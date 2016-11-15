@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword" content="undefined">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Yafei002" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        对提升大规模图形数据渲染性能的研究｜undefined
+        
+    </title>
+
+    <link rel="canonical" href="http://yafei002.github.io/2016/11/15/对提升大规模图形数据渲染性能的研究/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('undefined')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Yafei002
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>对提升大规模图形数据渲染性能的研究</h1>
+                    
+                    <span class="meta">
+                         作者 yafei002
+                        <span>
+                          日期 2016-11-15
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            对提升大规模图形数据渲染性能的研究
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="A．主题：在服务器端提前渲染d3"><a href="#A．主题：在服务器端提前渲染d3" class="headerlink" title="A．主题：在服务器端提前渲染d3"></a>A．主题：在服务器端提前渲染d3</h2><p>来源：<a href="http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html" target="_blank" rel="external">http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html</a></p>
+<p>原文摘要： The whole point of the technique is to do the html rendering in advance, so that users won’t have to wait to see the charts (and you run it only once for all users when they have to see the same data). If you can’t generate the charts in advance you may use the d3.js google group to find suitable performance enhancements.</p>
+<p>总结:</p>
+<p>原理：将d3对DOM渲染的过程在服务器端完成，形成静态html文档，也就是直接生成html里的svg。</p>
+<p>优点：</p>
+<p>1.相比较在客户端对DOM进行渲染，缩短了时间以及负担（具体情况的benchmark还有待测试）</p>
+<p>2.对大量的数据只需在服务器端渲染一次即可，无需再客户端重复调用脚本</p>
+<p>缺点：当数据量增加时，生成HTML的文档的时间相应增加。</p>
+<p>局限：当数据改变时需要重新生成HTML文档</p>
+<p>猜想：是否也可以在服务器端渲染canvas。</p>
+<h2 id="B-主题：JavaScript-DocumentFragment"><a href="#B-主题：JavaScript-DocumentFragment" class="headerlink" title="B. 主题：JavaScript DocumentFragment"></a>B. 主题：JavaScript DocumentFragment</h2><p>来源：</p>
+<p><a href="http://ejohn.org/blog/dom-documentfragments/" target="_blank" rel="external">http://ejohn.org/blog/dom-documentfragments/</a><br><a href="https://davidwalsh.name/documentfragment" target="_blank" rel="external">https://davidwalsh.name/documentfragment</a><br>总结：上一篇文章延伸出的知识点。DocumentFragment是DOM节点。他不属于DOM树，但是能够想DOM节点一样将子节点附加到它的上面，并且能相应事件。在DOM树中它会被附着在它上的子节点覆盖。</p>
+<p>使用DocumentFragment可以提升DOM处理的性能。</p>
+<p>在线测试：<a href="http://jsperf.com/out-of-dom-vs-documentfragment/3" target="_blank" rel="external">http://jsperf.com/out-of-dom-vs-documentfragment/3</a></p>
+<p>和<a href="http://jsperf.com/svg-fragment-test/2" target="_blank" rel="external">http://jsperf.com/svg-fragment-test/2</a> （SVG）</p>
+<p>也许节点数量很大时效果会比较明显。之后可以实地测试。上一篇文章作者提议在服务器端用产生一个DOM DocumentFragment，在加载时附加到页面。具体效果如何可以之后测试。</p>
+<h2 id="C-主题：比较D3和WebGL"><a href="#C-主题：比较D3和WebGL" class="headerlink" title="C.主题：比较D3和WebGL"></a>C.主题：比较D3和WebGL</h2><p>来源：<a href="http://engineering.ayasdi.com/2015/01/09/converting-a-d3-visualization-to-webgl-how-and-why/" target="_blank" rel="external">http://engineering.ayasdi.com/2015/01/09/converting-a-d3-visualization-to-webgl-how-and-why/</a></p>
+<p>摘要：“By hooking into your computer’s GPU, the browser can render and repaint at speeds that, if implemented correctly, are far superior to native DOM rendering.”</p>
+<p>“Another benefit of WebGL is that for large visualizations, your computer will end up allocating significantly less memory to your browser, freeing the rest of your DOM to work faster. If you have thousands of DOM elements, your CSS transitions and general usability will feel slow and laggy. With WebGL, the transitions will remain snappy.”</p>
+<p>总结:</p>
+<p>本文从svg的角度去思考从D3转到WebGL的可能性。首要WebGL的优势是在于GPU的加速，是浏览器渲染和重绘的速度上远比DOM渲染快速很多。其次是对于浏览器占用内存将大大减少。当DOM元素数量达到一定程度时，css的样式的变换将变得显著的慢，但WebGL可以保持比较顺畅的观感。</p>
+<p>但相比较D3，WebGL的代码负担较重且API也不会是标准的js或DOM的处理方式，甚至有可能需要自己编写自定义API，其次CSS的效果也会失去。</p>
+<p>（本文章的信息需进一步验证，但引起GPU对渲染影响的关注）</p>
+<h2 id="D-主题：双倍或不止提升SVG-FPS（frame-per-second）"><a href="#D-主题：双倍或不止提升SVG-FPS（frame-per-second）" class="headerlink" title="D. 主题：双倍或不止提升SVG FPS（frame per second）"></a>D. 主题：双倍或不止提升SVG FPS（frame per second）</h2><p>来源：<a href="http://www.crmarsh.com/svg-performance/" target="_blank" rel="external">http://www.crmarsh.com/svg-performance/</a></p>
+<p>总结: 对浏览器而言有四种主要样式的动画花销较小—Translation, Scale, Rotation, Opacity。改变节点的样式会迫使浏览器完成相应的比较昂贵的任务。改变width会影响页面的布局(re-computation)，改变background-color会使元素的像素重新绘制(repainting)。</p>
+<p>但是对SVG而言以上的情况却不能获得保证。（“there wasn’t any particular reason that SVG nodes had to behave differently than DOM nodes here, but that most browsers didn’t have particularly good SVG implementations.”)</p>
+<p>本文采用在外部套一层DOM节点的方式，相应的一些样式的操作在DOM节点中进行，实现提升FPS的效果。</p>
+<p>本文值得阅读，内容其次，重要的引发对浏览器工作机制的一些深层次的内容的兴趣。如何从浏览器的工作机制中研究如何提高渲染的性能。</p>
+<h2 id="E-主题：探讨结合D3和Canvas"><a href="#E-主题：探讨结合D3和Canvas" class="headerlink" title="E. 主题：探讨结合D3和Canvas"></a>E. 主题：探讨结合D3和Canvas</h2><p>来源：<a href="https://bocoup.com/weblog/d3js-and-canvas" target="_blank" rel="external">https://bocoup.com/weblog/d3js-and-canvas</a></p>
+<p>总结：本文的思维方式在于结合D3的交互性优势和Canvas渲染大规模节点的优势。本文的方法有局限性。虽然解决了数据绑定和transition，但是对于鼠标的事件无法向处理DOM时一样方便。</p>
+<p>本文虽然方法有所局限但思路值得研究一下。</p>
+<p>结论：数据渲染的性能受到多方的影响，而且也有很多技术可以实现相应的效果。个人感觉这会是一个比较深入的内容，因为相关因素比较多，很多都涉及比较深层次的东西，需要探索学习。但是针对实际情况也是一个循序渐进的过程。</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                    <li class="next">
+                        <a href="/2016/11/15/《大数据时代的网络数据可视分析》笔记/" data-toggle="tooltip" data-placement="top"
+                           title="《大数据时代的网络数据可视分析》笔记">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A．主题：在服务器端提前渲染d3"><span class="toc-text">A．主题：在服务器端提前渲染d3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-主题：JavaScript-DocumentFragment"><span class="toc-text">B. 主题：JavaScript DocumentFragment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-主题：比较D3和WebGL"><span class="toc-text">C.主题：比较D3和WebGL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#D-主题：双倍或不止提升SVG-FPS（frame-per-second）"><span class="toc-text">D. 主题：双倍或不止提升SVG FPS（frame per second）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E-主题：探讨结合D3和Canvas"><span class="toc-text">E. 主题：探讨结合D3和Canvas</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Yafei002 2016
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yafei002.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','undefined','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="undefined">
+</body>
+
+</html>

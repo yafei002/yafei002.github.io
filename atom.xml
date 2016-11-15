@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2016-11-09T13:08:44.887Z</updated>
+  <updated>2016-11-15T12:53:30.910Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -16,29 +16,1254 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yafei002.github.io/2016/11/09/hello-world/"/>
-    <id>http://yafei002.github.io/2016/11/09/hello-world/</id>
-    <published>2016-11-09T13:08:44.886Z</published>
-    <updated>2016-11-09T13:08:44.887Z</updated>
+    <title>对提升大规模图形数据渲染性能的研究</title>
+    <link href="http://yafei002.github.io/2016/11/15/%E5%AF%B9%E6%8F%90%E5%8D%87%E5%A4%A7%E8%A7%84%E6%A8%A1%E5%9B%BE%E5%BD%A2%E6%95%B0%E6%8D%AE%E6%B8%B2%E6%9F%93%E6%80%A7%E8%83%BD%E7%9A%84%E7%A0%94%E7%A9%B6/"/>
+    <id>http://yafei002.github.io/2016/11/15/对提升大规模图形数据渲染性能的研究/</id>
+    <published>2016-11-15T12:52:38.000Z</published>
+    <updated>2016-11-15T12:53:30.910Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+    <content type="html"><![CDATA[<h2 id="A．主题：在服务器端提前渲染d3"><a href="#A．主题：在服务器端提前渲染d3" class="headerlink" title="A．主题：在服务器端提前渲染d3"></a>A．主题：在服务器端提前渲染d3</h2><p>来源：<a href="http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html" target="_blank" rel="external">http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html</a></p>
+<p>原文摘要： The whole point of the technique is to do the html rendering in advance, so that users won’t have to wait to see the charts (and you run it only once for all users when they have to see the same data). If you can’t generate the charts in advance you may use the d3.js google group to find suitable performance enhancements.</p>
+<p>总结:</p>
+<p>原理：将d3对DOM渲染的过程在服务器端完成，形成静态html文档，也就是直接生成html里的svg。</p>
+<p>优点：</p>
+<p>1.相比较在客户端对DOM进行渲染，缩短了时间以及负担（具体情况的benchmark还有待测试）</p>
+<p>2.对大量的数据只需在服务器端渲染一次即可，无需再客户端重复调用脚本</p>
+<p>缺点：当数据量增加时，生成HTML的文档的时间相应增加。</p>
+<p>局限：当数据改变时需要重新生成HTML文档</p>
+<p>猜想：是否也可以在服务器端渲染canvas。</p>
+<h2 id="B-主题：JavaScript-DocumentFragment"><a href="#B-主题：JavaScript-DocumentFragment" class="headerlink" title="B. 主题：JavaScript DocumentFragment"></a>B. 主题：JavaScript DocumentFragment</h2><p>来源：</p>
+<p><a href="http://ejohn.org/blog/dom-documentfragments/" target="_blank" rel="external">http://ejohn.org/blog/dom-documentfragments/</a><br><a href="https://davidwalsh.name/documentfragment" target="_blank" rel="external">https://davidwalsh.name/documentfragment</a><br>总结：上一篇文章延伸出的知识点。DocumentFragment是DOM节点。他不属于DOM树，但是能够想DOM节点一样将子节点附加到它的上面，并且能相应事件。在DOM树中它会被附着在它上的子节点覆盖。</p>
+<p>使用DocumentFragment可以提升DOM处理的性能。</p>
+<p>在线测试：<a href="http://jsperf.com/out-of-dom-vs-documentfragment/3" target="_blank" rel="external">http://jsperf.com/out-of-dom-vs-documentfragment/3</a></p>
+<p>和<a href="http://jsperf.com/svg-fragment-test/2" target="_blank" rel="external">http://jsperf.com/svg-fragment-test/2</a> （SVG）</p>
+<p>也许节点数量很大时效果会比较明显。之后可以实地测试。上一篇文章作者提议在服务器端用产生一个DOM DocumentFragment，在加载时附加到页面。具体效果如何可以之后测试。</p>
+<h2 id="C-主题：比较D3和WebGL"><a href="#C-主题：比较D3和WebGL" class="headerlink" title="C.主题：比较D3和WebGL"></a>C.主题：比较D3和WebGL</h2><p>来源：<a href="http://engineering.ayasdi.com/2015/01/09/converting-a-d3-visualization-to-webgl-how-and-why/" target="_blank" rel="external">http://engineering.ayasdi.com/2015/01/09/converting-a-d3-visualization-to-webgl-how-and-why/</a></p>
+<p>摘要：“By hooking into your computer’s GPU, the browser can render and repaint at speeds that, if implemented correctly, are far superior to native DOM rendering.”</p>
+<p>“Another benefit of WebGL is that for large visualizations, your computer will end up allocating significantly less memory to your browser, freeing the rest of your DOM to work faster. If you have thousands of DOM elements, your CSS transitions and general usability will feel slow and laggy. With WebGL, the transitions will remain snappy.”</p>
+<p>总结:</p>
+<p>本文从svg的角度去思考从D3转到WebGL的可能性。首要WebGL的优势是在于GPU的加速，是浏览器渲染和重绘的速度上远比DOM渲染快速很多。其次是对于浏览器占用内存将大大减少。当DOM元素数量达到一定程度时，css的样式的变换将变得显著的慢，但WebGL可以保持比较顺畅的观感。</p>
+<p>但相比较D3，WebGL的代码负担较重且API也不会是标准的js或DOM的处理方式，甚至有可能需要自己编写自定义API，其次CSS的效果也会失去。</p>
+<p>（本文章的信息需进一步验证，但引起GPU对渲染影响的关注）</p>
+<h2 id="D-主题：双倍或不止提升SVG-FPS（frame-per-second）"><a href="#D-主题：双倍或不止提升SVG-FPS（frame-per-second）" class="headerlink" title="D. 主题：双倍或不止提升SVG FPS（frame per second）"></a>D. 主题：双倍或不止提升SVG FPS（frame per second）</h2><p>来源：<a href="http://www.crmarsh.com/svg-performance/" target="_blank" rel="external">http://www.crmarsh.com/svg-performance/</a></p>
+<p>总结: 对浏览器而言有四种主要样式的动画花销较小—Translation, Scale, Rotation, Opacity。改变节点的样式会迫使浏览器完成相应的比较昂贵的任务。改变width会影响页面的布局(re-computation)，改变background-color会使元素的像素重新绘制(repainting)。</p>
+<p>但是对SVG而言以上的情况却不能获得保证。（“there wasn’t any particular reason that SVG nodes had to behave differently than DOM nodes here, but that most browsers didn’t have particularly good SVG implementations.”)</p>
+<p>本文采用在外部套一层DOM节点的方式，相应的一些样式的操作在DOM节点中进行，实现提升FPS的效果。</p>
+<p>本文值得阅读，内容其次，重要的引发对浏览器工作机制的一些深层次的内容的兴趣。如何从浏览器的工作机制中研究如何提高渲染的性能。</p>
+<h2 id="E-主题：探讨结合D3和Canvas"><a href="#E-主题：探讨结合D3和Canvas" class="headerlink" title="E. 主题：探讨结合D3和Canvas"></a>E. 主题：探讨结合D3和Canvas</h2><p>来源：<a href="https://bocoup.com/weblog/d3js-and-canvas" target="_blank" rel="external">https://bocoup.com/weblog/d3js-and-canvas</a></p>
+<p>总结：本文的思维方式在于结合D3的交互性优势和Canvas渲染大规模节点的优势。本文的方法有局限性。虽然解决了数据绑定和transition，但是对于鼠标的事件无法向处理DOM时一样方便。</p>
+<p>本文虽然方法有所局限但思路值得研究一下。</p>
+<p>结论：数据渲染的性能受到多方的影响，而且也有很多技术可以实现相应的效果。个人感觉这会是一个比较深入的内容，因为相关因素比较多，很多都涉及比较深层次的东西，需要探索学习。但是针对实际情况也是一个循序渐进的过程。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;h2 id=&quot;A．主题：在服务器端提前渲染d3&quot;&gt;&lt;a href=&quot;#A．主题：在服务器端提前渲染d3&quot; class=&quot;headerlink&quot; title=&quot;A．主题：在服务器端提前渲染d3&quot;&gt;&lt;/a&gt;A．主题：在服务器端提前渲染d3&lt;/h2&gt;&lt;p&gt;来源：&lt;a href=&quot;ht
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>《大数据时代的网络数据可视分析》笔记</title>
+    <link href="http://yafei002.github.io/2016/11/15/%E3%80%8A%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%97%B6%E4%BB%A3%E7%9A%84%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%88%86%E6%9E%90%E3%80%8B%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yafei002.github.io/2016/11/15/《大数据时代的网络数据可视分析》笔记/</id>
+    <published>2016-11-15T12:48:49.000Z</published>
+    <updated>2016-11-15T12:49:14.682Z</updated>
+    
+    <content type="html"><![CDATA[<p>大数据时代数据呈现大量(Volume)，多样(Variety)，真实 (Veracity)，快速 (Velocity)， 价值(Value)的特点。相对过去的可视化方式，大数据时代对具有上述5V特征数据的可视化提出新的挑战。</p>
+<p>1.高维属性。 传统的通过改变可视元素的大小、形状、颜色等的方法只能表达数据的5-10维的特征，而不能体现更高维度数据的特点。<br>2.动态特征。 通过动画的方式可以吸引用户眼球的数据的动态特点。但这种方式往往用户更加关注动画效果而忽视了数据所呈现的时序变化的情况。<br>3.真实展示。 所谓可视化谎言是指通过坐标轴变换，图形形状不等比缩放等夸张的感知效果呈现数据的特点。但在大数据时代，由于数据来源、在线处理和整合等而造成数据误差，以及不可避免的对数据的采集和抽样，数据切片能否代表整体网络数据特点以及避免可视化的表达引起的用户感知的偏差，是面临的挑战。<br>4.数据价值 过去的拓扑结构分析、节点（边）相关属性分析、浏览、宏观概要的可视化分析方式是否适合大数据时代的可视化需求存在疑问。其次如何将定制化的可视化分析方法转变为系统化的数据可视化分析平台也是需要解决的问题。</p>
+<h2 id="深度网络分析与挖掘"><a href="#深度网络分析与挖掘" class="headerlink" title="深度网络分析与挖掘"></a>深度网络分析与挖掘</h2><p>对于一组网络数据可从三个层面进行分析挖掘：1）对全图分析全局统计量2）对全图进行分割形成子图，挖掘数据的聚类结构3）对节点进行相似性、相关性、因果关系的分析。此外还有新型的定位大型网络中信息传播的关键链接的分析方法。</p>
+<h2 id="任务驱动数据变换"><a href="#任务驱动数据变换" class="headerlink" title="任务驱动数据变换"></a>任务驱动数据变换</h2><p>一名美国教授提出的“纵览为先，缩放并过滤，按需查看细节”的查询信息的可视化方式不适合大数据时代的要求。由于数据的5V特性，全局提取摘要需要大量的开销，目前普遍采用的是根据用户的特性需求定制数据变换生成大型网络摘要的方式。</p>
+<h2 id="自然和谐用户交互"><a href="#自然和谐用户交互" class="headerlink" title="自然和谐用户交互"></a>自然和谐用户交互</h2><p>虽然目前有很多可视化的工具，但在三个方面仍然需要深入1）网络浏览，全局出发停留在关键细节的知识或模式发现。层析递进和遍历是经常涉及的方式。2）子网或多个时间帧的相互比较3）大数据集的特性导致单一算法或参数预设的方式无法适用。通过可视化界面展现算法调优的动态变化可以减少由于算法调优时间花销过大造成的延迟影响。</p>
+<h2 id="多态网络可视隐喻"><a href="#多态网络可视隐喻" class="headerlink" title="多态网络可视隐喻"></a>多态网络可视隐喻</h2><p>对于网络数据传统一般采用节点-边的传统可视化隐喻，但大数据时代，网络的体量、动态性以及丰富的节点/边的关系对这一传统的方式提出了挑战。针对不同的特点采用不同的方法如对较大型网络采用邻边矩阵（NodeTrix）的方法，对于动态网络数据采用基于平行坐标隐喻的平行边分割的方法，对于网络与文本的混合异构数据采用字云与节点-边的结合的方式。</p>
+<h2 id="原文："><a href="#原文：" class="headerlink" title="原文："></a>原文：</h2><p>时 磊, 童行行. 大数据时代的网络数据可视分析. 中国计算机学会通讯. 2014</p>
+<h2 id="格式塔观念"><a href="#格式塔观念" class="headerlink" title="格式塔观念"></a>格式塔观念</h2><p>格式塔心理学派断言：人们在观看时，眼脑并不是在一开始就区分一个形象的各个单一的组成部分，而是将各个部分组合起来，使之成为一个更易于理解的统一体。此外，他们坚持认为，在一个格式塔（即一个单一视场，或单一的参照系）内，眼睛的能力只能接受少数几个不相关联的整体单位。这种能力的强弱取决于这些整体单位的不同与相似，以及它们之间的相关位置。如果一个格式塔中包含了太多的互不相关的单位，眼脑就会试图将其简化，把各个单位加以组合，使之成为一个知觉上易于处理的整体。如果办不到这一点，整体形象将继续呈现为无序状态或混乱，从而无法被正确认知，简单地说，就是看不懂或无法接受。格式塔理论明确地提出：眼脑作用是一个不断组织、简化、统一的过程，正是通过这一过程，才产生出易于理解、协调的整体。<br>格式塔理论和研究述及了这样一个观念，即人们的审美观对整体与和谐具有一种基本的要求。简单地说，视觉形象首先是作为统一的整体被认知的，而后才以部分的形式被认知，也就是说，我们先“看见”一个构图的整体，然后才“看见”组成这一构图整体的各个部分。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;大数据时代数据呈现大量(Volume)，多样(Variety)，真实 (Veracity)，快速 (Velocity)， 价值(Value)的特点。相对过去的可视化方式，大数据时代对具有上述5V特征数据的可视化提出新的挑战。&lt;/p&gt;
+&lt;p&gt;1.高维属性。 传统的通过改变可视
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>复杂高维多元数据的可视化</title>
+    <link href="http://yafei002.github.io/2016/11/15/%E5%A4%8D%E6%9D%82%E9%AB%98%E7%BB%B4%E5%A4%9A%E5%85%83%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>http://yafei002.github.io/2016/11/15/复杂高维多元数据的可视化/</id>
+    <published>2016-11-15T12:24:27.000Z</published>
+    <updated>2016-11-15T12:27:16.407Z</updated>
+    
+    <content type="html"><![CDATA[<p>移动互联网时代涌现无数复杂的数据</p>
+<ul>
+<li>三位时空数据</li>
+<li>视频影像数据</li>
+<li>地理信息数据</li>
+<li>传感器网络数据</li>
+<li>社交网络数据</li>
+<li>网络日志数据</li>
+<li>等</li>
+</ul>
+<p>数据呈现的特点</p>
+<ul>
+<li>高维多元书，统计和基本分析方法无法胜任</li>
+<li>数据复杂度大大增加</li>
+<li>数据的尺度大到超过了单机甚至小型集群处理能力的极限</li>
+<li>数据质量尤其其中的数据的不确定性无法避免</li>
+<li>数据快速动态变化，常以流式数据存在</li>
+</ul>
+<h2 id="高维多元数据"><a href="#高维多元数据" class="headerlink" title="高维多元数据"></a>高维多元数据</h2><p><strong>定义</strong></p>
+<ul>
+<li>高维：数据具有多个独立属性</li>
+<li>多元：数据具有多个相关属性</li>
+</ul>
+<p><strong>可视化特点</strong></p>
+<p>传统的用不同的视觉编码表示不同属性的数据，在维度高是不适用。</p>
+<ul>
+<li>视觉编码的种类有限</li>
+<li>过多或过于复杂的视觉编码会降低可视化的可读性</li>
+</ul>
+<p><strong>方法</strong></p>
+<p>空间映射、图标法、基于像素的可视化方法</p>
+<h3 id="空间映射法"><a href="#空间映射法" class="headerlink" title="空间映射法"></a>空间映射法</h3><h4 id="散点图及散点图矩阵"><a href="#散点图及散点图矩阵" class="headerlink" title="散点图及散点图矩阵"></a>散点图及散点图矩阵</h4><p>对传统散点图的扩展</p>
+<ul>
+<li>方法：对于N维数据，采用N^2个散点图逐一表示N个属性之间的两两关系</li>
+<li>优势<ul>
+<li>符合人们使用直角坐标系的习惯</li>
+<li>有效的揭示属性之间的关联</li>
+</ul>
+</li>
+<li>局限<ul>
+<li>过多的散点图会占据有限的屏幕空间，降低可视化的可读性</li>
+<li>可以通过有限展示重要性较高的散点图缓解</li>
+</ul>
+</li>
+</ul>
+<h4 id="表格透镜（Table-Lens）"><a href="#表格透镜（Table-Lens）" class="headerlink" title="表格透镜（Table Lens）"></a>表格透镜（Table Lens）</h4><p>对传统表格的扩展</p>
+<ul>
+<li>行为数据对象，列为属性</li>
+<li>将表格中的数值用水平横条或点表示。横条或点占用的空间较小。</li>
+</ul>
+<h4 id="平行坐标"><a href="#平行坐标" class="headerlink" title="平行坐标"></a>平行坐标</h4><ul>
+<li>每个坐标轴对应一个属性，每个数据对象对应于一条穿过所有坐标轴的折线</li>
+<li>根据不同场景灵活的变换平行坐标的方式，如加入散点图等等<ul>
+<li>采用层次化平行坐标可视化数据中的分类信息</li>
+<li>将散点图技术与平行坐标综合使用</li>
+<li>采用基于半透明的折线表示法，揭示大规模数据集中的分类信息</li>
+<li>根据坐标轴之间的相关性进行聚类、重排列等</li>
+<li>将数据聚成条带，对异常数据进行特殊处理</li>
+<li>将统计直方图引入到每个坐标轴揭示数据在该属性上的分布</li>
+<li>用曲线代替折线以更好地表达坐标轴之间的连续性</li>
+<li>采用自由摆放的坐标轴，即灵活轴线法</li>
+</ul>
+</li>
+<li>局限<ul>
+<li>坐标轴为顺序排列，非相邻的属性之间关系表现较弱</li>
+<li>解决方法<ul>
+<li>交互选取感兴趣的部分数据，并高亮显示</li>
+<li>改变坐标轴的顺序以显示各个数据维度之间的关系</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="降维"><a href="#降维" class="headerlink" title="降维"></a>降维</h4><ul>
+<li>定义：将多元数据映射或嵌入低维空间，并尽量保持数据在多维空间的关系或特征。</li>
+<li>线性方法<ul>
+<li>主元分析</li>
+<li>多维尺度分析</li>
+</ul>
+</li>
+<li>非线性方法<ul>
+<li>局部线性嵌入</li>
+<li>Isomap</li>
+</ul>
+</li>
+</ul>
+<p><strong>主元分析</strong></p>
+<ul>
+<li>???</li>
+</ul>
+<p><strong>多尺度分析</strong></p>
+<ul>
+<li>???</li>
+</ul>
+<h3 id="图标法"><a href="#图标法" class="headerlink" title="图标法"></a>图标法</h3><p>图标中的不同视觉元素被用来表示数据对象的不同属性。</p>
+<h4 id="星形图-Star-Plots-雷达图-Radar-Chart"><a href="#星形图-Star-Plots-雷达图-Radar-Chart" class="headerlink" title="星形图(Star Plots)/雷达图(Radar Chart)"></a>星形图(Star Plots)/雷达图(Radar Chart)</h4><p>平行坐标的极坐标版本</p>
+<ul>
+<li>每个属性由一个坐标轴表示</li>
+<li>每个坐标轴上的值由该属性的值与该属性最大值的比例表示</li>
+<li>折线连接所有坐标轴上的点，形成一个星形区域</li>
+<li>星形区域的形状和大小反应了数据对象的属性</li>
+<li>评价；紧凑；数据维度增加，但总面积不变，人类对形状大小的敏感使得可视化理解容易高效</li>
+</ul>
+<h4 id="Chernoff-Faces"><a href="#Chernoff-Faces" class="headerlink" title="Chernoff Faces"></a>Chernoff Faces</h4><ul>
+<li>模拟人脸图标标识数据对象</li>
+<li>不同的属性映射为人脸不同的部位和结构</li>
+<li>评价<ul>
+<li>人类的视觉和大脑擅长人脸识别，能够观察脸部的细微变化</li>
+<li>人对脸部的各个部位特征的感知度不同，根据属性的优先级选择人脸的映射部位</li>
+</ul>
+</li>
+</ul>
+<h4 id="基于像素图的方法"><a href="#基于像素图的方法" class="headerlink" title="基于像素图的方法"></a>基于像素图的方法</h4><p>???</p>
+<h2 id="非结构化与异构数据的可视化"><a href="#非结构化与异构数据的可视化" class="headerlink" title="非结构化与异构数据的可视化"></a>非结构化与异构数据的可视化</h2><p>数据复杂度</p>
+<ul>
+<li>数据高维度特性</li>
+<li>数据的非结构性</li>
+<li>数据的异构性</li>
+</ul>
+<h3 id="非结构化数据"><a href="#非结构化数据" class="headerlink" title="非结构化数据"></a>非结构化数据</h3><ul>
+<li>无法用二维数据表表示的数据</li>
+<li>关键是采用合适的表达方法挖掘数据内在的模式，可视化方法依托于数据内在的结构和模式</li>
+</ul>
+<h4 id="网络日志数据可视化"><a href="#网络日志数据可视化" class="headerlink" title="网络日志数据可视化"></a>网络日志数据可视化</h4><ul>
+<li>定义：记录了用户访问页面及点击事件的行为</li>
+<li>作用：帮助了解用户如何使用目标网站、典型的浏览行为，从而帮助网站开发者与用户体验设计师有针对性的改进用体验，提供更优化和定制化的体验</li>
+<li>流程<ul>
+<li>从结构化数据日志中提取半结构化</li>
+<li>利用数据挖掘的方法提取其中的模式</li>
+<li>可视化呈现</li>
+</ul>
+</li>
+</ul>
+<p>此方法使非结构化数据转为半结构化数据，从而抽取更为结构化的行为模式<br>采用基于马科夫链的自组织映射(Self-organizing Map)将序列按照它们之间的相似关系布局在二维空间中，相似的序列相互靠近聚集成类。</p>
+<h3 id="异构数据"><a href="#异构数据" class="headerlink" title="异构数据"></a>异构数据</h3><ul>
+<li>异构数据：同一数据集中存在结构或属性不同的数据</li>
+<li>异构网络：存在多种不同类别的节点和连接的网络</li>
+<li>可视化关键<ul>
+<li>呈现不同的属性的数据</li>
+<li>利用异构的特性辅助可视化</li>
+</ul>
+</li>
+<li>对于大数据量和高复杂度的数据，可以从异构网络中提炼出本体拓扑结构</li>
+<li>更为通用的异构数据可视化方法是将数据属性自动逐一对应到可视化属性</li>
+<li>数据的异构性大部分来自于不同的数据源获取方式</li>
+<li>底层数据整合<ul>
+<li>物化式</li>
+<li>虚拟式</li>
+</ul>
+</li>
+</ul>
+<h2 id="大尺度数据的可视化"><a href="#大尺度数据的可视化" class="headerlink" title="大尺度数据的可视化"></a>大尺度数据的可视化</h2><p>???</p>
+<h2 id="数据不确定性的可视化"><a href="#数据不确定性的可视化" class="headerlink" title="数据不确定性的可视化"></a>数据不确定性的可视化</h2><p>数据采集到使用过程中带来的误差和不确定性</p>
+<h3 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h3><ul>
+<li>数据处理、手机、可视化<ul>
+<li>测量仪器的优劣和测量者知识水平的高低</li>
+<li>对数据进行过滤、简化、采样等操作</li>
+<li>可视化算法本身</li>
+</ul>
+</li>
+</ul>
+<h3 id="不确定性的可视化方法"><a href="#不确定性的可视化方法" class="headerlink" title="不确定性的可视化方法"></a>不确定性的可视化方法</h3><h4 id="图标法-1"><a href="#图标法-1" class="headerlink" title="图标法"></a>图标法</h4><ul>
+<li>误差条<ul>
+<li>横轴表示数据实体，纵轴表示统计特征</li>
+<li>纵轴至少三个值组成<ul>
+<li>均值、下线误差值和上限误差值</li>
+<li>实际使用中，可用标准差或者分位数等定义上限误差值和下限误差值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>盒须图，又名箱型图<ul>
+<li>最基本的是一种五数统计图（最大值、上四位数、中位数、下四分位数和最小值）</li>
+</ul>
+</li>
+<li>对不确定二维向量场的可视化，可以对图标（如箭头）进行相应的视觉编码</li>
+<li>流场雷达图：一种非稳定流场的静态可视化方法</li>
+</ul>
+<h4 id="视觉元素编码法"><a href="#视觉元素编码法" class="headerlink" title="视觉元素编码法"></a>视觉元素编码法</h4><p>基本的视觉标量</p>
+<ul>
+<li>位置<ul>
+<li>如添加模糊表达不确定性</li>
+</ul>
+</li>
+<li>形状</li>
+<li>透明度</li>
+<li>颜色</li>
+<li>方向</li>
+<li>亮度</li>
+<li>尺寸</li>
+<li>纹理<ul>
+<li>视觉元素的综合体</li>
+<li>如利用不同粒度的纹理表达等值面上的不确定性</li>
+<li>纹理合成是一种重要的流场可视化方法 ???</li>
+</ul>
+</li>
+</ul>
+<h4 id="几何体表达法"><a href="#几何体表达法" class="headerlink" title="几何体表达法"></a>几何体表达法</h4><p>基本的几何物体</p>
+<ul>
+<li>点<ul>
+<li>表达一维不确定性</li>
+</ul>
+</li>
+<li>散点<ul>
+<li>根据点的密集度表示不确定性，越密集不确定性越高</li>
+</ul>
+</li>
+<li>线<ul>
+<li>表达一维不确定性</li>
+</ul>
+</li>
+<li>面</li>
+<li>网格<ul>
+<li>表达二维不确定性</li>
+<li>直线表达确定下较低，曲线表达不确定性较高</li>
+</ul>
+</li>
+<li>体</li>
+</ul>
+<p>对于<strong>高维</strong>不确定性，可以用比较复杂的几何体表示</p>
+<ul>
+<li>比如用立方体的三个轴编码三个维度的不确定性</li>
+</ul>
+<p><strong>集合数据</strong></p>
+<ul>
+<li>为了获取更高的精度，在不同的初始条件或参数配置下多次运行同一数值计算模型或多个不同数值计算模型</li>
+<li>可视化方法<ul>
+<li>意大利面图</li>
+<li>渐变表达</li>
+<li>渐变丝带<ul>
+<li>渐变表达的扩展，丝带的宽度编码了等值线的不确定性</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>几何体表达法在引入代理几何体表示不确定性时，也极大地影响了原有确定性数据的可视化结果。</p>
+<h4 id="动画表达法"><a href="#动画表达法" class="headerlink" title="动画表达法"></a>动画表达法</h4><ul>
+<li>理论：人类视觉系统的前注意处理过程(Preattentive processs)，运动具有极高的处理优先级</li>
+<li>动画的可视化编码：速度、持续时间、运动范围、运动顺序、运动模糊、闪烁等</li>
+<li>基本思想: 将不确定性隐式地编码于一个与时间相关的函数</li>
+<li>对比静态可视化<ul>
+<li>更长的理解曲线</li>
+<li>容易造成视觉疲劳</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;移动互联网时代涌现无数复杂的数据&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;三位时空数据&lt;/li&gt;
+&lt;li&gt;视频影像数据&lt;/li&gt;
+&lt;li&gt;地理信息数据&lt;/li&gt;
+&lt;li&gt;传感器网络数据&lt;/li&gt;
+&lt;li&gt;社交网络数据&lt;/li&gt;
+&lt;li&gt;网络日志数据&lt;/li&gt;
+&lt;li&gt;等&lt;/li&gt;
+&lt;/u
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文本和文档可视化</title>
+    <link href="http://yafei002.github.io/2016/11/15/%E6%96%87%E6%9C%AC%E5%92%8C%E6%96%87%E6%A1%A3%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>http://yafei002.github.io/2016/11/15/文本和文档可视化/</id>
+    <published>2016-11-15T12:23:28.000Z</published>
+    <updated>2016-11-15T12:28:21.639Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="文本可视化释义"><a href="#文本可视化释义" class="headerlink" title="文本可视化释义"></a>文本可视化释义</h2><ul>
+<li>文本信息无处不在，为更高效的文本阅读和分析方法，文本可视化应运而生。</li>
+<li>文本可视化的核心是辅助用户准确的从文本中提取并简洁直观的展示信息</li>
+</ul>
+<h3 id="文本信息的层级"><a href="#文本信息的层级" class="headerlink" title="文本信息的层级"></a>文本信息的层级</h3><ul>
+<li>词汇级<ul>
+<li>文本信息的最小单元，包括字、词、短语以及他们在文章中的分布统计、词根、词位等相关信息</li>
+<li>提取方法通常通过分词技术，最常用的为正则表达式定义的有限向量机</li>
+</ul>
+</li>
+<li>语法级<ul>
+<li>语法级信息包括：词性、单复数、词与词之间的相似性，以及地点、时间、日期、人名等实体信息</li>
+<li>提取过程被称为命名实体识别</li>
+</ul>
+</li>
+<li>语义级<ul>
+<li>文本的最高层信息</li>
+<li>包含词汇和语法级所提取的知识在文本中的含义，如文本字词、短语等在文本中的含义和彼此间的关系；作者通过文本表达的信息，如文档的主题等</li>
+</ul>
+</li>
+</ul>
+<h3 id="文本可视化研究的内容"><a href="#文本可视化研究的内容" class="headerlink" title="文本可视化研究的内容"></a>文本可视化研究的内容</h3><ul>
+<li>文本文档的内容多种多样<ul>
+<li>单文本</li>
+<li>文档集合</li>
+<li>时序文本</li>
+</ul>
+</li>
+<li>有普适性的可视化技术，也有对特定分析需求研发了具有特性的可视化技术</li>
+</ul>
+<h3 id="文本可视化流程"><a href="#文本可视化流程" class="headerlink" title="文本可视化流程"></a>文本可视化流程</h3><pre><code>1. 文本信息挖掘
+2. 视图绘制
+3. 人机交互
+</code></pre><h4 id="文本信息挖掘"><a href="#文本信息挖掘" class="headerlink" title="文本信息挖掘"></a>文本信息挖掘</h4><p>依据可视化<strong>任务需求</strong>，分析原始文本</p>
+<ol>
+<li>文本数据的预处理</li>
+<li>文本特征的抽取</li>
+<li>文本特征的度量</li>
+</ol>
+<h4 id="视图绘制"><a href="#视图绘制" class="headerlink" title="视图绘制"></a>视图绘制</h4><p>将提炼的信息转变为直观的可视视图。常常涉及的方面： 图元设计和图元布局方法。</p>
+<h4 id="人机交互"><a href="#人机交互" class="headerlink" title="人机交互"></a>人机交互</h4><p>如何分析试图、如何操作从而满足分析需求。</p>
+<h2 id="文本信息分析基础"><a href="#文本信息分析基础" class="headerlink" title="文本信息分析基础"></a>文本信息分析基础</h2><h3 id="分词技术和词干提取"><a href="#分词技术和词干提取" class="headerlink" title="分词技术和词干提取"></a>分词技术和词干提取</h3><ul>
+<li>分词(Tokenization)<ul>
+<li>文字拆分为多个词项，剔除停词。如‘I have a dream’，分词后‘I， have， dream’，其中‘a’作为停词被剔除</li>
+</ul>
+</li>
+<li>词干提取(Stemming)<ul>
+<li>去除词缀获取词根，如‘men’， 提取后为‘man’</li>
+</ul>
+</li>
+</ul>
+<h3 id="向量空间模型"><a href="#向量空间模型" class="headerlink" title="向量空间模型"></a>向量空间模型</h3><p>利用向量符号对文本进行度量的代数模型</p>
+<h4 id="词袋模型（Bag-of-words-model）"><a href="#词袋模型（Bag-of-words-model）" class="headerlink" title="词袋模型（Bag-of-words model）"></a>词袋模型（Bag-of-words model）</h4><ul>
+<li>用来提取词汇级信息</li>
+<li>对文本进行初步处理后如过滤停词，将文本内容总结为在由关键词组成的集合上的加权分布向量</li>
+</ul>
+<h4 id="文本相似度度量"><a href="#文本相似度度量" class="headerlink" title="文本相似度度量"></a>文本相似度度量</h4><ul>
+<li>方法：词项-文档矩阵构建多个文档的数学模型<ul>
+<li>夹角余弦值等，余弦值越大，两个文档越相似</li>
+</ul>
+</li>
+<li>应用：文本分析、文本可视化和信息检索任务等<ul>
+<li>文档彼此的相似度</li>
+<li>查找文档最匹配用户的查询</li>
+<li>帮助理解文本集合内的特征模式，如文档聚类和主题分布</li>
+</ul>
+</li>
+</ul>
+<h4 id="TF-IDF"><a href="#TF-IDF" class="headerlink" title="TF-IDF"></a>TF-IDF</h4><ul>
+<li>一种最常用的权重分配模型</li>
+<li>核心思想：字词在文档中出现的次数与其重要性相关；字词在不同文档集中出现的次数与其在该文档中的重要性呈负相关</li>
+</ul>
+<h3 id="主题抽取"><a href="#主题抽取" class="headerlink" title="主题抽取"></a>主题抽取</h3><ul>
+<li>语义级别</li>
+<li>主题模型即文档的主题描述</li>
+<li>抽取算法<ul>
+<li>基于矩阵分解的非概率模型</li>
+<li>基于贝叶斯的概率模型</li>
+</ul>
+</li>
+</ul>
+<h2 id="文本内容可视化"><a href="#文本内容可视化" class="headerlink" title="文本内容可视化"></a>文本内容可视化</h2><h3 id="基于关键词的文本内容可视化"><a href="#基于关键词的文本内容可视化" class="headerlink" title="基于关键词的文本内容可视化"></a>基于关键词的文本内容可视化</h3><ul>
+<li><p>提取方法：常用的是词频</p>
+</li>
+<li><p>标签云(Tag Cloud, Text Cloud, Word Cloud)</p>
+<ul>
+<li>工具：wordle等</li>
+</ul>
+</li>
+<li>文档散(DocuBurst)<ul>
+<li>特点：既包含关键词可视化，还包含人类词汇中单词间存在的语义关系（有些词是其他词元的下位词，如weather-&gt;wind-&gt;breeze</li>
+</ul>
+</li>
+<li>文档卡片(Document Cards)<ul>
+<li>利用文档中的关键词和关键图呈现文档的内容</li>
+<li>方法：文档集合中的每个文档的关键 词和关键图被紧凑的布局在一张卡片上</li>
+</ul>
+</li>
+</ul>
+<h3 id="时序性的文本内容可视化"><a href="#时序性的文本内容可视化" class="headerlink" title="时序性的文本内容可视化"></a>时序性的文本内容可视化</h3><ul>
+<li>对象：具有时间和顺序属性的文本</li>
+<li>特点：有序演化</li>
+<li>方法<ul>
+<li>主题河流<ul>
+<li>将时间隐喻为时间上不断延续的河流</li>
+<li>方法：横轴为时间，一条河流一个主题，河流的宽度表示该时间点上在所有主题中占得比例</li>
+<li>局限：每个主题每个时间刻度只能有一个度量值，无法表示更多细节</li>
+</ul>
+</li>
+<li>TIARA<ul>
+<li>结合标签云和主题留</li>
+</ul>
+</li>
+<li>历史流（History Flow）</li>
+</ul>
+</li>
+</ul>
+<h3 id="文本特征的分布模式可视化"><a href="#文本特征的分布模式可视化" class="headerlink" title="文本特征的分布模式可视化"></a>文本特征的分布模式可视化</h3><ul>
+<li>文本弧（TextArc）<ul>
+<li>可视化一个文档词和词频的分布情况</li>
+</ul>
+</li>
+<li>文献指纹（Literature Fingerprinting）<ul>
+<li>将特征在整个文本的分布用一系列的像素图表达</li>
+</ul>
+</li>
+<li>文本特征透镜（Feature Lens)<ul>
+<li>可视化文本特征在一个文档集合中不同粒度的分布情况              </li>
+</ul>
+</li>
+</ul>
+<h3 id="情感分析可视化"><a href="#情感分析可视化" class="headerlink" title="情感分析可视化"></a>情感分析可视化</h3><ul>
+<li>表达文本中蕴含用户情感倾向性的信息<ul>
+<li>用户主观评价对象、对象属性、和用户的意见倾向，还包括自定义的信息等</li>
+</ul>
+</li>
+<li>方法: 基于矩阵的视图</li>
+</ul>
+<h3 id="文档信息检索可视化"><a href="#文档信息检索可视化" class="headerlink" title="文档信息检索可视化"></a>文档信息检索可视化</h3><ul>
+<li>辅助了解检索结果，揭示结果的分布规律<ul>
+<li>检索文档、查询项的相似性和检索文档所涉及的词汇</li>
+</ul>
+</li>
+<li>工具： TilBar、Sparkler</li>
+</ul>
+<h3 id="软件可视化"><a href="#软件可视化" class="headerlink" title="软件可视化"></a>软件可视化</h3><ul>
+<li>对象：软件设计、软件系统、代码</li>
+<li>工具：SeeSoft、Code_Swarm</li>
+</ul>
+<h2 id="文本关系可视化"><a href="#文本关系可视化" class="headerlink" title="文本关系可视化"></a>文本关系可视化</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;文本可视化释义&quot;&gt;&lt;a href=&quot;#文本可视化释义&quot; class=&quot;headerlink&quot; title=&quot;文本可视化释义&quot;&gt;&lt;/a&gt;文本可视化释义&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;文本信息无处不在，为更高效的文本阅读和分析方法，文本可视化应运而生。&lt;/li&gt;
+&lt;li&gt;
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>层次和网络数据可视化</title>
+    <link href="http://yafei002.github.io/2016/11/15/%E5%B1%82%E6%AC%A1%E5%92%8C%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>http://yafei002.github.io/2016/11/15/层次和网络数据可视化/</id>
+    <published>2016-11-15T12:15:33.000Z</published>
+    <updated>2016-11-15T12:26:53.866Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="层次结构"><a href="#层次结构" class="headerlink" title="层次结构"></a>层次结构</h2><p>层次数据表现为包含、从属、承接（决策树、家谱）关系。</p>
+<h2 id="层次数据的可视化"><a href="#层次数据的可视化" class="headerlink" title="层次数据的可视化"></a>层次数据的可视化</h2><p>要点： 对数据中层次关系的有效刻画。</p>
+<ul>
+<li>节点-链接<ul>
+<li>擅长： 承接关系</li>
+<li>缺点：广度和深度相差较大时，此方法可读性较差，大量数据点聚集在屏幕局部范围，难以高效利用有限的屏幕空间</li>
+</ul>
+</li>
+<li>空间填充： 将空间分块<ul>
+<li>擅长： 包含和从属</li>
+<li>缺点： 层次不如节点-链接法清晰</li>
+</ul>
+</li>
+<li>混合方法，即混合以上两种方法</li>
+</ul>
+<h3 id="节点-链接法"><a href="#节点-链接法" class="headerlink" title="节点-链接法"></a>节点-链接法</h3><ul>
+<li>节点位置的空间顺序和层次关系一致</li>
+<li>减少连线之间的交叉</li>
+<li>减少连线的总长度</li>
+<li>合适的长宽比，优化空间利用(数据-墨水原则)</li>
+</ul>
+<p><strong>缩进法</strong></p>
+<ul>
+<li>利用<strong>纵横布局算法</strong>，沿某个轴扩充或缩进子节点，同一层次节点在另一个轴展开</li>
+<li>缺点：数据量大时，需要很多滚动操作</li>
+</ul>
+<p><strong>正交布局</strong></p>
+<ul>
+<li>特点：与坐标轴一致，符合人视觉的规则布局</li>
+<li>擅长： 广度比较大的层次结构</li>
+<li>缺点： 容易导致不合理的长宽比， 造成数据显示空间不足和屏幕空间的浪费</li>
+</ul>
+<p><strong>径向布局</strong></p>
+<pre><code>* 根节点位于圆心，不同层次的节点被放置在半径不同的同心圆上，节点到圆心的距离对应于它的深度
+* 优点：合理的利用了空间
+</code></pre><ul>
+<li>环状径向树法<ul>
+<li>随着层次的深入，子节点的空间占位逐渐变小</li>
+</ul>
+</li>
+<li>圆锥法<ul>
+<li>在三维空间可视化层次数据，结合径向布局和正交布局</li>
+</ul>
+</li>
+</ul>
+<p>常规的径向图布局树节点往往呈几何倍的增长。而如果布局空间不是欧式空间，而为<strong>双曲空间</strong>，则圆周随半径的增加呈几何倍的增长，从而保证父节点与子节点有足够的距离。</p>
+<p>大尺度的层次结构，无法避免节点的重叠。解决方法：</p>
+<ul>
+<li>焦点+上下文</li>
+<li>兴趣度树（DOI Tree）</li>
+</ul>
+<h3 id="空间填充法"><a href="#空间填充法" class="headerlink" title="空间填充法"></a>空间填充法</h3><ul>
+<li>树图<ul>
+<li>使用矩形表示层次结构里的节点，父子层次关系用矩形之间的相互嵌套隐喻</li>
+<li>核心问题： 递归地分割空间采用的分割方法，如交替纵横切分法</li>
+<li>Voronoi树图法：任意多边形取代矩形空间</li>
+<li>树图 vs 节点-链接<ul>
+<li>优势：空间利用率高；根据节点的属性或权重，直观的考察比重大的节点</li>
+<li>劣势：空间嵌套的层次视觉效果不如节点-链接发直观；当层次深度较大时，也不是很直观</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>径向布局<ul>
+<li>旭日图（sunburst）：中心的圆表示根节点，各个层次用同心圆环表示。</li>
+<li>比较：空间利用率大于节点-链接法，小于树图法</li>
+<li>缺点：树结构的不平衡造成某一部分的扇形向外延伸很长，造成不合理的长宽比</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h3><p>混合使用节点-链接法与空间填充法</p>
+<ul>
+<li>相邻层次图（adjacency diagrams）</li>
+<li>弹性层次法</li>
+<li>扩展的旭日图法</li>
+</ul>
+<h2 id="网络数据"><a href="#网络数据" class="headerlink" title="网络数据"></a>网络数据</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;层次结构&quot;&gt;&lt;a href=&quot;#层次结构&quot; class=&quot;headerlink&quot; title=&quot;层次结构&quot;&gt;&lt;/a&gt;层次结构&lt;/h2&gt;&lt;p&gt;层次数据表现为包含、从属、承接（决策树、家谱）关系。&lt;/p&gt;
+&lt;h2 id=&quot;层次数据的可视化&quot;&gt;&lt;a href=&quot;#层次数
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>时变数据可视化</title>
+    <link href="http://yafei002.github.io/2016/11/15/%E6%97%B6%E5%8F%98%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>http://yafei002.github.io/2016/11/15/时变数据可视化/</id>
+    <published>2016-11-15T12:13:57.000Z</published>
+    <updated>2016-11-15T12:27:24.200Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
+<li>随时间变化，带有时间属性<ul>
+<li>语义分类<ul>
+<li>以时间轴排列的时间序列数据</li>
+<li>内部具有排列顺序的数据集，如生物DNA测序</li>
+</ul>
+</li>
+<li>实际应用中特点<ul>
+<li>量大</li>
+<li>维数多</li>
+<li>变量多</li>
+<li>流模式：无限长度时间轴</li>
+</ul>
+</li>
+<li>可视化方法<ul>
+<li>静态方法，不随时间变化，采用多视角、数据比较等体现数据规律</li>
+<li>动画方法，可视化领域主流观点，由于人类对动画的局限性，谨慎使用动画方式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="不同时间数据的可视化方式"><a href="#不同时间数据的可视化方式" class="headerlink" title="不同时间数据的可视化方式"></a>不同时间数据的可视化方式</h2><h3 id="时间属性可视化"><a href="#时间属性可视化" class="headerlink" title="时间属性可视化"></a>时间属性可视化</h3><ul>
+<li>刻画时间的三种方式<ul>
+<li>线性时间和周期时间</li>
+<li>时间点和时间间隔</li>
+<li>顺序时间、分支时间、多角度时间<ul>
+<li>顺序时间： 事件发生的先后</li>
+<li>分支时间： 一个决策的多个方案</li>
+<li>多角度时间： 例如不同目击者的报告</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="线性和周期时间可视化"><a href="#线性和周期时间可视化" class="headerlink" title="线性和周期时间可视化"></a>线性和周期时间可视化</h4><ul>
+<li>线性时间<ul>
+<li>标准的方式为x轴表示时间，y轴表示其他变量</li>
+<li>不能表示时间的周期性</li>
+</ul>
+</li>
+<li>周期时间<ul>
+<li>时间序列沿圆周排列，一个回路代表一个周期</li>
+<li>环状表示某时间段内的时间结构，体现数据的周期结构</li>
+<li>单个时间轴多个属性轴来表示顺序时间、点时间和多角度时间</li>
+<li>堆叠的语义流方法表达多个变量随时间演化的过程</li>
+<li>不同的属性采用不同的可视化通道表达</li>
+</ul>
+</li>
+</ul>
+<h4 id="日历时间可视化"><a href="#日历时间可视化" class="headerlink" title="日历时间可视化"></a>日历时间可视化</h4><p>参见示例</p>
+<h4 id="分支和多角度时间可视化"><a href="#分支和多角度时间可视化" class="headerlink" title="分支和多角度时间可视化"></a>分支和多角度时间可视化</h4><p>这类可视化分为线性、流状、树状、图状等</p>
+<h5 id="线性多角度时间可视化"><a href="#线性多角度时间可视化" class="headerlink" title="线性多角度时间可视化"></a>线性多角度时间可视化</h5><ul>
+<li>采用类似甘特图的方式呈现一个完整事件的历程和社会行为</li>
+<li>采用环形可视化呈现故事蕴含的周期特性</li>
+</ul>
+<h5 id="流状分支时间主线可视化"><a href="#流状分支时间主线可视化" class="headerlink" title="流状分支时间主线可视化"></a>流状分支时间主线可视化</h5><ul>
+<li>基于河流的可视隐喻可展示时序型事件随时间产生流动、合并、分叉和消失的效果，类似小说和电影的主线</li>
+</ul>
+<h5 id="时间属性的动态可视化"><a href="#时间属性的动态可视化" class="headerlink" title="时间属性的动态可视化"></a>时间属性的动态可视化</h5><ul>
+<li>适当的采用动态可视化方法，有助于用户了解整个事件的过程</li>
+</ul>
+<h4 id="多变量时变型数据可视化"><a href="#多变量时变型数据可视化" class="headerlink" title="多变量时变型数据可视化"></a>多变量时变型数据可视化</h4><p>对于多变量大尺度的时变数据的分析流程符合可视化的基本流程：全局摘要——缩放和过滤。可归纳为<br>三种方法</p>
+<ul>
+<li>数据抽象<ul>
+<li>数据降维、特征选取和数据简化等方法增强关键特征抑制不相关细节</li>
+</ul>
+</li>
+<li>聚类<ul>
+<li>核心是定义恰当的距离或相似性度量</li>
+</ul>
+</li>
+<li>特征分析，包括特征抽取、语义分析等操作<ul>
+<li>基于事件的可视化技术包含事件定义、事件抽取、语义分析</li>
+</ul>
+</li>
+</ul>
+<h5 id="基于线表示的可视化"><a href="#基于线表示的可视化" class="headerlink" title="基于线表示的可视化"></a>基于线表示的可视化</h5><p>高维抽象的时变数据具有宏观的、结构的、随时间变化的规律。将每个数据采样点相连形成一条高维<br>空间的线，在低维空间可视化这条线揭示高维空间的时间序列演化趋势。<br>步骤</p>
+<ol>
+<li>高维曲线采样， 频率由用户交互指定</li>
+<li>采样后的曲线分段，小段间可重叠。分段尺寸、重叠程度由用户交互指定</li>
+<li>用主元分析法将高维曲线投影到二维空间，显示和研究曲线的特性</li>
+</ol>
+<p>???</p>
+<h5 id="基于图结构的可视化"><a href="#基于图结构的可视化" class="headerlink" title="基于图结构的可视化"></a>基于图结构的可视化</h5><p>基于<strong>事件</strong>的时变或顺序数据可视化核心是<strong>事件演化的组织</strong>。</p>
+<ol>
+<li>根据需求和任务描述点从数据中找到与关注点相匹配的事件，从而对事件分类</li>
+<li>根据事件的特征描述从输入有序数据中检测事件，得到事件实例</li>
+<li>可视化检测到的事件</li>
+</ol>
+<h5 id="时间序列数据的可视化交互"><a href="#时间序列数据的可视化交互" class="headerlink" title="时间序列数据的可视化交互"></a>时间序列数据的可视化交互</h5><p>对大规模的时变数据需要设计合适的交互方法如有概览加上下文、层次细节等表现重要的领域。</p>
+<p>工具举例：TimeSearcher</p>
+<h4 id="流数据可视化"><a href="#流数据可视化" class="headerlink" title="流数据可视化"></a>流数据可视化</h4><p>特点：输入数据（全部或部分）不存储在可随机访问的磁盘或内存中，而是以一个或多个“连续数据流”<br>的形式到达。</p>
+<ul>
+<li>潜在大小或许无限</li>
+<li>在线到达，需实时处理，否则数据价值会随时间流动降低</li>
+<li>无法控制数据到达的顺序和质量</li>
+<li>数据处理后要么丢弃要么被归档存储</li>
+<li>查询异常情况和相似类型比较耗时，人工检测日志乏味且易出错</li>
+</ul>
+<h5 id="流数据可视化模型"><a href="#流数据可视化模型" class="headerlink" title="流数据可视化模型"></a>流数据可视化模型</h5><pre><code>流数据进入流处理器后经过整理大部分归档到数据库中，关键数据保存在可视化数据库中，然后被可视化
+处理器进行处理，经过用户的交互后返回到流处理器继续之前的同样的处理。
+</code></pre><p>流数据可是分析流水线：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/      </div><div class="line">        ————————时间分割—————————————————————</div><div class="line">        ↑                     ↓             ↓</div><div class="line">数据流———                   空间分割———————&gt;摘要/统计————&gt;统计模型/分析模型</div><div class="line">        ↓                     ↑             ↑</div><div class="line">        ————————聚合—————————————————————————</div></pre></td></tr></table></figure>
+<h5 id="流数据处理技术"><a href="#流数据处理技术" class="headerlink" title="流数据处理技术"></a>流数据处理技术</h5><ul>
+<li>传统数据挖掘的流数据改进算法<ul>
+<li>分类、聚类、频繁模式挖掘、降维等</li>
+</ul>
+</li>
+<li>大数据相关统计方法、采样算法、哈希算法等</li>
+<li>流数据特有算法<ul>
+<li>滑动窗口、数据预测等</li>
+</ul>
+</li>
+</ul>
+<p><strong>窗口技术</strong></p>
+<p>在数据集中如果最近的数据更被关心，窗口技术可以对数据在时间上进行限定。</p>
+<ul>
+<li>滑动窗口（sliding window）： 在时间轴上滑动窗口，挖掘窗口内的数据</li>
+<li>衰减窗口（decaying window）：考虑历史数据，为数据项添加随时间不断缩小的衰减因子，从而越老的数据权重越低</li>
+<li>时间盒（timebox）???：一种交互技术，通过时间盒框选部分数据进行联合搜索</li>
+</ul>
+<p><strong>时序数据相似性计算</strong></p>
+<p>???</p>
+<p><strong>符号技术</strong></p>
+<p>???</p>
+<h5 id="流数据可视化案例"><a href="#流数据可视化案例" class="headerlink" title="流数据可视化案例"></a>流数据可视化案例</h5><ul>
+<li>监控型，局部分析<ul>
+<li>用滑动窗口固定一个时间区间，将流数据转化为静态数据，数据更新方式可以是刷新</li>
+</ul>
+</li>
+<li>叠加型，历史型，全局分析<ul>
+<li>新数据映射到原来的历史数据可视化结果上，更新方式可谓渐进式更新</li>
+</ul>
+</li>
+</ul>
+<p>???</p>
+<h5 id="并行流计算框架"><a href="#并行流计算框架" class="headerlink" title="并行流计算框架"></a>并行流计算框架</h5><p>???</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;基础&quot;&gt;&lt;a href=&quot;#基础&quot; class=&quot;headerlink&quot; title=&quot;基础&quot;&gt;&lt;/a&gt;基础&lt;/h2&gt;&lt;h3 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h3&gt;&lt;ul&gt;
+&lt;
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据可视化基础</title>
+    <link href="http://yafei002.github.io/2016/11/15/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E5%9F%BA%E7%A1%80/"/>
+    <id>http://yafei002.github.io/2016/11/15/数据可视化基础/</id>
+    <published>2016-11-15T12:12:11.000Z</published>
+    <updated>2016-11-15T12:28:01.647Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="可视化中的数据"><a href="#可视化中的数据" class="headerlink" title="可视化中的数据"></a>可视化中的数据</h2><h3 id="数据认知"><a href="#数据认知" class="headerlink" title="数据认知"></a>数据认知</h3><ul>
+<li>数据模型：对数据的底层描述及对相关的操作</li>
+<li>概念模型：对数据的高层次描述。定义数据的概念和它们之间的联系，定义数据的语义和它们的含义</li>
+</ul>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ul>
+<li>根据数据模型<ul>
+<li>浮点数、整数、字符等</li>
+</ul>
+</li>
+<li>根据概念模型<ul>
+<li>如汽车、摩托车、自行车等分类数据</li>
+</ul>
+</li>
+<li>根据测量标度<ul>
+<li>类别型、有序型、数值型</li>
+</ul>
+</li>
+</ul>
+<h2 id="可视化的基本图表"><a href="#可视化的基本图表" class="headerlink" title="可视化的基本图表"></a>可视化的基本图表</h2><ul>
+<li>原始数据绘图<ul>
+<li>轨迹图</li>
+<li>柱状图</li>
+<li>直方图</li>
+<li>饼图：呈现各分量在整体中的比例</li>
+<li>等值线图： 将相等的数据点连线表示数据的连续分布和变化规律</li>
+<li>走势图： 一种紧凑并简洁的数据趋势表达方式，通常以折线图为基础嵌入文本或表格中</li>
+<li>散点图和散点图矩阵<ul>
+<li>散点图表示二维数据的标准方法</li>
+<li>散点图矩阵式散点图的高维扩展，用来表示高维（大于二维）的数据属性分布</li>
+</ul>
+</li>
+<li>维恩图（Venn diagram）<ul>
+<li>使用平面上的封闭图形来表示数据集合间的关系</li>
+</ul>
+</li>
+<li>热力图<ul>
+<li>用颜色表达与位置相关的二维数据数值的大小</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>简单的统计值标绘<ul>
+<li>盒须图（箱形图，box-plot）<ul>
+<li>一维盒须图可扩展为二维盒须图</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>多视图协调关联</li>
+</ul>
+<p>注：直方图和柱状图的区别：“直方图一般用来描述等距数据或等比数据；柱形图一般用来描述称名数据或顺序数据。直观上，直方图矩形之间是衔接在一起的，表示数据间的数学关系；柱形图则留有空隙，表示仅作为两个或多个不同的类，而不具有数学相关性质。”转自<a href="https://www.zhihu.com/question/26894953" target="_blank" rel="external">这里</a></p>
+<h2 id="可视化设计原则"><a href="#可视化设计原则" class="headerlink" title="可视化设计原则"></a>可视化设计原则</h2><ul>
+<li>准确</li>
+<li>直观</li>
+<li>美观</li>
+</ul>
+<h3 id="直观"><a href="#直观" class="headerlink" title="直观"></a>直观</h3><h4 id="视图选择与交互设计"><a href="#视图选择与交互设计" class="headerlink" title="视图选择与交互设计"></a>视图选择与交互设计</h4><p>成功的可视化首先考虑的是被用户广泛认可并成熟的视图设计。</p>
+<p>如：</p>
+<ul>
+<li>滚动和缩放</li>
+<li>颜色映射</li>
+<li>数据映射方式的控制，即除首先确定默认的直观的数据到可视化的呈现方案，其次提供其他的呈现方式供用户选择</li>
+<li>数据缩放和裁剪工具</li>
+<li>细节层次（level of detail）控制， 隐藏或突出数据的细节部分</li>
+</ul>
+<h4 id="数据筛选"><a href="#数据筛选" class="headerlink" title="数据筛选"></a>数据筛选</h4><p>过多过少均不合适，可以</p>
+<ul>
+<li>用户选择显示的部分数据，隐藏其他</li>
+<li>使用多视图或多显示器，数据根据它们的相关性分别显示</li>
+</ul>
+<h3 id="美观"><a href="#美观" class="headerlink" title="美观"></a>美观</h3><ul>
+<li>使用表格<ul>
+<li>过多过少均使数据缺乏准确和美观性</li>
+<li>区间的均匀性也对用户理解很重要</li>
+</ul>
+</li>
+<li>错误的或过多的使用颜色映射容易造成视觉混乱</li>
+<li>可视化是功能和形式的完美结合<ul>
+<li>聚焦，将用户注意力集中在重要区域</li>
+<li>平衡，有效利用可视化空间</li>
+<li>简单，避免视觉混乱，但也要主语过滤而来的信息损失，寻找其中的平衡</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;可视化中的数据&quot;&gt;&lt;a href=&quot;#可视化中的数据&quot; class=&quot;headerlink&quot; title=&quot;可视化中的数据&quot;&gt;&lt;/a&gt;可视化中的数据&lt;/h2&gt;&lt;h3 id=&quot;数据认知&quot;&gt;&lt;a href=&quot;#数据认知&quot; class=&quot;headerlink&quot; titl
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据</title>
+    <link href="http://yafei002.github.io/2016/11/15/%E6%95%B0%E6%8D%AE/"/>
+    <id>http://yafei002.github.io/2016/11/15/数据/</id>
+    <published>2016-11-15T12:08:49.000Z</published>
+    <updated>2016-11-15T12:27:49.900Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="关于数据"><a href="#关于数据" class="headerlink" title="关于数据"></a>关于数据</h2><h3 id="释义"><a href="#释义" class="headerlink" title="释义"></a>释义</h3><p>数据是符号的集合，是表达客观事物的未加工的原始素材。可以看成是数据对象及其属性大的集合。</p>
+<h3 id="数据分类"><a href="#数据分类" class="headerlink" title="数据分类"></a>数据分类</h3><p>从关系模型角度可以分为实体和关系，关系和实体可以包含属性，属性分为离散属性和连续属性。</p>
+<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><p>数据集是数据的实例。常见的数据集分为</p>
+<ul>
+<li>数据纪录集<ul>
+<li>数据矩阵</li>
+<li>文档向量</li>
+<li>事务处理数据</li>
+</ul>
+</li>
+<li>图数据集</li>
+<li>有序数据集——具有某种顺序的数据集<ul>
+<li>常见如空间数据、时间数据、时空数据、顺序数据等</li>
+</ul>
+</li>
+</ul>
+<p>另一种分类是考察数据模型的结构。分为</p>
+<ul>
+<li>结构化数据（如RDBMS储存的数据）</li>
+<li>非结构化数据（如文本、视频、图像等）</li>
+<li>半结构化数据（如XML、维基百科等）</li>
+</ul>
+<h2 id="数据获取和预处理"><a href="#数据获取和预处理" class="headerlink" title="数据获取和预处理"></a>数据获取和预处理</h2><h3 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h3><p>大数据时代数据开始变得廉价，数据的获取途径多种多样。传统数据获取以文件的输入/输出为主。在移动互联网时代以基于网络的多源数据交换为主流。数据获取的挑战主要有数据格式变换和异构异质数据的获取协议两部分。</p>
+<p>在科研领域有数据获取协议（Data Access Protocol）作为一种通用的数据获取标准。在互联网上很多企业及机构也会共享免费数据。</p>
+<h3 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h3><p>常见的数据元操作</p>
+<ul>
+<li>合并</li>
+<li>采样</li>
+<li>降维</li>
+<li>特征子集选择——可达到降维的效果，但不改变数据的属性结构</li>
+<li>特征生成——在原始数据集上构建新的能反映数据集重要信息的属性</li>
+<li>离散化与二值化——其中将数据区间映射到[0,1]区间的方法称为归一化</li>
+<li>属性变换——将某个属性的所有可能取值映射到另一个空间 ，如指数变化、取绝对值。其中标准化和归一化为两类特殊的属性变化。</li>
+</ul>
+<h2 id="数据组织和管理"><a href="#数据组织和管理" class="headerlink" title="数据组织和管理"></a>数据组织和管理</h2><p>由于错误、无关的信息的产生和引入，数据需要控制来进行后续的分析。<br>数据管理包括对数据进行有效的收集、存储、处理和应用的过程。</p>
+<h3 id="数据清洗与精简"><a href="#数据清洗与精简" class="headerlink" title="数据清洗与精简"></a>数据清洗与精简</h3><p>数据质量问题包括：噪声和离群值、数值缺失、数值重复等。解决方法为数据清洗。<br>在数据清洗中，可视化是一种有效的展示和交互手段。</p>
+<p>数据精简可用于提升大规模数据查询和管理的交互性。分析和推理只需要定性的结果，采用近似解可提高对大数据的精简效率。</p>
+<h3 id="数据整合与集成"><a href="#数据整合与集成" class="headerlink" title="数据整合与集成"></a>数据整合与集成</h3><p>来自不同数据源的数据具有高度异构的特点，即不同的数据模型、不同的数据类型、不同的命名方法、不同的数据单元、以及不同的质量等。</p>
+<p>对异构数据的处理，首先需要数据整合，即将不同的数据源进行采集、清洗、精简和转换后统一融合在一个数据集合中，并提供同一的数据视图的数据集成方式。</p>
+<p>数据整合有两种方法</p>
+<ul>
+<li>物化式：查询之前，涉及的数据块移动到统一物理位置。</li>
+<li>虚拟式：不同的数据源上增加转换策略，构建一个虚拟层，来提供统一的数据访问接口。常使用到中间件技术，定义虚拟数据层之上数据映射关系，同时将不同的数据源在语义上进行融合。</li>
+</ul>
+<p>交互分析和可视数据要求数据整合采用集中式、虚拟式的模式。</p>
+<p>解决方案1</p>
+<ul>
+<li>采用工具或中间件对数据源包装和联合数据库</li>
+<li>提供通用模型用于交换异构数据和实现物理层的透明，同时处理异构性，保存数据源的自主性及保证可扩展性</li>
+</ul>
+<p>解决方案2（更优）</p>
+<ul>
+<li>基于计算查询理念的语义整合，利用应用领域的概念视图而不是数据源的普通描述来提供概念数据的透明性</li>
+</ul>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>数据库是数据的集合，并包含对数据的相关组织和操作。数据库管理系统通常包括数据库模型设计、数据分析支持、并发和容错、速度和存储容量。</p>
+<p>数据模型包括基于对象的E-R和基于记录的关系逻辑模型。</p>
+<ul>
+<li>关系型数据库（RDBMS）</li>
+<li>数据结构和数据内容分离，具有ACID事务性。<ul>
+<li>Cons<ul>
+<li>交互式可视化应用通常将数据保存在内存从而保证足够的性能</li>
+<li>SQL支持存储导向而不是语义导向的数据</li>
+<li>关系型数据库采用触发器机制实现，难以满足实时性的需求</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>NoSQL数据库<ul>
+<li>支持灵活的数据模型</li>
+<li>高扩展性，高可用性</li>
+<li>BASE(basic availability, soft state, eventual consistency)</li>
+<li>根据数据结构的不同，分为：文档数据库（CouchDB, MongoDB）、网络数据库（Neo4j）、键值数据库（Dynamo, memcashed, Redis）、列数据库（HBase）</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据仓库"><a href="#数据仓库" class="headerlink" title="数据仓库"></a>数据仓库</h3><p>“数据仓库是指面向主题的、集成的、与时间相关的、主要用于存储的数据集合，支持管理部门的决策过程。”</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
+<li>特定的应用方向</li>
+<li>集成多个异构数据源的数据</li>
+<li>时变性</li>
+<li>非易失性（相对稳定性），数据只进行刷新，不进行更新处理</li>
+<li>数据源于外部，并开放给外部应用</li>
+<li>基本架构师数据流入/流出的过程，分为三层：源数据、数据仓库、数据应用</li>
+<li>流水线称为ETL, 即<ul>
+<li>抽取（Extract）</li>
+<li>转化（Transfer）， 数据变换操作，主要有清理、重构、标准化等</li>
+<li>装载（Load），将数据按一定存储格式储存</li>
+</ul>
+</li>
+<li>要求每个组建可重用，支持并行操作，提高处理效率</li>
+</ul>
+<h3 id="不同于一般数据库的特点"><a href="#不同于一般数据库的特点" class="headerlink" title="不同于一般数据库的特点"></a>不同于一般数据库的特点</h3><ul>
+<li>数据仓库围绕某个应用目标</li>
+<li>可以不断更新和增长</li>
+<li>为复杂的决策支持查询进行了大量的优化</li>
+<li>结构化或非结构化数据都能被处理，并提供两种数据的整合功能</li>
+</ul>
+<p><img src="img/dwh.png" alt="Database vs Data Warehouse"></p>
+<h2 id="数据分析与挖掘"><a href="#数据分析与挖掘" class="headerlink" title="数据分析与挖掘"></a>数据分析与挖掘</h2><h3 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h3><ul>
+<li>定义：指有组织有目的的采集、分析、概括和总结数据，从中提取有用的信息形成结论的过程</li>
+<li>从统计应用上分为<ul>
+<li>描述性统计分析<ul>
+<li>“描述统计是将研究中所得的数据加以整理、归类、简化或绘制成图表，以此描述和归纳数据的特征及变量之间的关系的一种最基本的统计方法。描述统计主要涉及数据的集中趋势、离散程度和相关强度，最常用的指标有平均数()、标准差(σx)、相关系数(r)等。”</li>
+</ul>
+</li>
+<li>探索式数据分析，强调从数据中找出之前未发现的特征和信息</li>
+<li>验证性数据分析，强调通过数据分析验证或证伪已提出的假说</li>
+</ul>
+</li>
+</ul>
+<p>探索式数据分析 vs 传统统计分析</p>
+<ul>
+<li>前者：关注数据本身，包括结构、离群值、异常值、数据导出的模型</li>
+<li>后者：关注模型，即估计模型的参数，从模型生成预测值</li>
+</ul>
+<p>探索式数据分析 vs 统计分析 vs 贝叶斯分析流程</p>
+<ul>
+<li>前：问题—数据—分析—模型—结论</li>
+<li>中：问题—数据—模型—分析—结论</li>
+<li>后：问题—数据—模型—先验分布—结论</li>
+</ul>
+<p>探索式数据分析 vs 数据挖掘</p>
+<ul>
+<li>前者：将聚类和异常检测看成探索式过程</li>
+<li>后者：关注模型的选择和参数的调节</li>
+</ul>
+<h3 id="联机分析处理（OLAP）"><a href="#联机分析处理（OLAP）" class="headerlink" title="联机分析处理（OLAP）"></a>联机分析处理（OLAP）</h3><p>表单转换为多维数组的步骤</p>
+<ol>
+<li>确定作为多维数组索引项的属性集合，必须具有离散值</li>
+<li>确定作为多维数组数据项的熟悉，通常为一个数值</li>
+</ol>
+<p>由于数据立方的高维度和大尺度，联机分析处理的挑战时设计高度交互的方法。</p>
+<ul>
+<li>方案一：预计算并存储不同层级的聚合值，以便减小数据尺度</li>
+<li>方案二：根据系统的可用性，将任意时刻处理对象限制于部分数据维度</li>
+</ul>
+<p>基本操作</p>
+<ul>
+<li>切片和切块，均等价于在整个数组中选择子集<ul>
+<li>切片：一个或多个维度上具有给定的属性值的数据项</li>
+<li>切块：从数据立方中选择属性值位于某个给定范围的数据子集</li>
+</ul>
+</li>
+<li>汇总和钻取：具有层次结构的属性值通常嵌套成一个树状或网状结构。通过向上汇总和向下钻取的方法获取数据在不同层次属性的数据值</li>
+</ul>
+<h3 id="数据挖掘"><a href="#数据挖掘" class="headerlink" title="数据挖掘"></a>数据挖掘</h3><p>数据挖掘是指设定特定的算法，从大量的数据集中去探索发现知识或者模式的理论和方法。</p>
+<p>数据挖掘任务：</p>
+<ul>
+<li>预测性方法：基于某些变量预测其他变量的预测值<ul>
+<li>分类</li>
+<li>回归</li>
+<li>偏差检测</li>
+</ul>
+</li>
+<li>描述性方法：以人类可以理解的模式描述数据<ul>
+<li>聚类</li>
+<li>概念描述</li>
+<li>关联规则挖掘</li>
+<li>序列模式挖掘</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;关于数据&quot;&gt;&lt;a href=&quot;#关于数据&quot; class=&quot;headerlink&quot; title=&quot;关于数据&quot;&gt;&lt;/a&gt;关于数据&lt;/h2&gt;&lt;h3 id=&quot;释义&quot;&gt;&lt;a href=&quot;#释义&quot; class=&quot;headerlink&quot; title=&quot;释义&quot;&gt;&lt;/a&gt;释义&lt;/h
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>视觉感知与认知</title>
+    <link href="http://yafei002.github.io/2016/11/15/%E8%A7%86%E8%A7%89%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%AE%A4%E7%9F%A5/"/>
+    <id>http://yafei002.github.io/2016/11/15/视觉感知与认知/</id>
+    <published>2016-11-15T12:03:07.000Z</published>
+    <updated>2016-11-15T12:27:38.850Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概念理解"><a href="#概念理解" class="headerlink" title="概念理解"></a>概念理解</h2><blockquote>
+<p>感知： 客观事物通过感觉器官在人脑中的直接反映</p>
+<p>认知：在认识的活动中个体对视觉信号接收、检测、转换、简约、合成、编码、存储、提取、重建、概念形成、判断和问题解决的信息加工处理过程。</p>
+</blockquote>
+<p>视觉分为<code>低阶视觉</code>和<code>高阶视觉</code>。</p>
+<p>低阶视觉与物体的<code>物理性质</code>相关，包括深度、形状、边界、表面材质等。</p>
+<p>高阶视觉包括对物体的 <code>识别和分类</code>，属于人类认知能力的重要组成部分。</p>
+<p>人工智能可以部分模仿低阶视觉，但无法模仿高阶视觉。人类视觉感知文字、数字等非形象化信息的能力远低于感知形象化视觉符号的理解。</p>
+<h2 id="格式塔理论"><a href="#格式塔理论" class="headerlink" title="格式塔理论"></a>格式塔理论</h2><p><strong>基本思想</strong>: 视觉形象首先作为统一的整体而被认知，而后才以部分的形式被认知。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原则</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">贴近原则</td>
+<td style="text-align:center">视觉元素相近时易被认为是一组</td>
+</tr>
+<tr>
+<td style="text-align:center">相似原则</td>
+<td style="text-align:center">根据事物的相似性分组</td>
+</tr>
+<tr>
+<td style="text-align:center">连续原则</td>
+<td style="text-align:center">倾向沿着物体的边界，将非连续的物体视为连续的。数据间隔较大时，容易造成感知和实际数据不符。</td>
+</tr>
+<tr>
+<td style="text-align:center">闭合原则</td>
+<td style="text-align:center">只要物体的形状注意表征整体，即使物体是不完整或不闭合的，也会被视为整个整体而忽略未闭合的特征。</td>
+</tr>
+<tr>
+<td style="text-align:center">共势原则</td>
+<td style="text-align:center">如果一组物体沿着相似的光滑路径运动趋势或具有相似的排列模式，人眼会将他们视为同一类物体。</td>
+</tr>
+<tr>
+<td style="text-align:center">好图原则</td>
+<td style="text-align:center">人眼会自动将一组物体按照简单、规则、有序的元素排列方式识别，而消除复杂性或不熟悉性。</td>
+</tr>
+<tr>
+<td style="text-align:center">对称原则</td>
+<td style="text-align:center">人眼倾向将物体视为沿某点或某轴对称的形状。</td>
+</tr>
+<tr>
+<td style="text-align:center">经验原则</td>
+<td style="text-align:center">视觉感知与过去的经验有关</td>
+</tr>
+</tbody>
+</table>
+<p>应用到可视化：视图需以一种直观、绝大多数用户可以容易理解的数据-可视化映射对需要可视化的信息进行编码。</p>
+<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h2><p>人眼能分辨的颜色：可见光谱和不同波长光谱色合成的合成色（如洋红、粉红等）</p>
+<h3 id="人眼工学系统"><a href="#人眼工学系统" class="headerlink" title="人眼工学系统"></a>人眼工学系统</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">角膜（将光线聚焦于晶状体）-&gt;</div><div class="line">瞳孔（控制光线的接收量）-&gt;</div><div class="line">晶状体（类似凸透镜，聚焦看到的物体）-&gt;</div><div class="line">视网膜（光感细胞：杆状细胞和锥状细胞）-&gt;</div><div class="line">视觉神经-&gt;</div><div class="line">大脑</div></pre></td></tr></table></figure>
+<ul>
+<li>杆状细胞：对光的刺激比其他感光细胞敏感10倍，因而很强的暗视觉。白天对视觉刺激饱和，不产生视觉感知作用。</li>
+<li>锥状细胞：仅对明亮光线产生刺激，因此形成明视觉。</li>
+</ul>
+<h3 id="颜色与视觉"><a href="#颜色与视觉" class="headerlink" title="颜色与视觉"></a>颜色与视觉</h3><p>光本身为电磁波不具有颜色性质。<br>颜色有物体材料属性、光源中各种波长分布和人的心理认知所决定。即使一种心理生理现象，又是一种心理物理现象。</p>
+<p>颜色视觉互补理论：<code>三色视觉理论</code>（L、M和S锥状细胞）和<code>补色过程理论</code></p>
+<h3 id="色彩空间"><a href="#色彩空间" class="headerlink" title="色彩空间"></a>色彩空间</h3><p>根据视网膜上三种感光器，即三种锥状细胞，原则上颜色可由三种参数决定。</p>
+<ul>
+<li>RGB\CMYK(青色、品红色、黄色、黑色)</li>
+<li>HSV\HSL</li>
+</ul>
+<p><code>绝对色彩空间</code>: 不依赖外部元素可以准确表示颜色的色彩空间</p>
+<p><code>相对色彩空间</code>：色彩空间无法通过一组值准确的表达颜色。如RGB色彩空间需要规定色彩配置文件达到绝对色彩空间。</p>
+<h2 id="视觉编码原则"><a href="#视觉编码原则" class="headerlink" title="视觉编码原则"></a>视觉编码原则</h2><p>对数据进行可视化元素映射时。需要遵循人类视觉感知的基本编码原则。</p>
+<h3 id="相对判断和视觉假象"><a href="#相对判断和视觉假象" class="headerlink" title="相对判断和视觉假象"></a>相对判断和视觉假象</h3><p>人类感知系统的工作原理，决定于对所观察事物的<code>相对判断</code>。这里的相对是指存在一个参照物来进行对照。</p>
+<p><code>视觉假象</code>是指人们通过眼睛所获取的信息被大脑处理后形成的关于事物的感知。<br>不合理的设定事务的上下文环境，会导致判断真实性的失效。<br>感知系统对于亮度和颜色的判断，完全是基于周围环境的。</p>
+<h2 id="标记和视觉通道"><a href="#标记和视觉通道" class="headerlink" title="标记和视觉通道"></a>标记和视觉通道</h2><p>可视化编码是信息可视化的核心内容，是将数据信息映射成可视化元素的技术。</p>
+<p><code>数据</code>包含了<code>属性和值</code>。可视化编码由两方面组成：<code>标记</code>和用于控制标记的视觉特征的<code>视觉通道</code>。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">种类</th>
+<th style="text-align:center">元素</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">标记</td>
+<td style="text-align:center">几何图形元素，如，点线面体等</td>
+<td style="text-align:center">分类，编码不同的数据</td>
+</tr>
+<tr>
+<td style="text-align:center">视觉通道</td>
+<td style="text-align:center">标记的位置，大小，形状，方向，色调，饱和度，亮度等</td>
+<td style="text-align:center">分类性质和定量性质</td>
+</tr>
+</tbody>
+</table>
+<p>视觉编码通道是<code>有限</code>的。过度地使用视觉通道编码同一数据属性，可能会导致视觉通道被消耗完，而无法编码其它数据属性。</p>
+<p>不同的视觉通道在表达信息的作用和能力上可能具有截然<code>不同的特性</code>,例如人们在理解长度上，能够比理解面积更精确。</p>
+<h3 id="视觉通道的类型"><a href="#视觉通道的类型" class="headerlink" title="视觉通道的类型"></a>视觉通道的类型</h3><p>人类感知系统在获取周围信息存在两种最基本的感知模式</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">感知模式</th>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">种类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">定性性质或分类性质</td>
+<td style="text-align:center">描述对象是什么或在哪里</td>
+<td style="text-align:center">形状，颜色的色调，空间位置等</td>
+</tr>
+<tr>
+<td style="text-align:center">定量性质或定序性质</td>
+<td style="text-align:center">描述对象某一属性的具体数值多少</td>
+<td style="text-align:center">大部分的视觉通道，如，直线长度，区域面积，空间体积，斜度，角度，颜色的饱和度，亮度等</td>
+</tr>
+</tbody>
+</table>
+<p>视觉通道的第三种性质是<code>分组性质</code></p>
+<ul>
+<li>接近性</li>
+<li>颜色相似性</li>
+<li>显式连接</li>
+<li>显式包围</li>
+</ul>
+<h3 id="视觉通道表现力和有效性"><a href="#视觉通道表现力和有效性" class="headerlink" title="视觉通道表现力和有效性"></a>视觉通道表现力和有效性</h3><p>知道可视化设计者如何挑选合适的视觉通道。</p>
+<ul>
+<li>用<code>表现力更高</code>的视觉通道编码数据中<code>更重要</code>的数据属性, 从而使用户在更短的时间内更加精确地获取数据信息。</li>
+<li>尽量忠于原始数据所包含的信息。例如有序的数据使用定序而非定性的视觉通道对数据进行编码。</li>
+</ul>
+<h3 id="表现力判断标准"><a href="#表现力判断标准" class="headerlink" title="表现力判断标准"></a>表现力判断标准</h3><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概念理解&quot;&gt;&lt;a href=&quot;#概念理解&quot; class=&quot;headerlink&quot; title=&quot;概念理解&quot;&gt;&lt;/a&gt;概念理解&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;感知： 客观事物通过感觉器官在人脑中的直接反映&lt;/p&gt;
+&lt;p&gt;认知：在认识的活动中个体对视觉信号接
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据可视化简介</title>
+    <link href="http://yafei002.github.io/2016/11/15/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AE%80%E4%BB%8B/"/>
+    <id>http://yafei002.github.io/2016/11/15/数据可视化简介/</id>
+    <published>2016-11-15T12:01:53.000Z</published>
+    <updated>2016-11-15T12:28:13.430Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h2><p>信息化时代面临的一个巨大的挑战是数据爆炸。这个挑战不仅在于数据量的体量、高维、多源、多态的特性，还体现在数据获取的动态性、数据内容大的噪声和互相矛盾、数据关系的异构和异质性等，从而导致人类分析数据的能力远远落后于数据获取的能力，由此演化为一门新的科学：数据科学。</p>
+<p>信息学科领域最基本的模型“数据（data）、信息（information）、知识（knowledge）、智慧（wisdom)构成了信息科学的基础理论，同时也是数据科学何种的一种数据处理流程，完成原始数据的转化。</p>
+<p>数据是对目标观察和记录的结果，本身没有用途。<br>信息是被赋予了意义和目标的数据。<br>知识是一种抽象的概念，但可以帮助我们去应用或行动的信息。<br>理解是知识与智慧的一种状态，是一种对为什么的理解。<br>智慧是被评估过得理解。</p>
+<h2 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h2><p>数据可视化的作用体现于从看见物体到获取知识的过程。它兼具知识的获取与艺术的表达，两者同时同在，从而达到真、善、美的均衡，有效的挖掘数据中蕴含的信息、知识与思想。<br>真，即真实性，反应数据的本质和对事物与规律的真实的感受和认知。<br>善，即倾向性，表达对社会和生活具体的含义和影响。<br>美，即艺术性，是艺术与内容的和谐统一。</p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>数据可视化分为科学可视化（处理科学数据）、信息可视化(处理抽象、非结构化的数据）与可视分析（体现数据分析的重要性）。<br>科学可视化根据数据的种类分为标量（单个数值如密度、温度）、向量（有方向和趋势的值，如风向和力场）和张量（矢量的推广如压力和弥散）。<br>信息可视化处理的对象为抽象、非结构化的数据集合，如文本、图表、层次结构、地图等。<br>可视分析学是一门以可视交互界面为基础的分析推理科学。它有效的结合人脑智能和机器智能，以视觉感知为通道，通过可视交互界面，形成人脑和机器智能的双向转换，降低数据的复杂度到人脑与机器智能均可处理的范围。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;发展&quot;&gt;&lt;a href=&quot;#发展&quot; class=&quot;headerlink&quot; title=&quot;发展&quot;&gt;&lt;/a&gt;发展&lt;/h2&gt;&lt;p&gt;信息化时代面临的一个巨大的挑战是数据爆炸。这个挑战不仅在于数据量的体量、高维、多源、多态的特性，还体现在数据获取的动态性、数据内容大的噪声和
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
   </entry>
   

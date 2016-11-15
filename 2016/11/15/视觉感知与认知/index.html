@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword" content="undefined">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Yafei002" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        视觉感知与认知｜undefined
+        
+    </title>
+
+    <link rel="canonical" href="http://yafei002.github.io/2016/11/15/视觉感知与认知/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('undefined')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Yafei002
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>视觉感知与认知</h1>
+                    
+                    <span class="meta">
+                         作者 yafei002
+                        <span>
+                          日期 2016-11-15
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#数据可视化"
+                           title="数据可视化">数据可视化</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            视觉感知与认知
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="概念理解"><a href="#概念理解" class="headerlink" title="概念理解"></a>概念理解</h2><blockquote>
+<p>感知： 客观事物通过感觉器官在人脑中的直接反映</p>
+<p>认知：在认识的活动中个体对视觉信号接收、检测、转换、简约、合成、编码、存储、提取、重建、概念形成、判断和问题解决的信息加工处理过程。</p>
+</blockquote>
+<p>视觉分为<code>低阶视觉</code>和<code>高阶视觉</code>。</p>
+<p>低阶视觉与物体的<code>物理性质</code>相关，包括深度、形状、边界、表面材质等。</p>
+<p>高阶视觉包括对物体的 <code>识别和分类</code>，属于人类认知能力的重要组成部分。</p>
+<p>人工智能可以部分模仿低阶视觉，但无法模仿高阶视觉。人类视觉感知文字、数字等非形象化信息的能力远低于感知形象化视觉符号的理解。</p>
+<h2 id="格式塔理论"><a href="#格式塔理论" class="headerlink" title="格式塔理论"></a>格式塔理论</h2><p><strong>基本思想</strong>: 视觉形象首先作为统一的整体而被认知，而后才以部分的形式被认知。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原则</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">贴近原则</td>
+<td style="text-align:center">视觉元素相近时易被认为是一组</td>
+</tr>
+<tr>
+<td style="text-align:center">相似原则</td>
+<td style="text-align:center">根据事物的相似性分组</td>
+</tr>
+<tr>
+<td style="text-align:center">连续原则</td>
+<td style="text-align:center">倾向沿着物体的边界，将非连续的物体视为连续的。数据间隔较大时，容易造成感知和实际数据不符。</td>
+</tr>
+<tr>
+<td style="text-align:center">闭合原则</td>
+<td style="text-align:center">只要物体的形状注意表征整体，即使物体是不完整或不闭合的，也会被视为整个整体而忽略未闭合的特征。</td>
+</tr>
+<tr>
+<td style="text-align:center">共势原则</td>
+<td style="text-align:center">如果一组物体沿着相似的光滑路径运动趋势或具有相似的排列模式，人眼会将他们视为同一类物体。</td>
+</tr>
+<tr>
+<td style="text-align:center">好图原则</td>
+<td style="text-align:center">人眼会自动将一组物体按照简单、规则、有序的元素排列方式识别，而消除复杂性或不熟悉性。</td>
+</tr>
+<tr>
+<td style="text-align:center">对称原则</td>
+<td style="text-align:center">人眼倾向将物体视为沿某点或某轴对称的形状。</td>
+</tr>
+<tr>
+<td style="text-align:center">经验原则</td>
+<td style="text-align:center">视觉感知与过去的经验有关</td>
+</tr>
+</tbody>
+</table>
+<p>应用到可视化：视图需以一种直观、绝大多数用户可以容易理解的数据-可视化映射对需要可视化的信息进行编码。</p>
+<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h2><p>人眼能分辨的颜色：可见光谱和不同波长光谱色合成的合成色（如洋红、粉红等）</p>
+<h3 id="人眼工学系统"><a href="#人眼工学系统" class="headerlink" title="人眼工学系统"></a>人眼工学系统</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">角膜（将光线聚焦于晶状体）-&gt;</div><div class="line">瞳孔（控制光线的接收量）-&gt;</div><div class="line">晶状体（类似凸透镜，聚焦看到的物体）-&gt;</div><div class="line">视网膜（光感细胞：杆状细胞和锥状细胞）-&gt;</div><div class="line">视觉神经-&gt;</div><div class="line">大脑</div></pre></td></tr></table></figure>
+<ul>
+<li>杆状细胞：对光的刺激比其他感光细胞敏感10倍，因而很强的暗视觉。白天对视觉刺激饱和，不产生视觉感知作用。</li>
+<li>锥状细胞：仅对明亮光线产生刺激，因此形成明视觉。</li>
+</ul>
+<h3 id="颜色与视觉"><a href="#颜色与视觉" class="headerlink" title="颜色与视觉"></a>颜色与视觉</h3><p>光本身为电磁波不具有颜色性质。<br>颜色有物体材料属性、光源中各种波长分布和人的心理认知所决定。即使一种心理生理现象，又是一种心理物理现象。</p>
+<p>颜色视觉互补理论：<code>三色视觉理论</code>（L、M和S锥状细胞）和<code>补色过程理论</code></p>
+<h3 id="色彩空间"><a href="#色彩空间" class="headerlink" title="色彩空间"></a>色彩空间</h3><p>根据视网膜上三种感光器，即三种锥状细胞，原则上颜色可由三种参数决定。</p>
+<ul>
+<li>RGB\CMYK(青色、品红色、黄色、黑色)</li>
+<li>HSV\HSL</li>
+</ul>
+<p><code>绝对色彩空间</code>: 不依赖外部元素可以准确表示颜色的色彩空间</p>
+<p><code>相对色彩空间</code>：色彩空间无法通过一组值准确的表达颜色。如RGB色彩空间需要规定色彩配置文件达到绝对色彩空间。</p>
+<h2 id="视觉编码原则"><a href="#视觉编码原则" class="headerlink" title="视觉编码原则"></a>视觉编码原则</h2><p>对数据进行可视化元素映射时。需要遵循人类视觉感知的基本编码原则。</p>
+<h3 id="相对判断和视觉假象"><a href="#相对判断和视觉假象" class="headerlink" title="相对判断和视觉假象"></a>相对判断和视觉假象</h3><p>人类感知系统的工作原理，决定于对所观察事物的<code>相对判断</code>。这里的相对是指存在一个参照物来进行对照。</p>
+<p><code>视觉假象</code>是指人们通过眼睛所获取的信息被大脑处理后形成的关于事物的感知。<br>不合理的设定事务的上下文环境，会导致判断真实性的失效。<br>感知系统对于亮度和颜色的判断，完全是基于周围环境的。</p>
+<h2 id="标记和视觉通道"><a href="#标记和视觉通道" class="headerlink" title="标记和视觉通道"></a>标记和视觉通道</h2><p>可视化编码是信息可视化的核心内容，是将数据信息映射成可视化元素的技术。</p>
+<p><code>数据</code>包含了<code>属性和值</code>。可视化编码由两方面组成：<code>标记</code>和用于控制标记的视觉特征的<code>视觉通道</code>。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">种类</th>
+<th style="text-align:center">元素</th>
+<th style="text-align:center">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">标记</td>
+<td style="text-align:center">几何图形元素，如，点线面体等</td>
+<td style="text-align:center">分类，编码不同的数据</td>
+</tr>
+<tr>
+<td style="text-align:center">视觉通道</td>
+<td style="text-align:center">标记的位置，大小，形状，方向，色调，饱和度，亮度等</td>
+<td style="text-align:center">分类性质和定量性质</td>
+</tr>
+</tbody>
+</table>
+<p>视觉编码通道是<code>有限</code>的。过度地使用视觉通道编码同一数据属性，可能会导致视觉通道被消耗完，而无法编码其它数据属性。</p>
+<p>不同的视觉通道在表达信息的作用和能力上可能具有截然<code>不同的特性</code>,例如人们在理解长度上，能够比理解面积更精确。</p>
+<h3 id="视觉通道的类型"><a href="#视觉通道的类型" class="headerlink" title="视觉通道的类型"></a>视觉通道的类型</h3><p>人类感知系统在获取周围信息存在两种最基本的感知模式</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">感知模式</th>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">种类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">定性性质或分类性质</td>
+<td style="text-align:center">描述对象是什么或在哪里</td>
+<td style="text-align:center">形状，颜色的色调，空间位置等</td>
+</tr>
+<tr>
+<td style="text-align:center">定量性质或定序性质</td>
+<td style="text-align:center">描述对象某一属性的具体数值多少</td>
+<td style="text-align:center">大部分的视觉通道，如，直线长度，区域面积，空间体积，斜度，角度，颜色的饱和度，亮度等</td>
+</tr>
+</tbody>
+</table>
+<p>视觉通道的第三种性质是<code>分组性质</code></p>
+<ul>
+<li>接近性</li>
+<li>颜色相似性</li>
+<li>显式连接</li>
+<li>显式包围</li>
+</ul>
+<h3 id="视觉通道表现力和有效性"><a href="#视觉通道表现力和有效性" class="headerlink" title="视觉通道表现力和有效性"></a>视觉通道表现力和有效性</h3><p>知道可视化设计者如何挑选合适的视觉通道。</p>
+<ul>
+<li>用<code>表现力更高</code>的视觉通道编码数据中<code>更重要</code>的数据属性, 从而使用户在更短的时间内更加精确地获取数据信息。</li>
+<li>尽量忠于原始数据所包含的信息。例如有序的数据使用定序而非定性的视觉通道对数据进行编码。</li>
+</ul>
+<h3 id="表现力判断标准"><a href="#表现力判断标准" class="headerlink" title="表现力判断标准"></a>表现力判断标准</h3><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/11/15/数据/" data-toggle="tooltip" data-placement="top"
+                           title="数据">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2016/11/15/数据可视化简介/" data-toggle="tooltip" data-placement="top"
+                           title="数据可视化简介">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念理解"><span class="toc-text">概念理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#格式塔理论"><span class="toc-text">格式塔理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#颜色"><span class="toc-text">颜色</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#人眼工学系统"><span class="toc-text">人眼工学系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色与视觉"><span class="toc-text">颜色与视觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#色彩空间"><span class="toc-text">色彩空间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视觉编码原则"><span class="toc-text">视觉编码原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#相对判断和视觉假象"><span class="toc-text">相对判断和视觉假象</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标记和视觉通道"><span class="toc-text">标记和视觉通道</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#视觉通道的类型"><span class="toc-text">视觉通道的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视觉通道表现力和有效性"><span class="toc-text">视觉通道表现力和有效性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表现力判断标准"><span class="toc-text">表现力判断标准</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Yafei002 2016
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yafei002.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','undefined','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="undefined">
+</body>
+
+</html>

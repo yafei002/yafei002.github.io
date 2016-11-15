@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword" content="undefined">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Yafei002" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        时变数据可视化｜undefined
+        
+    </title>
+
+    <link rel="canonical" href="http://yafei002.github.io/2016/11/15/时变数据可视化/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('undefined')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Yafei002
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>时变数据可视化</h1>
+                    
+                    <span class="meta">
+                         作者 yafei002
+                        <span>
+                          日期 2016-11-15
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#数据可视化"
+                           title="数据可视化">数据可视化</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            时变数据可视化
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
+<li>随时间变化，带有时间属性<ul>
+<li>语义分类<ul>
+<li>以时间轴排列的时间序列数据</li>
+<li>内部具有排列顺序的数据集，如生物DNA测序</li>
+</ul>
+</li>
+<li>实际应用中特点<ul>
+<li>量大</li>
+<li>维数多</li>
+<li>变量多</li>
+<li>流模式：无限长度时间轴</li>
+</ul>
+</li>
+<li>可视化方法<ul>
+<li>静态方法，不随时间变化，采用多视角、数据比较等体现数据规律</li>
+<li>动画方法，可视化领域主流观点，由于人类对动画的局限性，谨慎使用动画方式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="不同时间数据的可视化方式"><a href="#不同时间数据的可视化方式" class="headerlink" title="不同时间数据的可视化方式"></a>不同时间数据的可视化方式</h2><h3 id="时间属性可视化"><a href="#时间属性可视化" class="headerlink" title="时间属性可视化"></a>时间属性可视化</h3><ul>
+<li>刻画时间的三种方式<ul>
+<li>线性时间和周期时间</li>
+<li>时间点和时间间隔</li>
+<li>顺序时间、分支时间、多角度时间<ul>
+<li>顺序时间： 事件发生的先后</li>
+<li>分支时间： 一个决策的多个方案</li>
+<li>多角度时间： 例如不同目击者的报告</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="线性和周期时间可视化"><a href="#线性和周期时间可视化" class="headerlink" title="线性和周期时间可视化"></a>线性和周期时间可视化</h4><ul>
+<li>线性时间<ul>
+<li>标准的方式为x轴表示时间，y轴表示其他变量</li>
+<li>不能表示时间的周期性</li>
+</ul>
+</li>
+<li>周期时间<ul>
+<li>时间序列沿圆周排列，一个回路代表一个周期</li>
+<li>环状表示某时间段内的时间结构，体现数据的周期结构</li>
+<li>单个时间轴多个属性轴来表示顺序时间、点时间和多角度时间</li>
+<li>堆叠的语义流方法表达多个变量随时间演化的过程</li>
+<li>不同的属性采用不同的可视化通道表达</li>
+</ul>
+</li>
+</ul>
+<h4 id="日历时间可视化"><a href="#日历时间可视化" class="headerlink" title="日历时间可视化"></a>日历时间可视化</h4><p>参见示例</p>
+<h4 id="分支和多角度时间可视化"><a href="#分支和多角度时间可视化" class="headerlink" title="分支和多角度时间可视化"></a>分支和多角度时间可视化</h4><p>这类可视化分为线性、流状、树状、图状等</p>
+<h5 id="线性多角度时间可视化"><a href="#线性多角度时间可视化" class="headerlink" title="线性多角度时间可视化"></a>线性多角度时间可视化</h5><ul>
+<li>采用类似甘特图的方式呈现一个完整事件的历程和社会行为</li>
+<li>采用环形可视化呈现故事蕴含的周期特性</li>
+</ul>
+<h5 id="流状分支时间主线可视化"><a href="#流状分支时间主线可视化" class="headerlink" title="流状分支时间主线可视化"></a>流状分支时间主线可视化</h5><ul>
+<li>基于河流的可视隐喻可展示时序型事件随时间产生流动、合并、分叉和消失的效果，类似小说和电影的主线</li>
+</ul>
+<h5 id="时间属性的动态可视化"><a href="#时间属性的动态可视化" class="headerlink" title="时间属性的动态可视化"></a>时间属性的动态可视化</h5><ul>
+<li>适当的采用动态可视化方法，有助于用户了解整个事件的过程</li>
+</ul>
+<h4 id="多变量时变型数据可视化"><a href="#多变量时变型数据可视化" class="headerlink" title="多变量时变型数据可视化"></a>多变量时变型数据可视化</h4><p>对于多变量大尺度的时变数据的分析流程符合可视化的基本流程：全局摘要——缩放和过滤。可归纳为<br>三种方法</p>
+<ul>
+<li>数据抽象<ul>
+<li>数据降维、特征选取和数据简化等方法增强关键特征抑制不相关细节</li>
+</ul>
+</li>
+<li>聚类<ul>
+<li>核心是定义恰当的距离或相似性度量</li>
+</ul>
+</li>
+<li>特征分析，包括特征抽取、语义分析等操作<ul>
+<li>基于事件的可视化技术包含事件定义、事件抽取、语义分析</li>
+</ul>
+</li>
+</ul>
+<h5 id="基于线表示的可视化"><a href="#基于线表示的可视化" class="headerlink" title="基于线表示的可视化"></a>基于线表示的可视化</h5><p>高维抽象的时变数据具有宏观的、结构的、随时间变化的规律。将每个数据采样点相连形成一条高维<br>空间的线，在低维空间可视化这条线揭示高维空间的时间序列演化趋势。<br>步骤</p>
+<ol>
+<li>高维曲线采样， 频率由用户交互指定</li>
+<li>采样后的曲线分段，小段间可重叠。分段尺寸、重叠程度由用户交互指定</li>
+<li>用主元分析法将高维曲线投影到二维空间，显示和研究曲线的特性</li>
+</ol>
+<p>???</p>
+<h5 id="基于图结构的可视化"><a href="#基于图结构的可视化" class="headerlink" title="基于图结构的可视化"></a>基于图结构的可视化</h5><p>基于<strong>事件</strong>的时变或顺序数据可视化核心是<strong>事件演化的组织</strong>。</p>
+<ol>
+<li>根据需求和任务描述点从数据中找到与关注点相匹配的事件，从而对事件分类</li>
+<li>根据事件的特征描述从输入有序数据中检测事件，得到事件实例</li>
+<li>可视化检测到的事件</li>
+</ol>
+<h5 id="时间序列数据的可视化交互"><a href="#时间序列数据的可视化交互" class="headerlink" title="时间序列数据的可视化交互"></a>时间序列数据的可视化交互</h5><p>对大规模的时变数据需要设计合适的交互方法如有概览加上下文、层次细节等表现重要的领域。</p>
+<p>工具举例：TimeSearcher</p>
+<h4 id="流数据可视化"><a href="#流数据可视化" class="headerlink" title="流数据可视化"></a>流数据可视化</h4><p>特点：输入数据（全部或部分）不存储在可随机访问的磁盘或内存中，而是以一个或多个“连续数据流”<br>的形式到达。</p>
+<ul>
+<li>潜在大小或许无限</li>
+<li>在线到达，需实时处理，否则数据价值会随时间流动降低</li>
+<li>无法控制数据到达的顺序和质量</li>
+<li>数据处理后要么丢弃要么被归档存储</li>
+<li>查询异常情况和相似类型比较耗时，人工检测日志乏味且易出错</li>
+</ul>
+<h5 id="流数据可视化模型"><a href="#流数据可视化模型" class="headerlink" title="流数据可视化模型"></a>流数据可视化模型</h5><pre><code>流数据进入流处理器后经过整理大部分归档到数据库中，关键数据保存在可视化数据库中，然后被可视化
+处理器进行处理，经过用户的交互后返回到流处理器继续之前的同样的处理。
+</code></pre><p>流数据可是分析流水线：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/      </div><div class="line">        ————————时间分割—————————————————————</div><div class="line">        ↑                     ↓             ↓</div><div class="line">数据流———                   空间分割———————&gt;摘要/统计————&gt;统计模型/分析模型</div><div class="line">        ↓                     ↑             ↑</div><div class="line">        ————————聚合—————————————————————————</div></pre></td></tr></table></figure>
+<h5 id="流数据处理技术"><a href="#流数据处理技术" class="headerlink" title="流数据处理技术"></a>流数据处理技术</h5><ul>
+<li>传统数据挖掘的流数据改进算法<ul>
+<li>分类、聚类、频繁模式挖掘、降维等</li>
+</ul>
+</li>
+<li>大数据相关统计方法、采样算法、哈希算法等</li>
+<li>流数据特有算法<ul>
+<li>滑动窗口、数据预测等</li>
+</ul>
+</li>
+</ul>
+<p><strong>窗口技术</strong></p>
+<p>在数据集中如果最近的数据更被关心，窗口技术可以对数据在时间上进行限定。</p>
+<ul>
+<li>滑动窗口（sliding window）： 在时间轴上滑动窗口，挖掘窗口内的数据</li>
+<li>衰减窗口（decaying window）：考虑历史数据，为数据项添加随时间不断缩小的衰减因子，从而越老的数据权重越低</li>
+<li>时间盒（timebox）???：一种交互技术，通过时间盒框选部分数据进行联合搜索</li>
+</ul>
+<p><strong>时序数据相似性计算</strong></p>
+<p>???</p>
+<p><strong>符号技术</strong></p>
+<p>???</p>
+<h5 id="流数据可视化案例"><a href="#流数据可视化案例" class="headerlink" title="流数据可视化案例"></a>流数据可视化案例</h5><ul>
+<li>监控型，局部分析<ul>
+<li>用滑动窗口固定一个时间区间，将流数据转化为静态数据，数据更新方式可以是刷新</li>
+</ul>
+</li>
+<li>叠加型，历史型，全局分析<ul>
+<li>新数据映射到原来的历史数据可视化结果上，更新方式可谓渐进式更新</li>
+</ul>
+</li>
+</ul>
+<p>???</p>
+<h5 id="并行流计算框架"><a href="#并行流计算框架" class="headerlink" title="并行流计算框架"></a>并行流计算框架</h5><p>???</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/11/15/层次和网络数据可视化/" data-toggle="tooltip" data-placement="top"
+                           title="层次和网络数据可视化">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2016/11/15/数据可视化基础/" data-toggle="tooltip" data-placement="top"
+                           title="数据可视化基础">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础"><span class="toc-text">基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义"><span class="toc-text">定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不同时间数据的可视化方式"><span class="toc-text">不同时间数据的可视化方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#时间属性可视化"><span class="toc-text">时间属性可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#线性和周期时间可视化"><span class="toc-text">线性和周期时间可视化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#日历时间可视化"><span class="toc-text">日历时间可视化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分支和多角度时间可视化"><span class="toc-text">分支和多角度时间可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#线性多角度时间可视化"><span class="toc-text">线性多角度时间可视化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#流状分支时间主线可视化"><span class="toc-text">流状分支时间主线可视化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#时间属性的动态可视化"><span class="toc-text">时间属性的动态可视化</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多变量时变型数据可视化"><span class="toc-text">多变量时变型数据可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#基于线表示的可视化"><span class="toc-text">基于线表示的可视化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#基于图结构的可视化"><span class="toc-text">基于图结构的可视化</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#时间序列数据的可视化交互"><span class="toc-text">时间序列数据的可视化交互</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#流数据可视化"><span class="toc-text">流数据可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#流数据可视化模型"><span class="toc-text">流数据可视化模型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#流数据处理技术"><span class="toc-text">流数据处理技术</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#流数据可视化案例"><span class="toc-text">流数据可视化案例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#并行流计算框架"><span class="toc-text">并行流计算框架</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Yafei002 2016
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yafei002.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','undefined','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="undefined">
+</body>
+
+</html>

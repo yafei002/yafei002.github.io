@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="null">
+    <meta name="keyword" content="undefined">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Yafei002" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        层次和网络数据可视化｜undefined
+        
+    </title>
+
+    <link rel="canonical" href="http://yafei002.github.io/2016/11/15/层次和网络数据可视化/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('undefined')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Yafei002
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>层次和网络数据可视化</h1>
+                    
+                    <span class="meta">
+                         作者 yafei002
+                        <span>
+                          日期 2016-11-15
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#数据可视化"
+                           title="数据可视化">数据可视化</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            层次和网络数据可视化
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="层次结构"><a href="#层次结构" class="headerlink" title="层次结构"></a>层次结构</h2><p>层次数据表现为包含、从属、承接（决策树、家谱）关系。</p>
+<h2 id="层次数据的可视化"><a href="#层次数据的可视化" class="headerlink" title="层次数据的可视化"></a>层次数据的可视化</h2><p>要点： 对数据中层次关系的有效刻画。</p>
+<ul>
+<li>节点-链接<ul>
+<li>擅长： 承接关系</li>
+<li>缺点：广度和深度相差较大时，此方法可读性较差，大量数据点聚集在屏幕局部范围，难以高效利用有限的屏幕空间</li>
+</ul>
+</li>
+<li>空间填充： 将空间分块<ul>
+<li>擅长： 包含和从属</li>
+<li>缺点： 层次不如节点-链接法清晰</li>
+</ul>
+</li>
+<li>混合方法，即混合以上两种方法</li>
+</ul>
+<h3 id="节点-链接法"><a href="#节点-链接法" class="headerlink" title="节点-链接法"></a>节点-链接法</h3><ul>
+<li>节点位置的空间顺序和层次关系一致</li>
+<li>减少连线之间的交叉</li>
+<li>减少连线的总长度</li>
+<li>合适的长宽比，优化空间利用(数据-墨水原则)</li>
+</ul>
+<p><strong>缩进法</strong></p>
+<ul>
+<li>利用<strong>纵横布局算法</strong>，沿某个轴扩充或缩进子节点，同一层次节点在另一个轴展开</li>
+<li>缺点：数据量大时，需要很多滚动操作</li>
+</ul>
+<p><strong>正交布局</strong></p>
+<ul>
+<li>特点：与坐标轴一致，符合人视觉的规则布局</li>
+<li>擅长： 广度比较大的层次结构</li>
+<li>缺点： 容易导致不合理的长宽比， 造成数据显示空间不足和屏幕空间的浪费</li>
+</ul>
+<p><strong>径向布局</strong></p>
+<pre><code>* 根节点位于圆心，不同层次的节点被放置在半径不同的同心圆上，节点到圆心的距离对应于它的深度
+* 优点：合理的利用了空间
+</code></pre><ul>
+<li>环状径向树法<ul>
+<li>随着层次的深入，子节点的空间占位逐渐变小</li>
+</ul>
+</li>
+<li>圆锥法<ul>
+<li>在三维空间可视化层次数据，结合径向布局和正交布局</li>
+</ul>
+</li>
+</ul>
+<p>常规的径向图布局树节点往往呈几何倍的增长。而如果布局空间不是欧式空间，而为<strong>双曲空间</strong>，则圆周随半径的增加呈几何倍的增长，从而保证父节点与子节点有足够的距离。</p>
+<p>大尺度的层次结构，无法避免节点的重叠。解决方法：</p>
+<ul>
+<li>焦点+上下文</li>
+<li>兴趣度树（DOI Tree）</li>
+</ul>
+<h3 id="空间填充法"><a href="#空间填充法" class="headerlink" title="空间填充法"></a>空间填充法</h3><ul>
+<li>树图<ul>
+<li>使用矩形表示层次结构里的节点，父子层次关系用矩形之间的相互嵌套隐喻</li>
+<li>核心问题： 递归地分割空间采用的分割方法，如交替纵横切分法</li>
+<li>Voronoi树图法：任意多边形取代矩形空间</li>
+<li>树图 vs 节点-链接<ul>
+<li>优势：空间利用率高；根据节点的属性或权重，直观的考察比重大的节点</li>
+<li>劣势：空间嵌套的层次视觉效果不如节点-链接发直观；当层次深度较大时，也不是很直观</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>径向布局<ul>
+<li>旭日图（sunburst）：中心的圆表示根节点，各个层次用同心圆环表示。</li>
+<li>比较：空间利用率大于节点-链接法，小于树图法</li>
+<li>缺点：树结构的不平衡造成某一部分的扇形向外延伸很长，造成不合理的长宽比</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h3><p>混合使用节点-链接法与空间填充法</p>
+<ul>
+<li>相邻层次图（adjacency diagrams）</li>
+<li>弹性层次法</li>
+<li>扩展的旭日图法</li>
+</ul>
+<h2 id="网络数据"><a href="#网络数据" class="headerlink" title="网络数据"></a>网络数据</h2><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/11/15/文本和文档可视化/" data-toggle="tooltip" data-placement="top"
+                           title="文本和文档可视化">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2016/11/15/时变数据可视化/" data-toggle="tooltip" data-placement="top"
+                           title="时变数据可视化">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#层次结构"><span class="toc-text">层次结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#层次数据的可视化"><span class="toc-text">层次数据的可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#节点-链接法"><span class="toc-text">节点-链接法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#空间填充法"><span class="toc-text">空间填充法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他方法"><span class="toc-text">其他方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络数据"><span class="toc-text">网络数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Yafei002 2016
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yafei002.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','undefined','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="undefined">
+</body>
+
+</html>
