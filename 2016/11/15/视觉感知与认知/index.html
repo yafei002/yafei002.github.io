@@ -235,9 +235,18 @@
 </ul>
 <p><code>绝对色彩空间</code>: 不依赖外部元素可以准确表示颜色的色彩空间</p>
 <p><code>相对色彩空间</code>：色彩空间无法通过一组值准确的表达颜色。如RGB色彩空间需要规定色彩配置文件达到绝对色彩空间。</p>
-<h2 id="视觉编码原则"><a href="#视觉编码原则" class="headerlink" title="视觉编码原则"></a>视觉编码原则</h2><p>然而不合理的设定事务的上下文环境，会导致判断真实性的失效。</p>
-<p>感知系统对于亮度和颜色的判断，完全是基于周围环境的。</p>
-<h2 id="标记和视觉通道"><a href="#标记和视觉通道" class="headerlink" title="标记和视觉通道"></a>标记和视觉通道</h2><p>可视化编码是信息可视化的核心内容，是将数据信息映射成可视化元素的技术。</p>
+<h2 id="视觉编码原则"><a href="#视觉编码原则" class="headerlink" title="视觉编码原则"></a>视觉编码原则</h2><h3 id="相对判断和视觉假象"><a href="#相对判断和视觉假象" class="headerlink" title="相对判断和视觉假象"></a>相对判断和视觉假象</h3><ul>
+<li>人类感知系统的工作原理在于对所观察事物的<code>相对判断</code><ul>
+<li>若物体使用相同的参照物或者相互对齐，有助于做出准确的相对判断</li>
+</ul>
+</li>
+<li>视觉假象指人通过眼睛所获取的信息被大脑处理后形成的关于事物的感知<ul>
+<li>不合理的设定事务的上下文环境，会导致判断真实性的失效。</li>
+<li>感知系统对于亮度和颜色的判断，完全是基于周围环境的。</li>
+</ul>
+</li>
+</ul>
+<h3 id="标记和视觉通道"><a href="#标记和视觉通道" class="headerlink" title="标记和视觉通道"></a>标记和视觉通道</h3><p>可视化编码是信息可视化的核心内容，是将数据信息映射成可视化元素的技术。</p>
 <p><code>数据</code>包含了<code>属性和值</code>。可视化编码由两方面组成：<code>标记</code>和用于控制标记的视觉特征的<code>视觉通道</code>。</p>
 <table>
 <thead>
@@ -291,10 +300,15 @@
 <li>显式连接</li>
 <li>显式包围</li>
 </ul>
-<h3 id="视觉通道表现力和有效性"><a href="#视觉通道表现力和有效性" class="headerlink" title="视觉通道表现力和有效性"></a>视觉通道表现力和有效性</h3><p>知道可视化设计者如何挑选合适的视觉通道。</p>
-<ul>
-<li>用<code>表现力更高</code>的视觉通道编码数据中<code>更重要</code>的数据属性, 从而使用户在更短的时间内更加精确地获取数据信息。</li>
-<li>尽量忠于原始数据所包含的信息。例如有序的数据使用定序而非定性的视觉通道对数据进行编码。</li>
+<h3 id="视觉通道表现力和有效性"><a href="#视觉通道表现力和有效性" class="headerlink" title="视觉通道表现力和有效性"></a>视觉通道表现力和有效性</h3><ul>
+<li>表现力<ul>
+<li>视觉通道的表现力要求视觉通道准确编码数据包含的所有信息。即视觉通道在对数据进行编码的时候，需要尽量忠于原始数据</li>
+</ul>
+</li>
+<li>有效性<ul>
+<li>表现力更高的视觉通道编码数据中更重要的数据属性</li>
+</ul>
+</li>
 </ul>
 <p>视觉通道表现力排序</p>
 <table>
@@ -349,7 +363,61 @@
 <p><strong>可辨认性</strong></p>
 <p>视觉通道可以具有不同的取值范围，然而如何调整取值使人们能够区分该数据通道的两种或多种取值状态即位<code>可辨性问题</code>。</p>
 <p>如直线宽度持续增加时，会变成另外的视觉通道——面积。</p>
-<p>（未完待续）</p>
+<p><strong>可分离性</strong></p>
+<p>描述不同视觉通道在被用于表达数据属性的时候，两两之间相互干扰的现象</p>
+<p><strong>视觉突出</strong></p>
+<p>指在很短时间内（200-250ms），人的感知系统依赖感知的前项注意力</p>
+<h3 id="视觉通道的特性"><a href="#视觉通道的特性" class="headerlink" title="视觉通道的特性"></a>视觉通道的特性</h3><h4 id="平面位置"><a href="#平面位置" class="headerlink" title="平面位置"></a>平面位置</h4><ul>
+<li>可用于编码分类，定序/定量的视觉通道，利用接近性也可用于分组</li>
+<li>垂直位置比水平位置有略高的优先级<ul>
+<li>显示器设计成宽屏的一个原因</li>
+</ul>
+</li>
+</ul>
+<h4 id="颜色-1"><a href="#颜色-1" class="headerlink" title="颜色"></a>颜色</h4><ul>
+<li>亮度<ul>
+<li>编码有序的数据</li>
+<li>可辨性低，尽量使用少于6个不同的可辩的亮度层次</li>
+<li>亮度形成的边界现象非常明显</li>
+</ul>
+</li>
+<li>饱和度<ul>
+<li>编码有序的数据</li>
+<li>饱和度和尺寸相互影响，小尺寸区域饱和度区分困难</li>
+</ul>
+</li>
+<li>色调<ul>
+<li>编码分类的数据属性，也具有分组功能</li>
+<li>与尺寸相互影响，小尺寸区分困难</li>
+</ul>
+</li>
+<li>配色方案<ul>
+<li>好的配色方案带给用户探索可视化信息的兴趣且能增加可视化结果的美观性</li>
+<li>软件工具辅助设计，如ColorBrewer,Adobe公司的Kuler配色系统</li>
+</ul>
+</li>
+</ul>
+<h4 id="尺寸"><a href="#尺寸" class="headerlink" title="尺寸"></a>尺寸</h4><ul>
+<li>编码有序数据</li>
+<li>长度是一维尺寸，面积为二维尺寸，体积为三位尺寸</li>
+</ul>
+<h4 id="斜度和角度"><a href="#斜度和角度" class="headerlink" title="斜度和角度"></a>斜度和角度</h4><ul>
+<li>用于编码分类和有序的数据属性</li>
+<li>斜度是而为坐标方向和0度坐标的夹角；角度是指任意两条线段之间的夹角</li>
+</ul>
+<h4 id="形状"><a href="#形状" class="headerlink" title="形状"></a>形状</h4><ul>
+<li>适合编码分类的数据属性</li>
+<li>通过前向注意力就能识别的低阶视觉特征</li>
+</ul>
+<h4 id="纹理"><a href="#纹理" class="headerlink" title="纹理"></a>纹理</h4><ul>
+<li>多种视觉变量的组合，如形状、颜色和方向</li>
+<li>用于填充多边形、区域或者表面</li>
+</ul>
+<h4 id="动画"><a href="#动画" class="headerlink" title="动画"></a>动画</h4><ul>
+<li>利用了人的生理上的视觉残留现象和人们趋向将连续相似的图像在大脑组织起来的心理作用</li>
+<li>动画作为视觉通道包含了：运动的方向（定性）、运动的速度（定量）与闪烁的频率（定量）</li>
+<li>与其他视觉通道有天然的分离性</li>
+</ul>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
 
                 <hr>
@@ -378,7 +446,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念理解"><span class="toc-text">概念理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#格式塔理论"><span class="toc-text">格式塔理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#颜色"><span class="toc-text">颜色</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#人眼工学系统"><span class="toc-text">人眼工学系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色与视觉"><span class="toc-text">颜色与视觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#色彩空间"><span class="toc-text">色彩空间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视觉编码原则"><span class="toc-text">视觉编码原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标记和视觉通道"><span class="toc-text">标记和视觉通道</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#视觉通道的类型"><span class="toc-text">视觉通道的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视觉通道表现力和有效性"><span class="toc-text">视觉通道表现力和有效性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表现力判断标准"><span class="toc-text">表现力判断标准</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概念理解"><span class="toc-text">概念理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#格式塔理论"><span class="toc-text">格式塔理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#颜色"><span class="toc-text">颜色</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#人眼工学系统"><span class="toc-text">人眼工学系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色与视觉"><span class="toc-text">颜色与视觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#色彩空间"><span class="toc-text">色彩空间</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#视觉编码原则"><span class="toc-text">视觉编码原则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#相对判断和视觉假象"><span class="toc-text">相对判断和视觉假象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标记和视觉通道"><span class="toc-text">标记和视觉通道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视觉通道的类型"><span class="toc-text">视觉通道的类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视觉通道表现力和有效性"><span class="toc-text">视觉通道表现力和有效性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表现力判断标准"><span class="toc-text">表现力判断标准</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视觉通道的特性"><span class="toc-text">视觉通道的特性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#平面位置"><span class="toc-text">平面位置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#颜色-1"><span class="toc-text">颜色</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#尺寸"><span class="toc-text">尺寸</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#斜度和角度"><span class="toc-text">斜度和角度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#形状"><span class="toc-text">形状</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#纹理"><span class="toc-text">纹理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#动画"><span class="toc-text">动画</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
                 </div>
             </div>
         </div>
