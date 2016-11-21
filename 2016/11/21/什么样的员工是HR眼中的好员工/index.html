@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        对提升大规模图形数据渲染性能的研究｜Yafei002&#39;s blog
+        什么样的员工是HR眼中的好员工｜Yafei002&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://yafei002.github.io/2016/11/15/对提升大规模图形数据渲染性能的研究/">
+    <link rel="canonical" href="http://yafei002.github.io/2016/11/21/什么样的员工是HR眼中的好员工/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -137,15 +137,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>对提升大规模图形数据渲染性能的研究</h1>
+                    <h1>什么样的员工是HR眼中的好员工</h1>
                     
                     <span class="meta">
                          作者 yafei002
                         <span>
-                          日期 2016-11-15
+                          日期 2016-11-21
                          </span>
                     </span>
                     <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#meetup"
+                           title="meetup">meetup</a>
                         
                     </div>
                 </div>
@@ -154,7 +157,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            对提升大规模图形数据渲染性能的研究
+            什么样的员工是HR眼中的好员工
         </span>
     </div>
 </header>
@@ -165,53 +168,45 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h2 id="A．主题：在服务器端提前渲染d3"><a href="#A．主题：在服务器端提前渲染d3" class="headerlink" title="A．主题：在服务器端提前渲染d3"></a>A．主题：在服务器端提前渲染d3</h2><p>来源：<a href="http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html" target="_blank" rel="external">http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html</a></p>
-<p>原文摘要： The whole point of the technique is to do the html rendering in advance, so that users won’t have to wait to see the charts (and you run it only once for all users when they have to see the same data). If you can’t generate the charts in advance you may use the d3.js google group to find suitable performance enhancements.</p>
-<p>总结:</p>
-<p>原理：将d3对DOM渲染的过程在服务器端完成，形成静态html文档，也就是直接生成html里的svg。</p>
-<p>优点：</p>
-<p>1.相比较在客户端对DOM进行渲染，缩短了时间以及负担（具体情况的benchmark还有待测试）</p>
-<p>2.对大量的数据只需在服务器端渲染一次即可，无需再客户端重复调用脚本</p>
-<p>缺点：当数据量增加时，生成HTML的文档的时间相应增加。</p>
-<p>局限：当数据改变时需要重新生成HTML文档</p>
-<p>猜想：是否也可以在服务器端渲染canvas。</p>
-<h2 id="B-主题：JavaScript-DocumentFragment"><a href="#B-主题：JavaScript-DocumentFragment" class="headerlink" title="B. 主题：JavaScript DocumentFragment"></a>B. 主题：JavaScript DocumentFragment</h2><p>来源：</p>
-<p><a href="http://ejohn.org/blog/dom-documentfragments/" target="_blank" rel="external">http://ejohn.org/blog/dom-documentfragments/</a><br><a href="https://davidwalsh.name/documentfragment" target="_blank" rel="external">https://davidwalsh.name/documentfragment</a><br>总结：上一篇文章延伸出的知识点。DocumentFragment是DOM节点。他不属于DOM树，但是能够想DOM节点一样将子节点附加到它的上面，并且能相应事件。在DOM树中它会被附着在它上的子节点覆盖。</p>
-<p>使用DocumentFragment可以提升DOM处理的性能。</p>
-<p>在线测试：<a href="http://jsperf.com/out-of-dom-vs-documentfragment/3" target="_blank" rel="external">http://jsperf.com/out-of-dom-vs-documentfragment/3</a></p>
-<p>和<a href="http://jsperf.com/svg-fragment-test/2" target="_blank" rel="external">http://jsperf.com/svg-fragment-test/2</a> （SVG）</p>
-<p>也许节点数量很大时效果会比较明显。之后可以实地测试。上一篇文章作者提议在服务器端用产生一个DOM DocumentFragment，在加载时附加到页面。具体效果如何可以之后测试。</p>
-<h2 id="C-主题：比较D3和WebGL"><a href="#C-主题：比较D3和WebGL" class="headerlink" title="C.主题：比较D3和WebGL"></a>C.主题：比较D3和WebGL</h2><p>来源：<a href="http://engineering.ayasdi.com/2015/01/09/converting-a-d3-visualization-to-webgl-how-and-why/" target="_blank" rel="external">http://engineering.ayasdi.com/2015/01/09/converting-a-d3-visualization-to-webgl-how-and-why/</a></p>
-<p>摘要：“By hooking into your computer’s GPU, the browser can render and repaint at speeds that, if implemented correctly, are far superior to native DOM rendering.”</p>
-<p>“Another benefit of WebGL is that for large visualizations, your computer will end up allocating significantly less memory to your browser, freeing the rest of your DOM to work faster. If you have thousands of DOM elements, your CSS transitions and general usability will feel slow and laggy. With WebGL, the transitions will remain snappy.”</p>
-<p>总结:</p>
-<p>本文从svg的角度去思考从D3转到WebGL的可能性。首要WebGL的优势是在于GPU的加速，是浏览器渲染和重绘的速度上远比DOM渲染快速很多。其次是对于浏览器占用内存将大大减少。当DOM元素数量达到一定程度时，css的样式的变换将变得显著的慢，但WebGL可以保持比较顺畅的观感。</p>
-<p>但相比较D3，WebGL的代码负担较重且API也不会是标准的js或DOM的处理方式，甚至有可能需要自己编写自定义API，其次CSS的效果也会失去。</p>
-<p>（本文章的信息需进一步验证，但引起GPU对渲染影响的关注）</p>
-<h2 id="D-主题：双倍或不止提升SVG-FPS（frame-per-second）"><a href="#D-主题：双倍或不止提升SVG-FPS（frame-per-second）" class="headerlink" title="D. 主题：双倍或不止提升SVG FPS（frame per second）"></a>D. 主题：双倍或不止提升SVG FPS（frame per second）</h2><p>来源：<a href="http://www.crmarsh.com/svg-performance/" target="_blank" rel="external">http://www.crmarsh.com/svg-performance/</a></p>
-<p>总结: 对浏览器而言有四种主要样式的动画花销较小—Translation, Scale, Rotation, Opacity。改变节点的样式会迫使浏览器完成相应的比较昂贵的任务。改变width会影响页面的布局(re-computation)，改变background-color会使元素的像素重新绘制(repainting)。</p>
-<p>但是对SVG而言以上的情况却不能获得保证。（“there wasn’t any particular reason that SVG nodes had to behave differently than DOM nodes here, but that most browsers didn’t have particularly good SVG implementations.”)</p>
-<p>本文采用在外部套一层DOM节点的方式，相应的一些样式的操作在DOM节点中进行，实现提升FPS的效果。</p>
-<p>本文值得阅读，内容其次，重要的引发对浏览器工作机制的一些深层次的内容的兴趣。如何从浏览器的工作机制中研究如何提高渲染的性能。</p>
-<h2 id="E-主题：探讨结合D3和Canvas"><a href="#E-主题：探讨结合D3和Canvas" class="headerlink" title="E. 主题：探讨结合D3和Canvas"></a>E. 主题：探讨结合D3和Canvas</h2><p>来源：<a href="https://bocoup.com/weblog/d3js-and-canvas" target="_blank" rel="external">https://bocoup.com/weblog/d3js-and-canvas</a></p>
-<p>总结：本文的思维方式在于结合D3的交互性优势和Canvas渲染大规模节点的优势。本文的方法有局限性。虽然解决了数据绑定和transition，但是对于鼠标的事件无法向处理DOM时一样方便。</p>
-<p>本文虽然方法有所局限但思路值得研究一下。</p>
-<p>结论：数据渲染的性能受到多方的影响，而且也有很多技术可以实现相应的效果。个人感觉这会是一个比较深入的内容，因为相关因素比较多，很多都涉及比较深层次的东西，需要探索学习。但是针对实际情况也是一个循序渐进的过程。</p>
+                <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>16年11月18日参加活动行里有关HR的分享活动。我参加的理由</p>
+<ol>
+<li>正好有时间</li>
+<li>作为技术人员潜心钻研技术自是本分之事，但了解其他职业行业的人他们思考关心的事情对于<br>个人综合素质的提高，开拓视野对未来的发展是很有必要的。HR是和技术人员息息相关的一份职业，<br>了解他们的思维不仅对我们今后的面试以及如何处理团队的问题都很有帮助。</li>
+</ol>
+<p>本次分享是以<code>初创团队</code>为背景展开的讨论。</p>
+<h2 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h2><h3 id="初创团队HR会选择什么样的技术员工"><a href="#初创团队HR会选择什么样的技术员工" class="headerlink" title="初创团队HR会选择什么样的技术员工"></a>初创团队HR会选择什么样的技术员工</h3><p>这是作为技术人员首先关系的问题，所以放在前面讨论。</p>
+<ul>
+<li>性格&gt;能力&gt;技术</li>
+<li>评测标准<ol>
+<li>口头表达能力、综合分析能力、人际交往能力、自我控制力与情绪稳定性</li>
+<li>求职动机</li>
+<li>业余兴趣爱好</li>
+</ol>
+</li>
+</ul>
+<p>员工需要自我激励和良好的工作态度。<br>总结：性格决定命运、气度决定格局</p>
+<h3 id="HR员工选取通道"><a href="#HR员工选取通道" class="headerlink" title="HR员工选取通道"></a>HR员工选取通道</h3><p><img src="img/choose employee.png" alt="选择通道"></p>
+<p>(注意：图片选自演讲人ppt)</p>
+<h3 id="HR会希望留住哪些员工"><a href="#HR会希望留住哪些员工" class="headerlink" title="HR会希望留住哪些员工"></a>HR会希望留住哪些员工</h3><p>对于有能力有潜力的员工自然是希望被留下来的，同事对团队有影响力能够影响团队氛围的员工同样是需要争取的对象。</p>
+<p>员工离职的原因</p>
+<ul>
+<li>高强度工作缺少自己的时间学习，生活，陪伴家人</li>
+<li>岗位和个人未来的职业规划不匹配</li>
+<li>晋升空间、个人提高空间少</li>
+<li>对领导不认可</li>
+</ul>
+<p>如何争取？不仅要关心员工本人，同时对员工的亲人等对员工有影响的因素同样需要关注。</p>
+<p>###</p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2016/11/21/什么样的员工是HR眼中的好员工/" data-toggle="tooltip" data-placement="top"
-                           title="什么样的员工是HR眼中的好员工">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2016/11/15/《大数据时代的网络数据可视分析》笔记/" data-toggle="tooltip" data-placement="top"
-                           title="《大数据时代的网络数据可视分析》笔记">Next Post &rarr;</a>
+                        <a href="/2016/11/15/对提升大规模图形数据渲染性能的研究/" data-toggle="tooltip" data-placement="top"
+                           title="对提升大规模图形数据渲染性能的研究">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -224,7 +219,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A．主题：在服务器端提前渲染d3"><span class="toc-text">A．主题：在服务器端提前渲染d3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-主题：JavaScript-DocumentFragment"><span class="toc-text">B. 主题：JavaScript DocumentFragment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-主题：比较D3和WebGL"><span class="toc-text">C.主题：比较D3和WebGL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#D-主题：双倍或不止提升SVG-FPS（frame-per-second）"><span class="toc-text">D. 主题：双倍或不止提升SVG FPS（frame per second）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#E-主题：探讨结合D3和Canvas"><span class="toc-text">E. 主题：探讨结合D3和Canvas</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#背景"><span class="toc-text">背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#收获"><span class="toc-text">收获</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初创团队HR会选择什么样的技术员工"><span class="toc-text">初创团队HR会选择什么样的技术员工</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HR员工选取通道"><span class="toc-text">HR员工选取通道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HR会希望留住哪些员工"><span class="toc-text">HR会希望留住哪些员工</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -245,6 +240,9 @@
                         <a href="/tags/">FEATURED TAGS</a>
                     </h5>
                     <div class="tags">
+                        
+                        <a class="tag" href="/tags/#meetup"
+                           title="meetup">meetup</a>
                         
                     </div>
                 </section>
