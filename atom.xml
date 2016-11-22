@@ -1502,4 +1502,41 @@
     
   </entry>
   
+  <entry>
+    <title>PageRank</title>
+    <link href="http://yafei002.github.io/2016/04/22/PageRank/"/>
+    <id>http://yafei002.github.io/2016/04/22/PageRank/</id>
+    <published>2016-04-22T14:41:13.000Z</published>
+    <updated>2016-11-22T14:56:00.683Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>PageRank是解决网页排序问题的一个算法，由谷歌的创始人拉里·佩奇和谢尔盖·布林提出。</p>
+<ul>
+<li>目的是在大量的网页中检索用户所输入的搜索词相关的高质量的网页。</li>
+<li>核心思想是如果一个网页被更多的其他网页（非本站）所链接，说明这个网页更值得信赖，那么这个网页的质量相对越高，排序越靠前。此外，其他网页的质量（即所谓社会网络的排序声望）同时也做为评判的标准纳入考量。</li>
+</ul>
+<h2 id="计算方法"><a href="#计算方法" class="headerlink" title="计算方法"></a>计算方法</h2><p><img src="/image/PageRank1.png" alt="PageRank1"></p>
+<p>其中B表示网站排名序列，矩阵A中对应的<img src="/image/PageRank2.png" alt="PageRank2">表示第m个网页指向第n个网页的链接数。<br>假设初始网页排名均为1/N，即</p>
+<p><img src="/image/PageRank3.png" alt="PageRank3"></p>
+<p>迭代计算如下公式</p>
+<p><img src="/image/PageRank4.png" alt="PageRank4"></p>
+<p>最终B收敛。其中无论初始假设选为何值，最终都会收敛到某个值。</p>
+<p>但是现实中网页见到的链接是非常稀疏的，即有的网页并没有来自其他的链接，使得A中存在很多0或极小数。解决办法是使用平滑处理，加入一个比较小的常数，最终变为<br><img src="/image/PageRank5.png" alt="PageRank5"></p>
+<p>其中I为N维单位向量，因为A也为向量。</p>
+<p>参考资料<br>[1]    吴军. “第10章 PageRank”，数学之美. 人民邮电出版社, 2014.<br>[2]    Xindong Wu, Vipin Kumar, and 李文波 吴素研. “PageRank”. 数据挖掘十大算法. 清华大学出版社, 2013.<br>[3]  张洋. “浅析PageRank算法”. Colding Labs.<br><a href="http://blog.codinglabs.org/articles/intro-to-pagerank.html" target="_blank" rel="external">http://blog.codinglabs.org/articles/intro-to-pagerank.html</a></p>
+<pre><code>。
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;PageRank是解决网页排序问题的一个算法，由谷歌的创始人拉里·佩奇和谢尔盖·布林提出。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目的是在大量的网页中检
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yafei002.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
 </feed>
