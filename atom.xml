@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2016-11-21T16:00:51.504Z</updated>
+  <updated>2016-11-22T10:28:11.998Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -16,11 +16,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数据可视化视频教程</title>
+    <link href="http://yafei002.github.io/2016/11/22/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B/"/>
+    <id>http://yafei002.github.io/2016/11/22/数据可视化视频教程/</id>
+    <published>2016-11-22T10:26:24.000Z</published>
+    <updated>2016-11-22T10:28:11.998Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>加深自己对数据可视化理论的理解。</p>
+<h2 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h2><h3 id="第2章-视觉感知与认知"><a href="#第2章-视觉感知与认知" class="headerlink" title="第2章 视觉感知与认知"></a>第2章 视觉感知与认知</h3><embed src="http://player.youku.com/player.php/sid/XMTgzMTc4MzgzNg==/v.swf" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h2&gt;&lt;p&gt;加深自己对数据可视化理论的理解。&lt;/p&gt;
+&lt;h2 id=&quot;内容&quot;&gt;&lt;a href=&quot;#内容&quot; class=&quot;headerlink&quot; titl
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
     <title>什么样的员工是HR眼中的好员工</title>
-    <link href="http://yafei002.github.io/2016/11/21/%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%91%98%E5%B7%A5%E6%98%AFHR%E7%9C%BC%E4%B8%AD%E7%9A%84%E5%A5%BD%E5%91%98%E5%B7%A5/"/>
-    <id>http://yafei002.github.io/2016/11/21/什么样的员工是HR眼中的好员工/</id>
-    <published>2016-11-21T15:15:06.000Z</published>
-    <updated>2016-11-21T16:00:51.504Z</updated>
+    <link href="http://yafei002.github.io/2016/11/18/%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%91%98%E5%B7%A5%E6%98%AFHR%E7%9C%BC%E4%B8%AD%E7%9A%84%E5%A5%BD%E5%91%98%E5%B7%A5/"/>
+    <id>http://yafei002.github.io/2016/11/18/什么样的员工是HR眼中的好员工/</id>
+    <published>2016-11-18T15:15:06.000Z</published>
+    <updated>2016-11-22T10:13:26.191Z</updated>
     
     <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>16年11月18日参加活动行里有关HR的分享活动。我参加的理由</p>
 <ol>
@@ -39,7 +62,7 @@
 </li>
 </ul>
 <p>员工需要自我激励和良好的工作态度。<br>总结：性格决定命运、气度决定格局</p>
-<h3 id="HR员工选取通道"><a href="#HR员工选取通道" class="headerlink" title="HR员工选取通道"></a>HR员工选取通道</h3><p><img src="img/choose employee.png" alt="选择通道"></p>
+<h3 id="HR员工选取通道"><a href="#HR员工选取通道" class="headerlink" title="HR员工选取通道"></a>HR员工选取通道</h3><p><img src="/image/choose employee.png" alt="选择通道"></p>
 <p>(注意：图片选自演讲人ppt)</p>
 <h3 id="HR会希望留住哪些员工"><a href="#HR会希望留住哪些员工" class="headerlink" title="HR会希望留住哪些员工"></a>HR会希望留住哪些员工</h3><p>对于有能力有潜力的员工自然是希望被留下来的，同事对团队有影响力能够影响团队氛围的员工同样是需要争取的对象。</p>
 <p>员工离职的原因</p>
@@ -977,7 +1000,7 @@
     <link href="http://yafei002.github.io/2016/11/15/%E6%95%B0%E6%8D%AE/"/>
     <id>http://yafei002.github.io/2016/11/15/数据/</id>
     <published>2016-11-15T12:08:49.000Z</published>
-    <updated>2016-11-15T12:27:49.900Z</updated>
+    <updated>2016-11-22T10:16:32.391Z</updated>
     
     <content type="html"><![CDATA[<h2 id="关于数据"><a href="#关于数据" class="headerlink" title="关于数据"></a>关于数据</h2><h3 id="释义"><a href="#释义" class="headerlink" title="释义"></a>释义</h3><p>数据是符号的集合，是表达客观事物的未加工的原始素材。可以看成是数据对象及其属性大的集合。</p>
 <h3 id="数据分类"><a href="#数据分类" class="headerlink" title="数据分类"></a>数据分类</h3><p>从关系模型角度可以分为实体和关系，关系和实体可以包含属性，属性分为离散属性和连续属性。</p>
@@ -1076,7 +1099,7 @@
 <li>为复杂的决策支持查询进行了大量的优化</li>
 <li>结构化或非结构化数据都能被处理，并提供两种数据的整合功能</li>
 </ul>
-<p><img src="img/dwh.png" alt="Database vs Data Warehouse"></p>
+<p><img src="/image/dwh.png" alt="Database vs Data Warehouse"></p>
 <h2 id="数据分析与挖掘"><a href="#数据分析与挖掘" class="headerlink" title="数据分析与挖掘"></a>数据分析与挖掘</h2><h3 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h3><ul>
 <li>定义：指有组织有目的的采集、分析、概括和总结数据，从中提取有用的信息形成结论的过程</li>
 <li>从统计应用上分为<ul>
