@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2016-11-22T10:13:26.191Z</updated>
+  <updated>2016-11-24T10:15:14.148Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yafei002.github.io/2016/11/18/%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%91%98%E5%B7%A5%E6%98%AFHR%E7%9C%BC%E4%B8%AD%E7%9A%84%E5%A5%BD%E5%91%98%E5%B7%A5/"/>
     <id>http://yafei002.github.io/2016/11/18/什么样的员工是HR眼中的好员工/</id>
     <published>2016-11-18T15:15:06.000Z</published>
-    <updated>2016-11-22T10:13:26.191Z</updated>
+    <updated>2016-11-24T10:15:14.148Z</updated>
     
     <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>16年11月18日参加活动行里有关HR的分享活动。我参加的理由</p>
 <ol>
@@ -84,7 +84,7 @@
     <link href="http://yafei002.github.io/2016/11/15/%E5%AF%B9%E6%8F%90%E5%8D%87%E5%A4%A7%E8%A7%84%E6%A8%A1%E5%9B%BE%E5%BD%A2%E6%95%B0%E6%8D%AE%E6%B8%B2%E6%9F%93%E6%80%A7%E8%83%BD%E7%9A%84%E7%A0%94%E7%A9%B6/"/>
     <id>http://yafei002.github.io/2016/11/15/对提升大规模图形数据渲染性能的研究/</id>
     <published>2016-11-15T12:52:38.000Z</published>
-    <updated>2016-11-15T12:53:30.910Z</updated>
+    <updated>2016-11-24T10:15:01.330Z</updated>
     
     <content type="html"><![CDATA[<h2 id="A．主题：在服务器端提前渲染d3"><a href="#A．主题：在服务器端提前渲染d3" class="headerlink" title="A．主题：在服务器端提前渲染d3"></a>A．主题：在服务器端提前渲染d3</h2><p>来源：<a href="http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html" target="_blank" rel="external">http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html</a></p>
 <p>原文摘要： The whole point of the technique is to do the html rendering in advance, so that users won’t have to wait to see the charts (and you run it only once for all users when they have to see the same data). If you can’t generate the charts in advance you may use the d3.js google group to find suitable performance enhancements.</p>
@@ -127,6 +127,8 @@
     </summary>
     
     
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
+    
   </entry>
   
   <entry>
@@ -134,7 +136,7 @@
     <link href="http://yafei002.github.io/2016/11/15/%E3%80%8A%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%97%B6%E4%BB%A3%E7%9A%84%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%88%86%E6%9E%90%E3%80%8B%E7%AC%94%E8%AE%B0/"/>
     <id>http://yafei002.github.io/2016/11/15/《大数据时代的网络数据可视分析》笔记/</id>
     <published>2016-11-15T12:48:49.000Z</published>
-    <updated>2016-11-17T12:35:47.884Z</updated>
+    <updated>2016-11-24T10:14:35.036Z</updated>
     
     <content type="html"><![CDATA[<p>大数据时代数据呈现大量(Volume)，多样(Variety)，真实 (Veracity)，快速 (Velocity)， 价值(Value)的特点。相对过去的可视化方式，大数据时代对具有上述5V特征数据的可视化提出新的挑战。</p>
 <p>1.高维属性。 传统的通过改变可视元素的大小、形状、颜色等的方法只能表达数据的5-10维的特征，而不能体现更高维度数据的特点。<br>2.动态特征。 通过动画的方式可以吸引用户眼球的数据的动态特点。但这种方式往往用户更加关注动画效果而忽视了数据所呈现的时序变化的情况。<br>3.真实展示。 所谓可视化谎言是指通过坐标轴变换，图形形状不等比缩放等夸张的感知效果呈现数据的特点。但在大数据时代，由于数据来源、在线处理和整合等而造成数据误差，以及不可避免的对数据的采集和抽样，数据切片能否代表整体网络数据特点以及避免可视化的表达引起的用户感知的偏差，是面临的挑战。<br>4.数据价值 过去的拓扑结构分析、节点（边）相关属性分析、浏览、宏观概要的可视化分析方式是否适合大数据时代的可视化需求存在疑问。其次如何将定制化的可视化分析方法转变为系统化的数据可视化分析平台也是需要解决的问题。</p>
@@ -153,10 +155,10 @@
     
     </summary>
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/categories/data-visualization/"/>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -165,7 +167,7 @@
     <link href="http://yafei002.github.io/2016/11/15/%E5%A4%8D%E6%9D%82%E9%AB%98%E7%BB%B4%E5%A4%9A%E5%85%83%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yafei002.github.io/2016/11/15/复杂高维多元数据的可视化/</id>
     <published>2016-11-15T12:24:27.000Z</published>
-    <updated>2016-11-15T12:27:16.407Z</updated>
+    <updated>2016-11-24T10:15:07.642Z</updated>
     
     <content type="html"><![CDATA[<p>移动互联网时代涌现无数复杂的数据</p>
 <ul>
@@ -433,7 +435,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -605,7 +607,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -614,7 +616,7 @@
     <link href="http://yafei002.github.io/2016/11/15/%E5%B1%82%E6%AC%A1%E5%92%8C%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yafei002.github.io/2016/11/15/层次和网络数据可视化/</id>
     <published>2016-11-15T12:15:33.000Z</published>
-    <updated>2016-11-15T12:26:53.866Z</updated>
+    <updated>2016-11-24T10:14:42.408Z</updated>
     
     <content type="html"><![CDATA[<h2 id="层次结构"><a href="#层次结构" class="headerlink" title="层次结构"></a>层次结构</h2><p>层次数据表现为包含、从属、承接（决策树、家谱）关系。</p>
 <h2 id="层次数据的可视化"><a href="#层次数据的可视化" class="headerlink" title="层次数据的可视化"></a>层次数据的可视化</h2><p>要点： 对数据中层次关系的有效刻画。</p>
@@ -703,7 +705,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -863,7 +865,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -968,7 +970,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -1151,7 +1153,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -1424,7 +1426,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -1450,7 +1452,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -1459,7 +1461,7 @@
     <link href="http://yafei002.github.io/2016/07/23/%E7%AC%AC27%E6%9C%9F%EF%BC%9A%E9%9B%B6%E5%94%AE-%E9%87%91%E8%9E%8D-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AD%89%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%90%86%E5%BF%B5%E5%8F%8A%E5%AE%9E%E8%B7%B5-%E6%B5%B7%E6%95%B0%E6%8D%AE%E7%A4%BE%E5%8C%BA/"/>
     <id>http://yafei002.github.io/2016/07/23/第27期：零售-金融-深度学习等大数据理念及实践-海数据社区/</id>
     <published>2016-07-23T12:25:29.000Z</published>
-    <updated>2016-11-22T12:58:10.958Z</updated>
+    <updated>2016-11-24T10:21:41.205Z</updated>
     
     <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>7月23日参加的海数据社区关于大数据内容的分享。具体介绍在<a href="http://www.hibigdata.cn/portal/article/41" target="_blank" rel="external">这里</a>。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="大数据零售业"><a href="#大数据零售业" class="headerlink" title="大数据零售业"></a>大数据零售业</h3><p>通过分析商城的线上线下的用户的数据，推荐商城采取相应的促销营销策略。可以提高企业收益，但是收益有限，尤其是对大的商城，有可能都弥补不了商城付给百度的成本。</p>
@@ -1498,7 +1500,9 @@
     </summary>
     
     
-      <category term="meetup 大数据" scheme="http://yafei002.github.io/tags/meetup-%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="meetup" scheme="http://yafei002.github.io/tags/meetup/"/>
+    
+      <category term="大数据" scheme="http://yafei002.github.io/tags/big-data/"/>
     
   </entry>
   
@@ -1507,7 +1511,7 @@
     <link href="http://yafei002.github.io/2016/04/22/PageRank/"/>
     <id>http://yafei002.github.io/2016/04/22/PageRank/</id>
     <published>2016-04-22T14:41:13.000Z</published>
-    <updated>2016-11-22T14:56:00.683Z</updated>
+    <updated>2016-11-24T10:15:33.364Z</updated>
     
     <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>PageRank是解决网页排序问题的一个算法，由谷歌的创始人拉里·佩奇和谢尔盖·布林提出。</p>
 <ul>
@@ -1535,7 +1539,7 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yafei002.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://yafei002.github.io/tags/algorithm/"/>
     
   </entry>
   
