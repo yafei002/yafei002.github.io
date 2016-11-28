@@ -167,7 +167,7 @@
     <link href="http://yafei002.github.io/2016/11/15/%E5%A4%8D%E6%9D%82%E9%AB%98%E7%BB%B4%E5%A4%9A%E5%85%83%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yafei002.github.io/2016/11/15/复杂高维多元数据的可视化/</id>
     <published>2016-11-15T12:24:27.000Z</published>
-    <updated>2016-11-24T10:15:07.642Z</updated>
+    <updated>2016-11-28T07:19:49.385Z</updated>
     
     <content type="html"><![CDATA[<p>移动互联网时代涌现无数复杂的数据</p>
 <ul>
@@ -281,7 +281,8 @@
 </ul>
 </li>
 </ul>
-<h4 id="基于像素图的方法"><a href="#基于像素图的方法" class="headerlink" title="基于像素图的方法"></a>基于像素图的方法</h4><p>???</p>
+<h4 id="基于像素图的方法"><a href="#基于像素图的方法" class="headerlink" title="基于像素图的方法"></a>基于像素图的方法</h4><p><strong>像素图</strong>：每个像素代表一个属性，颜色编码数据值。所有的矩形按照一定的布局策略（如顺序或螺旋布局）排列在二维空间上，生成一整个像素块</p>
+<p><strong>像素柱状图</strong>：数据对象按照选定的分割属性进行分类，不同类的对象布局在不同的空间区域，每一类按照两个排列顺序属性组成的直角坐标系进行布局。像素的颜色由对应的颜色属性的值决定。</p>
 <h2 id="非结构化与异构数据的可视化"><a href="#非结构化与异构数据的可视化" class="headerlink" title="非结构化与异构数据的可视化"></a>非结构化与异构数据的可视化</h2><p>数据复杂度</p>
 <ul>
 <li>数据高维度特性</li>
@@ -616,7 +617,7 @@
     <link href="http://yafei002.github.io/2016/11/15/%E5%B1%82%E6%AC%A1%E5%92%8C%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yafei002.github.io/2016/11/15/层次和网络数据可视化/</id>
     <published>2016-11-15T12:15:33.000Z</published>
-    <updated>2016-11-24T10:59:45.741Z</updated>
+    <updated>2016-11-28T07:19:24.026Z</updated>
     
     <content type="html"><![CDATA[<h2 id="层次结构"><a href="#层次结构" class="headerlink" title="层次结构"></a>层次结构</h2><p>层次数据表现为包含、从属、承接（决策树、家谱）关系。</p>
 <h2 id="层次数据的可视化"><a href="#层次数据的可视化" class="headerlink" title="层次数据的可视化"></a>层次数据的可视化</h2><p>要点： 对数据中层次关系的有效刻画。</p>
@@ -646,8 +647,8 @@
 </ul>
 <p><strong>正交布局</strong></p>
 <ul>
-<li>特点：与坐标轴一致，符合人视觉的规则布局</li>
-<li>擅长： 广度比较大的层次结构</li>
+<li>特点：与坐标轴一致，</li>
+<li>优点： 符合人视觉的规则布局</li>
 <li>缺点： 容易导致不合理的长宽比， 造成数据显示空间不足和屏幕空间的浪费</li>
 </ul>
 <p><strong>径向布局</strong></p>
