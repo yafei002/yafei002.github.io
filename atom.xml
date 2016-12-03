@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2016-11-24T10:15:14.148Z</updated>
+  <updated>2016-12-03T15:31:29.720Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[meetup]IT工程能力实战</title>
+    <link href="http://yafei002.github.io/2016/12/03/meetup-IT%E5%B7%A5%E7%A8%8B%E8%83%BD%E5%8A%9B%E5%AE%9E%E6%88%98/"/>
+    <id>http://yafei002.github.io/2016/12/03/meetup-IT工程能力实战/</id>
+    <published>2016-12-03T15:03:15.000Z</published>
+    <updated>2016-12-03T15:31:29.720Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>12月3日参加51CTO高招举办的《CTO训练营2016最后一次开放日：属于技术管理者的年终盛宴》活动。有幸能和<br>技术领域的前辈一起参加，并从中学到了很多更深层次的内容，扩展了自己的技术视野。</p>
+<p>这篇文章是对第一位演讲者内容的总结，因为中途参加，总结不会很完整，但仍有很多值得回味。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="团队技术能力"><a href="#团队技术能力" class="headerlink" title="团队技术能力"></a>团队技术能力</h3><ul>
+<li>关键技术<ul>
+<li>比如视频网站视频方面的能力，百度搜索方面的能力</li>
+</ul>
+</li>
+<li>架构能力<ul>
+<li>能考虑到系统支撑的规模</li>
+</ul>
+</li>
+<li>工程能力<ul>
+<li>团队持续高产出保障业务的发展</li>
+</ul>
+</li>
+</ul>
+<p>对于团队而言，这三方面的能力需要平均一些。</p>
+<h3 id="个人技术能力"><a href="#个人技术能力" class="headerlink" title="个人技术能力"></a>个人技术能力</h3><p>除了团队技术能力所包含的三项能力外，还需要<code>编程能力</code>。一般个人而言，编程能力会占较大部分，<br>工程能力较弱。但考虑未来个人能力发展需要四种能力都相对均衡一些。</p>
+<h3 id="学先进-走正道-傍大款"><a href="#学先进-走正道-傍大款" class="headerlink" title="学先进 走正道 傍大款"></a>学先进 走正道 傍大款</h3><p>对创业团队，需要</p>
+<ul>
+<li>学习业界最佳实践</li>
+<li>走长期可持续发展道路</li>
+<li>选择有实力的合作伙伴</li>
+</ul>
+<p>并保持<strong>学习能力</strong>+<strong>追求卓越之心</strong></p>
+<h3 id="工具和方法"><a href="#工具和方法" class="headerlink" title="工具和方法"></a>工具和方法</h3><p>（待续）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;12月3日参加51CTO高招举办的《CTO训练营2016最后一次开放日：属于技术管理者的年终盛宴》活动。有幸能和&lt;br&gt;技术领域的前辈一起参
+    
+    </summary>
+    
+    
+      <category term="meetup" scheme="http://yafei002.github.io/tags/meetup/"/>
+    
+  </entry>
   
   <entry>
     <title>什么样的员工是HR眼中的好员工</title>
