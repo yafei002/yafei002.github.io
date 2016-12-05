@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2016-12-03T15:31:29.720Z</updated>
+  <updated>2016-12-05T08:19:08.759Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yafei002.github.io/2016/12/03/meetup-IT%E5%B7%A5%E7%A8%8B%E8%83%BD%E5%8A%9B%E5%AE%9E%E6%88%98/"/>
     <id>http://yafei002.github.io/2016/12/03/meetup-IT工程能力实战/</id>
     <published>2016-12-03T15:03:15.000Z</published>
-    <updated>2016-12-03T15:31:29.720Z</updated>
+    <updated>2016-12-05T08:19:08.759Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>12月3日参加51CTO高招举办的《CTO训练营2016最后一次开放日：属于技术管理者的年终盛宴》活动。有幸能和<br>技术领域的前辈一起参加，并从中学到了很多更深层次的内容，扩展了自己的技术视野。</p>
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>12月3日参加51CTO高招举办的《CTO训练营2016最后一次开放日：属于技术管理者的年终盛宴》活动。演讲人是马拉马拉CTO左文建。</p>
 <p>这篇文章是对第一位演讲者内容的总结，因为中途参加，总结不会很完整，但仍有很多值得回味。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="团队技术能力"><a href="#团队技术能力" class="headerlink" title="团队技术能力"></a>团队技术能力</h3><ul>
 <li>关键技术<ul>
@@ -34,12 +34,25 @@
 </ul>
 </li>
 <li>工程能力<ul>
-<li>团队持续高产出保障业务的发展</li>
+<li>团队持续高产出，保障业务的发展</li>
 </ul>
 </li>
 </ul>
 <p>对于团队而言，这三方面的能力需要平均一些。</p>
+<p><img src="/image/IT工程能力实战/团队技术能力构成.jpg" alt="团队技术能力构成"></p>
+<p>(图片来自原作者PPT)</p>
 <h3 id="个人技术能力"><a href="#个人技术能力" class="headerlink" title="个人技术能力"></a>个人技术能力</h3><p>除了团队技术能力所包含的三项能力外，还需要<code>编程能力</code>。一般个人而言，编程能力会占较大部分，<br>工程能力较弱。但考虑未来个人能力发展需要四种能力都相对均衡一些。</p>
+<p><img src="/image/IT工程能力实战/个人技术能力成长.jpg" alt="个人技术能力成长"></p>
+<p>(图片来自原作者PPT)</p>
+<h3 id="如何提高工程能力"><a href="#如何提高工程能力" class="headerlink" title="如何提高工程能力"></a>如何提高工程能力</h3><p>需要科学有效的<strong>方法</strong>、<strong>机制</strong>、<strong>制度</strong> 来保证生产优质产品。</p>
+<p>思路</p>
+<ul>
+<li>系统验证<a href="http://blog.csdn.net/weiwangchao_/article/details/52589615" target="_blank" rel="external">灰度化</a>(图片来自原作者PPT)</li>
+<li>重复工作自动化 选择合适的工具和方法</li>
+<li>问题尽早透明化 问题提前暴露</li>
+<li>写作形式、工具化</li>
+</ul>
+<h3 id="系统灰度验证"><a href="#系统灰度验证" class="headerlink" title="系统灰度验证"></a>系统灰度验证</h3><p><img src="/image/IT工程能力实战/灰度验证.jpg" alt="系统灰度验证"></p>
 <h3 id="学先进-走正道-傍大款"><a href="#学先进-走正道-傍大款" class="headerlink" title="学先进 走正道 傍大款"></a>学先进 走正道 傍大款</h3><p>对创业团队，需要</p>
 <ul>
 <li>学习业界最佳实践</li>
@@ -47,12 +60,52 @@
 <li>选择有实力的合作伙伴</li>
 </ul>
 <p>并保持<strong>学习能力</strong>+<strong>追求卓越之心</strong></p>
-<h3 id="工具和方法"><a href="#工具和方法" class="headerlink" title="工具和方法"></a>工具和方法</h3><p>（待续）</p>
+<h3 id="工具和方法"><a href="#工具和方法" class="headerlink" title="工具和方法"></a>工具和方法</h3><p>在正确方法的基础上使用合适的工具是提升工程能力非常有效的手段。</p>
+<ul>
+<li>rigger-ng 多环境资源管理器</li>
+<li>ansible 一键发布工具</li>
+<li>代码质量<ul>
+<li>单元测试</li>
+<li>jenkins 持续集成工具</li>
+<li>sonar 代码质量管理</li>
+</ul>
+</li>
+<li>xdebug PHP程序调试器</li>
+<li>运行监控<ul>
+<li>Log  记录运行信息</li>
+<li>Sentry 警告、错误收集</li>
+</ul>
+</li>
+</ul>
+<p>处理<a href="http://www.jianshu.com/p/37db253ee10d" target="_blank" rel="external">技术债务</a>、代码重复率问题。</p>
+<h3 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h3><p>“过早的优化是程序设计的万恶之源。”（Donald Knuth）</p>
+<blockquote>
+<p>过早指的不是在开发过程的早期，而是在还没弄清楚需求未来的变化的走向的时候。你的优化不仅可能导致你无法很好地实现新的需求，而且你对优化的预期的猜测有可能还是错的，导致实际上你除了把代码变复杂以外什么都没得到。</p>
+<p>正确的方法是，先有质量地实现你的需求，写够testcase，然后做profile去找到性能的瓶颈，这个时候才优化他。</p>
+<p>作者：vczh</p>
+<p>来源：知乎</p>
+<p>链接：<a href="https://www.zhihu.com/question/24282796/answer/27279410" target="_blank" rel="external">https://www.zhihu.com/question/24282796/answer/27279410</a></p>
+</blockquote>
+<p>无数据的优化就是时间黑洞。</p>
+<h3 id="协作"><a href="#协作" class="headerlink" title="协作"></a>协作</h3><h4 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h4><p><code>文档是为阅读者而不是生产者书写</code>。</p>
+<p>有些时候程序员会抱怨其他人的文档写的不完善，难以理解，而忽视了自己在文档上是否对其他人产生麻烦。</p>
+<h4 id="统一与标准"><a href="#统一与标准" class="headerlink" title="统一与标准"></a>统一与标准</h4><ul>
+<li>统一的运行环境</li>
+<li>统一的框架</li>
+<li>同意的资源管理：mysql、redis。。。</li>
+<li>建立团队模板标准</li>
+</ul>
+<h4 id="协作工具"><a href="#协作工具" class="headerlink" title="协作工具"></a>协作工具</h4><ul>
+<li>gitflow 用工具支持过程</li>
+<li>wiki 书写为了阅读</li>
+<li>postman 研发以接口为中心（从而解决前后端因接口问题不断地扯皮）</li>
+</ul>
+<p>（待续）</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;12月3日参加51CTO高招举办的《CTO训练营2016最后一次开放日：属于技术管理者的年终盛宴》活动。有幸能和&lt;br&gt;技术领域的前辈一起参
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;12月3日参加51CTO高招举办的《CTO训练营2016最后一次开放日：属于技术管理者的年终盛宴》活动。演讲人是马拉马拉CTO左文建。&lt;/p
     
     </summary>
     
