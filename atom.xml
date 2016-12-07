@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2016-12-07T09:44:52.778Z</updated>
+  <updated>2016-12-07T10:48:17.745Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -20,12 +20,18 @@
     <link href="http://yafei002.github.io/2016/12/07/meetup-%E5%88%9B%E4%B8%9A%E6%97%A9%E6%9C%9F%E7%9A%84%E9%80%89%E5%9E%8B%E4%B8%8E%E4%BA%B2%E5%8E%86%E7%9A%84%E5%9D%91/"/>
     <id>http://yafei002.github.io/2016/12/07/meetup-创业早期的选型与亲历的坑/</id>
     <published>2016-12-07T09:44:52.000Z</published>
-    <updated>2016-12-07T09:44:52.778Z</updated>
+    <updated>2016-12-07T10:48:17.745Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2>]]></content>
     
     <summary type="html">
     
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;
+    
     </summary>
     
+    
+      <category term="meetup" scheme="http://yafei002.github.io/tags/meetup/"/>
     
   </entry>
   
@@ -123,7 +129,7 @@
     </summary>
     
     
-      <category term="meetup" scheme="http://yafei002.github.io/Tags/meetup/"/>
+      <category term="meetup" scheme="http://yafei002.github.io/tags/meetup/"/>
     
   </entry>
   
@@ -132,7 +138,7 @@
     <link href="http://yafei002.github.io/2016/11/18/%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E5%91%98%E5%B7%A5%E6%98%AFHR%E7%9C%BC%E4%B8%AD%E7%9A%84%E5%A5%BD%E5%91%98%E5%B7%A5/"/>
     <id>http://yafei002.github.io/2016/11/18/什么样的员工是HR眼中的好员工/</id>
     <published>2016-11-18T15:15:06.000Z</published>
-    <updated>2016-11-24T10:15:14.148Z</updated>
+    <updated>2016-12-07T10:40:59.121Z</updated>
     
     <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>16年11月18日参加活动行里有关HR的分享活动。我参加的理由</p>
 <ol>
@@ -187,7 +193,7 @@
     </summary>
     
     
-      <category term="meetup" scheme="http://yafei002.github.io/Tags/meetup/"/>
+      <category term="meetup" scheme="http://yafei002.github.io/tags/meetup/"/>
     
   </entry>
   
@@ -239,7 +245,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/Tags/data-visualization/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -270,7 +276,7 @@
       <category term="数据可视化" scheme="http://yafei002.github.io/categories/data-visualization/"/>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/Tags/data-visualization/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -548,7 +554,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/Tags/data-visualization/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -720,7 +726,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/Tags/data-visualization/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -818,7 +824,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/Tags/data-visualization/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -978,7 +984,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/Tags/data-visualization/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -1083,7 +1089,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/Tags/data-visualization/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -1266,7 +1272,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/Tags/data-visualization/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -1539,7 +1545,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/Tags/data-visualization/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -1565,7 +1571,7 @@
     </summary>
     
     
-      <category term="数据可视化" scheme="http://yafei002.github.io/Tags/data-visualization/"/>
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
@@ -1613,9 +1619,9 @@
     </summary>
     
     
-      <category term="meetup" scheme="http://yafei002.github.io/Tags/meetup/"/>
+      <category term="meetup" scheme="http://yafei002.github.io/tags/meetup/"/>
     
-      <category term="大数据" scheme="http://yafei002.github.io/Tags/big-data/"/>
+      <category term="大数据" scheme="http://yafei002.github.io/tags/big-data/"/>
     
   </entry>
   
@@ -1652,7 +1658,7 @@
     </summary>
     
     
-      <category term="算法" scheme="http://yafei002.github.io/Tags/algorithm/"/>
+      <category term="算法" scheme="http://yafei002.github.io/tags/algorithm/"/>
     
   </entry>
   
