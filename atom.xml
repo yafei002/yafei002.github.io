@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2016-12-09T07:24:31.092Z</updated>
+  <updated>2017-01-06T15:32:52.812Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -14,6 +14,51 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据可视化之层次数据可视化（视频）</title>
+    <link href="http://yafei002.github.io/2017/01/06/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8B%E5%B1%82%E6%AC%A1%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
+    <id>http://yafei002.github.io/2017/01/06/数据可视化之层次数据可视化（视频）/</id>
+    <published>2017-01-06T15:31:18.000Z</published>
+    <updated>2017-01-06T15:32:52.812Z</updated>
+    
+    <content type="html"><![CDATA[<iframe height="498" width="510" src="http://player.youku.com/embed/XMTg0MDUyNTgyNA==" frameborder="0" 'allowfullscreen'=""></iframe>
+
+
+<embed src="http://player.youku.com/player.php/sid/XMTg0MDUyNTgyNA==/v.swf" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;iframe height=&quot;498&quot; width=&quot;510&quot; src=&quot;http://player.youku.com/embed/XMTg0MDUyNTgyNA==&quot; frameborder=&quot;0&quot; &#39;allowfullscreen&#39;=&quot;&quot;&gt;&lt;/iframe&gt;
+
+
+&lt;emb
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>了解KNN算法</title>
+    <link href="http://yafei002.github.io/2017/01/06/%E4%BA%86%E8%A7%A3KNN%E7%AE%97%E6%B3%95/"/>
+    <id>http://yafei002.github.io/2017/01/06/了解KNN算法/</id>
+    <published>2017-01-06T15:28:20.000Z</published>
+    <updated>2017-01-06T15:28:53.206Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://yafei002.github.io/tags/algorithm/"/>
+    
+      <category term="数据挖掘" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+    
+  </entry>
   
   <entry>
     <title>[meetup]创业早期的选型与亲历的坑</title>
@@ -158,7 +203,7 @@
     <link href="http://yafei002.github.io/2016/12/03/meetup-IT%E5%B7%A5%E7%A8%8B%E8%83%BD%E5%8A%9B%E5%AE%9E%E6%88%98/"/>
     <id>http://yafei002.github.io/2016/12/03/meetup-IT工程能力实战/</id>
     <published>2016-12-03T15:03:15.000Z</published>
-    <updated>2016-12-09T07:24:18.897Z</updated>
+    <updated>2016-12-09T07:37:14.578Z</updated>
     
     <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="/image/cover/201651CTO.jpg" alt="51CTO"><br>12月3日参加51CTO高招举办的《<a href="http://www.huodongxing.com/event/6360493849300" target="_blank" rel="external">CTO训练营2016最后一次开放日：属于技术管理者的年终盛宴</a>》活动。</p>
 <p>这是活动的第一场“IT工程能力实践”的总结，演讲人是马拉马拉CTO左文建。</p>
@@ -403,7 +448,7 @@
     <link href="http://yafei002.github.io/2016/11/15/%E5%A4%8D%E6%9D%82%E9%AB%98%E7%BB%B4%E5%A4%9A%E5%85%83%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yafei002.github.io/2016/11/15/复杂高维多元数据的可视化/</id>
     <published>2016-11-15T12:24:27.000Z</published>
-    <updated>2016-11-28T07:19:49.385Z</updated>
+    <updated>2016-12-09T07:24:42.941Z</updated>
     
     <content type="html"><![CDATA[<p>移动互联网时代涌现无数复杂的数据</p>
 <ul>
@@ -681,7 +726,7 @@
     <link href="http://yafei002.github.io/2016/11/15/%E6%96%87%E6%9C%AC%E5%92%8C%E6%96%87%E6%A1%A3%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yafei002.github.io/2016/11/15/文本和文档可视化/</id>
     <published>2016-11-15T12:23:28.000Z</published>
-    <updated>2016-11-15T12:28:21.639Z</updated>
+    <updated>2017-01-06T15:31:49.404Z</updated>
     
     <content type="html"><![CDATA[<h2 id="文本可视化释义"><a href="#文本可视化释义" class="headerlink" title="文本可视化释义"></a>文本可视化释义</h2><ul>
 <li>文本信息无处不在，为更高效的文本阅读和分析方法，文本可视化应运而生。</li>
