@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2017-01-08T23:18:39.044Z</updated>
+  <updated>2017-01-08T23:19:45.391Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -20,9 +20,11 @@
     <link href="http://yafei002.github.io/2017/01/09/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AE%80%E4%BB%8B%E5%92%8C%E5%8E%86%E5%8F%B2%EF%BC%88PPT/"/>
     <id>http://yafei002.github.io/2017/01/09/数据可视化简介和历史（PPT/</id>
     <published>2017-01-08T23:17:18.000Z</published>
-    <updated>2017-01-08T23:18:39.044Z</updated>
+    <updated>2017-01-08T23:19:45.391Z</updated>
     
     <content type="html"><![CDATA[<script async class="speakerdeck-embed" data-id="31691151436c4ab3bce9238c9809e905" data-ratio="1.50146627565982" src="//speakerdeck.com/assets/embed.js"></script>
+
+<p>（说明：如果没有显示，请翻墙）</p>
 ]]></content>
     
     <summary type="html">
@@ -41,7 +43,7 @@
     <link href="http://yafei002.github.io/2017/01/09/%E4%BA%86%E8%A7%A3%E5%86%B3%E7%AD%96%E6%A0%91%E5%92%8CC4-5%E7%AE%97%E6%B3%95%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/09/了解决策树和C4-5算法（视频）/</id>
     <published>2017-01-08T23:07:56.000Z</published>
-    <updated>2017-01-08T23:11:19.404Z</updated>
+    <updated>2017-01-08T23:24:34.836Z</updated>
     
     <content type="html"><![CDATA[<embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=t0364qvai6k&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
@@ -49,6 +51,7 @@
 <ul>
 <li>ppt：<a href="https://speakerdeck.com/yafei002/liao-jie-jue-ce-shu-he-c4-dot-5suan-fa" target="_blank" rel="external">https://speakerdeck.com/yafei002/liao-jie-jue-ce-shu-he-c4-dot-5suan-fa</a> （需翻墙）</li>
 </ul>
+<p><script async class="speakerdeck-embed" data-id="1cc654b996894bf3a563befde20f848b" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（若没有显示，请翻墙）</p>
 ]]></content>
     
     <summary type="html">
@@ -69,13 +72,13 @@
     <link href="http://yafei002.github.io/2017/01/09/%E4%BA%86%E8%A7%A3K-Means%E7%AE%97%E6%B3%95%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/09/了解K-Means算法（视频）/</id>
     <published>2017-01-08T18:22:07.000Z</published>
-    <updated>2017-01-08T23:08:53.554Z</updated>
+    <updated>2017-01-08T23:24:08.342Z</updated>
     
     <content type="html"><![CDATA[<embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=e03636silu3&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
 <p>（说明：简单的介绍,主要是为了自己学习的总结和理解。）</p>
 <ul>
-<li>ppt：<a href="https://speakerdeck.com/yafei002/liao-jie-k-meanssuan-fa" target="_blank" rel="external">了解K-Means算法</a>（需翻墙）</li>
+<li>ppt：<a href="https://speakerdeck.com/yafei002/liao-jie-k-meanssuan-fa" target="_blank" rel="external">了解K-Means算法</a>（需翻墙）<br><script async class="speakerdeck-embed" data-id="4a0cc9eb9b9e4d8d958f27ba0a16a026" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（若没有显示，请翻墙）</li>
 </ul>
 ]]></content>
     
@@ -97,13 +100,16 @@
     <link href="http://yafei002.github.io/2017/01/07/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8B%E8%A7%86%E8%A7%89%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%AE%A4%E7%9F%A5%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/07/数据可视化之视觉感知与认知（视频）/</id>
     <published>2017-01-06T16:04:53.000Z</published>
-    <updated>2017-01-08T23:08:46.625Z</updated>
+    <updated>2017-01-08T23:26:50.822Z</updated>
     
     <content type="html"><![CDATA[<embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=s0363rwc2ny&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
 <p>（说明：视频录制的目的主要是自己能将学习到的内容能总结出来，能说出来，增强学习的效果）</p>
 <ul>
 <li>ppt: <a href="https://speakerdeck.com/yafei002/shu-ju-ke-shi-hua-zhi-shi-jue-gan-zhi-yu-ren-zhi" target="_blank" rel="external">数据可视化之视觉感知与认知</a>（需翻墙）</li>
+</ul>
+<p><script async class="speakerdeck-embed" data-id="68bc622c160941289205e3adff921df2" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（若没有显示，请翻墙）</p>
+<ul>
 <li>资料：”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.”第二章</li>
 </ul>
 ]]></content>
@@ -124,13 +130,16 @@
     <link href="http://yafei002.github.io/2017/01/07/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8B%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/07/数据可视化之地理信息可视化（视频）/</id>
     <published>2017-01-06T16:04:20.000Z</published>
-    <updated>2017-01-08T23:08:48.136Z</updated>
+    <updated>2017-01-08T23:25:52.333Z</updated>
     
     <content type="html"><![CDATA[<embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=e0363jpoj28&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
 <p>（说明：视频录制的目的主要是自己能将学习到的内容能总结出来，能说出来，增强学习的效果）</p>
 <ul>
 <li>ppt: <a href="https://speakerdeck.com/yafei002/shu-ju-ke-shi-hua-zhi-di-li-xin-xi-ke-shi-hua" target="_blank" rel="external">数据可视化之地理信息可视化</a>（需翻墙）</li>
+</ul>
+<p><script async class="speakerdeck-embed" data-id="198a64d42ac640f3b354eef6da02c3e4" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（若没有显示，请翻墙）</p>
+<ul>
 <li>资料：”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.”第六章</li>
 </ul>
 ]]></content>
@@ -151,13 +160,16 @@
     <link href="http://yafei002.github.io/2017/01/07/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8B%E5%A4%8D%E6%9D%82%E9%AB%98%E7%BB%B4%E5%A4%9A%E5%85%83%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/07/数据可视化之复杂高维多元数据的可视化（上）（视频）/</id>
     <published>2017-01-06T16:03:44.000Z</published>
-    <updated>2017-01-08T23:08:47.228Z</updated>
+    <updated>2017-01-08T23:26:17.209Z</updated>
     
     <content type="html"><![CDATA[<embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=s0363oun5qx&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
 <p>（说明：视频录制的目的主要是自己能将学习到的内容能总结出来，能说出来，增强学习的效果）</p>
 <ul>
 <li>ppt：<a href="https://speakerdeck.com/yafei002/shu-ju-ke-shi-hua-zhi-fu-za-gao-wei-duo-yuan-shu-ju-de-ke-shi-hua-shang" target="_blank" rel="external">数据可视化之复杂高维多元数据的可视化（上）</a>（需翻墙）</li>
+</ul>
+<p><script async class="speakerdeck-embed" data-id="40d2a92bc9d640e985e34a8d9b234635" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（若没有显示，请翻墙）</p>
+<ul>
 <li>资料：”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.”第十二章上</li>
 </ul>
 ]]></content>
@@ -178,13 +190,16 @@
     <link href="http://yafei002.github.io/2017/01/06/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8B%E5%B1%82%E6%AC%A1%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/06/数据可视化之层次数据可视化（视频）/</id>
     <published>2017-01-06T15:31:18.000Z</published>
-    <updated>2017-01-08T23:08:50.622Z</updated>
+    <updated>2017-01-08T23:25:19.828Z</updated>
     
     <content type="html"><![CDATA[<embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=e0363zhvfly&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
 <p>（说明：视频录制的目的主要是自己能将学习到的内容能总结出来，能说出来，增强学习的效果）</p>
 <ul>
 <li>ppt: <a href="https://speakerdeck.com/yafei002/shu-ju-ke-shi-hua-zhi-ceng-ci-he-wang-luo-shu-ju-ke-shi-hua-shang" target="_blank" rel="external">数据可视化之层次数据可视化</a>（需翻墙）</li>
+</ul>
+<p><script async class="speakerdeck-embed" data-id="c8401ce050ca41d691cf19cb1d08affb" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（若没有显示，请翻墙）</p>
+<ul>
 <li>资料：”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.”第九章上</li>
 </ul>
 ]]></content>
@@ -205,7 +220,7 @@
     <link href="http://yafei002.github.io/2017/01/06/%E4%BA%86%E8%A7%A3KNN%E7%AE%97%E6%B3%95%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/06/了解KNN算法（视频）/</id>
     <published>2017-01-06T15:28:20.000Z</published>
-    <updated>2017-01-08T23:08:51.478Z</updated>
+    <updated>2017-01-08T23:24:05.450Z</updated>
     
     <content type="html"><![CDATA[<embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=d0363i3n7h8&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
@@ -213,6 +228,7 @@
 <ul>
 <li>ppt：<a href="https://speakerdeck.com/yafei002/liao-jie-knnsuan-fa" target="_blank" rel="external">了解KNN算法</a>（需翻墙）</li>
 </ul>
+<p><script async class="speakerdeck-embed" data-id="9ecea0d44dc349d19d41281bf574e71d" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（若没有显示，请翻墙）</p>
 ]]></content>
     
     <summary type="html">
