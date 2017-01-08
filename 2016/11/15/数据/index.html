@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yafei002在 Github 上的个人博客">
+    <meta name="keyword" content="undefined">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="alternate" type="application/atom+xml" title="Yafei002" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        数据｜Yafei002&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://yafei002.github.io/2016/11/15/数据/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('//o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Yafei002
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/tags/">tags</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>数据</h1>
+                    
+                    <span class="meta">
+                         作者 yafei002
+                        <span>
+                          日期 2016-11-15
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#数据可视化"
+                           title="数据可视化">数据可视化</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            数据
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="关于数据"><a href="#关于数据" class="headerlink" title="关于数据"></a>关于数据</h2><h3 id="释义"><a href="#释义" class="headerlink" title="释义"></a>释义</h3><p>数据是符号的集合，是表达客观事物的未加工的原始素材。可以看成是数据对象及其属性大的集合。</p>
+<h3 id="数据分类"><a href="#数据分类" class="headerlink" title="数据分类"></a>数据分类</h3><p>从关系模型角度可以分为实体和关系，关系和实体可以包含属性，属性分为离散属性和连续属性。</p>
+<h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2><p>数据集是数据的实例。常见的数据集分为</p>
+<ul>
+<li>数据纪录集<ul>
+<li>数据矩阵</li>
+<li>文档向量</li>
+<li>事务处理数据</li>
+</ul>
+</li>
+<li>图数据集</li>
+<li>有序数据集——具有某种顺序的数据集<ul>
+<li>常见如空间数据、时间数据、时空数据、顺序数据等</li>
+</ul>
+</li>
+</ul>
+<p>另一种分类是考察数据模型的结构。分为</p>
+<ul>
+<li>结构化数据（如RDBMS储存的数据）</li>
+<li>非结构化数据（如文本、视频、图像等）</li>
+<li>半结构化数据（如XML、维基百科等）</li>
+</ul>
+<h2 id="数据获取和预处理"><a href="#数据获取和预处理" class="headerlink" title="数据获取和预处理"></a>数据获取和预处理</h2><h3 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h3><p>大数据时代数据开始变得廉价，数据的获取途径多种多样。传统数据获取以文件的输入/输出为主。在移动互联网时代以基于网络的多源数据交换为主流。数据获取的挑战主要有数据格式变换和异构异质数据的获取协议两部分。</p>
+<p>在科研领域有数据获取协议（Data Access Protocol）作为一种通用的数据获取标准。在互联网上很多企业及机构也会共享免费数据。</p>
+<h3 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h3><p>常见的数据元操作</p>
+<ul>
+<li>合并</li>
+<li>采样</li>
+<li>降维</li>
+<li>特征子集选择——可达到降维的效果，但不改变数据的属性结构</li>
+<li>特征生成——在原始数据集上构建新的能反映数据集重要信息的属性</li>
+<li>离散化与二值化——其中将数据区间映射到[0,1]区间的方法称为归一化</li>
+<li>属性变换——将某个属性的所有可能取值映射到另一个空间 ，如指数变化、取绝对值。其中标准化和归一化为两类特殊的属性变化。</li>
+</ul>
+<h2 id="数据组织和管理"><a href="#数据组织和管理" class="headerlink" title="数据组织和管理"></a>数据组织和管理</h2><p>由于错误、无关的信息的产生和引入，数据需要控制来进行后续的分析。<br>数据管理包括对数据进行有效的收集、存储、处理和应用的过程。</p>
+<h3 id="数据清洗与精简"><a href="#数据清洗与精简" class="headerlink" title="数据清洗与精简"></a>数据清洗与精简</h3><p>数据质量问题包括：噪声和离群值、数值缺失、数值重复等。解决方法为数据清洗。<br>在数据清洗中，可视化是一种有效的展示和交互手段。</p>
+<p>数据精简可用于提升大规模数据查询和管理的交互性。分析和推理只需要定性的结果，采用近似解可提高对大数据的精简效率。</p>
+<h3 id="数据整合与集成"><a href="#数据整合与集成" class="headerlink" title="数据整合与集成"></a>数据整合与集成</h3><p>来自不同数据源的数据具有高度异构的特点，即不同的数据模型、不同的数据类型、不同的命名方法、不同的数据单元、以及不同的质量等。</p>
+<p>对异构数据的处理，首先需要数据整合，即将不同的数据源进行采集、清洗、精简和转换后统一融合在一个数据集合中，并提供同一的数据视图的数据集成方式。</p>
+<p>数据整合有两种方法</p>
+<ul>
+<li>物化式：查询之前，涉及的数据块移动到统一物理位置。</li>
+<li>虚拟式：不同的数据源上增加转换策略，构建一个虚拟层，来提供统一的数据访问接口。常使用到中间件技术，定义虚拟数据层之上数据映射关系，同时将不同的数据源在语义上进行融合。</li>
+</ul>
+<p>交互分析和可视数据要求数据整合采用集中式、虚拟式的模式。</p>
+<p>解决方案1</p>
+<ul>
+<li>采用工具或中间件对数据源包装和联合数据库</li>
+<li>提供通用模型用于交换异构数据和实现物理层的透明，同时处理异构性，保存数据源的自主性及保证可扩展性</li>
+</ul>
+<p>解决方案2（更优）</p>
+<ul>
+<li>基于计算查询理念的语义整合，利用应用领域的概念视图而不是数据源的普通描述来提供概念数据的透明性</li>
+</ul>
+<h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>数据库是数据的集合，并包含对数据的相关组织和操作。数据库管理系统通常包括数据库模型设计、数据分析支持、并发和容错、速度和存储容量。</p>
+<p>数据模型包括基于对象的E-R和基于记录的关系逻辑模型。</p>
+<ul>
+<li>关系型数据库（RDBMS）</li>
+<li>数据结构和数据内容分离，具有ACID事务性。<ul>
+<li>Cons<ul>
+<li>交互式可视化应用通常将数据保存在内存从而保证足够的性能</li>
+<li>SQL支持存储导向而不是语义导向的数据</li>
+<li>关系型数据库采用触发器机制实现，难以满足实时性的需求</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>NoSQL数据库<ul>
+<li>支持灵活的数据模型</li>
+<li>高扩展性，高可用性</li>
+<li>BASE(basic availability, soft state, eventual consistency)</li>
+<li>根据数据结构的不同，分为：文档数据库（CouchDB, MongoDB）、网络数据库（Neo4j）、键值数据库（Dynamo, memcashed, Redis）、列数据库（HBase）</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据仓库"><a href="#数据仓库" class="headerlink" title="数据仓库"></a>数据仓库</h3><p>“数据仓库是指面向主题的、集成的、与时间相关的、主要用于存储的数据集合，支持管理部门的决策过程。”</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
+<li>特定的应用方向</li>
+<li>集成多个异构数据源的数据</li>
+<li>时变性</li>
+<li>非易失性（相对稳定性），数据只进行刷新，不进行更新处理</li>
+<li>数据源于外部，并开放给外部应用</li>
+<li>基本架构师数据流入/流出的过程，分为三层：源数据、数据仓库、数据应用</li>
+<li>流水线称为ETL, 即<ul>
+<li>抽取（Extract）</li>
+<li>转化（Transfer）， 数据变换操作，主要有清理、重构、标准化等</li>
+<li>装载（Load），将数据按一定存储格式储存</li>
+</ul>
+</li>
+<li>要求每个组建可重用，支持并行操作，提高处理效率</li>
+</ul>
+<h3 id="不同于一般数据库的特点"><a href="#不同于一般数据库的特点" class="headerlink" title="不同于一般数据库的特点"></a>不同于一般数据库的特点</h3><ul>
+<li>数据仓库围绕某个应用目标</li>
+<li>可以不断更新和增长</li>
+<li>为复杂的决策支持查询进行了大量的优化</li>
+<li>结构化或非结构化数据都能被处理，并提供两种数据的整合功能</li>
+</ul>
+<p><img src="/image/dwh.png" alt="Database vs Data Warehouse"></p>
+<h2 id="数据分析与挖掘"><a href="#数据分析与挖掘" class="headerlink" title="数据分析与挖掘"></a>数据分析与挖掘</h2><h3 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h3><ul>
+<li>定义：指有组织有目的的采集、分析、概括和总结数据，从中提取有用的信息形成结论的过程</li>
+<li>从统计应用上分为<ul>
+<li>描述性统计分析<ul>
+<li>“描述统计是将研究中所得的数据加以整理、归类、简化或绘制成图表，以此描述和归纳数据的特征及变量之间的关系的一种最基本的统计方法。描述统计主要涉及数据的集中趋势、离散程度和相关强度，最常用的指标有平均数()、标准差(σx)、相关系数(r)等。”</li>
+</ul>
+</li>
+<li>探索式数据分析，强调从数据中找出之前未发现的特征和信息</li>
+<li>验证性数据分析，强调通过数据分析验证或证伪已提出的假说</li>
+</ul>
+</li>
+</ul>
+<p>探索式数据分析 vs 传统统计分析</p>
+<ul>
+<li>前者：关注数据本身，包括结构、离群值、异常值、数据导出的模型</li>
+<li>后者：关注模型，即估计模型的参数，从模型生成预测值</li>
+</ul>
+<p>探索式数据分析 vs 统计分析 vs 贝叶斯分析流程</p>
+<ul>
+<li>前：问题—数据—分析—模型—结论</li>
+<li>中：问题—数据—模型—分析—结论</li>
+<li>后：问题—数据—模型—先验分布—结论</li>
+</ul>
+<p>探索式数据分析 vs 数据挖掘</p>
+<ul>
+<li>前者：将聚类和异常检测看成探索式过程</li>
+<li>后者：关注模型的选择和参数的调节</li>
+</ul>
+<h3 id="联机分析处理（OLAP）"><a href="#联机分析处理（OLAP）" class="headerlink" title="联机分析处理（OLAP）"></a>联机分析处理（OLAP）</h3><p>表单转换为多维数组的步骤</p>
+<ol>
+<li>确定作为多维数组索引项的属性集合，必须具有离散值</li>
+<li>确定作为多维数组数据项的熟悉，通常为一个数值</li>
+</ol>
+<p>由于数据立方的高维度和大尺度，联机分析处理的挑战时设计高度交互的方法。</p>
+<ul>
+<li>方案一：预计算并存储不同层级的聚合值，以便减小数据尺度</li>
+<li>方案二：根据系统的可用性，将任意时刻处理对象限制于部分数据维度</li>
+</ul>
+<p>基本操作</p>
+<ul>
+<li>切片和切块，均等价于在整个数组中选择子集<ul>
+<li>切片：一个或多个维度上具有给定的属性值的数据项</li>
+<li>切块：从数据立方中选择属性值位于某个给定范围的数据子集</li>
+</ul>
+</li>
+<li>汇总和钻取：具有层次结构的属性值通常嵌套成一个树状或网状结构。通过向上汇总和向下钻取的方法获取数据在不同层次属性的数据值</li>
+</ul>
+<h3 id="数据挖掘"><a href="#数据挖掘" class="headerlink" title="数据挖掘"></a>数据挖掘</h3><p>数据挖掘是指设定特定的算法，从大量的数据集中去探索发现知识或者模式的理论和方法。</p>
+<p>数据挖掘任务：</p>
+<ul>
+<li>预测性方法：基于某些变量预测其他变量的预测值<ul>
+<li>分类</li>
+<li>回归</li>
+<li>偏差检测</li>
+</ul>
+</li>
+<li>描述性方法：以人类可以理解的模式描述数据<ul>
+<li>聚类</li>
+<li>概念描述</li>
+<li>关联规则挖掘</li>
+<li>序列模式挖掘</li>
+</ul>
+</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2016/11/15/数据可视化基础/" data-toggle="tooltip" data-placement="top"
+                           title="数据可视化基础">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2016/11/15/视觉感知与认知/" data-toggle="tooltip" data-placement="top"
+                           title="视觉感知与认知">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于数据"><span class="toc-text">关于数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#释义"><span class="toc-text">释义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据分类"><span class="toc-text">数据分类</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据集"><span class="toc-text">数据集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据获取和预处理"><span class="toc-text">数据获取和预处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据获取"><span class="toc-text">数据获取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据预处理"><span class="toc-text">数据预处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据组织和管理"><span class="toc-text">数据组织和管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据清洗与精简"><span class="toc-text">数据清洗与精简</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据整合与集成"><span class="toc-text">数据整合与集成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据库"><span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据仓库"><span class="toc-text">数据仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#特点"><span class="toc-text">特点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#不同于一般数据库的特点"><span class="toc-text">不同于一般数据库的特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据分析与挖掘"><span class="toc-text">数据分析与挖掘</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据分析"><span class="toc-text">数据分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#联机分析处理（OLAP）"><span class="toc-text">联机分析处理（OLAP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数据挖掘"><span class="toc-text">数据挖掘</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#数据可视化"
+                           title="数据可视化">数据可视化</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <div style="margin-top: 20px;">
+                    <h5 class="text-center">FRIENDS</h5>
+                    <ul class="list-inline text-center">
+                        
+                        <li><a href="https://yafei002.wordpress.com/">My English Blog</a></li>
+                        
+                        <li><a href="https://yafei002cn.wordpress.com/">原博客</a></li>
+                        
+                        <li><a href="http://i.youku.com/yafei002">视频</a></li>
+                        
+                        <li><a href="https://speakerdeck.com/yafei002">PPT</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/yafei002">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Yafei002 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yafei002.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','null','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="android-chrome-192x192.png">
+</body>
+
+</html>
