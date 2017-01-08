@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2017-01-08T23:11:19.404Z</updated>
+  <updated>2017-01-08T23:18:39.044Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据可视化简介和历史（PPT)</title>
+    <link href="http://yafei002.github.io/2017/01/09/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AE%80%E4%BB%8B%E5%92%8C%E5%8E%86%E5%8F%B2%EF%BC%88PPT/"/>
+    <id>http://yafei002.github.io/2017/01/09/数据可视化简介和历史（PPT/</id>
+    <published>2017-01-08T23:17:18.000Z</published>
+    <updated>2017-01-08T23:18:39.044Z</updated>
+    
+    <content type="html"><![CDATA[<script async class="speakerdeck-embed" data-id="31691151436c4ab3bce9238c9809e905" data-ratio="1.50146627565982" src="//speakerdeck.com/assets/embed.js"></script>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script async class=&quot;speakerdeck-embed&quot; data-id=&quot;31691151436c4ab3bce9238c9809e905&quot; data-ratio=&quot;1.50146627565982&quot; src=&quot;//speakerdeck.com/asse
+    
+    </summary>
+    
+    
+      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
+    
+  </entry>
   
   <entry>
     <title>了解决策树和C4.5算法（视频）</title>
@@ -1851,32 +1872,6 @@
       &lt;h2 id=&quot;概念理解&quot;&gt;&lt;a href=&quot;#概念理解&quot; class=&quot;headerlink&quot; title=&quot;概念理解&quot;&gt;&lt;/a&gt;概念理解&lt;/h2&gt;&lt;blockquote&gt;
 &lt;p&gt;感知： 客观事物通过感觉器官在人脑中的直接反映&lt;/p&gt;
 &lt;p&gt;认知：在认识的活动中个体对视觉信号接
-    
-    </summary>
-    
-    
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据可视化简介</title>
-    <link href="http://yafei002.github.io/2016/11/15/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AE%80%E4%BB%8B/"/>
-    <id>http://yafei002.github.io/2016/11/15/数据可视化简介/</id>
-    <published>2016-11-15T12:01:53.000Z</published>
-    <updated>2016-11-15T12:28:13.430Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="发展"><a href="#发展" class="headerlink" title="发展"></a>发展</h2><p>信息化时代面临的一个巨大的挑战是数据爆炸。这个挑战不仅在于数据量的体量、高维、多源、多态的特性，还体现在数据获取的动态性、数据内容大的噪声和互相矛盾、数据关系的异构和异质性等，从而导致人类分析数据的能力远远落后于数据获取的能力，由此演化为一门新的科学：数据科学。</p>
-<p>信息学科领域最基本的模型“数据（data）、信息（information）、知识（knowledge）、智慧（wisdom)构成了信息科学的基础理论，同时也是数据科学何种的一种数据处理流程，完成原始数据的转化。</p>
-<p>数据是对目标观察和记录的结果，本身没有用途。<br>信息是被赋予了意义和目标的数据。<br>知识是一种抽象的概念，但可以帮助我们去应用或行动的信息。<br>理解是知识与智慧的一种状态，是一种对为什么的理解。<br>智慧是被评估过得理解。</p>
-<h2 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h2><p>数据可视化的作用体现于从看见物体到获取知识的过程。它兼具知识的获取与艺术的表达，两者同时同在，从而达到真、善、美的均衡，有效的挖掘数据中蕴含的信息、知识与思想。<br>真，即真实性，反应数据的本质和对事物与规律的真实的感受和认知。<br>善，即倾向性，表达对社会和生活具体的含义和影响。<br>美，即艺术性，是艺术与内容的和谐统一。</p>
-<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>数据可视化分为科学可视化（处理科学数据）、信息可视化(处理抽象、非结构化的数据）与可视分析（体现数据分析的重要性）。<br>科学可视化根据数据的种类分为标量（单个数值如密度、温度）、向量（有方向和趋势的值，如风向和力场）和张量（矢量的推广如压力和弥散）。<br>信息可视化处理的对象为抽象、非结构化的数据集合，如文本、图表、层次结构、地图等。<br>可视分析学是一门以可视交互界面为基础的分析推理科学。它有效的结合人脑智能和机器智能，以视觉感知为通道，通过可视交互界面，形成人脑和机器智能的双向转换，降低数据的复杂度到人脑与机器智能均可处理的范围。</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;发展&quot;&gt;&lt;a href=&quot;#发展&quot; class=&quot;headerlink&quot; title=&quot;发展&quot;&gt;&lt;/a&gt;发展&lt;/h2&gt;&lt;p&gt;信息化时代面临的一个巨大的挑战是数据爆炸。这个挑战不仅在于数据量的体量、高维、多源、多态的特性，还体现在数据获取的动态性、数据内容大的噪声和
     
     </summary>
     
