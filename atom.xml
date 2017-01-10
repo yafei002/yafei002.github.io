@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2017-01-09T16:22:42.612Z</updated>
+  <updated>2017-01-10T03:37:17.030Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -20,9 +20,11 @@
     <link href="http://yafei002.github.io/2017/01/10/%E4%BA%86%E8%A7%A3%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/10/了解朴素贝叶斯（视频）/</id>
     <published>2017-01-09T16:18:59.000Z</published>
-    <updated>2017-01-09T16:22:42.612Z</updated>
+    <updated>2017-01-10T03:37:17.030Z</updated>
     
-    <content type="html"><![CDATA[<p>（说明：简单的介绍,主要是为了自己学习的总结和理解。）</p>
+    <content type="html"><![CDATA[<embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=h0364s0yn92&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
+
+<p>（说明：简单的介绍,主要是为了自己学习的总结和理解。）</p>
 <ul>
 <li>ppt：<a href="https://speakerdeck.com/yafei002/liao-jie-po-su-bei-xie-si" target="_blank" rel="external">https://speakerdeck.com/yafei002/liao-jie-po-su-bei-xie-si</a> （需翻墙）</li>
 </ul>
@@ -31,9 +33,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;（说明：简单的介绍,主要是为了自己学习的总结和理解。）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ppt：&lt;a href=&quot;https://speakerdeck.com/yafei002/liao-jie-po-su-bei-xie-si&quot; target=&quot;_blank&quot; rel=&quot;ex
+      &lt;embed src=&quot;https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&amp;v=20161117&amp;vid=h0364s0yn92&amp;auto=0&quot; allowfullscreen=&quot;tru
     
     </summary>
     
