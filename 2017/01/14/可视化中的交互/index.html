@@ -185,7 +185,52 @@
 </li>
 <li>交互能让用户更好地参与对数据的理解和分析</li>
 </ul>
-<h2 id="交互准则"><a href="#交互准则" class="headerlink" title="交互准则"></a>交互准则</h2>
+<h2 id="交互准则"><a href="#交互准则" class="headerlink" title="交互准则"></a>交互准则</h2><p>交互是指从用户操作的发生到系统返回结果所经过的时间，是决定交互有效性最重要的因素之一。</p>
+<h3 id="交互延时"><a href="#交互延时" class="headerlink" title="交互延时"></a>交互延时</h3><p>延时的长短决定了一个可视化系统的可用性及用户体验。</p>
+<ul>
+<li>感知处理，指用户感知交互效果的过程       <ul>
+<li>如用户选装三位物体时更新的操作在0.1秒内完成</li>
+</ul>
+</li>
+<li>立即反应，指用户和可视化系统之间类似对话的交互<ul>
+<li>如鼠标点击选中可视化对象或不同视图间切换，用户容忍延时的忍耐度是1秒</li>
+</ul>
+</li>
+<li>基本任务，用户在交互中指令系统完成一个相对复杂的任务<ul>
+<li>如数据搜索相关信息，用户对此时延时的忍耐度大大增加，一般的期望是10秒，在某些情况下甚至是30秒。但在设计可视化系统是，尽可能将大的任务分解成若干个10秒内可以完成的基本任务，这样增加系统地互动性，优化用户体验</li>
+</ul>
+</li>
+</ul>
+<p>交互延时还来自用户的输入，如通过视频进行人体跟踪或者眼球跟踪的时候，系统处理输入信号并转换成交互操作的指令时间不可忽略。</p>
+<h4 id="系统反馈"><a href="#系统反馈" class="headerlink" title="系统反馈"></a>系统反馈</h4><p>可视化系统通过视觉信号来反馈信息。</p>
+<p>当一个交互操作完成所需要的时间比用户预期的更长时</p>
+<pre><code>* 显示操作的进度
+* 更好的，转变成对应的用户延时期望较大的另一类交互，如感知处理转变成立即反应
+</code></pre><h3 id="交互成本"><a href="#交互成本" class="headerlink" title="交互成本"></a>交互成本</h3><p>可视化系统应当采用数据挖掘算法自动发现用户可能会关心的数据或模式，并通过可视化呈现，提高交互效率。</p>
+<p>系统自动分析即通过自动算法得出用户的需要的结论，与用户交互分析是相互互补的，权衡两者的作用和成本，达到合理的平衡。</p>
+<p>7种主要的交互成本</p>
+<ul>
+<li>达成目的的选择花费的决策成本</li>
+<li>生成系统操作花费的系统资源成本</li>
+<li>多重输入模式引发的交互流程阻滞</li>
+<li>人体物理动作占据的流程执行时间</li>
+<li>视觉混淆引起的感知障碍</li>
+<li>视图变换花费的解读时间</li>
+<li>评估解释中的状态转换成本</li>
+</ul>
+<h3 id="交互场景变化"><a href="#交互场景变化" class="headerlink" title="交互场景变化"></a>交互场景变化</h3><p>交互操作引发可视化场景的变化，此时需要依赖用户的视觉和感知记忆避免交互出错。有时会增加用户的认知负担。</p>
+<p>通过一些辅助手段</p>
+<ul>
+<li>将这些需要用户记忆的信息在系统中保存并显示。</li>
+<li>动画（动画的转换比突然的切换更能帮助用户对场景中发生变化的部分进行跟踪)</li>
+<li>让用户自主地在场景之间来回切换（尤其对于需要通过对比交互前后场景的区别得出结论的应用）</li>
+</ul>
+<p><strong>变化盲视</strong>：由于大脑和感知系统的局限，我们通常只能关注有限的<code>焦点区域</code>内的变化，无法注意到焦点之外的变化，即使是非常大的变化。</p>
+<ul>
+<li>解决：系统提前引导，如高亮</li>
+</ul>
+<p>（待续）</p>
+
                 <hr>
                 
 
@@ -207,7 +252,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#交互准则"><span class="toc-text">交互准则</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#交互准则"><span class="toc-text">交互准则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#交互延时"><span class="toc-text">交互延时</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#系统反馈"><span class="toc-text">系统反馈</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#交互成本"><span class="toc-text">交互成本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#交互场景变化"><span class="toc-text">交互场景变化</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
