@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2017-01-15T19:00:11.160Z</updated>
+  <updated>2017-03-20T12:41:32.655Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -16,11 +16,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>深度学习读书笔记-Part1</title>
+    <link href="http://yafei002.github.io/2017/03/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-Part1/"/>
+    <id>http://yafei002.github.io/2017/03/18/深度学习读书笔记-Part1/</id>
+    <published>2017-03-18T02:07:25.000Z</published>
+    <updated>2017-03-20T12:41:32.655Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="深度学习是什么东西"><a href="#深度学习是什么东西" class="headerlink" title="深度学习是什么东西"></a>深度学习是什么东西</h2><ul>
+<li>深度神经网络包含多层前馈神经网络、递归神经网络、卷积神经网络</li>
+<li>深度神经网络是一种结构，不是算法</li>
+</ul>
+<h3 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h3><ul>
+<li>监督学习：给定数据，预测标签</li>
+<li>非监督学习：给定数据，学习数据</li>
+<li>强化学习：给定数据，选择动作来最大化长期回报期望</li>
+</ul>
+<p><img src="/image/dl/rl_in_out.png" alt="reiforcement learning"></p>
+<p><a href="https://www.zhihu.com/question/41775291" target="_blank" rel="external">图片来自</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;深度学习是什么东西&quot;&gt;&lt;a href=&quot;#深度学习是什么东西&quot; class=&quot;headerlink&quot; title=&quot;深度学习是什么东西&quot;&gt;&lt;/a&gt;深度学习是什么东西&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;深度神经网络包含多层前馈神经网络、递归神经网络、卷积神经网络&lt;/li&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>可视化中的交互</title>
     <link href="http://yafei002.github.io/2017/01/14/%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B8%AD%E7%9A%84%E4%BA%A4%E4%BA%92/"/>
     <id>http://yafei002.github.io/2017/01/14/可视化中的交互/</id>
     <published>2017-01-14T13:42:46.000Z</published>
-    <updated>2017-01-15T19:00:11.160Z</updated>
+    <updated>2017-01-16T04:03:04.504Z</updated>
     
     <content type="html"><![CDATA[<p>用户交互是数据可视化系统中除了视觉呈现外另一个核心要素。</p>
 <ul>
@@ -35,7 +66,7 @@
 <h3 id="交互延时"><a href="#交互延时" class="headerlink" title="交互延时"></a>交互延时</h3><p>延时的长短决定了一个可视化系统的可用性及用户体验。</p>
 <ul>
 <li>感知处理，指用户感知交互效果的过程       <ul>
-<li>如用户选装三位物体时更新的操作在0.1秒内完成</li>
+<li>如用户选装三维物体时更新的操作在0.1秒内完成</li>
 </ul>
 </li>
 <li>立即反应，指用户和可视化系统之间类似对话的交互<ul>
@@ -100,7 +131,7 @@
     <link href="http://yafei002.github.io/2017/01/12/%E4%BA%86%E8%A7%A3%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/12/了解人工神经网络（视频）/</id>
     <published>2017-01-12T15:32:31.000Z</published>
-    <updated>2017-01-13T03:42:11.464Z</updated>
+    <updated>2017-01-16T04:25:23.389Z</updated>
     
     <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=o0365o3c7a5&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
@@ -128,7 +159,7 @@
     <link href="http://yafei002.github.io/2017/01/10/%E4%BA%86%E8%A7%A3%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/10/了解朴素贝叶斯（视频）/</id>
     <published>2017-01-09T16:18:59.000Z</published>
-    <updated>2017-01-10T04:40:09.222Z</updated>
+    <updated>2017-01-10T04:40:09.223Z</updated>
     
     <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=h0364s0yn92&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
@@ -177,7 +208,7 @@
     <link href="http://yafei002.github.io/2017/01/09/%E4%BA%86%E8%A7%A3%E5%86%B3%E7%AD%96%E6%A0%91%E5%92%8CC4-5%E7%AE%97%E6%B3%95%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/09/了解决策树和C4-5算法（视频）/</id>
     <published>2017-01-08T23:07:56.000Z</published>
-    <updated>2017-01-10T04:40:05.179Z</updated>
+    <updated>2017-01-16T04:22:38.570Z</updated>
     
     <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=t0364qvai6k&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
@@ -229,7 +260,7 @@
     <link href="http://yafei002.github.io/2017/01/07/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8B%E8%A7%86%E8%A7%89%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%AE%A4%E7%9F%A5%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/07/数据可视化之视觉感知与认知（视频）/</id>
     <published>2017-01-06T16:04:53.000Z</published>
-    <updated>2017-01-10T04:40:32.521Z</updated>
+    <updated>2017-01-16T04:30:09.619Z</updated>
     
     <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=s0363rwc2ny&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
@@ -254,7 +285,7 @@
     <link href="http://yafei002.github.io/2017/01/07/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8B%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
     <id>http://yafei002.github.io/2017/01/07/数据可视化之地理信息可视化（视频）/</id>
     <published>2017-01-06T16:04:20.000Z</published>
-    <updated>2017-01-10T04:40:24.075Z</updated>
+    <updated>2017-01-16T04:33:50.296Z</updated>
     
     <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=e0363jpoj28&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
 
@@ -355,7 +386,7 @@
     <link href="http://yafei002.github.io/2016/12/07/meetup-%E5%88%9B%E4%B8%9A%E6%97%A9%E6%9C%9F%E7%9A%84%E9%80%89%E5%9E%8B%E4%B8%8E%E4%BA%B2%E5%8E%86%E7%9A%84%E5%9D%91/"/>
     <id>http://yafei002.github.io/2016/12/07/meetup-创业早期的选型与亲历的坑/</id>
     <published>2016-12-07T09:44:52.000Z</published>
-    <updated>2016-12-09T07:24:31.092Z</updated>
+    <updated>2016-12-09T07:24:31.093Z</updated>
     
     <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="/image/cover/201651CTO.jpg" alt="51CTO"><br>12月3日参加51CTO高招举办的《<a href="http://www.huodongxing.com/event/6360493849300" target="_blank" rel="external">CTO训练营2016最后一次开放日：属于技术管理者的年终盛宴</a>》活动。</p>
 <p>演讲人为黄全能，Leapp教育科技有限公司CTO。</p>
@@ -493,7 +524,7 @@
     <link href="http://yafei002.github.io/2016/12/03/meetup-IT%E5%B7%A5%E7%A8%8B%E8%83%BD%E5%8A%9B%E5%AE%9E%E6%88%98/"/>
     <id>http://yafei002.github.io/2016/12/03/meetup-IT工程能力实战/</id>
     <published>2016-12-03T15:03:15.000Z</published>
-    <updated>2016-12-09T07:37:14.578Z</updated>
+    <updated>2016-12-09T07:37:14.579Z</updated>
     
     <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="/image/cover/201651CTO.jpg" alt="51CTO"><br>12月3日参加51CTO高招举办的《<a href="http://www.huodongxing.com/event/6360493849300" target="_blank" rel="external">CTO训练营2016最后一次开放日：属于技术管理者的年终盛宴</a>》活动。</p>
 <p>这是活动的第一场“IT工程能力实践”的总结，演讲人是马拉马拉CTO左文建。</p>
@@ -1188,7 +1219,7 @@
     <link href="http://yafei002.github.io/2016/11/15/%E5%B1%82%E6%AC%A1%E5%92%8C%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yafei002.github.io/2016/11/15/层次和网络数据可视化/</id>
     <published>2016-11-15T12:15:33.000Z</published>
-    <updated>2016-11-28T07:19:24.026Z</updated>
+    <updated>2016-11-28T07:19:24.027Z</updated>
     
     <content type="html"><![CDATA[<h2 id="层次结构"><a href="#层次结构" class="headerlink" title="层次结构"></a>层次结构</h2><p>层次数据表现为包含、从属、承接（决策树、家谱）关系。</p>
 <h2 id="层次数据的可视化"><a href="#层次数据的可视化" class="headerlink" title="层次数据的可视化"></a>层次数据的可视化</h2><p>要点： 对数据中层次关系的有效刻画。</p>
@@ -1273,166 +1304,6 @@
     
       &lt;h2 id=&quot;层次结构&quot;&gt;&lt;a href=&quot;#层次结构&quot; class=&quot;headerlink&quot; title=&quot;层次结构&quot;&gt;&lt;/a&gt;层次结构&lt;/h2&gt;&lt;p&gt;层次数据表现为包含、从属、承接（决策树、家谱）关系。&lt;/p&gt;
 &lt;h2 id=&quot;层次数据的可视化&quot;&gt;&lt;a href=&quot;#层次数
-    
-    </summary>
-    
-    
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>时变数据可视化</title>
-    <link href="http://yafei002.github.io/2016/11/15/%E6%97%B6%E5%8F%98%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    <id>http://yafei002.github.io/2016/11/15/时变数据可视化/</id>
-    <published>2016-11-15T12:13:57.000Z</published>
-    <updated>2016-11-15T12:27:24.200Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><ul>
-<li>随时间变化，带有时间属性<ul>
-<li>语义分类<ul>
-<li>以时间轴排列的时间序列数据</li>
-<li>内部具有排列顺序的数据集，如生物DNA测序</li>
-</ul>
-</li>
-<li>实际应用中特点<ul>
-<li>量大</li>
-<li>维数多</li>
-<li>变量多</li>
-<li>流模式：无限长度时间轴</li>
-</ul>
-</li>
-<li>可视化方法<ul>
-<li>静态方法，不随时间变化，采用多视角、数据比较等体现数据规律</li>
-<li>动画方法，可视化领域主流观点，由于人类对动画的局限性，谨慎使用动画方式</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="不同时间数据的可视化方式"><a href="#不同时间数据的可视化方式" class="headerlink" title="不同时间数据的可视化方式"></a>不同时间数据的可视化方式</h2><h3 id="时间属性可视化"><a href="#时间属性可视化" class="headerlink" title="时间属性可视化"></a>时间属性可视化</h3><ul>
-<li>刻画时间的三种方式<ul>
-<li>线性时间和周期时间</li>
-<li>时间点和时间间隔</li>
-<li>顺序时间、分支时间、多角度时间<ul>
-<li>顺序时间： 事件发生的先后</li>
-<li>分支时间： 一个决策的多个方案</li>
-<li>多角度时间： 例如不同目击者的报告</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="线性和周期时间可视化"><a href="#线性和周期时间可视化" class="headerlink" title="线性和周期时间可视化"></a>线性和周期时间可视化</h4><ul>
-<li>线性时间<ul>
-<li>标准的方式为x轴表示时间，y轴表示其他变量</li>
-<li>不能表示时间的周期性</li>
-</ul>
-</li>
-<li>周期时间<ul>
-<li>时间序列沿圆周排列，一个回路代表一个周期</li>
-<li>环状表示某时间段内的时间结构，体现数据的周期结构</li>
-<li>单个时间轴多个属性轴来表示顺序时间、点时间和多角度时间</li>
-<li>堆叠的语义流方法表达多个变量随时间演化的过程</li>
-<li>不同的属性采用不同的可视化通道表达</li>
-</ul>
-</li>
-</ul>
-<h4 id="日历时间可视化"><a href="#日历时间可视化" class="headerlink" title="日历时间可视化"></a>日历时间可视化</h4><p>参见示例</p>
-<h4 id="分支和多角度时间可视化"><a href="#分支和多角度时间可视化" class="headerlink" title="分支和多角度时间可视化"></a>分支和多角度时间可视化</h4><p>这类可视化分为线性、流状、树状、图状等</p>
-<h5 id="线性多角度时间可视化"><a href="#线性多角度时间可视化" class="headerlink" title="线性多角度时间可视化"></a>线性多角度时间可视化</h5><ul>
-<li>采用类似甘特图的方式呈现一个完整事件的历程和社会行为</li>
-<li>采用环形可视化呈现故事蕴含的周期特性</li>
-</ul>
-<h5 id="流状分支时间主线可视化"><a href="#流状分支时间主线可视化" class="headerlink" title="流状分支时间主线可视化"></a>流状分支时间主线可视化</h5><ul>
-<li>基于河流的可视隐喻可展示时序型事件随时间产生流动、合并、分叉和消失的效果，类似小说和电影的主线</li>
-</ul>
-<h5 id="时间属性的动态可视化"><a href="#时间属性的动态可视化" class="headerlink" title="时间属性的动态可视化"></a>时间属性的动态可视化</h5><ul>
-<li>适当的采用动态可视化方法，有助于用户了解整个事件的过程</li>
-</ul>
-<h4 id="多变量时变型数据可视化"><a href="#多变量时变型数据可视化" class="headerlink" title="多变量时变型数据可视化"></a>多变量时变型数据可视化</h4><p>对于多变量大尺度的时变数据的分析流程符合可视化的基本流程：全局摘要——缩放和过滤。可归纳为<br>三种方法</p>
-<ul>
-<li>数据抽象<ul>
-<li>数据降维、特征选取和数据简化等方法增强关键特征抑制不相关细节</li>
-</ul>
-</li>
-<li>聚类<ul>
-<li>核心是定义恰当的距离或相似性度量</li>
-</ul>
-</li>
-<li>特征分析，包括特征抽取、语义分析等操作<ul>
-<li>基于事件的可视化技术包含事件定义、事件抽取、语义分析</li>
-</ul>
-</li>
-</ul>
-<h5 id="基于线表示的可视化"><a href="#基于线表示的可视化" class="headerlink" title="基于线表示的可视化"></a>基于线表示的可视化</h5><p>高维抽象的时变数据具有宏观的、结构的、随时间变化的规律。将每个数据采样点相连形成一条高维<br>空间的线，在低维空间可视化这条线揭示高维空间的时间序列演化趋势。<br>步骤</p>
-<ol>
-<li>高维曲线采样， 频率由用户交互指定</li>
-<li>采样后的曲线分段，小段间可重叠。分段尺寸、重叠程度由用户交互指定</li>
-<li>用主元分析法将高维曲线投影到二维空间，显示和研究曲线的特性</li>
-</ol>
-<p>???</p>
-<h5 id="基于图结构的可视化"><a href="#基于图结构的可视化" class="headerlink" title="基于图结构的可视化"></a>基于图结构的可视化</h5><p>基于<strong>事件</strong>的时变或顺序数据可视化核心是<strong>事件演化的组织</strong>。</p>
-<ol>
-<li>根据需求和任务描述点从数据中找到与关注点相匹配的事件，从而对事件分类</li>
-<li>根据事件的特征描述从输入有序数据中检测事件，得到事件实例</li>
-<li>可视化检测到的事件</li>
-</ol>
-<h5 id="时间序列数据的可视化交互"><a href="#时间序列数据的可视化交互" class="headerlink" title="时间序列数据的可视化交互"></a>时间序列数据的可视化交互</h5><p>对大规模的时变数据需要设计合适的交互方法如有概览加上下文、层次细节等表现重要的领域。</p>
-<p>工具举例：TimeSearcher</p>
-<h4 id="流数据可视化"><a href="#流数据可视化" class="headerlink" title="流数据可视化"></a>流数据可视化</h4><p>特点：输入数据（全部或部分）不存储在可随机访问的磁盘或内存中，而是以一个或多个“连续数据流”<br>的形式到达。</p>
-<ul>
-<li>潜在大小或许无限</li>
-<li>在线到达，需实时处理，否则数据价值会随时间流动降低</li>
-<li>无法控制数据到达的顺序和质量</li>
-<li>数据处理后要么丢弃要么被归档存储</li>
-<li>查询异常情况和相似类型比较耗时，人工检测日志乏味且易出错</li>
-</ul>
-<h5 id="流数据可视化模型"><a href="#流数据可视化模型" class="headerlink" title="流数据可视化模型"></a>流数据可视化模型</h5><pre><code>流数据进入流处理器后经过整理大部分归档到数据库中，关键数据保存在可视化数据库中，然后被可视化
-处理器进行处理，经过用户的交互后返回到流处理器继续之前的同样的处理。
-</code></pre><p>流数据可是分析流水线：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/      </div><div class="line">        ————————时间分割—————————————————————</div><div class="line">        ↑                     ↓             ↓</div><div class="line">数据流———                   空间分割———————&gt;摘要/统计————&gt;统计模型/分析模型</div><div class="line">        ↓                     ↑             ↑</div><div class="line">        ————————聚合—————————————————————————</div></pre></td></tr></table></figure>
-<h5 id="流数据处理技术"><a href="#流数据处理技术" class="headerlink" title="流数据处理技术"></a>流数据处理技术</h5><ul>
-<li>传统数据挖掘的流数据改进算法<ul>
-<li>分类、聚类、频繁模式挖掘、降维等</li>
-</ul>
-</li>
-<li>大数据相关统计方法、采样算法、哈希算法等</li>
-<li>流数据特有算法<ul>
-<li>滑动窗口、数据预测等</li>
-</ul>
-</li>
-</ul>
-<p><strong>窗口技术</strong></p>
-<p>在数据集中如果最近的数据更被关心，窗口技术可以对数据在时间上进行限定。</p>
-<ul>
-<li>滑动窗口（sliding window）： 在时间轴上滑动窗口，挖掘窗口内的数据</li>
-<li>衰减窗口（decaying window）：考虑历史数据，为数据项添加随时间不断缩小的衰减因子，从而越老的数据权重越低</li>
-<li>时间盒（timebox）???：一种交互技术，通过时间盒框选部分数据进行联合搜索</li>
-</ul>
-<p><strong>时序数据相似性计算</strong></p>
-<p>???</p>
-<p><strong>符号技术</strong></p>
-<p>???</p>
-<h5 id="流数据可视化案例"><a href="#流数据可视化案例" class="headerlink" title="流数据可视化案例"></a>流数据可视化案例</h5><ul>
-<li>监控型，局部分析<ul>
-<li>用滑动窗口固定一个时间区间，将流数据转化为静态数据，数据更新方式可以是刷新</li>
-</ul>
-</li>
-<li>叠加型，历史型，全局分析<ul>
-<li>新数据映射到原来的历史数据可视化结果上，更新方式可谓渐进式更新</li>
-</ul>
-</li>
-</ul>
-<p>???</p>
-<h5 id="并行流计算框架"><a href="#并行流计算框架" class="headerlink" title="并行流计算框架"></a>并行流计算框架</h5><p>???</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>本文为”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.” 笔记</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;基础&quot;&gt;&lt;a href=&quot;#基础&quot; class=&quot;headerlink&quot; title=&quot;基础&quot;&gt;&lt;/a&gt;基础&lt;/h2&gt;&lt;h3 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h3&gt;&lt;ul&gt;
-&lt;
     
     </summary>
     
