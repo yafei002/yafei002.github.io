@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        深度学习读书笔记-Part1｜Yafei002&#39;s blog
+        Neo4j-Dump和Load｜Yafei002&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://yafei002.github.io/2017/03/18/深度学习读书笔记-Part1/">
+    <link rel="canonical" href="http://yafei002.github.io/2017/12/12/Neo4j-Dump和Load/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,15 +145,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>深度学习读书笔记-Part1</h1>
+                    <h1>Neo4j-Dump和Load</h1>
                     
                     <span class="meta">
                          作者 yafei002
                         <span>
-                          日期 2017-03-18
+                          日期 2017-12-12
                          </span>
                     </span>
                     <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Neo4j"
+                           title="Neo4j">Neo4j</a>
                         
                     </div>
                 </div>
@@ -162,7 +165,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            深度学习读书笔记-Part1
+            Neo4j-Dump和Load
         </span>
     </div>
 </header>
@@ -173,17 +176,16 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <h2 id="深度学习是什么东西"><a href="#深度学习是什么东西" class="headerlink" title="深度学习是什么东西"></a>深度学习是什么东西</h2><ul>
-<li>深度神经网络包含多层前馈神经网络、递归神经网络、卷积神经网络</li>
-<li>深度神经网络是一种结构，不是算法</li>
-</ul>
-<h3 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h3><ul>
-<li>监督学习：给定数据，预测标签</li>
-<li>非监督学习：给定数据，学习数据</li>
-<li>强化学习：给定数据，选择动作来最大化长期回报期望</li>
-</ul>
-<p><img src="/image/dl/rl_in_out.png" alt="reiforcement learning"></p>
-<p><a href="https://www.zhihu.com/question/41775291" target="_blank" rel="external">图片来自</a></p>
+                <p>当数据库需要备份或保存历史数据或做数据迁移时，由于数据库目录的格式和内容会随着时间而改变，显然单纯的复制<br>粘贴是不能完全保证数据库正常工作的，有时甚至是有害的。</p>
+<p>这是使用<code>neo4j-admin dump</code>和<code>neo4j-admin load</code>会更安全一些。</p>
+<p>具体的语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">neo4j-admin dump --database=&lt;database&gt; --to=&lt;destination-path&gt;</div><div class="line"></div><div class="line">neo4j-admin load --from=&lt;archive-path&gt; --database=&lt;database&gt; [--force]</div></pre></td></tr></table></figure>
+<h2 id="Dump"><a href="#Dump" class="headerlink" title="Dump"></a>Dump</h2><p>样例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$neo4j-home&gt; bin/neo4j-admin dump --database=graph.db --to=backups/graph.db/2016-10-02.dump</div><div class="line"></div><div class="line">$neo4j-home&gt; ls backups/graph.db</div><div class="line"></div><div class="line">$neo4j-home&gt; 2016-10-02.dump</div></pre></td></tr></table></figure>
+<p>保证当前目录下存在<code>backups/graph.db</code>目录。</p>
+<h2 id="Load"><a href="#Load" class="headerlink" title="Load"></a>Load</h2><p>样例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$neo4j-home&gt; bin/neo4j stop</div><div class="line"></div><div class="line">Stopping Neo4j.. stopped</div><div class="line"></div><div class="line">$neo4j-home&gt; bin/neo4j-admin load --from=backups/graph.db/2016-10-02.dump --database=graph.db --force</div></pre></td></tr></table></figure>
+<p>首先关闭neo4j进程，然后再加载。<code>force</code>是指覆盖原有的graph.db。</p>
 
                 <hr>
                 
@@ -191,14 +193,14 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/12/12/Neo4j-Dump和Load/" data-toggle="tooltip" data-placement="top"
-                           title="Neo4j-Dump和Load">&larr; Previous Post</a>
+                        <a href="/2017/12/12/周记-17.10.27/" data-toggle="tooltip" data-placement="top"
+                           title="周记-17.10.27">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2017/01/14/可视化中的交互/" data-toggle="tooltip" data-placement="top"
-                           title="可视化中的交互">Next Post &rarr;</a>
+                        <a href="/2017/03/18/深度学习读书笔记-Part1/" data-toggle="tooltip" data-placement="top"
+                           title="深度学习读书笔记-Part1">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -233,7 +235,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#深度学习是什么东西"><span class="toc-text">深度学习是什么东西</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#机器学习"><span class="toc-text">机器学习</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Dump"><span class="toc-text">Dump</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Load"><span class="toc-text">Load</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -254,6 +256,9 @@
                         <a href="/tags/">FEATURED TAGS</a>
                     </h5>
                     <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Neo4j"
+                           title="Neo4j">Neo4j</a>
                         
                     </div>
                 </section>

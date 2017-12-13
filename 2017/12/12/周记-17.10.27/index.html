@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Yafei002在 Github 上的个人博客">
+    <meta name="keyword" content="undefined">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="alternate" type="application/atom+xml" title="Yafei002" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        周记-17.10.27｜Yafei002&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://yafei002.github.io/2017/12/12/周记-17.10.27/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('//o7bkkhiex.bkt.clouddn.com/lion-blur-bg.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Yafei002
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/tags/">tags</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>周记-17.10.27</h1>
+                    
+                    <span class="meta">
+                         作者 yafei002
+                        <span>
+                          日期 2017-12-12
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#周记"
+                           title="周记">周记</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            周记-17.10.27
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <h2 id="17-10-27"><a href="#17-10-27" class="headerlink" title="17.10.27"></a>17.10.27</h2><h3 id="理解SparkX-Pregal"><a href="#理解SparkX-Pregal" class="headerlink" title="理解SparkX Pregal"></a>理解SparkX Pregal</h3><p>结合<a href="https://www.cakesolutions.net/teamblogs/graphx-pregel-api-an-example" target="_blank" rel="external">GraphX Pregel API: An Example</a><br>和<a href="https://www.2cto.com/net/201703/608753.html" target="_blank" rel="external">GraphXPregel实例实现</a>这两篇文章即可。</p>
+<h3 id="团伙欺诈"><a href="#团伙欺诈" class="headerlink" title="团伙欺诈"></a>团伙欺诈</h3><p><a href="http://www.sohu.com/a/85768779_278472" target="_blank" rel="external">识别欺诈团伙,“关系网络”为何这么霸气</a></p>
+<h3 id="spark"><a href="#spark" class="headerlink" title="spark"></a>spark</h3><p><a href="http://www.cnblogs.com/MOBIN/p/5373256.html" target="_blank" rel="external">Spark函数详解系列之RDD基本转换</a></p>
+<h3 id="理解矩阵"><a href="#理解矩阵" class="headerlink" title="理解矩阵"></a>理解矩阵</h3><p><a href="https://www.zhihu.com/question/21351965/answer/204058188" target="_blank" rel="external">矩阵乘法的本质是什么？</a></p>
+<p><a href="https://www.zhihu.com/question/21832377/answer/202231378" target="_blank" rel="external">矩阵和向量组和线性方程组之间的关系是什么？</a></p>
+<p><a href="http://www.matongxue.com/madocs/254.html#/madoc" target="_blank" rel="external">如何理解矩阵的「秩」？</a></p>
+<p><a href="https://wenku.baidu.com/view/da0dbc1c6bd97f192279e909.html" target="_blank" rel="external">第七讲 矩阵的乘法运算</a></p>
+<h3 id="奇异值分解"><a href="#奇异值分解" class="headerlink" title="奇异值分解"></a>奇异值分解</h3><p><a href="http://mp.weixin.qq.com/s/Mu9jkm7rGO6oJ8aYN_hM-w" target="_blank" rel="external">如何理解奇异值以及奇异值分解？</a></p>
+<p><a href="http://www.cnblogs.com/LeftNotEasy/archive/2011/01/19/svd-and-applications.html" target="_blank" rel="external">机器学习中的数学(5)-强大的矩阵奇异值分解(SVD)及其应用</a></p>
+<h2 id="17-10-30"><a href="#17-10-30" class="headerlink" title="17.10.30"></a>17.10.30</h2><h3 id="理解特征值和特征向量"><a href="#理解特征值和特征向量" class="headerlink" title="理解特征值和特征向量"></a>理解特征值和特征向量</h3><p><a href="https://www.zhihu.com/question/20507061/answer/120540926" target="_blank" rel="external">线性代数中，特征值与特征向量在代数和几何层面的实际意义是什么？</a></p>
+<p><a href="https://www.zhihu.com/question/21874816" target="_blank" rel="external">如何理解矩阵特征值？</a></p>
+<h3 id="spark-neo4j"><a href="#spark-neo4j" class="headerlink" title="spark+neo4j"></a>spark+neo4j</h3><p><a href="https://neo4j.com/blog/neo4j-3-0-apache-spark-connector/" target="_blank" rel="external">Introducing the Neo4j 3.0 Apache Spark Connector</a></p>
+<h3 id="理解最小二乘法"><a href="#理解最小二乘法" class="headerlink" title="理解最小二乘法"></a>理解最小二乘法</h3><p><a href="https://wenku.baidu.com/view/3c5e605049649b6649d74759.html" target="_blank" rel="external">最小二乘法原理的几何解释</a></p>
+<p><a href="http://dy.163.com/v2/article/detail/CG1D3EV305118CTM.html" target="_blank" rel="external">如何在20分钟内快速了解数据降维和参数降维</a></p>
+<p><a href="http://blog.csdn.net/antkillerfarm/article/details/53734658" target="_blank" rel="external">机器学习（十四）——协同过滤的ALS算法（2）、主成分分析</a></p>
+<h3 id="推荐系统"><a href="#推荐系统" class="headerlink" title="推荐系统"></a>推荐系统</h3><p><a href="http://www.cnblogs.com/Leo_wl/p/6337667.html" target="_blank" rel="external">推荐系统</a></p>
+<h2 id="17-10-31"><a href="#17-10-31" class="headerlink" title="17.10.31"></a>17.10.31</h2><h3 id="模型评估标准"><a href="#模型评估标准" class="headerlink" title="模型评估标准"></a>模型评估标准</h3><p><a href="http://charleshm.github.io/2016/03/Model-Performance/" target="_blank" rel="external">机器学习性能评估指标</a></p>
+<h3 id="光滑函数"><a href="#光滑函数" class="headerlink" title="光滑函数"></a>光滑函数</h3><p>光滑函数（smooth function）：各阶导数存在且连续的函数，若一函数是连续的，则称其为C^0函数；若函数存在导函数，且其导函数连续，即连续可导，则称其为C^1函数；若一函数n阶可导，并且其n阶导函数连续，则为函数C^n。而光滑函数是对所有n都属于C^n的函数，特称其为C∞函数。</p>
+<p>作者：楚天<br>链接：<a href="https://www.zhihu.com/question/27924991/answer/250643851" target="_blank" rel="external">https://www.zhihu.com/question/27924991/answer/250643851</a><br>来源：知乎</p>
+<h2 id="17-11-1"><a href="#17-11-1" class="headerlink" title="17.11.1"></a>17.11.1</h2><h3 id="特征分箱"><a href="#特征分箱" class="headerlink" title="特征分箱"></a>特征分箱</h3><p><a href="http://blog.csdn.net/Mr_tyting/article/details/75212250?locationNum=3&amp;fps=1" target="_blank" rel="external">金融风控–&gt;申请评分卡模型–&gt;特征工程（特征分箱，WOE编码）</a></p>
+<h3 id="相关性"><a href="#相关性" class="headerlink" title="相关性"></a>相关性</h3><p><a href="http://www.fuzihao.org/blog/2015/01/17/%E4%BA%92%E4%BF%A1%E6%81%AF%E7%9A%84%E7%90%86%E8%A7%A3/" target="_blank" rel="external">互信息的理解</a></p>
+<p><a href="https://www.zhihu.com/question/19734616/answer/174098489" target="_blank" rel="external">如何理解皮尔逊相关系数（Pearson Correlation Coefficient）？</a></p>
+<h2 id="17-11-06"><a href="#17-11-06" class="headerlink" title="17.11.06"></a>17.11.06</h2><h3 id="disable-requests-package-InsecureRequestWarning"><a href="#disable-requests-package-InsecureRequestWarning" class="headerlink" title="disable requests package:InsecureRequestWarning"></a><a href="https://stackoverflow.com/questions/27981545/suppress-insecurerequestwarning-unverified-https-request-is-being-made-in-pytho" target="_blank" rel="external">disable requests package:InsecureRequestWarning</a></h3><p>To disable warnings in requests’ vendored urllib3, you’ll need to import that specific instance of the module:</p>
+<p>import requests<br>from requests.packages.urllib3.exceptions import InsecureRequestWarning</p>
+<p>requests.packages.urllib3.disable_warnings(InsecureRequestWarning)</p>
+<h2 id="17-11-07"><a href="#17-11-07" class="headerlink" title="17.11.07"></a>17.11.07</h2><h3 id="PageRank算法简介及Map-Reduce实现"><a href="#PageRank算法简介及Map-Reduce实现" class="headerlink" title="PageRank算法简介及Map-Reduce实现"></a><a href="http://blog.jobbole.com/71431/" target="_blank" rel="external">PageRank算法简介及Map-Reduce实现</a></h3><h2 id="17-11-09"><a href="#17-11-09" class="headerlink" title="17.11.09"></a>17.11.09</h2><h3 id="spark-job，-stage-，task介绍"><a href="#spark-job，-stage-，task介绍" class="headerlink" title="spark job， stage ，task介绍"></a><a href="https://www.cnblogs.com/missmzt/p/6078189.html" target="_blank" rel="external">spark job， stage ，task介绍</a></h3><h3 id="GCN"><a href="#GCN" class="headerlink" title="GCN"></a>GCN</h3><p><a href="http://www.sohu.com/a/116070299_494939" target="_blank" rel="external">Graph 卷积神经网络：概述、样例及最新进展</a></p>
+<p><a href="https://www.zhihu.com/question/54504471" target="_blank" rel="external">如何理解 Graph Convolutional Network（GCN）？</a></p>
+<p><a href="http://tkipf.github.io/graph-convolutional-networks/" target="_blank" rel="external">GRAPH CONVOLUTIONAL NETWORKS</a></p>
+<p><a href="https://arxiv.org/pdf/1609.02907.pdf" target="_blank" rel="external">https://arxiv.org/pdf/1609.02907.pdf</a></p>
+<h2 id="17-11-15"><a href="#17-11-15" class="headerlink" title="17.11.15"></a>17.11.15</h2><h3 id="线代"><a href="#线代" class="headerlink" title="线代"></a>线代</h3><p><a href="http://mp.weixin.qq.com/s/4dg3-5i0y1LBZev_KvTJ0A" target="_blank" rel="external">如何理解相似矩阵？</a></p>
+<h3 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h3><p><a href="https://www.2cto.com/kf/201707/658181.html" target="_blank" rel="external">scikit-learn 朴素贝叶斯类库使用小结</a></p>
+<h2 id="17-11-15-1"><a href="#17-11-15-1" class="headerlink" title="17.11.15"></a>17.11.15</h2><p><a href="http://blog.csdn.net/pipisorry/article/details/52250760" target="_blank" rel="external">Scikit-learn：模型评估Model evaluation</a></p>
+<p><a href="http://blog.csdn.net/ybdesire/article/details/51999995" target="_blank" rel="external">详解ROC/AUC计算过程</a></p>
+<p><a href="http://blog.csdn.net/u013393647/article/details/47999513" target="_blank" rel="external">如何评估模型好坏</a></p>
+<p><a href="http://blog.csdn.net/kevinelstri/article/details/52636661" target="_blank" rel="external">数据加载，数据归一，特征选择，逻辑回归，贝叶斯，k近邻，决策树，SVM</a></p>
+<p><a href="https://www.cnblogs.com/pinard/p/6074222.html" target="_blank" rel="external">scikit-learn 朴素贝叶斯类库使用小结</a></p>
+<p><a href="http://blog.csdn.net/u010705209/article/details/53037481" target="_blank" rel="external">机器学习模型评价指标 – 混淆矩阵</a></p>
+<h2 id="17-11-20"><a href="#17-11-20" class="headerlink" title="17.11.20"></a>17.11.20</h2><p><a href="http://www.jianshu.com/p/a47c46153326" target="_blank" rel="external">回归系列之L1和L2正则化</a></p>
+<p><a href="https://www.cnblogs.com/subconscious/p/5058741.html" target="_blank" rel="external">神经网络浅讲：从神经元到深度学习</a></p>
+<p><a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&amp;mid=2650728746&amp;idx=1&amp;sn=61e9cb824501ec7c505eb464e8317915&amp;scene=0#wechat_redirect" target="_blank" rel="external">机器视角：长文揭秘图像处理和卷积神经网络架构</a></p>
+<p><a href="https://www.cnblogs.com/nsnow/p/4562308.html" target="_blank" rel="external">技术向：一文读懂卷积神经网络CNN</a></p>
+<p><a href="https://www.cnblogs.com/alexcai/p/5506806.html" target="_blank" rel="external">深度学习简介(一)——卷积神经网络</a></p>
+<h2 id="17-11-22"><a href="#17-11-22" class="headerlink" title="17.11.22"></a>17.11.22</h2><p><a href="http://blog.csdn.net/xlinsist/article/details/51289825" target="_blank" rel="external"> 逻辑回归（Logistic regression）详解-并用scikit-learn训练逻辑回归拟合Iris数据集</a></p>
+<h2 id="17-11-23"><a href="#17-11-23" class="headerlink" title="17.11.23"></a>17.11.23</h2><p><a href="https://mp.weixin.qq.com/s?__biz=MzAxNzg3MTE3Ng==&amp;mid=2247488549&amp;idx=2&amp;sn=a8bc802cc0a534482d2d9185fc85872e&amp;chksm=9bdfac02aca825148a6dcebe07a4fb5959e5912265d94409e78e91d14d07d9a208dc1715c204&amp;scene=21#wechat_redirect" target="_blank" rel="external">【泰勒多项式】图解普林斯顿微积分 18</a></p>
+<h2 id="17-11-24"><a href="#17-11-24" class="headerlink" title="17.11.24"></a>17.11.24</h2><p><a href="https://www.cnblogs.com/leoo2sk/archive/2010/09/19/decision-tree.html" target="_blank" rel="external">算法杂货铺——分类算法之决策树(Decision tree)</a></p>
+<h2 id="17-11-27"><a href="#17-11-27" class="headerlink" title="17.11.27"></a>17.11.27</h2><p><a href="http://blog.csdn.net/vividonly/article/details/50723852" target="_blank" rel="external">L0,L1,L2正则化浅析</a></p>
+<p><a href="http://blog.csdn.net/u012162613/article/details/44261657" target="_blank" rel="external">正则化方法：L1和L2 regularization、数据集扩增、dropout</a></p>
+<p><a href="http://blog.csdn.net/a_step_further/article/details/50333961" target="_blank" rel="external">基于hanLP的中文分词详解-MapReduce实现&amp;自定义词典文件</a></p>
+<p><a href="http://blog.csdn.net/zbc1090549839/article/details/38929215" target="_blank" rel="external">机器学习中的维数灾难</a></p>
+<h2 id="17-11-28"><a href="#17-11-28" class="headerlink" title="17.11.28"></a>17.11.28</h2><p><a href="http://www.jianshu.com/p/fc91fed8c77b" target="_blank" rel="external">聚类、K-Means、例子、细节</a></p>
+<p><a href="http://blog.csdn.net/zouxy09/article/details/42297625" target="_blank" rel="external">基于稀疏矩阵的k近邻（KNN）实现</a></p>
+<p><a href="https://www.cnblogs.com/pinard/p/6056319.html" target="_blank" rel="external">scikit-learn决策树算法类库使用小结</a></p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/2017/12/12/周记-17.11.29/" data-toggle="tooltip" data-placement="top"
+                           title="周记-17.11.29">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/2017/12/12/Neo4j-Dump和Load/" data-toggle="tooltip" data-placement="top"
+                           title="Neo4j-Dump和Load">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC8zMTczNy84MzAx">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
+                
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#17-10-27"><span class="toc-text">17.10.27</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#理解SparkX-Pregal"><span class="toc-text">理解SparkX Pregal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#团伙欺诈"><span class="toc-text">团伙欺诈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#spark"><span class="toc-text">spark</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#理解矩阵"><span class="toc-text">理解矩阵</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#奇异值分解"><span class="toc-text">奇异值分解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-10-30"><span class="toc-text">17.10.30</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#理解特征值和特征向量"><span class="toc-text">理解特征值和特征向量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#spark-neo4j"><span class="toc-text">spark+neo4j</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#理解最小二乘法"><span class="toc-text">理解最小二乘法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#推荐系统"><span class="toc-text">推荐系统</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-10-31"><span class="toc-text">17.10.31</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#模型评估标准"><span class="toc-text">模型评估标准</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#光滑函数"><span class="toc-text">光滑函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-1"><span class="toc-text">17.11.1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#特征分箱"><span class="toc-text">特征分箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相关性"><span class="toc-text">相关性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-06"><span class="toc-text">17.11.06</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#disable-requests-package-InsecureRequestWarning"><span class="toc-text">disable requests package:InsecureRequestWarning</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-07"><span class="toc-text">17.11.07</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PageRank算法简介及Map-Reduce实现"><span class="toc-text">PageRank算法简介及Map-Reduce实现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-09"><span class="toc-text">17.11.09</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#spark-job，-stage-，task介绍"><span class="toc-text">spark job， stage ，task介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GCN"><span class="toc-text">GCN</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-15"><span class="toc-text">17.11.15</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#线代"><span class="toc-text">线代</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ML"><span class="toc-text">ML</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-15-1"><span class="toc-text">17.11.15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-20"><span class="toc-text">17.11.20</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-22"><span class="toc-text">17.11.22</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-23"><span class="toc-text">17.11.23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-24"><span class="toc-text">17.11.24</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-27"><span class="toc-text">17.11.27</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-11-28"><span class="toc-text">17.11.28</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#周记"
+                           title="周记">周记</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <div style="margin-top: 20px;">
+                    <h5 class="text-center">FRIENDS</h5>
+                    <ul class="list-inline text-center">
+                        
+                        <li><a href="https://yafei002.wordpress.com/">My English Blog</a></li>
+                        
+                        <li><a href="https://yafei002cn.wordpress.com/">原博客</a></li>
+                        
+                        <li><a href="http://v.qq.com/vplus/e034e23a89c67eb53f5d52605fe4dbe1">视频</a></li>
+                        
+                        <li><a href="https://speakerdeck.com/yafei002">PPT</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/yafei002">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Yafei002 2017
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yafei002.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','null','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="android-chrome-192x192.png">
+</body>
+
+</html>
