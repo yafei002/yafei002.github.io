@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2017-12-13T09:01:22.781Z</updated>
+  <updated>2017-12-14T00:41:41.437Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -16,32 +16,91 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Neo4j-Warm Up</title>
-    <link href="http://yafei002.github.io/2017/12/12/Neo4j-Warm%20Up/"/>
-    <id>http://yafei002.github.io/2017/12/12/Neo4j-Warm Up/</id>
-    <published>2017-12-12T03:27:18.000Z</published>
-    <updated>2017-12-13T09:01:22.781Z</updated>
+    <title>知识图谱基础-RDF和RDFS</title>
+    <link href="http://yafei002.github.io/2017/12/14/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E5%9F%BA%E7%A1%80-RDF%E5%92%8CRDFS/"/>
+    <id>http://yafei002.github.io/2017/12/14/知识图谱基础-RDF和RDFS/</id>
+    <published>2017-12-14T00:40:26.000Z</published>
+    <updated>2017-12-14T00:41:41.437Z</updated>
     
-    <content type="html"><![CDATA[<p>有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘<br>中获取记录。如果能直接从内存中提取，性能将会大大提高。</p>
-<p>可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是<br>需要考虑到在配置文件中设置的pagecache的大小，如果所有数据加起来小于等于设置的内存的大小，<br>就可以加载整个图谱；如果小于，只会尽可能的加载，无法覆盖整个图谱。</p>
-<p>Cypher语句如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MATCH (n)</div><div class="line">OPTIONAL MATCH (n)-[r]-&gt;()</div><div class="line">RETURN count(n.prop) + count(r.prop);</div></pre></td></tr></table></figure>
-<p><code>count(n.prop) + count(r.prop)</code>这条语句可以触及到所有节点和边中叫“prop”的属性。如果是<br>用<code>count(*)</code>的话并不能充分的加载所有节点和边的属性。</p>
-<p>java的方式：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@GET</span> <span class="meta">@Path</span>(<span class="string">"/warmup"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">warmUp</span><span class="params">(@Context GraphDatabaseService db)</span> </span>&#123;</div><div class="line">    <span class="keyword">try</span> ( Transaction tx = db.beginTx()) &#123;</div><div class="line">        <span class="keyword">for</span> ( Node n : GlobalGraphOperations.at(db).getAllNodes()) &#123;</div><div class="line">            n.getPropertyKeys();</div><div class="line">            <span class="keyword">for</span> ( Relationship relationship : n.getRelationships()) &#123;</div><div class="line">                relationship.getPropertyKeys();</div><div class="line">                relationship.getStartNode();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Warmed up and ready to go!"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>对于3.0以上版本的Neo4j, 且加入了<a href="https://github.com/neo4j-contrib/neo4j-apoc-procedures" target="_blank" rel="external">apoc</a><br>插件，可以使用如下方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CALL apoc.warmup.run()</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<p>知识图谱是一个节点与关系的集合，节点通过关系相互连接，关系和节点拥有类型和属性。</p>
+<p>节点和关系的类型定义在模式（schema）中。</p>
+<p>这些被定义的关系叫做词汇（vocabulary）。</p>
+<h2 id="RDF-and-RDFS"><a href="#RDF-and-RDFS" class="headerlink" title="RDF and RDFS"></a>RDF and RDFS</h2><p>RDF（资源描述框架）是语义网络的现代标准。RDFS是RDF模式。</p>
+<h3 id="RDF"><a href="#RDF" class="headerlink" title="RDF"></a>RDF</h3><p>RDF通常指代W3C的资源。资源可以是任何事物——人、动物、游戏的角色等等。</p>
+<h4 id="RDF三元组和图"><a href="#RDF三元组和图" class="headerlink" title="RDF三元组和图"></a>RDF三元组和图</h4><p>资源，也叫做表述（statements）描述在RDF三元组中。RDF三元组图示如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-abddeb48489fdfcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="RDF triple.png"></p>
+<p>RDF图包含这些三元组的集合。集合中有三类节点：<a href="https://baike.baidu.com/item/iri/4442698?fr=aladdin" target="_blank" rel="external">IRI</a>（Iternationalised Resource Identifier, 国际化资源标识符），字面量（literals）和空节点。</p>
+<p>更具体地，对于一个三元组：</p>
+<ul>
+<li>主体（Subject）可以是一个IRI或空节点</li>
+<li>谓词（Predict）应该是一个IRI</li>
+<li>宾体（Object）可以是一个IRI,字面量或空节点</li>
+</ul>
+<p>字面量表示如字符串、数字和时间之类的值。</p>
+<p>空节点可以指代非IRI和字面量表示的<strong>其他任意</strong>事物。有空节点表示的资源被称为匿名资源，意味着某种事物的存在。而IRI表示的是任意的<strong>特定</strong>的事物。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-626479aa0c0b3f7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>IRI一般以一个前缀作为开始，这种前缀叫做命名空间前缀（namespace prefix）。拥有命名空间前缀的IRI叫做命名空间IRI。如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-9a7dddd67f92fa0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>从而上面的三元组可表示为：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-236e9fa9117ffe8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>三元组的其他示例：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-7265c74799afe056.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><strong>序列化RDF</strong></p>
+<p>RDF为知识图谱提供标准的数据模型。几种存储和交换RDF的序列化语法是Turtle、RDF/XML、RDFa、N-Tripples、NQUADS和JSON-LD。</p>
+<p>Turtle文档可以使得RDF表示成紧凑的文本格式。其中“#”表示注释，IRI包含在&lt;&gt;中。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-53387eee95b7c8cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>字面量格式：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-f5bb441131e1f674.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>指定了数据类型的字面量：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-a86772524584c20e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>其他规则：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-eb6dcb687c7edd1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>一个完整的RDF序列化的例子如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-49fff5e9ea483861.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h4 id="RDFS"><a href="#RDFS" class="headerlink" title="RDFS"></a>RDFS</h4><p>RDFS为RDF提供简单的语言模式来声明类（classes）或属性（properties）。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-5e4676b679923e88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>RDFS可定义属性和类的依赖：rdfs:subClassOf, rdfs:subPropertyOf, rdfs:domain and rdfs:range.</p>
+<ul>
+<li><p>subClassOf 表示类的子类，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:Start -up rdfs:subClassOf org:Organization .</div></pre></td></tr></table></figure>
+</li>
+<li><p>subPropertyOf 表示属性的子属性，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasEnglishHomePage rdfs:subPropertyOf org:hasHomePage .</div></pre></td></tr></table></figure>
+</li>
+<li><p>domain表示属性在类的领域内，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasHomePage rdfs:domain org:Organization .</div></pre></td></tr></table></figure>
+</li>
+<li><p>range表示所有该属性的值是一个类或数据类型（如rdfs:Literal）的实例。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasHomePage rdfs:range rdfs:Literal .</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="RDF相关资料"><a href="#RDF相关资料" class="headerlink" title="RDF相关资料"></a>RDF相关资料</h4><ul>
+<li><a href="http://zh.transwiki.org/cn/rdfprimer.htm" target="_blank" rel="external">W3C RDF 入门</a>（W3C标准RDF中文译文）</li>
+<li><a href="https://www.w3.org/TR/turtle/" target="_blank" rel="external">W3C RDF 1.1 Turtle</a></li>
+<li>博客<ul>
+<li><a href="http://blog.sina.com.cn/s/blog_6c42aaa60100nh30.html" target="_blank" rel="external">资源描述框架RDF </a></li>
+<li>[《RDF 1.1入门》摘要] (<a href="http://catwizard.net/posts/20140909212445.html" target="_blank" rel="external">http://catwizard.net/posts/20140909212445.html</a>)</li>
+</ul>
+</li>
+</ul>
+<p>然后去理解：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-f56d02683b66e88e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>其中Turtle序列化：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">@prefix org: &lt;http :// www.w3.org/ns/org#&gt;</div><div class="line">@prefix rdf: &lt;http :// www.w3.org /1999/02/22 -rdf -syntax -ns#&gt;</div><div class="line">@prefix rdfs: &lt;http :// www.w3.org /2000/01/ rdf -schema#&gt;</div><div class="line">@prefix data: &lt;http :// data.lab.expertsystem.com/&gt;</div><div class="line">org:Organization a rdfs:Class .</div><div class="line">org:Non -GovOrganization a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Organization .</div><div class="line">org:InternationalOrg a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:SME a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:Startup a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:hasName a rdf:Property ;</div><div class="line">rdfs:domain org:Organization;</div><div class="line">rdfs:range rdfs:Literal.</div><div class="line">org:hasPartner a rdf:Property ;</div><div class="line">rdfs:domain org:Organization ;</div><div class="line">rdfs:range org:Organization .</div><div class="line">org:hasHomePage a rdf:Property ;</div><div class="line">rdfs:domain org:InternationalOrg .</div><div class="line">data:ESI a org:SME ;</div><div class="line">org:hasPartner data:IBM ;</div><div class="line">org:hasName &quot;Expert System Iberia&quot; .</div><div class="line">data:IBM a org:InternationalOrg ;</div><div class="line">org:hasPartner data:Fundera ;</div><div class="line">org:hasHomePage &quot;http :// www.ibm.com&quot; .</div><div class="line">data:Fundera a org:Start -up .</div></pre></td></tr></table></figure>
+<h4 id="RDF局限性"><a href="#RDF局限性" class="headerlink" title="RDF局限性"></a>RDF局限性</h4><p>to do…</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘&lt;br&gt;中获取记录。如果能直接从内存中提取，性能将会大大提高。&lt;/p&gt;
-&lt;p&gt;可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是&lt;
+      &lt;p&gt;知识图谱是一个节点与关系的集合，节点通过关系相互连接，关系和节点拥有类型和属性。&lt;/p&gt;
+&lt;p&gt;节点和关系的类型定义在模式（schema）中。&lt;/p&gt;
+&lt;p&gt;这些被定义的关系叫做词汇（vocabulary）。&lt;/p&gt;
+&lt;h2 id=&quot;RDF-and-RDFS&quot;&gt;&lt;a hre
     
     </summary>
     
     
-      <category term="Neo4j" scheme="http://yafei002.github.io/tags/Neo4j/"/>
+      <category term="知识图谱" scheme="http://yafei002.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
     
   </entry>
   
@@ -137,6 +196,36 @@
     
     
       <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Neo4j-Warm Up</title>
+    <link href="http://yafei002.github.io/2017/12/12/Neo4j-Warm%20Up/"/>
+    <id>http://yafei002.github.io/2017/12/12/Neo4j-Warm Up/</id>
+    <published>2017-12-12T03:27:18.000Z</published>
+    <updated>2017-12-13T09:01:22.781Z</updated>
+    
+    <content type="html"><![CDATA[<p>有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘<br>中获取记录。如果能直接从内存中提取，性能将会大大提高。</p>
+<p>可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是<br>需要考虑到在配置文件中设置的pagecache的大小，如果所有数据加起来小于等于设置的内存的大小，<br>就可以加载整个图谱；如果小于，只会尽可能的加载，无法覆盖整个图谱。</p>
+<p>Cypher语句如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MATCH (n)</div><div class="line">OPTIONAL MATCH (n)-[r]-&gt;()</div><div class="line">RETURN count(n.prop) + count(r.prop);</div></pre></td></tr></table></figure>
+<p><code>count(n.prop) + count(r.prop)</code>这条语句可以触及到所有节点和边中叫“prop”的属性。如果是<br>用<code>count(*)</code>的话并不能充分的加载所有节点和边的属性。</p>
+<p>java的方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@GET</span> <span class="meta">@Path</span>(<span class="string">"/warmup"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">warmUp</span><span class="params">(@Context GraphDatabaseService db)</span> </span>&#123;</div><div class="line">    <span class="keyword">try</span> ( Transaction tx = db.beginTx()) &#123;</div><div class="line">        <span class="keyword">for</span> ( Node n : GlobalGraphOperations.at(db).getAllNodes()) &#123;</div><div class="line">            n.getPropertyKeys();</div><div class="line">            <span class="keyword">for</span> ( Relationship relationship : n.getRelationships()) &#123;</div><div class="line">                relationship.getPropertyKeys();</div><div class="line">                relationship.getStartNode();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Warmed up and ready to go!"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对于3.0以上版本的Neo4j, 且加入了<a href="https://github.com/neo4j-contrib/neo4j-apoc-procedures" target="_blank" rel="external">apoc</a><br>插件，可以使用如下方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CALL apoc.warmup.run()</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘&lt;br&gt;中获取记录。如果能直接从内存中提取，性能将会大大提高。&lt;/p&gt;
+&lt;p&gt;可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是&lt;
+    
+    </summary>
+    
+    
+      <category term="Neo4j" scheme="http://yafei002.github.io/tags/Neo4j/"/>
     
   </entry>
   
@@ -906,58 +995,6 @@
     
     
       <category term="meetup" scheme="http://yafei002.github.io/tags/meetup/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对提升大规模图形数据渲染性能的研究</title>
-    <link href="http://yafei002.github.io/2016/11/15/%E5%AF%B9%E6%8F%90%E5%8D%87%E5%A4%A7%E8%A7%84%E6%A8%A1%E5%9B%BE%E5%BD%A2%E6%95%B0%E6%8D%AE%E6%B8%B2%E6%9F%93%E6%80%A7%E8%83%BD%E7%9A%84%E7%A0%94%E7%A9%B6/"/>
-    <id>http://yafei002.github.io/2016/11/15/对提升大规模图形数据渲染性能的研究/</id>
-    <published>2016-11-15T12:52:38.000Z</published>
-    <updated>2016-11-24T10:15:01.330Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="A．主题：在服务器端提前渲染d3"><a href="#A．主题：在服务器端提前渲染d3" class="headerlink" title="A．主题：在服务器端提前渲染d3"></a>A．主题：在服务器端提前渲染d3</h2><p>来源：<a href="http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html" target="_blank" rel="external">http://mango-is.com/blog/engineering/pre-render-d3-js-charts-at-server-side.html</a></p>
-<p>原文摘要： The whole point of the technique is to do the html rendering in advance, so that users won’t have to wait to see the charts (and you run it only once for all users when they have to see the same data). If you can’t generate the charts in advance you may use the d3.js google group to find suitable performance enhancements.</p>
-<p>总结:</p>
-<p>原理：将d3对DOM渲染的过程在服务器端完成，形成静态html文档，也就是直接生成html里的svg。</p>
-<p>优点：</p>
-<p>1.相比较在客户端对DOM进行渲染，缩短了时间以及负担（具体情况的benchmark还有待测试）</p>
-<p>2.对大量的数据只需在服务器端渲染一次即可，无需再客户端重复调用脚本</p>
-<p>缺点：当数据量增加时，生成HTML的文档的时间相应增加。</p>
-<p>局限：当数据改变时需要重新生成HTML文档</p>
-<p>猜想：是否也可以在服务器端渲染canvas。</p>
-<h2 id="B-主题：JavaScript-DocumentFragment"><a href="#B-主题：JavaScript-DocumentFragment" class="headerlink" title="B. 主题：JavaScript DocumentFragment"></a>B. 主题：JavaScript DocumentFragment</h2><p>来源：</p>
-<p><a href="http://ejohn.org/blog/dom-documentfragments/" target="_blank" rel="external">http://ejohn.org/blog/dom-documentfragments/</a><br><a href="https://davidwalsh.name/documentfragment" target="_blank" rel="external">https://davidwalsh.name/documentfragment</a><br>总结：上一篇文章延伸出的知识点。DocumentFragment是DOM节点。他不属于DOM树，但是能够想DOM节点一样将子节点附加到它的上面，并且能相应事件。在DOM树中它会被附着在它上的子节点覆盖。</p>
-<p>使用DocumentFragment可以提升DOM处理的性能。</p>
-<p>在线测试：<a href="http://jsperf.com/out-of-dom-vs-documentfragment/3" target="_blank" rel="external">http://jsperf.com/out-of-dom-vs-documentfragment/3</a></p>
-<p>和<a href="http://jsperf.com/svg-fragment-test/2" target="_blank" rel="external">http://jsperf.com/svg-fragment-test/2</a> （SVG）</p>
-<p>也许节点数量很大时效果会比较明显。之后可以实地测试。上一篇文章作者提议在服务器端用产生一个DOM DocumentFragment，在加载时附加到页面。具体效果如何可以之后测试。</p>
-<h2 id="C-主题：比较D3和WebGL"><a href="#C-主题：比较D3和WebGL" class="headerlink" title="C.主题：比较D3和WebGL"></a>C.主题：比较D3和WebGL</h2><p>来源：<a href="http://engineering.ayasdi.com/2015/01/09/converting-a-d3-visualization-to-webgl-how-and-why/" target="_blank" rel="external">http://engineering.ayasdi.com/2015/01/09/converting-a-d3-visualization-to-webgl-how-and-why/</a></p>
-<p>摘要：“By hooking into your computer’s GPU, the browser can render and repaint at speeds that, if implemented correctly, are far superior to native DOM rendering.”</p>
-<p>“Another benefit of WebGL is that for large visualizations, your computer will end up allocating significantly less memory to your browser, freeing the rest of your DOM to work faster. If you have thousands of DOM elements, your CSS transitions and general usability will feel slow and laggy. With WebGL, the transitions will remain snappy.”</p>
-<p>总结:</p>
-<p>本文从svg的角度去思考从D3转到WebGL的可能性。首要WebGL的优势是在于GPU的加速，是浏览器渲染和重绘的速度上远比DOM渲染快速很多。其次是对于浏览器占用内存将大大减少。当DOM元素数量达到一定程度时，css的样式的变换将变得显著的慢，但WebGL可以保持比较顺畅的观感。</p>
-<p>但相比较D3，WebGL的代码负担较重且API也不会是标准的js或DOM的处理方式，甚至有可能需要自己编写自定义API，其次CSS的效果也会失去。</p>
-<p>（本文章的信息需进一步验证，但引起GPU对渲染影响的关注）</p>
-<h2 id="D-主题：双倍或不止提升SVG-FPS（frame-per-second）"><a href="#D-主题：双倍或不止提升SVG-FPS（frame-per-second）" class="headerlink" title="D. 主题：双倍或不止提升SVG FPS（frame per second）"></a>D. 主题：双倍或不止提升SVG FPS（frame per second）</h2><p>来源：<a href="http://www.crmarsh.com/svg-performance/" target="_blank" rel="external">http://www.crmarsh.com/svg-performance/</a></p>
-<p>总结: 对浏览器而言有四种主要样式的动画花销较小—Translation, Scale, Rotation, Opacity。改变节点的样式会迫使浏览器完成相应的比较昂贵的任务。改变width会影响页面的布局(re-computation)，改变background-color会使元素的像素重新绘制(repainting)。</p>
-<p>但是对SVG而言以上的情况却不能获得保证。（“there wasn’t any particular reason that SVG nodes had to behave differently than DOM nodes here, but that most browsers didn’t have particularly good SVG implementations.”)</p>
-<p>本文采用在外部套一层DOM节点的方式，相应的一些样式的操作在DOM节点中进行，实现提升FPS的效果。</p>
-<p>本文值得阅读，内容其次，重要的引发对浏览器工作机制的一些深层次的内容的兴趣。如何从浏览器的工作机制中研究如何提高渲染的性能。</p>
-<h2 id="E-主题：探讨结合D3和Canvas"><a href="#E-主题：探讨结合D3和Canvas" class="headerlink" title="E. 主题：探讨结合D3和Canvas"></a>E. 主题：探讨结合D3和Canvas</h2><p>来源：<a href="https://bocoup.com/weblog/d3js-and-canvas" target="_blank" rel="external">https://bocoup.com/weblog/d3js-and-canvas</a></p>
-<p>总结：本文的思维方式在于结合D3的交互性优势和Canvas渲染大规模节点的优势。本文的方法有局限性。虽然解决了数据绑定和transition，但是对于鼠标的事件无法向处理DOM时一样方便。</p>
-<p>本文虽然方法有所局限但思路值得研究一下。</p>
-<p>结论：数据渲染的性能受到多方的影响，而且也有很多技术可以实现相应的效果。个人感觉这会是一个比较深入的内容，因为相关因素比较多，很多都涉及比较深层次的东西，需要探索学习。但是针对实际情况也是一个循序渐进的过程。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;A．主题：在服务器端提前渲染d3&quot;&gt;&lt;a href=&quot;#A．主题：在服务器端提前渲染d3&quot; class=&quot;headerlink&quot; title=&quot;A．主题：在服务器端提前渲染d3&quot;&gt;&lt;/a&gt;A．主题：在服务器端提前渲染d3&lt;/h2&gt;&lt;p&gt;来源：&lt;a href=&quot;ht
-    
-    </summary>
-    
-    
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   

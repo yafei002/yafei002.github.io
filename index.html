@@ -273,18 +273,21 @@
 
 <div class="post-preview "
      style="background-image: url('')">
-    <a href="/2017/12/12/Neo4j-Warm Up/">
+    <a href="/2017/12/14/知识图谱基础-RDF和RDFS/">
         <h2 class="post-title">
-            Neo4j-Warm Up
+            知识图谱基础-RDF和RDFS
         </h2>
         <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-12-12
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-12-14
         </p>
         
         <div class="post-content-preview">
             <p>
-                有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘中获取记录。如果能直接从内存中提取，性能将会大大提高。
-可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是需要考虑到在配置文件中设置的pagecache..
+                知识图谱是一个节点与关系的集合，节点通过关系相互连接，关系和节点拥有类型和属性。
+节点和关系的类型定义在模式（schema）中。
+这些被定义的关系叫做词汇（vocabulary）。
+RDF and RDFSRDF（资源描述框架）是语义网络的现代标准。RDFS是RDF模式。
+RDFRDF通常指代W..
             </p>
         </div>
     </a>
@@ -320,6 +323,30 @@ W3C RDF 1.1 Turtle
 博客
 资源描述框架RDF 
 [《RDF 1.1入门》摘要] (http://catwizard.net/posts/201409092..
+            </p>
+        </div>
+    </a>
+
+</div>
+
+<hr>
+
+
+
+<div class="post-preview "
+     style="background-image: url('')">
+    <a href="/2017/12/12/Neo4j-Warm Up/">
+        <h2 class="post-title">
+            Neo4j-Warm Up
+        </h2>
+        <p class="post-meta">
+            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-12-12
+        </p>
+        
+        <div class="post-content-preview">
+            <p>
+                有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘中获取记录。如果能直接从内存中提取，性能将会大大提高。
+可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是需要考虑到在配置文件中设置的pagecache..
             </p>
         </div>
     </a>
@@ -531,33 +558,6 @@ PPT（ppt若没有显示，请翻墙）
 
 
 
-<div class="post-preview "
-     style="background-image: url('')">
-    <a href="/2017/01/09/了解决策树和C4-5算法（视频）/">
-        <h2 class="post-title">
-            了解决策树和C4.5算法（视频）
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2017-01-09
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                视频
-
-（说明：简单的介绍,主要是为了自己学习的总结和理解。）
-PPT（ppt若没有显示，请翻墙）
-
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
 
 <!-- 翻页 pager -->
 
@@ -640,23 +640,28 @@ PPT（ppt若没有显示，请翻墙）
                     
                     
                     
-                    <a href="/tags/#meetup" title="meetup"
-                       rel="4">meetup</a>
-                    
-                    
-                    
                     <a href="/tags/#数据可视化" title="数据可视化"
                        rel="16">数据可视化</a>
                     
                     
                     
-                    <a href="/tags/#周记" title="周记"
-                       rel="2">周记</a>
+                    <a href="/tags/#meetup" title="meetup"
+                       rel="4">meetup</a>
+                    
+                    
+                    
+                    <a href="/tags/#知识图谱" title="知识图谱"
+                       rel="1">知识图谱</a>
                     
                     
                     
                     <a href="/tags/#大数据" title="大数据"
                        rel="1">大数据</a>
+                    
+                    
+                    
+                    <a href="/tags/#周记" title="周记"
+                       rel="2">周记</a>
                     
                     
                 </div>
