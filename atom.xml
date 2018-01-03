@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2017-12-18T00:55:25.692Z</updated>
+  <updated>2018-01-03T01:19:53.373Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -14,6 +14,104 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>周记-17.12.25</title>
+    <link href="http://yafei002.github.io/2018/01/03/%E5%91%A8%E8%AE%B0-17-12-25/"/>
+    <id>http://yafei002.github.io/2018/01/03/周记-17-12-25/</id>
+    <published>2018-01-03T01:19:02.000Z</published>
+    <updated>2018-01-03T01:19:53.373Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Janusgraph"><a href="#Janusgraph" class="headerlink" title="Janusgraph"></a>Janusgraph</h2><ul>
+<li><a href="https://www.cnblogs.com/jiyuqi/p/320267ff0b5052fad4613945e58ea1f1.html" target="_blank" rel="external">JanusGraph Server配置</a></li>
+</ul>
+<h2 id="nlp"><a href="#nlp" class="headerlink" title="nlp"></a>nlp</h2><ul>
+<li>simhash<ul>
+<li><a href="https://www.zhihu.com/question/20820286" target="_blank" rel="external">什么是哈希算法？</a></li>
+<li><a href="https://yanyiwu.com/work/2014/01/30/simhash-shi-xian-xiang-jie.html" target="_blank" rel="external">simhash算法原理及实现</a></li>
+<li><a href="http://grunt1223.iteye.com/blog/964564" target="_blank" rel="external">我的数学之美系列二 —— simhash与重复信息识别</a></li>
+<li><a href="http://blog.csdn.net/zhaoxinfan/article/details/15815275" target="_blank" rel="external">simhash应用-文章去重</a></li>
+</ul>
+</li>
+<li><a href="https://www.cnblogs.com/hxsyl/p/5263114.html" target="_blank" rel="external">初识随机游走</a></li>
+<li><a href="https://www.jianshu.com/p/b7ede4e842f1" target="_blank" rel="external">带监督的文本分类算法FastText</a></li>
+<li><a href="http://blog.csdn.net/songzitea/article/details/18087401" target="_blank" rel="external">浅谈随机游走</a></li>
+<li><a href="http://blog.csdn.net/chichoxian/article/details/53944188" target="_blank" rel="external"> 编辑距离算法（Edit Distance）</a></li>
+</ul>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
+<li><a href="http://blog.csdn.net/jiutianhe/article/details/8076835" target="_blank" rel="external">Trie树（字典树）</a></li>
+</ul>
+<h2 id="图算法"><a href="#图算法" class="headerlink" title="图算法"></a>图算法</h2><ul>
+<li><a href="http://blog.csdn.net/osuperman12345/article/details/65444832" target="_blank" rel="external">DeepWalk 论文笔记</a></li>
+</ul>
+<h2 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h2><ul>
+<li><a href="https://mp.weixin.qq.com/s/rdb4I-IeT4-2pv1xOjyxPw" target="_blank" rel="external">你应该知道的模型评估的五个方法</a></li>
+<li><a href="http://blog.csdn.net/sinat_26917383/article/details/51725102" target="_blank" rel="external">笔记︱风控分类模型种类（决策、排序）比较与模型评估体系（ROC/gini/KS/lift）</a></li>
+<li><a href="http://blog.csdn.net/u010922186/article/details/41244317" target="_blank" rel="external">heavy-tailed distribution（重尾分布）</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Janusgraph&quot;&gt;&lt;a href=&quot;#Janusgraph&quot; class=&quot;headerlink&quot; title=&quot;Janusgraph&quot;&gt;&lt;/a&gt;Janusgraph&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-17.12.18</title>
+    <link href="http://yafei002.github.io/2018/01/03/%E5%91%A8%E8%AE%B0-17-12-18/"/>
+    <id>http://yafei002.github.io/2018/01/03/周记-17-12-18/</id>
+    <published>2018-01-03T01:17:15.000Z</published>
+    <updated>2018-01-03T01:17:49.105Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><ul>
+<li><a href="https://github.com/eligrey/FileSaver.js/" target="_blank" rel="external">FileSaver.js</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL" target="_blank" rel="external">FileReader.readAsDataURL()</a></li>
+<li><a href="https://github.com/sheetjs/js-xlsx" target="_blank" rel="external">js-xlsx</a></li>
+<li><a href="https://www.zhihu.com/question/19631256/answer/119911045" target="_blank" rel="external">如何在 form 表单提交后实现页面不跳转？</a></li>
+<li><a href="https://www.zhihu.com/question/20948649" target="_blank" rel="external">Cross origin requests are only supported for HTTP?</a></li>
+<li><a href="http://blog.csdn.net/shidaping/article/details/52765155" target="_blank" rel="external">express设置ejs渲染.html文件</a></li>
+<li><a href="https://www.cnblogs.com/-nothing-/p/4943354.html" target="_blank" rel="external">Express使用html模板</a></li>
+<li><a href="https://stackoverflow.com/questions/8359902/how-to-rename-files-parsed-by-formidable" target="_blank" rel="external">How to rename files parsed by Formidable?</a></li>
+</ul>
+<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><ul>
+<li><a href="http://www.jianshu.com/p/9d6da9b76d70" target="_blank" rel="external">Flask-Uploads文件上传的简单使用</a></li>
+<li><a href="http://www.jianshu.com/p/716d470d6434" target="_blank" rel="external">使用 Flask-Uploads + jQuery + Bootstrap 创建带进度条的文件上传</a></li>
+<li><a href="https://www.cnblogs.com/mosson/p/6163233.html" target="_blank" rel="external">flask文件的上传和下载</a></li>
+<li><a href="http://docs.jinkan.org/docs/flask/patterns/fileuploads.html" target="_blank" rel="external">上传文件</a></li>
+<li><a href="https://stackoverflow.com/questions/23450534/how-to-call-python-function-from-nodejs" target="_blank" rel="external">How to call Python function from NodeJS</a></li>
+</ul>
+<h2 id="janus"><a href="#janus" class="headerlink" title="janus"></a>janus</h2><ul>
+<li><a href="https://www.cnblogs.com/jiyuqi/p/7132986.html" target="_blank" rel="external">通过使用JanusGraph索引提高性能</a></li>
+</ul>
+<h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><ul>
+<li><a href="https://www.cnblogs.com/hustcat/archive/2009/10/28/1591648.html" target="_blank" rel="external">理解MySQL——索引与优化</a></li>
+</ul>
+<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><ul>
+<li><a href="https://www.zhihu.com/question/27126057" target="_blank" rel="external">对数损失函数是如何度量损失的？</a></li>
+<li><a href="http://blog.csdn.net/bitcarmanlee/article/details/51154481" target="_blank" rel="external">logistic回归详解一：为什么要使用logistic函数</a></li>
+<li><a href="http://blog.csdn.net/bitcarmanlee/article/details/51165444" target="_blank" rel="external">logistic回归详解(二）：损失函数（cost function）详解</a></li>
+<li><a href="http://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92" target="_blank" rel="external">Softmax回归</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/eligrey/FileSaver.js/&quot; target=&quot;_blan
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>周记-17.12.11</title>
@@ -766,242 +864,6 @@
       <category term="算法" scheme="http://yafei002.github.io/tags/algorithm/"/>
     
       <category term="数据挖掘" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[meetup]创业早期的选型与亲历的坑</title>
-    <link href="http://yafei002.github.io/2016/12/07/meetup-%E5%88%9B%E4%B8%9A%E6%97%A9%E6%9C%9F%E7%9A%84%E9%80%89%E5%9E%8B%E4%B8%8E%E4%BA%B2%E5%8E%86%E7%9A%84%E5%9D%91/"/>
-    <id>http://yafei002.github.io/2016/12/07/meetup-创业早期的选型与亲历的坑/</id>
-    <published>2016-12-07T09:44:52.000Z</published>
-    <updated>2016-12-09T07:24:31.092Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="/image/cover/201651CTO.jpg" alt="51CTO"><br>12月3日参加51CTO高招举办的《<a href="http://www.huodongxing.com/event/6360493849300" target="_blank" rel="external">CTO训练营2016最后一次开放日：属于技术管理者的年终盛宴</a>》活动。</p>
-<p>演讲人为黄全能，Leapp教育科技有限公司CTO。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
-<p>创业需谨慎</p>
-</blockquote>
-<h3 id="关于架构"><a href="#关于架构" class="headerlink" title="关于架构"></a>关于架构</h3><h4 id="如何选架构"><a href="#如何选架构" class="headerlink" title="如何选架构"></a>如何选架构</h4><p>考虑架构的几个方面</p>
-<ul>
-<li>流行性</li>
-<li>扩展性</li>
-<li>学习成本</li>
-<li>部署</li>
-<li>维护效率</li>
-<li>稳定性</li>
-<li>风险</li>
-</ul>
-<p>考虑的几个原则</p>
-<ul>
-<li>从众原则 文档、生态完善，人才资源容易获取</li>
-<li>熟悉原则 无需投入宝贵学习时间</li>
-<li>简单原则 易于维护</li>
-<li>随性原则 架构一时不一定全部想通， 想不通先做，之后根据发展填坑</li>
-</ul>
-<h4 id="架构坏了怎么办"><a href="#架构坏了怎么办" class="headerlink" title="架构坏了怎么办"></a>架构坏了怎么办</h4><p>演讲者推荐<a href="http://product.dangdang.com/1491654051.html" target="_blank" rel="external">《京东技术解密》</a>，原说法是写的不怎么样，但有些思想值得借鉴。</p>
-<h4 id="架构迭代的可能性"><a href="#架构迭代的可能性" class="headerlink" title="架构迭代的可能性"></a>架构迭代的可能性</h4><p>随着业务的发展，架构不会一直适应业务的需求。新技术、新情景的出现都会强迫架构去重构。</p>
-<p>重构不一定要在不得不重构的时候重构，有时间的情况下也可以提前想到重构迭代的情况。</p>
-<p><code>尽量保存数据。</code></p>
-<h4 id="第三方资源"><a href="#第三方资源" class="headerlink" title="第三方资源"></a>第三方资源</h4><p>第三方资源如</p>
-<ul>
-<li>云 vs IDC</li>
-<li>内容分发cdn</li>
-<li>各种sdk</li>
-<li>短信</li>
-</ul>
-<p>要考虑</p>
-<ul>
-<li>稳定性</li>
-<li>服务</li>
-<li>价格</li>
-</ul>
-<h3 id="团队"><a href="#团队" class="headerlink" title="团队"></a>团队</h3><p><strong>创业公司早期吸引人才可能面临的问题</strong></p>
-<ul>
-<li>没产品</li>
-<li>没高新</li>
-<li>工作时间长</li>
-<li>没预算</li>
-<li>工作环境差</li>
-</ul>
-<p>所以为吸引<strong>人才采取的策略</strong></p>
-<ol>
-<li>上上策有用户量，有品牌</li>
-<li>中上策有格局知名投资</li>
-<li>中中策有产品清晰思路</li>
-<li>中下策有靠谱成员</li>
-<li>下下策有情怀</li>
-</ol>
-<p><strong>早期公司招人思路</strong></p>
-<ul>
-<li>公司故事逻辑要清晰</li>
-<li>明确人才挖掘的目标公司</li>
-<li>团队规划：因人设岗；有背景深厚的团队样例（牛人）一两个</li>
-<li>为人才画好清晰路线：升级路线与撤退路线。对自己负责对他人负责。</li>
-<li>挖不倒时不气馁，不放弃，因为不可能挖到所有人</li>
-<li>最最重要挖人的定位：是不是一起奋斗的人</li>
-</ul>
-<p><strong>早期团队文化是否重要</strong></p>
-<ul>
-<li>重要：提前清晰的团队文化从而保证团队的良性发展</li>
-</ul>
-<p>vs</p>
-<ul>
-<li>不是那么重要：文化是在团队磨合的过程中逐渐形成的</li>
-</ul>
-<p><strong>人才目标</strong></p>
-<ul>
-<li>梯度团队</li>
-</ul>
-<p>vs</p>
-<ul>
-<li>精英团队</li>
-</ul>
-<p>各有特点。</p>
-<p>梯度团队</p>
-<ul>
-<li>业务导向</li>
-<li>核心人才靠谱</li>
-<li>未来想做精英化拆分出精英化组织</li>
-</ul>
-<p>精英团队的建议</p>
-<ul>
-<li>技术导向，公司需要有足够大格局和故事吸引精英</li>
-<li>硅谷试管理风格，结果导向，弹性民主</li>
-<li>中后期转为梯度-铅笔型人才结构</li>
-</ul>
-<h3 id="早期技术管理"><a href="#早期技术管理" class="headerlink" title="早期技术管理"></a>早期技术管理</h3><p><strong>工作时间</strong></p>
-<ul>
-<li>996 vs xx6</li>
-<li>项目导向 vs 全年导向</li>
-<li>无偿 vs 非补偿调休</li>
-</ul>
-<p>即使996，要考虑到996到什么时候，那些团队需要996。</p>
-<p><strong>其他思考</strong></p>
-<ul>
-<li>对于开发人员固定的上班时间是无意义的</li>
-<li>每日例会：早会 vs 晚会，关键在于是想让员工早上班还是早下班</li>
-<li>思考：纪律(按时完成) vs 质量(保质完成)，上线日期是否不可动摇，这会影响开发的质量</li>
-</ul>
-<p><strong>例会怎么开</strong></p>
-<ul>
-<li>产品和技术一起开？</li>
-<li>需求自下而上还是自上而下？</li>
-</ul>
-<p><strong>怎么估计时间</strong></p>
-<ul>
-<li>粗略估计</li>
-<li>多人估计，比粗略估计更准确</li>
-<li>类比估计，根据过往的开发经验有目标的对比得出</li>
-</ul>
-<p>演讲人会将百分十的时间给员工自己探索新的技术或相关领域，但前提是对公司是有益的。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/image/cover/201651CTO.jpg&quot; alt=&quot;51CTO&quot;&gt;&lt;br&gt;12月3日参加51CTO高招举办
-    
-    </summary>
-    
-    
-      <category term="meetup" scheme="http://yafei002.github.io/tags/meetup/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[meetup]IT工程能力实战</title>
-    <link href="http://yafei002.github.io/2016/12/03/meetup-IT%E5%B7%A5%E7%A8%8B%E8%83%BD%E5%8A%9B%E5%AE%9E%E6%88%98/"/>
-    <id>http://yafei002.github.io/2016/12/03/meetup-IT工程能力实战/</id>
-    <published>2016-12-03T15:03:15.000Z</published>
-    <updated>2016-12-09T07:37:14.578Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p><img src="/image/cover/201651CTO.jpg" alt="51CTO"><br>12月3日参加51CTO高招举办的《<a href="http://www.huodongxing.com/event/6360493849300" target="_blank" rel="external">CTO训练营2016最后一次开放日：属于技术管理者的年终盛宴</a>》活动。</p>
-<p>这是活动的第一场“IT工程能力实践”的总结，演讲人是马拉马拉CTO左文建。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="团队技术能力"><a href="#团队技术能力" class="headerlink" title="团队技术能力"></a>团队技术能力</h3><ul>
-<li>关键技术<ul>
-<li>比如视频网站视频方面的能力，百度搜索方面的能力</li>
-</ul>
-</li>
-<li>架构能力<ul>
-<li>能考虑到系统支撑的规模</li>
-</ul>
-</li>
-<li>工程能力<ul>
-<li>团队持续高产出，保障业务的发展</li>
-</ul>
-</li>
-</ul>
-<p>对于团队而言，这三方面的能力需要平均一些。</p>
-<p><img src="/image/IT工程能力实战/团队技术能力构成.jpg" alt="团队技术能力构成"></p>
-<p>(图片来自原作者PPT)</p>
-<h3 id="个人技术能力"><a href="#个人技术能力" class="headerlink" title="个人技术能力"></a>个人技术能力</h3><p>除了团队技术能力所包含的三项能力外，还需要<code>编程能力</code>。一般个人而言，编程能力会占较大部分，<br>工程能力较弱。但考虑未来个人能力发展需要四种能力都相对均衡一些。</p>
-<p><img src="/image/IT工程能力实战/个人技术能力成长.jpg" alt="个人技术能力成长"></p>
-<p>(图片来自原作者PPT)</p>
-<h3 id="如何提高工程能力"><a href="#如何提高工程能力" class="headerlink" title="如何提高工程能力"></a>如何提高工程能力</h3><p>需要科学有效的<strong>方法</strong>、<strong>机制</strong>、<strong>制度</strong> 来保证生产优质产品。</p>
-<p>思路</p>
-<ul>
-<li>系统验证<a href="http://blog.csdn.net/weiwangchao_/article/details/52589615" target="_blank" rel="external">灰度化</a>(图片来自原作者PPT)</li>
-<li>重复工作自动化 选择合适的工具和方法</li>
-<li>问题尽早透明化 问题提前暴露</li>
-<li>写作形式、工具化</li>
-</ul>
-<h3 id="系统灰度验证"><a href="#系统灰度验证" class="headerlink" title="系统灰度验证"></a>系统灰度验证</h3><p><img src="/image/IT工程能力实战/灰度验证.jpg" alt="系统灰度验证"></p>
-<h3 id="学先进-走正道-傍大款"><a href="#学先进-走正道-傍大款" class="headerlink" title="学先进 走正道 傍大款"></a>学先进 走正道 傍大款</h3><p>对创业团队，需要</p>
-<ul>
-<li>学习业界最佳实践</li>
-<li>走长期可持续发展道路</li>
-<li>选择有实力的合作伙伴</li>
-</ul>
-<p>并保持<strong>学习能力</strong>+<strong>追求卓越之心</strong></p>
-<h3 id="工具和方法"><a href="#工具和方法" class="headerlink" title="工具和方法"></a>工具和方法</h3><p>在正确方法的基础上使用合适的工具是提升工程能力非常有效的手段。</p>
-<ul>
-<li>rigger-ng 多环境资源管理器</li>
-<li>ansible 一键发布工具</li>
-<li>代码质量<ul>
-<li>单元测试</li>
-<li>jenkins 持续集成工具</li>
-<li>sonar 代码质量管理</li>
-</ul>
-</li>
-<li>xdebug PHP程序调试器</li>
-<li>运行监控<ul>
-<li>Log  记录运行信息</li>
-<li>Sentry 警告、错误收集</li>
-</ul>
-</li>
-</ul>
-<p>处理<a href="http://www.jianshu.com/p/37db253ee10d" target="_blank" rel="external">技术债务</a>、代码重复率问题。</p>
-<h3 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h3><p>“过早的优化是程序设计的万恶之源。”（Donald Knuth）</p>
-<blockquote>
-<p>过早指的不是在开发过程的早期，而是在还没弄清楚需求未来的变化的走向的时候。你的优化不仅可能导致你无法很好地实现新的需求，而且你对优化的预期的猜测有可能还是错的，导致实际上你除了把代码变复杂以外什么都没得到。</p>
-<p>正确的方法是，先有质量地实现你的需求，写够testcase，然后做profile去找到性能的瓶颈，这个时候才优化他。</p>
-<p>作者：vczh</p>
-<p>来源：知乎</p>
-<p>链接：<a href="https://www.zhihu.com/question/24282796/answer/27279410" target="_blank" rel="external">https://www.zhihu.com/question/24282796/answer/27279410</a></p>
-</blockquote>
-<p>无数据的优化就是时间黑洞。</p>
-<h3 id="协作"><a href="#协作" class="headerlink" title="协作"></a>协作</h3><h4 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h4><p><code>文档是为阅读者而不是生产者书写</code>。</p>
-<p>有些时候程序员会抱怨其他人的文档写的不完善，难以理解，而忽视了自己在文档上是否对其他人产生麻烦。</p>
-<h4 id="统一与标准"><a href="#统一与标准" class="headerlink" title="统一与标准"></a>统一与标准</h4><ul>
-<li>统一的运行环境</li>
-<li>统一的框架</li>
-<li>同意的资源管理：mysql、redis。。。</li>
-<li>建立团队模板标准</li>
-</ul>
-<h4 id="协作工具"><a href="#协作工具" class="headerlink" title="协作工具"></a>协作工具</h4><ul>
-<li>gitflow 用工具支持过程</li>
-<li>wiki 书写为了阅读</li>
-<li>postman 研发以接口为中心（从而解决前后端因接口问题不断地扯皮）</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/image/cover/201651CTO.jpg&quot; alt=&quot;51CTO&quot;&gt;&lt;br&gt;12月3日参加51CTO高招举办
-    
-    </summary>
-    
-    
-      <category term="meetup" scheme="http://yafei002.github.io/tags/meetup/"/>
     
   </entry>
   
