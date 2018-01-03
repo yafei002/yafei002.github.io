@@ -274,36 +274,6 @@
   </entry>
   
   <entry>
-    <title>Neo4j-Warm Up</title>
-    <link href="http://yafei002.github.io/2017/12/12/Neo4j-Warm%20Up/"/>
-    <id>http://yafei002.github.io/2017/12/12/Neo4j-Warm Up/</id>
-    <published>2017-12-12T03:27:18.000Z</published>
-    <updated>2017-12-13T09:01:22.781Z</updated>
-    
-    <content type="html"><![CDATA[<p>有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘<br>中获取记录。如果能直接从内存中提取，性能将会大大提高。</p>
-<p>可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是<br>需要考虑到在配置文件中设置的pagecache的大小，如果所有数据加起来小于等于设置的内存的大小，<br>就可以加载整个图谱；如果小于，只会尽可能的加载，无法覆盖整个图谱。</p>
-<p>Cypher语句如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MATCH (n)</div><div class="line">OPTIONAL MATCH (n)-[r]-&gt;()</div><div class="line">RETURN count(n.prop) + count(r.prop);</div></pre></td></tr></table></figure>
-<p><code>count(n.prop) + count(r.prop)</code>这条语句可以触及到所有节点和边中叫“prop”的属性。如果是<br>用<code>count(*)</code>的话并不能充分的加载所有节点和边的属性。</p>
-<p>java的方式：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@GET</span> <span class="meta">@Path</span>(<span class="string">"/warmup"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">warmUp</span><span class="params">(@Context GraphDatabaseService db)</span> </span>&#123;</div><div class="line">    <span class="keyword">try</span> ( Transaction tx = db.beginTx()) &#123;</div><div class="line">        <span class="keyword">for</span> ( Node n : GlobalGraphOperations.at(db).getAllNodes()) &#123;</div><div class="line">            n.getPropertyKeys();</div><div class="line">            <span class="keyword">for</span> ( Relationship relationship : n.getRelationships()) &#123;</div><div class="line">                relationship.getPropertyKeys();</div><div class="line">                relationship.getStartNode();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Warmed up and ready to go!"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>对于3.0以上版本的Neo4j, 且加入了<a href="https://github.com/neo4j-contrib/neo4j-apoc-procedures" target="_blank" rel="external">apoc</a><br>插件，可以使用如下方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CALL apoc.warmup.run()</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘&lt;br&gt;中获取记录。如果能直接从内存中提取，性能将会大大提高。&lt;/p&gt;
-&lt;p&gt;可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是&lt;
-    
-    </summary>
-    
-    
-      <category term="Neo4j" scheme="http://yafei002.github.io/tags/Neo4j/"/>
-    
-  </entry>
-  
-  <entry>
     <title>周记-17.11.29</title>
     <link href="http://yafei002.github.io/2017/12/12/%E5%91%A8%E8%AE%B0-17.11.29/"/>
     <id>http://yafei002.github.io/2017/12/12/周记-17.11.29/</id>
@@ -395,6 +365,36 @@
     
     
       <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Neo4j-Warm Up</title>
+    <link href="http://yafei002.github.io/2017/12/12/Neo4j-Warm%20Up/"/>
+    <id>http://yafei002.github.io/2017/12/12/Neo4j-Warm Up/</id>
+    <published>2017-12-12T03:27:18.000Z</published>
+    <updated>2017-12-13T09:01:22.781Z</updated>
+    
+    <content type="html"><![CDATA[<p>有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘<br>中获取记录。如果能直接从内存中提取，性能将会大大提高。</p>
+<p>可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是<br>需要考虑到在配置文件中设置的pagecache的大小，如果所有数据加起来小于等于设置的内存的大小，<br>就可以加载整个图谱；如果小于，只会尽可能的加载，无法覆盖整个图谱。</p>
+<p>Cypher语句如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MATCH (n)</div><div class="line">OPTIONAL MATCH (n)-[r]-&gt;()</div><div class="line">RETURN count(n.prop) + count(r.prop);</div></pre></td></tr></table></figure>
+<p><code>count(n.prop) + count(r.prop)</code>这条语句可以触及到所有节点和边中叫“prop”的属性。如果是<br>用<code>count(*)</code>的话并不能充分的加载所有节点和边的属性。</p>
+<p>java的方式：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@GET</span> <span class="meta">@Path</span>(<span class="string">"/warmup"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">warmUp</span><span class="params">(@Context GraphDatabaseService db)</span> </span>&#123;</div><div class="line">    <span class="keyword">try</span> ( Transaction tx = db.beginTx()) &#123;</div><div class="line">        <span class="keyword">for</span> ( Node n : GlobalGraphOperations.at(db).getAllNodes()) &#123;</div><div class="line">            n.getPropertyKeys();</div><div class="line">            <span class="keyword">for</span> ( Relationship relationship : n.getRelationships()) &#123;</div><div class="line">                relationship.getPropertyKeys();</div><div class="line">                relationship.getStartNode();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Warmed up and ready to go!"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对于3.0以上版本的Neo4j, 且加入了<a href="https://github.com/neo4j-contrib/neo4j-apoc-procedures" target="_blank" rel="external">apoc</a><br>插件，可以使用如下方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CALL apoc.warmup.run()</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘&lt;br&gt;中获取记录。如果能直接从内存中提取，性能将会大大提高。&lt;/p&gt;
+&lt;p&gt;可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是&lt;
+    
+    </summary>
+    
+    
+      <category term="Neo4j" scheme="http://yafei002.github.io/tags/Neo4j/"/>
     
   </entry>
   
