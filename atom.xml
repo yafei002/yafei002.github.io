@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2018-02-23T08:57:20.096Z</updated>
+  <updated>2018-06-17T11:17:56.199Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -14,6 +14,230 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>周记-18.04.02</title>
+    <link href="http://yafei002.github.io/2018/04/09/%E5%91%A8%E8%AE%B0-18-04-02/"/>
+    <id>http://yafei002.github.io/2018/04/09/周记-18-04-02/</id>
+    <published>2018-04-09T11:16:49.000Z</published>
+    <updated>2018-06-17T11:17:56.199Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><ul>
+<li><a href="http://www.jb51.net/article/136817.htm" target="_blank" rel="external">vue项目关闭eslint校验</a></li>
+<li><a href="https://jingyan.baidu.com/article/29697b916d6a7bab20de3cf9.html" target="_blank" rel="external">axios.post传参数</a></li>
+</ul>
+<h2 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h2><ul>
+<li><a href="http://x-algo.cn/index.php/2016/02/28/crf-tagging/" target="_blank" rel="external">CRF++词性标注</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MzUyMjE2MTE0Mw==&amp;mid=2247485768&amp;idx=1&amp;sn=de461897a29feacfc5c9a2bd353de7f3&amp;chksm=f9d157d0cea6dec686a354ef3f79d663e32005fb5cefee56abccb6117ec6a7876c734f66cc4b&amp;mpshare=1&amp;scene=1&amp;srcid=03189neYXqYw1E12EDvz9mYI#rd" target="_blank" rel="external">【干货教程】自然语言处理入门：手把手教你解决90%的NLP问题</a></li>
+<li><a href="https://www.jianshu.com/p/55755fc649b1" target="_blank" rel="external">如何轻松愉快地理解条件随机场（CRF）？</a></li>
+<li><a href="https://www.cnblogs.com/xueyinzhe/p/7225923.html" target="_blank" rel="external">条件随机场-应用</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Vue&quot;&gt;&lt;a href=&quot;#Vue&quot; class=&quot;headerlink&quot; title=&quot;Vue&quot;&gt;&lt;/a&gt;Vue&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.jb51.net/article/136817.htm&quot; target=&quot;_bl
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-18.03.25</title>
+    <link href="http://yafei002.github.io/2018/04/01/%E5%91%A8%E8%AE%B0-18-03-25/"/>
+    <id>http://yafei002.github.io/2018/04/01/周记-18-03-25/</id>
+    <published>2018-04-01T11:11:01.000Z</published>
+    <updated>2018-06-17T11:17:02.248Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h2><ul>
+<li><a href="http://www.yangqiu.cn/OpenKG-CN/3548990.html" target="_blank" rel="external">技术动态 | 基于深度学习的中文自然语言处理工具 FudanDNN-NLP3.0</a></li>
+<li><a href="https://github.com/phychaos/pycrfpp" target="_blank" rel="external">pycrfpp</a></li>
+</ul>
+<p>待读</p>
+<ul>
+<li><a href="https://wenku.baidu.com/view/d0549ce04b35eefdc9d3334f.html" target="_blank" rel="external">基于Tbox和Abox的描述逻辑推理研究</a></li>
+<li><a href="http://www.chokkan.org/software/crfsuite/api/crfsuite_hpp_api.html" target="_blank" rel="external">CRFSuite C++/SWIG API</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;NLP&quot;&gt;&lt;a href=&quot;#NLP&quot; class=&quot;headerlink&quot; title=&quot;NLP&quot;&gt;&lt;/a&gt;NLP&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.yangqiu.cn/OpenKG-CN/3548990.html&quot; targe
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-18.03.19</title>
+    <link href="http://yafei002.github.io/2018/03/26/%E5%91%A8%E8%AE%B0-18-03-19/"/>
+    <id>http://yafei002.github.io/2018/03/26/周记-18-03-19/</id>
+    <published>2018-03-26T07:45:22.000Z</published>
+    <updated>2018-06-16T07:46:03.356Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h2><ul>
+<li><a href="https://cn.100offer.com/blog/posts/296" target="_blank" rel="external">NLP 算法工程师的学习、成长和实战经验</a></li>
+<li><a href="https://www.cnblogs.com/CheeseZH/p/5768389.html" target="_blank" rel="external">依存句法分析与语义依存分析的区别</a></li>
+<li><a href="https://www.ltp-cloud.com/intro/#sdp_how" target="_blank" rel="external">要进行什么样的语言分析</a></li>
+<li><a href="https://github.com/SnakeHacker/QA-Snake" target="_blank" rel="external">QA-Snake</a></li>
+<li><a href="https://blog.csdn.net/aws3217150/article/details/53840029" target="_blank" rel="external">LDA(Latent Dirichlet Allocation)主题模型</a></li>
+<li><a href="http://python.jobbole.com/82007/" target="_blank" rel="external">用AIML开发人工智能聊天机器人</a></li>
+<li>[]</li>
+</ul>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><ul>
+<li><a href="http://blog.163.com/weak_time/blog/static/25852809120169333247925/" target="_blank" rel="external">Python命令行参数学习</a></li>
+<li><a href="https://blog.csdn.net/hong201/article/details/4219035" target="_blank" rel="external">python整理二十七——egg文件制作与安装</a></li>
+<li><a href="https://blog.csdn.net/xxzhangx/article/details/53558654" target="_blank" rel="external">python：用setup.py安装第三方包packages</a></li>
+<li><a href="https://www.cnblogs.com/maociping/p/6633948.html" target="_blank" rel="external">python的构建工具setup.py</a></li>
+</ul>
+<h2 id="chatbot"><a href="#chatbot" class="headerlink" title="chatbot"></a>chatbot</h2><ul>
+<li><a href="http://python.jobbole.com/82007/" target="_blank" rel="external">用AIML开发人工智能聊天机器人</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;NLP&quot;&gt;&lt;a href=&quot;#NLP&quot; class=&quot;headerlink&quot; title=&quot;NLP&quot;&gt;&lt;/a&gt;NLP&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://cn.100offer.com/blog/posts/296&quot; target=&quot;_bl
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-18.03.12</title>
+    <link href="http://yafei002.github.io/2018/03/19/%E5%91%A8%E8%AE%B0-18-03-12/"/>
+    <id>http://yafei002.github.io/2018/03/19/周记-18-03-12/</id>
+    <published>2018-03-19T04:34:30.000Z</published>
+    <updated>2018-06-16T07:44:43.248Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><ul>
+<li><a href="http://files.cnblogs.com/files/rocketfan/LightGBM%E4%B8%AD%E7%9A%84GBDT%E5%AE%9E%E7%8E%B0.pdf" target="_blank" rel="external">Melt/LightGBM中GBDT的实现</a></li>
+<li><a href="http://blog.csdn.net/sinat_32547403/article/details/73008127" target="_blank" rel="external">交叉验证与网格搜索</a></li>
+<li><a href="http://www.sohu.com/a/165867311_99950513" target="_blank" rel="external">反欺诈的核心是人，教你如何用知识图谱识别欺诈行为</a></li>
+</ul>
+<h2 id="KG"><a href="#KG" class="headerlink" title="KG"></a>KG</h2><ul>
+<li><a href="http://deepdive.stanford.edu/" target="_blank" rel="external">DeepDive</a></li>
+<li><a href="http://mp.weixin.qq.com/s/qw9i24goTsVgdk1qW6ie9A" target="_blank" rel="external">知识图谱数据构建的“硬骨头”，阿里工程师如何拿下？</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;ML&quot;&gt;&lt;a href=&quot;#ML&quot; class=&quot;headerlink&quot; title=&quot;ML&quot;&gt;&lt;/a&gt;ML&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://files.cnblogs.com/files/rocketfan/LightGBM%E4%B8
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-18.03.05</title>
+    <link href="http://yafei002.github.io/2018/03/12/%E5%91%A8%E8%AE%B0-18-03-05/"/>
+    <id>http://yafei002.github.io/2018/03/12/周记-18-03-05/</id>
+    <published>2018-03-12T04:33:01.000Z</published>
+    <updated>2018-06-16T04:33:38.624Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Knowledge-Graph"><a href="#Knowledge-Graph" class="headerlink" title="Knowledge Graph"></a>Knowledge Graph</h2><ul>
+<li><a href="https://baijiahao.baidu.com/s?id=1570399007693287&amp;wfr=spider&amp;for=pc" target="_blank" rel="external">系列课程：从知识图谱到表征学习｜集智AI学园</a></li>
+<li><a href="https://wenku.baidu.com/view/2c229e05941ea76e59fa04dd.html" target="_blank" rel="external">百度知识图谱新进展</a></li>
+<li><a href="http://www.xzbu.com/8/view-7438120.htm" target="_blank" rel="external">中文异构百科知识库实体对齐</a></li>
+<li><a href="http://crad.ict.ac.cn/CN/abstract/abstract3093.shtml" target="_blank" rel="external">知识库实体对齐技术综述</a></li>
+</ul>
+<p>Todo</p>
+<ul>
+<li><a href="https://www.cnblogs.com/jtianwen2014/p/7000190.html" target="_blank" rel="external">知识图谱表示学习与关系推理（2016-2017）（一）</a></li>
+<li><a href="http://chuansong.me/n/2553541" target="_blank" rel="external">【干货】刘知远：面向大规模知识图谱的表示学习技术</a></li>
+<li><a href="http://blog.csdn.net/dark_scope/article/details/74279582" target="_blank" rel="external">NE(Network Embedding)论文小览</a></li>
+<li><a href="https://www.jianshu.com/p/b00e699b1a51" target="_blank" rel="external">网络表示学习概述</a></li>
+<li><a href="https://yq.aliyun.com/articles/225331" target="_blank" rel="external">Representation Learning on Network 网络表示学习</a></li>
+<li><a href="http://www.statsmodels.org/stable/index.html" target="_blank" rel="external">基于贝叶斯网的知识图谱链接预测</a></li>
+<li><p><a href="http://www.xzbu.com/8/view-7212316.htm" target="_blank" rel="external">基于图方法的命名实体消歧</a></p>
+</li>
+<li><p><a href="http://blog.csdn.net/fffnull/article/details/51204550" target="_blank" rel="external">TransE算法（Translating Embedding）</a></p>
+</li>
+</ul>
+<h2 id="Statistics"><a href="#Statistics" class="headerlink" title="Statistics"></a>Statistics</h2><ul>
+<li><a href="http://www.statsmodels.org/stable/index.html" target="_blank" rel="external">Statsmodels</a></li>
+</ul>
+<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><ul>
+<li><a href="http://files.cnblogs.com/files/rocketfan/LightGBM%E4%B8%AD%E7%9A%84GBDT%E5%AE%9E%E7%8E%B0.pdf" target="_blank" rel="external">Melt/LightGBM中GBDT的实现</a></li>
+<li><a href="https://www.jianshu.com/p/3e8b9f2764c8" target="_blank" rel="external">不平衡数据下的机器学习方法简介</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Knowledge-Graph&quot;&gt;&lt;a href=&quot;#Knowledge-Graph&quot; class=&quot;headerlink&quot; title=&quot;Knowledge Graph&quot;&gt;&lt;/a&gt;Knowledge Graph&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;htt
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gitlab 安装 遇到&quot;ruby_block[supervise_redis_sleep]&quot;</title>
+    <link href="http://yafei002.github.io/2018/03/09/gitlab_pro1/"/>
+    <id>http://yafei002.github.io/2018/03/09/gitlab_pro1/</id>
+    <published>2018-03-09T02:33:47.000Z</published>
+    <updated>2018-03-09T02:46:18.539Z</updated>
+    
+    <content type="html"><![CDATA[<p>CentOS7上安装GitLab，运行<code>sudo gitlab-ctl reconfigure</code>。程序停在下面不动：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">ruby_block[supervise_redis_sleep] action run</div></pre></td></tr></table></figure>
+<p>解决方法：</p>
+<p>首先按<code>ctrl+C</code>，然后运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo systemctl restart gitlab-runsvdir</div><div class="line">sudo gitlab-ctl reconfigure</div></pre></td></tr></table></figure>
+<p>参考：<a href="https://gitlab.com/gitlab-org/omnibus-gitlab/issues/160#note_24078285" target="_blank" rel="external">https://gitlab.com/gitlab-org/omnibus-gitlab/issues/160#note_24078285</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CentOS7上安装GitLab，运行&lt;code&gt;sudo gitlab-ctl reconfigure&lt;/code&gt;。程序停在下面不动：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;
+    
+    </summary>
+    
+    
+      <category term="工程" scheme="http://yafei002.github.io/tags/%E5%B7%A5%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转换neo4j格式数据为前端可视化格式</title>
+    <link href="http://yafei002.github.io/2018/02/24/%E8%BD%AC%E6%8D%A2neo4j%E6%A0%BC%E5%BC%8F%E6%95%B0%E6%8D%AE%E4%B8%BA%E5%89%8D%E7%AB%AF%E5%8F%AF%E8%A7%86%E5%8C%96%E6%A0%BC%E5%BC%8F/"/>
+    <id>http://yafei002.github.io/2018/02/24/转换neo4j格式数据为前端可视化格式/</id>
+    <published>2018-02-24T08:12:05.000Z</published>
+    <updated>2018-02-24T08:15:53.360Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> request = <span class="built_in">require</span>(<span class="string">'request'</span>);</div><div class="line">reqObj = &#123;</div><div class="line">  <span class="string">"statements"</span>: [&#123;</div><div class="line">    <span class="string">"statement"</span>: <span class="string">"MATCH path = (n)-[r]-&gt;(m) RETURN path"</span>,</div><div class="line">    <span class="string">"resultDataContents"</span>: [<span class="string">"graph"</span>]</div><div class="line">  &#125;]</div><div class="line">&#125;</div><div class="line">request(&#123;</div><div class="line">    <span class="string">'method'</span>: <span class="string">'POST'</span>,</div><div class="line">    <span class="string">'uri'</span>: <span class="string">'http://10.100.22.62:6474/db/data/transaction/commit'</span>,</div><div class="line"></div><div class="line">    <span class="string">'json'</span>: reqObj,</div><div class="line"></div><div class="line">    <span class="string">"auth"</span>: &#123;</div><div class="line">      <span class="string">'user'</span>: <span class="string">'neo4j'</span>,</div><div class="line">      <span class="string">'pass'</span>: <span class="string">'credithc'</span>,</div><div class="line">      <span class="string">'sendImmediately'</span>: <span class="literal">false</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="function"><span class="keyword">function</span>(<span class="params">error, response, body</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (!error &amp;&amp; response.statusCode == <span class="number">200</span>) &#123;</div><div class="line">      <span class="built_in">console</span>.log(body)</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="built_in">console</span>.log(response.statusCode);</div><div class="line">      <span class="built_in">console</span>.log(error);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">);</div></pre></td></tr></table></figure>
+<p><a href="https://stackoverflow.com/questions/8675688/send-content-type-application-json-post-with-node-js" target="_blank" rel="external">send Content-Type: application/json post with node.js</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>jupyter notebook 结果显示不全解决方法</title>
@@ -40,6 +264,453 @@
     
     
       <category term="技术日记" scheme="http://yafei002.github.io/tags/%E6%8A%80%E6%9C%AF%E6%97%A5%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-18.02.13</title>
+    <link href="http://yafei002.github.io/2018/02/20/%E5%91%A8%E8%AE%B0-18-02-13/"/>
+    <id>http://yafei002.github.io/2018/02/20/周记-18-02-13/</id>
+    <published>2018-02-20T04:31:50.000Z</published>
+    <updated>2018-06-16T04:32:37.255Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><ul>
+<li><a href="http://blog.csdn.net/bitboy_star/article/details/51427306" target="_blank" rel="external">远程访问jupyter notebook</a></li>
+<li><a href="http://blog.csdn.net/calmdog/article/details/51930768" target="_blank" rel="external">jupyter notebook配置文件修改注意事项–远程访问</a></li>
+<li><a href="https://www.cnblogs.com/luckjun/p/4958338.html" target="_blank" rel="external">pip –upgrade批量更新过期的python库</a></li>
+</ul>
+<h2 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h2><ul>
+<li><a href="http://blog.csdn.net/roamer314/article/details/52179191" target="_blank" rel="external">Pandas的 loc iloc ix 区别</a></li>
+<li><a href="http://blog.csdn.net/u012560212/article/details/53405338" target="_blank" rel="external">python 数据处理中的 LabelEncoder 和 OneHotEncoder</a></li>
+<li><a href="http://blog.csdn.net/lujiandong1/article/details/52836051" target="_blank" rel="external">pandas使用get_dummies进行one-hot编码</a></li>
+<li><a href="http://blog.51cto.com/6226001001/1898938" target="_blank" rel="external">pandas 读写sql数据库</a></li>
+<li><a href="https://www.thinksaas.cn/group/topic/504073/" target="_blank" rel="external">python pandas dataframe 去重函数</a></li>
+<li><a href="https://www.cnblogs.com/wuzhiblog/p/python_pandas.html" target="_blank" rel="external">pandas.DataFrame排除特定行</a></li>
+<li><a href="http://blog.csdn.net/wr339988/article/details/65446138" target="_blank" rel="external">pandas中Dataframe的查询方法（[], loc, iloc, at, iat, ix）</a></li>
+<li><a href="https://morvanzhou.github.io/tutorials/data-manipulation/np-pd/3-8-pd-plot/" target="_blank" rel="external">Pandas plot 出图</a></li>
+<li>特征工程<ul>
+<li><a href="https://www.zhihu.com/question/31989952" target="_blank" rel="external">连续特征的离散化：在什么情况下将连续的特征离散化之后可以获得更好的效果？</a>(推荐)</li>
+<li><a href="https://www.jianshu.com/p/0127b187a7c2" target="_blank" rel="external">特征工程之缺失值与离群值处理</a></li>
+<li><a href="https://cethik.vip/2017/07/25/data-explore/" target="_blank" rel="external">数据分析之特征工程</a></li>
+<li><a href="https://baike.baidu.com/item/%E9%AB%98%E6%9D%A0%E6%9D%86%E7%82%B9/19112886?fr=aladdin" target="_blank" rel="external">高杠杆点</a></li>
+<li><a href="https://www.applysquare.com/topic-cn/ShiBHw1ny/" target="_blank" rel="external">在统计学中，异常值，杠杆点，离群点，影响点有什么区别？又如何判断？</a></li>
+<li><a href="https://www.zhihu.com/question/31989952" target="_blank" rel="external">连续特征的离散化：在什么情况下将连续的特征离散化之后可以获得更好的效果？</a></li>
+<li><a href="http://www.cnblogs.com/charlotte77/p/5606926.html" target="_blank" rel="external">机器学习基础与实践（一）—-数据清洗</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><ul>
+<li><a href="https://segmentfault.com/q/1010000010792877/a-1020000010899717" target="_blank" rel="external">import About from ‘@/components/About’中@啥意思？</a></li>
+<li><a href="https://segmentfault.com/q/1010000011793017" target="_blank" rel="external">如何把atom 默认的换行符设置成LF</a></li>
+<li><a href="https://tyronetudehope.com/2016/12/13/composing-d3-visualizations-with-vuejs/" target="_blank" rel="external">Composing D3 Visualizations With Vue.js</a></li>
+<li><a href="https://segmentfault.com/q/1010000008427497?_ea=1645645" target="_blank" rel="external">如何在vue中使用d3.js</a></li>
+<li><a href="https://segmentfault.com/q/1010000012744010" target="_blank" rel="external">如何将vue-cli生成的文件缩进改成4个啊？</a></li>
+<li><a href="https://segmentfault.com/q/1010000009842688" target="_blank" rel="external">assets 和static的区别</a></li>
+<li><a href="http://blog.csdn.net/hsany330/article/details/53197601" target="_blank" rel="external">vue-resource插件使用</a>(推荐)</li>
+</ul>
+<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><ul>
+<li><a href="https://github.com/Honlan/fullstack-data-engineer" target="_blank" rel="external">全栈数据工程师养成攻略</a></li>
+<li>GBDT<ul>
+<li><a href="http://blog.csdn.net/u012684933/article/details/51088609" target="_blank" rel="external">机器学习系列——1. GBDT算法的原理</a></li>
+<li><a href="https://www.jianshu.com/p/0e5ccc88d2cb" target="_blank" rel="external">数据挖掘面试题之梯度提升树</a></li>
+<li><a href="https://www.cnblogs.com/pinard/p/6140514.html" target="_blank" rel="external">梯度提升树(GBDT)原理小结</a></li>
+</ul>
+</li>
+<li>XGBoost<ul>
+<li><a href="https://www.jianshu.com/p/7467e616f227" target="_blank" rel="external">xgboost的原理没你想像的那么难</a>(推荐)</li>
+<li><a href="http://blog.csdn.net/a819825294/article/details/51206410" target="_blank" rel="external">xgboost原理</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/28672955" target="_blank" rel="external">xgboost参数调节</a></li>
+</ul>
+</li>
+<li>LightGBM<ul>
+<li><a href="https://yq.aliyun.com/articles/69330" target="_blank" rel="external">倚天遇到屠龙：LightGBM VS xgboost谁才是最强的梯度提升库？</a></li>
+<li><a href="http://blog.csdn.net/u010414589/article/details/51153310" target="_blank" rel="external">xgboost 调参经验</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h2><ul>
+<li><a href="http://blog.csdn.net/zll01/article/details/5018413" target="_blank" rel="external">301、404、200、304等HTTP状态</a></li>
+<li>koa<ul>
+<li><a href="https://github.com/liuyahuiZ/server-koa" target="_blank" rel="external">koa2 从入坑到放弃</a></li>
+<li><a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434501579966ab03decb0dd246e1a6799dd653a15e1b000" target="_blank" rel="external">廖雪峰koa教程</a></li>
+<li><a href="https://www.npmjs.com/package/koa-middlewares" target="_blank" rel="external">koa-middlewares</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2017/08/koa.html" target="_blank" rel="external">阮一峰Koa 框架教程</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Nodejs"><a href="#Nodejs" class="headerlink" title="Nodejs"></a>Nodejs</h2><ul>
+<li><a href="https://stackoverflow.com/questions/8675688/send-content-type-application-json-post-with-node-js" target="_blank" rel="external">send Content-Type: application/json post with node.js</a></li>
+</ul>
+<h2 id="Data-Visualization"><a href="#Data-Visualization" class="headerlink" title="Data Visualization"></a>Data Visualization</h2><ul>
+<li><a href="https://neo4j.com/developer/guide-data-visualization/#_howto_graph_visualization_step_by_step" target="_blank" rel="external">neo4j data to d3 data format</a></li>
+<li><a href="https://github.com/liuyahuiZ/server-koa" target="_blank" rel="external">koa2 从入坑到放弃</a></li>
+</ul>
+<h2 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h2><ul>
+<li><a href="http://blog.csdn.net/u010159842/article/details/52859035" target="_blank" rel="external">python删除pandas DataFrame的某一/几列</a></li>
+<li><a href="http://blog.csdn.net/stevenkwong/article/details/52528616" target="_blank" rel="external">PANDAS 数据合并与重塑（concat篇）</a></li>
+<li><a href="http://blog.csdn.net/zhili8866/article/details/68134481" target="_blank" rel="external">pandas数据清洗，排序，索引设置，数据选取</a></li>
+<li>可视化<ul>
+<li><a href="https://www.yiibai.com/pandas/python_pandas_visualization.html" target="_blank" rel="external">易百教程</a></li>
+<li><a href="https://ask.hellobi.com/blog/wangdawei/9036" target="_blank" rel="external">pandas可视化（1）【官方文档解读】–基础绘图</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Statistics"><a href="#Statistics" class="headerlink" title="Statistics"></a>Statistics</h2><ul>
+<li><a href="https://www.zhihu.com/question/36172806" target="_blank" rel="external">箱形图为什么能检测异常值，原理是什么？</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Python&quot;&gt;&lt;a href=&quot;#Python&quot; class=&quot;headerlink&quot; title=&quot;Python&quot;&gt;&lt;/a&gt;Python&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/bitboy_star/articl
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-18.02.05</title>
+    <link href="http://yafei002.github.io/2018/02/12/%E5%91%A8%E8%AE%B0-18-02-05/"/>
+    <id>http://yafei002.github.io/2018/02/12/周记-18-02-05/</id>
+    <published>2018-02-12T04:30:40.000Z</published>
+    <updated>2018-06-16T04:31:21.056Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h2><ul>
+<li><a href="https://segmentfault.com/a/1190000005857342" target="_blank" rel="external">npm升级所有可更新包</a></li>
+</ul>
+<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><ul>
+<li><a href="http://blog.csdn.net/ymf827311945/article/details/78007698" target="_blank" rel="external">数据挖掘之图挖掘</a></li>
+</ul>
+<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
+<li><a href="https://baike.baidu.com/item/%E5%BC%BA%E8%BF%9E%E9%80%9A%E5%9B%BE/6769617" target="_blank" rel="external">强连通图</a></li>
+<li><a href="http://blog.csdn.net/qq_38262266/article/details/77010230" target="_blank" rel="external">极大连通子图 + 极小连通子图 + 连通分量</a></li>
+<li><a href="http://blog.csdn.net/liuchuo/article/details/51986102" target="_blank" rel="external">【离散数学】单向连通和弱连通的区别</a></li>
+<li><a href="https://baike.baidu.com/item/%E5%BC%B1%E8%BF%9E%E9%80%9A%E5%9B%BE/4808996?fr=aladdin" target="_blank" rel="external">弱连通图</a></li>
+</ul>
+<h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><ul>
+<li><a href="https://www.cnblogs.com/litifeng/p/5649432.html" target="_blank" rel="external">mkdir命令的-p和-m</a></li>
+<li><a href="https://www.cnblogs.com/davygeek/p/5670212.html" target="_blank" rel="external">Shell特殊变量：Shell $0, $#, $*, $@, $?, $$和命令行参数</a></li>
+<li><a href="http://blog.csdn.net/kentzhang_/article/details/50538777" target="_blank" rel="external">find、grep、wc使用方法简单总结</a></li>
+<li><a href="http://www.360doc.com/content/13/0523/16/7044580_287544243.shtml" target="_blank" rel="external">Shell重定向＆&gt;file、2&gt;&amp;1、1&gt;&amp;2的区别</a></li>
+<li><a href="http://blog.csdn.net/longshenlmj/article/details/25062025" target="_blank" rel="external">shell重定向（大于号，小于号，左右，2&gt;&amp;1，&amp;）</a></li>
+</ul>
+<h2 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h2><ul>
+<li><a href="http://blog.csdn.net/u013778905/article/details/54235906" target="_blank" rel="external">Vue.js系列之vue-resource（6）</a></li>
+</ul>
+<h2 id="Thrift"><a href="#Thrift" class="headerlink" title="Thrift"></a>Thrift</h2><ul>
+<li><a href="https://www.zhihu.com/question/25536695" target="_blank" rel="external">谁能用通俗的语言解释一下什么是 RPC 框架？</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;NPM&quot;&gt;&lt;a href=&quot;#NPM&quot; class=&quot;headerlink&quot; title=&quot;NPM&quot;&gt;&lt;/a&gt;NPM&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://segmentfault.com/a/1190000005857342&quot; target
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-18.01.29</title>
+    <link href="http://yafei002.github.io/2018/02/05/%E5%91%A8%E8%AE%B0-18-01-29/"/>
+    <id>http://yafei002.github.io/2018/02/05/周记-18-01-29/</id>
+    <published>2018-02-05T04:29:13.000Z</published>
+    <updated>2018-06-16T04:30:18.913Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="DL"><a href="#DL" class="headerlink" title="DL"></a>DL</h2><ul>
+<li>SNE<ul>
+<li><a href="http://www.datakit.cn/blog/2017/02/05/t_sne_full.html" target="_blank" rel="external">t-SNE完整笔记</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Knowledge-Graph"><a href="#Knowledge-Graph" class="headerlink" title="Knowledge Graph"></a>Knowledge Graph</h2><ul>
+<li>Graph Network Embedding<ul>
+<li><a href="http://www.sohu.com/a/154650431_642762" target="_blank" rel="external">推荐｜NE(Network Embedding)论文小览，附21篇经典论文和代码</a></li>
+<li><a href="http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/#top" target="_blank" rel="external">从SNE到t-SNE再到LargeVis</a></li>
+<li><a href="https://github.com/chihming/awesome-network-embedding" target="_blank" rel="external">awesome-network-embedding</a></li>
+<li><a href="https://github.com/phanein/deepwalk" target="_blank" rel="external">DeepWalk Github</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><ul>
+<li><a href="http://blog.csdn.net/u014356002/article/details/54376138" target="_blank" rel="external">数据比赛大杀器—-模型融合(stacking&amp;blending)</a></li>
+<li><a href="http://blog.csdn.net/amyaguang/article/details/46043885" target="_blank" rel="external">关于感知学习模型机中空间任一点到超平面的距离公式的推导过程</a></li>
+<li><a href="http://blog.csdn.net/shijing_0214/article/details/51000845" target="_blank" rel="external">理解支持向量机（二）核函数</a></li>
+<li><a href="http://blog.csdn.net/eathen_zheng/article/details/53765358" target="_blank" rel="external">[机器学习 - 周志华] - 第六章 支持向量机</a></li>
+<li><a href="https://www.jianshu.com/p/ba31fb7fc52f" target="_blank" rel="external">学习笔记：支持向量机</a></li>
+<li><a href="http://blog.csdn.net/sb19931201/article/details/52557382" target="_blank" rel="external">xgboost入门与实战（原理篇）</a></li>
+<li><a href="https://wenku.baidu.com/view/ffdd3dd0ce2f0066f53322e2.html" target="_blank" rel="external">图数据挖掘技术的研究与进展</a></li>
+</ul>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><ul>
+<li><a href="http://blog.csdn.net/xiemanr/article/details/72763234" target="_blank" rel="external">Python的7种性能测试工具：timeit、profile、cProfile、line_profiler、memory_profiler、PyCharm图形化性能测试工具、objgraph</a></li>
+<li><a href="http://blog.csdn.net/ricky110/article/details/77727397" target="_blank" rel="external">python简单的retry模块</a></li>
+</ul>
+<h2 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h2><ul>
+<li><a href="http://tech.ifeng.com/a/20171116/44764232_0.shtml" target="_blank" rel="external">Google发布自然语言处理解析器SLING，免除模块化分析级联效应产生的缺陷</a></li>
+<li><a href="http://sling.apache.org/" target="_blank" rel="external">Sling</a></li>
+</ul>
+<h2 id="Azkaban"><a href="#Azkaban" class="headerlink" title="Azkaban"></a>Azkaban</h2><ul>
+<li><a href="https://www.jianshu.com/p/01188607a794" target="_blank" rel="external">Azkaban 使用问题及解决(一)</a></li>
+<li><a href="https://www.jianshu.com/p/484564beda1d" target="_blank" rel="external">Azkaban－开源任务调度程序（使用篇）</a></li>
+<li><a href="http://blog.csdn.net/dailywater/article/details/24578913" target="_blank" rel="external">Quartz 框架 教程（中文版）2.2.x 之第六课 CronTrigger</a></li>
+</ul>
+<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
+<li><a href="https://www.bilibili.com/video/av15992851/" target="_blank" rel="external">「珂学原理」No. 27「欧拉公式在干什么？」</a></li>
+<li><a href="https://www.bilibili.com/video/av16951919/?from=search&amp;seid=8571400057197884461" target="_blank" rel="external">「珂学原理」No.34「泰勒公式有何卵用？」</a></li>
+<li><a href="https://www.bilibili.com/video/av15571608/?t=454" target="_blank" rel="external">「珂学原理」No. 26「拉普拉斯变换了什么？」</a></li>
+<li><a href="https://mp.weixin.qq.com/s/NorKEkwe7p6pTczKvLhA9w" target="_blank" rel="external">如何通俗的理解傅立叶变换？</a></li>
+</ul>
+<h2 id="Statistics"><a href="#Statistics" class="headerlink" title="Statistics"></a>Statistics</h2><ul>
+<li><a href="http://mp.weixin.qq.com/s/SX-Pv8R_0s7adkNxdP_uvw" target="_blank" rel="external">如何理解t检验、t分布、t值？</a></li>
+<li><a href="http://mp.weixin.qq.com/s/oejfQS-705PI5DhmC4AAug" target="_blank" rel="external">如何理解协方差、相关系数？</a></li>
+<li><a href="http://mp.weixin.qq.com/s/MWhhOmsVm7tLwXKyUho6fA" target="_blank" rel="external">如何理解置信区间？</a></li>
+</ul>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><ul>
+<li><a href="https://www.cnblogs.com/xiaoboluo768/p/5400990.html" target="_blank" rel="external">mysql explain执行计划详解</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;DL&quot;&gt;&lt;a href=&quot;#DL&quot; class=&quot;headerlink&quot; title=&quot;DL&quot;&gt;&lt;/a&gt;DL&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;SNE&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.datakit.cn/blog/2017/02/05/t_sne
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-18.01.22</title>
+    <link href="http://yafei002.github.io/2018/01/29/%E5%91%A8%E8%AE%B0-18-01-22/"/>
+    <id>http://yafei002.github.io/2018/01/29/周记-18-01-22/</id>
+    <published>2018-01-29T04:28:17.000Z</published>
+    <updated>2018-06-16T04:29:25.989Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Knowledge-Graph"><a href="#Knowledge-Graph" class="headerlink" title="Knowledge Graph"></a>Knowledge Graph</h2><ul>
+<li>Jena<ul>
+<li><a href="https://www.jianshu.com/p/2709946c2f76" target="_blank" rel="external">Jena学习笔记（一） RDF</a></li>
+<li><a href="https://www.jianshu.com/p/f93fdc1a4f68" target="_blank" rel="external">Jena学习笔记（二） SPARQL</a></li>
+<li><a href="http://jena.apache.org/tutorials/sparql.html" target="_blank" rel="external">SPARQL Tutorial</a></li>
+<li><a href="http://jena.apache.org/tutorials/rdf_api.html" target="_blank" rel="external">An Introduction to RDF and the Jena RDF API</a></li>
+</ul>
+</li>
+<li><a href="http://blog.csdn.net/headwind_/article/details/70234546" target="_blank" rel="external">Python RDF知识库查询</a></li>
+<li>GEM<ul>
+<li><a href="http://blog.sina.com.cn/s/blog_49f6467e0100qh9l.html" target="_blank" rel="external">泊松分布和幂律分布</a></li>
+<li><a href="http://blog.csdn.net/u013527419/article/details/76017528" target="_blank" rel="external">网络表示学习（DeepWalk，LINE，node2vec，SDNE）</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Hive"><a href="#Hive" class="headerlink" title="Hive"></a>Hive</h2><ul>
+<li><a href="http://blog.csdn.net/qianshangding0708/article/details/50381966" target="_blank" rel="external">Hive如何添加第三方JAR</a></li>
+</ul>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><ul>
+<li><a href="http://blog.csdn.net/wyb_009/article/details/8896744" target="_blank" rel="external">Python调试利器PDB</a></li>
+</ul>
+<h2 id="HiveMall"><a href="#HiveMall" class="headerlink" title="HiveMall"></a>HiveMall</h2><ul>
+<li><a href="https://github.com/apache/incubator-hivemall/blob/master/docs/gitbook/SUMMARY.md" target="_blank" rel="external">gitbook</a></li>
+<li><a href="https://www.iteblog.com/archives/2088.html" target="_blank" rel="external">Apache Hivemall:可运行在Hive, Spark 和 Pig 上的可扩展机器学习库</a></li>
+<li><a href="https://segmentfault.com/a/1190000010608433" target="_blank" rel="external">Hivemall官方文档翻译-（第一部分：目录）</a></li>
+<li><a href="http://hivemall.incubator.apache.org/userguide/" target="_blank" rel="external">User Guide</a></li>
+</ul>
+<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
+<li><a href="https://baike.baidu.com/item/%E6%8B%89%E6%A0%BC%E6%9C%97%E6%97%A5%E4%B9%98%E5%AD%90/4841841?fr=aladdin" target="_blank" rel="external">拉格朗日乘子</a></li>
+<li><a href="https://www.zhihu.com/question/38586401" target="_blank" rel="external">拉格朗日乘子法如何理解？</a></li>
+</ul>
+<h2 id="Statistics"><a href="#Statistics" class="headerlink" title="Statistics"></a>Statistics</h2><ul>
+<li><a href="https://baike.baidu.com/item/%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83/1442377?fr=aladdin" target="_blank" rel="external">二项分布</a></li>
+<li><a href="https://baike.baidu.com/item/%E6%B3%8A%E6%9D%BE%E5%88%86%E5%B8%83/1442110?fr=aladdin" target="_blank" rel="external">泊松分布</a></li>
+<li><a href="https://www.zhihu.com/question/21756860/answer/126950765" target="_blank" rel="external">泊松分布和正态分布有什么内在联系？</a></li>
+<li><a href="http://blog.csdn.net/gao1440156051/article/details/48392813" target="_blank" rel="external">泊松分布和幂律分布</a></li>
+</ul>
+<h2 id="Python-1"><a href="#Python-1" class="headerlink" title="Python"></a>Python</h2><ul>
+<li><a href="https://www.cnblogs.com/lipijin/p/3709903.html" target="_blank" rel="external">python多进程的理解 multiprocessing Process join run</a></li>
+<li><a href="http://outofmemory.cn/code-snippet/2267/Python-duojincheng-multiprocessing-usage-example" target="_blank" rel="external">Python多进程multiprocessing使用示例</a></li>
+<li><a href="http://www.cnblogs.com/pdev/p/5267720.html" target="_blank" rel="external">用Python实现多核心并行计算</a></li>
+<li><a href="http://blog.csdn.net/lbxoqy/article/details/70139791" target="_blank" rel="external">Python 自定义异常类，主动捕获异常，主动抛出异常</a></li>
+<li><a href="http://www.jb51.net/article/57663.htm" target="_blank" rel="external">Python multiprocessing.Manager介绍和实例（进程间共享数据）</a></li>
+</ul>
+<h2 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h2><ul>
+<li><a href="http://tech.ifeng.com/a/20171116/44764232_0.shtml" target="_blank" rel="external">Google发布自然语言处理解析器SLING，免除模块化分析级联效应产生的缺陷</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Knowledge-Graph&quot;&gt;&lt;a href=&quot;#Knowledge-Graph&quot; class=&quot;headerlink&quot; title=&quot;Knowledge Graph&quot;&gt;&lt;/a&gt;Knowledge Graph&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Jena&lt;ul&gt;
+&lt;li
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-18.01.15</title>
+    <link href="http://yafei002.github.io/2018/01/22/%E5%91%A8%E8%AE%B0-18-01-15/"/>
+    <id>http://yafei002.github.io/2018/01/22/周记-18-01-15/</id>
+    <published>2018-01-22T04:27:04.000Z</published>
+    <updated>2018-06-16T04:27:46.768Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Graph"><a href="#Graph" class="headerlink" title="Graph"></a>Graph</h2><p><a href="https://www.zhihu.com/question/57269332/answer/157375170" target="_blank" rel="external">有哪些指标可以描述两个图（graph）的相似度？</a>(推荐)</p>
+<h2 id="DL"><a href="#DL" class="headerlink" title="DL"></a>DL</h2><ul>
+<li><a href="http://blog.csdn.net/zchang81/article/details/70224688" target="_blank" rel="external">深度学习——激活函数Sigmoid/Tanh/ReLU</a></li>
+<li><a href="https://www.youtube.com/watch?v=mC9IwulM7D0" target="_blank" rel="external">word2vec 正篇（上）：Count Based</a></li>
+<li><a href="http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/" target="_blank" rel="external">从SNE到t-SNE再到LargeVis</a></li>
+<li><a href="https://www.jianshu.com/p/8eb17fa41164" target="_blank" rel="external">Softmax分类函数</a></li>
+<li><a href="http://www.datakit.cn/blog/2017/02/05/t_sne_full.html" target="_blank" rel="external">t-SNE完整笔记</a></li>
+<li><a href="http://blog.csdn.net/lzl1663515011/article/details/46328337" target="_blank" rel="external">t-分布邻域嵌入算法（t-SNE algorithm）简单理解</a></li>
+<li><a href="http://www.sohu.com/a/160521636_609399" target="_blank" rel="external">Tensorflow 的 word2vec详细解释——basic篇</a></li>
+<li><a href="https://www.cnblogs.com/rocketfan/p/4976806.html" target="_blank" rel="external">Tensorflow 的Word2vec demo解析</a></li>
+<li><a href="https://www.jianshu.com/p/f682066f0586" target="_blank" rel="external">Tensorflow机器学习–图文理解Word2Vec</a></li>
+<li><a href="http://bindog.github.io/blog/2016/06/04/from-sne-to-tsne-to-largevis/" target="_blank" rel="external">从SNE到t-SNE再到LargeVis</a></li>
+<li><a href="http://blog.csdn.net/u014595019/article/details/54093161" target="_blank" rel="external">tensorflow笔记:使用tf来实现word2vec</a></li>
+<li><a href="http://blog.csdn.net/u014595019/article/details/51884529" target="_blank" rel="external">自己动手写word2vec (一):主要概念和流程</a></li>
+<li><a href="http://blog.csdn.net/u014595019/article/details/51970582" target="_blank" rel="external">word2vec 中的数学原理详解-基于 Negative Sampling 的模型</a></li>
+<li><a href="http://wiki.jikexueyuan.com/project/tensorflow-zh/tutorials/word2vec.html" target="_blank" rel="external">Vector Representations of Words</a></li>
+<li><a href="http://blog.csdn.net/on2way/article/details/50525548" target="_blank" rel="external">深度学习系列（九）：详解工具箱参数及网络一种改进方式-dropout</a></li>
+<li><a href="http://blog.csdn.net/u012162613/article/details/44239919" target="_blank" rel="external">交叉熵代价函数</a></li>
+<li><a href="http://blog.csdn.net/l691899397/article/details/52267166" target="_blank" rel="external">深度学习笔记6：全连接层的实现</a></li>
+<li><a href="http://blog.csdn.net/itplus/article/details/37969979" target="_blank" rel="external">word2vec 中的数学原理详解（四）基于 Hierarchical Softmax 的模型</a></li>
+<li><a href="http://blog.csdn.net/itplus/article/details/37969635" target="_blank" rel="external">word2vec 中的数学原理详解（二）预备知识</a></li>
+<li><a href="http://blog.csdn.net/u013527419/article/details/74129996" target="_blank" rel="external">word2vec</a></li>
+</ul>
+<h2 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h2><ul>
+<li><a href="https://www.jianshu.com/p/236335897b30" target="_blank" rel="external">TensorFlow架构与设计：OP本质论</a></li>
+<li><a href="https://www.cnblogs.com/tsiangleo/p/6145112.html" target="_blank" rel="external">tensorflow中的基本概念</a></li>
+<li><a href="http://blog.csdn.net/u014422406/article/details/52805924" target="_blank" rel="external">sigmoid和softmax总结</a></li>
+</ul>
+<h2 id="azkaban"><a href="#azkaban" class="headerlink" title="azkaban"></a>azkaban</h2><ul>
+<li><a href="https://www.jianshu.com/p/0f191c11773e" target="_blank" rel="external">Azkaban单机与集群的安装</a></li>
+<li><a href="http://blog.csdn.net/jkdcdlly/article/details/53227253" target="_blank" rel="external">azkaban 指南</a></li>
+<li><a href="https://www.jianshu.com/p/7c3428c7ed76" target="_blank" rel="external">Azkaban Upload zip</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Graph&quot;&gt;&lt;a href=&quot;#Graph&quot; class=&quot;headerlink&quot; title=&quot;Graph&quot;&gt;&lt;/a&gt;Graph&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/57269332/answer/15
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-18.01.08</title>
+    <link href="http://yafei002.github.io/2018/01/15/%E5%91%A8%E8%AE%B0-18-01-08/"/>
+    <id>http://yafei002.github.io/2018/01/15/周记-18-01-08/</id>
+    <published>2018-01-15T04:25:31.000Z</published>
+    <updated>2018-06-16T04:26:26.025Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
+<li><a href="https://baike.baidu.com/item/%E6%AD%A3%E4%BA%A4%E7%9F%A9%E9%98%B5/407284?fr=aladdin" target="_blank" rel="external">正交矩阵</a></li>
+<li><a href="https://www.cnblogs.com/AndyJee/p/3491487.html" target="_blank" rel="external">行列式的几何意义</a></li>
+<li><a href="https://baike.baidu.com/item/%E5%AF%B9%E8%A7%92%E7%9F%A9%E9%98%B5/638916?fr=aladdin" target="_blank" rel="external">对角矩阵</a></li>
+<li><a href="https://baike.baidu.com/item/%E5%AF%B9%E7%A7%B0%E7%9F%A9%E9%98%B5/7291260?fr=aladdin" target="_blank" rel="external">对称矩阵</a></li>
+</ul>
+<h2 id="DL"><a href="#DL" class="headerlink" title="DL"></a>DL</h2><ul>
+<li><a href="https://www.zhihu.com/question/22298352" target="_blank" rel="external">如何通俗易懂地解释卷积？</a></li>
+<li><a href="https://www.leiphone.com/news/201606/aewwFhhu9SCeIqUG.html" target="_blank" rel="external">ICML论文 | 利用CNN来学习任意图结构</a></li>
+<li><a href="http://blog.csdn.net/bvl10101111/article/details/53484620" target="_blank" rel="external"> 论文笔记之Learning Convolutional Neural Networks for Graphs</a></li>
+<li><a href="https://www.leiphone.com/news/201706/ppA1Hr0M0fLqm7OP.html" target="_blank" rel="external">卷积神经网络不能处理“图”结构数据？这篇文章告诉你答案</a></li>
+<li><a href="http://blog.csdn.net/u014313009/article/details/51043064" target="_blank" rel="external">交叉熵代价函数（作用及公式推导）</a>(推荐)</li>
+<li><a href="http://blog.csdn.net/u012162613/article/details/44239919" target="_blank" rel="external">交叉熵代价函数</a></li>
+<li><a href="https://www.zhihu.com/question/57269332/answer/157375170" target="_blank" rel="external">有哪些指标可以描述两个图（graph）的相似度？</a>(推荐)</li>
+</ul>
+<h2 id="Graph"><a href="#Graph" class="headerlink" title="Graph"></a>Graph</h2><ul>
+<li><a href="http://konect.uni-koblenz.de/statistics/" target="_blank" rel="external">network statistic </a>(强烈推荐)</li>
+</ul>
+<h2 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h2><ul>
+<li><a href="http://www.cnblogs.com/xingmeng/p/4446613.html" target="_blank" rel="external">mysql insert if not exists防止插入重复记录的方法</a></li>
+<li><a href="http://www.jb51.net/article/39421.htm" target="_blank" rel="external">mysql出现“Incorrect key file for table”处理方法</a></li>
+<li><a href="http://blog.csdn.net/wendi_0506/article/details/52173865" target="_blank" rel="external">MySQL使用SELECT INTO OUTFILE导出文本文件</a></li>
+<li><a href="http://blog.csdn.net/man_to_home/article/details/54947518" target="_blank" rel="external">MYSQL导出数据出现The MySQL server is running with the –secure-file-priv option so it cannot execute this</a></li>
+</ul>
+<h2 id="Tool"><a href="#Tool" class="headerlink" title="Tool"></a>Tool</h2><ul>
+<li><a href="https://www.jianshu.com/p/6e2ec0b8fff1" target="_blank" rel="external">pandoc markdown to doc &amp; ppt</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Math&quot;&gt;&lt;a href=&quot;#Math&quot; class=&quot;headerlink&quot; title=&quot;Math&quot;&gt;&lt;/a&gt;Math&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://baike.baidu.com/item/%E6%AD%A3%E4%BA%A4
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>周记-18.01.03</title>
+    <link href="http://yafei002.github.io/2018/01/10/%E5%91%A8%E8%AE%B0-18-01-03/"/>
+    <id>http://yafei002.github.io/2018/01/10/周记-18-01-03/</id>
+    <published>2018-01-10T04:12:36.000Z</published>
+    <updated>2018-06-16T04:15:19.979Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h2><ul>
+<li><a href="https://wenku.baidu.com/view/208864738e9951e79a892705.html" target="_blank" rel="external">重尾分布</a>(推荐)</li>
+</ul>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
+<li><a href="https://www.cnblogs.com/wuyuankun/p/3982216.html" target="_blank" rel="external">哈夫曼树与哈夫曼编码</a></li>
+</ul>
+<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><ul>
+<li><a href="https://www.jianshu.com/p/c497b41f8caa" target="_blank" rel="external">GD(梯度下降)和SGD(随机梯度下降)</a></li>
+<li><a href="https://www.cnblogs.com/bqtang/p/3693827.html" target="_blank" rel="external">拉普拉斯平滑处理 Laplace Smoothing</a>(推荐)</li>
+<li><a href="http://blog.csdn.net/seekerhit/article/details/53319905" target="_blank" rel="external">半监督分类算法简述，self-trainning，co-trainning</a></li>
+<li><a href="https://linqs.soe.ucsc.edu/home" target="_blank" rel="external">LINQS STATISTICAL RELATIONAL LEARNING GROUP</a></li>
+<li><a href="https://github.com/tkipf/gcn" target="_blank" rel="external">Graph Convolutional Networks</a></li>
+<li><a href="https://networkx.github.io/" target="_blank" rel="external">NetworkX</a></li>
+<li><a href="http://tkipf.github.io/graph-convolutional-networks/" target="_blank" rel="external">GRAPH CONVOLUTIONAL NETWORKS</a></li>
+<li><a href="http://blog.csdn.net/wsj998689aa/article/details/39547771" target="_blank" rel="external">谈谈自己对正则化的一些理解~</a></li>
+</ul>
+<h2 id="Deep-Learing"><a href="#Deep-Learing" class="headerlink" title="Deep Learing"></a>Deep Learing</h2><ul>
+<li><a href="http://blog.csdn.net/u013146742/article/details/51986575" target="_blank" rel="external">RELU 激活函数及其他相关的函数</a></li>
+</ul>
+<p><strong>ReLU</strong></p>
+<p>f(x)=max(0,x)</p>
+<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><ul>
+<li><a href="https://github.com/extrabacon/python-shell" target="_blank" rel="external">python-shell</a></li>
+</ul>
+<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
+<li><a href="https://baike.baidu.com/item/%E4%B8%80%E9%98%B6%E5%B7%AE%E5%88%86/3937421?fr=aladdin" target="_blank" rel="external">一阶差分与高阶差分</a></li>
+<li><a href="https://baike.baidu.com/item/%E5%85%8B%E7%BD%97%E5%86%85%E5%85%8B%E7%A7%AF/6282573?fr=aladdin" target="_blank" rel="external">克罗内克积和克罗内克和</a></li>
+<li><a href="http://www.doc88.com/p-6734183381055.html" target="_blank" rel="external">拉普拉斯变换讲解</a>(推荐)</li>
+</ul>
+<h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2><ul>
+<li><a href="http://lbsyun.baidu.com/index.php?title=lbscloud/yunni/explain" target="_blank" rel="external">LBS.云服务</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;统计&quot;&gt;&lt;a href=&quot;#统计&quot; class=&quot;headerlink&quot; title=&quot;统计&quot;&gt;&lt;/a&gt;统计&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://wenku.baidu.com/view/208864738e9951e79a892705.h
+    
+    </summary>
+    
+    
+      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   
@@ -393,479 +1064,6 @@
     
     
       <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Neo4j-Warm Up</title>
-    <link href="http://yafei002.github.io/2017/12/12/Neo4j-Warm%20Up/"/>
-    <id>http://yafei002.github.io/2017/12/12/Neo4j-Warm Up/</id>
-    <published>2017-12-12T03:27:18.000Z</published>
-    <updated>2017-12-13T09:01:22.782Z</updated>
-    
-    <content type="html"><![CDATA[<p>有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘<br>中获取记录。如果能直接从内存中提取，性能将会大大提高。</p>
-<p>可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是<br>需要考虑到在配置文件中设置的pagecache的大小，如果所有数据加起来小于等于设置的内存的大小，<br>就可以加载整个图谱；如果小于，只会尽可能的加载，无法覆盖整个图谱。</p>
-<p>Cypher语句如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MATCH (n)</div><div class="line">OPTIONAL MATCH (n)-[r]-&gt;()</div><div class="line">RETURN count(n.prop) + count(r.prop);</div></pre></td></tr></table></figure>
-<p><code>count(n.prop) + count(r.prop)</code>这条语句可以触及到所有节点和边中叫“prop”的属性。如果是<br>用<code>count(*)</code>的话并不能充分的加载所有节点和边的属性。</p>
-<p>java的方式：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@GET</span> <span class="meta">@Path</span>(<span class="string">"/warmup"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">warmUp</span><span class="params">(@Context GraphDatabaseService db)</span> </span>&#123;</div><div class="line">    <span class="keyword">try</span> ( Transaction tx = db.beginTx()) &#123;</div><div class="line">        <span class="keyword">for</span> ( Node n : GlobalGraphOperations.at(db).getAllNodes()) &#123;</div><div class="line">            n.getPropertyKeys();</div><div class="line">            <span class="keyword">for</span> ( Relationship relationship : n.getRelationships()) &#123;</div><div class="line">                relationship.getPropertyKeys();</div><div class="line">                relationship.getStartNode();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Warmed up and ready to go!"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>对于3.0以上版本的Neo4j, 且加入了<a href="https://github.com/neo4j-contrib/neo4j-apoc-procedures" target="_blank" rel="external">apoc</a><br>插件，可以使用如下方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CALL apoc.warmup.run()</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘&lt;br&gt;中获取记录。如果能直接从内存中提取，性能将会大大提高。&lt;/p&gt;
-&lt;p&gt;可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是&lt;
-    
-    </summary>
-    
-    
-      <category term="Neo4j" scheme="http://yafei002.github.io/tags/Neo4j/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>周记-17.10.27</title>
-    <link href="http://yafei002.github.io/2017/12/12/%E5%91%A8%E8%AE%B0-17.10.27/"/>
-    <id>http://yafei002.github.io/2017/12/12/周记-17.10.27/</id>
-    <published>2017-12-12T02:27:18.000Z</published>
-    <updated>2017-12-13T09:00:26.045Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="17-10-27"><a href="#17-10-27" class="headerlink" title="17.10.27"></a>17.10.27</h2><h3 id="理解SparkX-Pregal"><a href="#理解SparkX-Pregal" class="headerlink" title="理解SparkX Pregal"></a>理解SparkX Pregal</h3><p>结合<a href="https://www.cakesolutions.net/teamblogs/graphx-pregel-api-an-example" target="_blank" rel="external">GraphX Pregel API: An Example</a><br>和<a href="https://www.2cto.com/net/201703/608753.html" target="_blank" rel="external">GraphXPregel实例实现</a>这两篇文章即可。</p>
-<h3 id="团伙欺诈"><a href="#团伙欺诈" class="headerlink" title="团伙欺诈"></a>团伙欺诈</h3><p><a href="http://www.sohu.com/a/85768779_278472" target="_blank" rel="external">识别欺诈团伙,“关系网络”为何这么霸气</a></p>
-<h3 id="spark"><a href="#spark" class="headerlink" title="spark"></a>spark</h3><p><a href="http://www.cnblogs.com/MOBIN/p/5373256.html" target="_blank" rel="external">Spark函数详解系列之RDD基本转换</a></p>
-<h3 id="理解矩阵"><a href="#理解矩阵" class="headerlink" title="理解矩阵"></a>理解矩阵</h3><p><a href="https://www.zhihu.com/question/21351965/answer/204058188" target="_blank" rel="external">矩阵乘法的本质是什么？</a></p>
-<p><a href="https://www.zhihu.com/question/21832377/answer/202231378" target="_blank" rel="external">矩阵和向量组和线性方程组之间的关系是什么？</a></p>
-<p><a href="http://www.matongxue.com/madocs/254.html#/madoc" target="_blank" rel="external">如何理解矩阵的「秩」？</a></p>
-<p><a href="https://wenku.baidu.com/view/da0dbc1c6bd97f192279e909.html" target="_blank" rel="external">第七讲 矩阵的乘法运算</a></p>
-<h3 id="奇异值分解"><a href="#奇异值分解" class="headerlink" title="奇异值分解"></a>奇异值分解</h3><p><a href="http://mp.weixin.qq.com/s/Mu9jkm7rGO6oJ8aYN_hM-w" target="_blank" rel="external">如何理解奇异值以及奇异值分解？</a></p>
-<p><a href="http://www.cnblogs.com/LeftNotEasy/archive/2011/01/19/svd-and-applications.html" target="_blank" rel="external">机器学习中的数学(5)-强大的矩阵奇异值分解(SVD)及其应用</a></p>
-<h2 id="17-10-30"><a href="#17-10-30" class="headerlink" title="17.10.30"></a>17.10.30</h2><h3 id="理解特征值和特征向量"><a href="#理解特征值和特征向量" class="headerlink" title="理解特征值和特征向量"></a>理解特征值和特征向量</h3><p><a href="https://www.zhihu.com/question/20507061/answer/120540926" target="_blank" rel="external">线性代数中，特征值与特征向量在代数和几何层面的实际意义是什么？</a></p>
-<p><a href="https://www.zhihu.com/question/21874816" target="_blank" rel="external">如何理解矩阵特征值？</a></p>
-<h3 id="spark-neo4j"><a href="#spark-neo4j" class="headerlink" title="spark+neo4j"></a>spark+neo4j</h3><p><a href="https://neo4j.com/blog/neo4j-3-0-apache-spark-connector/" target="_blank" rel="external">Introducing the Neo4j 3.0 Apache Spark Connector</a></p>
-<h3 id="理解最小二乘法"><a href="#理解最小二乘法" class="headerlink" title="理解最小二乘法"></a>理解最小二乘法</h3><p><a href="https://wenku.baidu.com/view/3c5e605049649b6649d74759.html" target="_blank" rel="external">最小二乘法原理的几何解释</a></p>
-<p><a href="http://dy.163.com/v2/article/detail/CG1D3EV305118CTM.html" target="_blank" rel="external">如何在20分钟内快速了解数据降维和参数降维</a></p>
-<p><a href="http://blog.csdn.net/antkillerfarm/article/details/53734658" target="_blank" rel="external">机器学习（十四）——协同过滤的ALS算法（2）、主成分分析</a></p>
-<h3 id="推荐系统"><a href="#推荐系统" class="headerlink" title="推荐系统"></a>推荐系统</h3><p><a href="http://www.cnblogs.com/Leo_wl/p/6337667.html" target="_blank" rel="external">推荐系统</a></p>
-<h2 id="17-10-31"><a href="#17-10-31" class="headerlink" title="17.10.31"></a>17.10.31</h2><h3 id="模型评估标准"><a href="#模型评估标准" class="headerlink" title="模型评估标准"></a>模型评估标准</h3><p><a href="http://charleshm.github.io/2016/03/Model-Performance/" target="_blank" rel="external">机器学习性能评估指标</a></p>
-<h3 id="光滑函数"><a href="#光滑函数" class="headerlink" title="光滑函数"></a>光滑函数</h3><p>光滑函数（smooth function）：各阶导数存在且连续的函数，若一函数是连续的，则称其为C^0函数；若函数存在导函数，且其导函数连续，即连续可导，则称其为C^1函数；若一函数n阶可导，并且其n阶导函数连续，则为函数C^n。而光滑函数是对所有n都属于C^n的函数，特称其为C∞函数。</p>
-<p>作者：楚天<br>链接：<a href="https://www.zhihu.com/question/27924991/answer/250643851" target="_blank" rel="external">https://www.zhihu.com/question/27924991/answer/250643851</a><br>来源：知乎</p>
-<h2 id="17-11-1"><a href="#17-11-1" class="headerlink" title="17.11.1"></a>17.11.1</h2><h3 id="特征分箱"><a href="#特征分箱" class="headerlink" title="特征分箱"></a>特征分箱</h3><p><a href="http://blog.csdn.net/Mr_tyting/article/details/75212250?locationNum=3&amp;fps=1" target="_blank" rel="external">金融风控–&gt;申请评分卡模型–&gt;特征工程（特征分箱，WOE编码）</a></p>
-<h3 id="相关性"><a href="#相关性" class="headerlink" title="相关性"></a>相关性</h3><p><a href="http://www.fuzihao.org/blog/2015/01/17/%E4%BA%92%E4%BF%A1%E6%81%AF%E7%9A%84%E7%90%86%E8%A7%A3/" target="_blank" rel="external">互信息的理解</a></p>
-<p><a href="https://www.zhihu.com/question/19734616/answer/174098489" target="_blank" rel="external">如何理解皮尔逊相关系数（Pearson Correlation Coefficient）？</a></p>
-<h2 id="17-11-06"><a href="#17-11-06" class="headerlink" title="17.11.06"></a>17.11.06</h2><h3 id="disable-requests-package-InsecureRequestWarning"><a href="#disable-requests-package-InsecureRequestWarning" class="headerlink" title="disable requests package:InsecureRequestWarning"></a><a href="https://stackoverflow.com/questions/27981545/suppress-insecurerequestwarning-unverified-https-request-is-being-made-in-pytho" target="_blank" rel="external">disable requests package:InsecureRequestWarning</a></h3><p>To disable warnings in requests’ vendored urllib3, you’ll need to import that specific instance of the module:</p>
-<p>import requests<br>from requests.packages.urllib3.exceptions import InsecureRequestWarning</p>
-<p>requests.packages.urllib3.disable_warnings(InsecureRequestWarning)</p>
-<h2 id="17-11-07"><a href="#17-11-07" class="headerlink" title="17.11.07"></a>17.11.07</h2><h3 id="PageRank算法简介及Map-Reduce实现"><a href="#PageRank算法简介及Map-Reduce实现" class="headerlink" title="PageRank算法简介及Map-Reduce实现"></a><a href="http://blog.jobbole.com/71431/" target="_blank" rel="external">PageRank算法简介及Map-Reduce实现</a></h3><h2 id="17-11-09"><a href="#17-11-09" class="headerlink" title="17.11.09"></a>17.11.09</h2><h3 id="spark-job，-stage-，task介绍"><a href="#spark-job，-stage-，task介绍" class="headerlink" title="spark job， stage ，task介绍"></a><a href="https://www.cnblogs.com/missmzt/p/6078189.html" target="_blank" rel="external">spark job， stage ，task介绍</a></h3><h3 id="GCN"><a href="#GCN" class="headerlink" title="GCN"></a>GCN</h3><p><a href="http://www.sohu.com/a/116070299_494939" target="_blank" rel="external">Graph 卷积神经网络：概述、样例及最新进展</a></p>
-<p><a href="https://www.zhihu.com/question/54504471" target="_blank" rel="external">如何理解 Graph Convolutional Network（GCN）？</a></p>
-<p><a href="http://tkipf.github.io/graph-convolutional-networks/" target="_blank" rel="external">GRAPH CONVOLUTIONAL NETWORKS</a></p>
-<p><a href="https://arxiv.org/pdf/1609.02907.pdf" target="_blank" rel="external">https://arxiv.org/pdf/1609.02907.pdf</a></p>
-<h2 id="17-11-15"><a href="#17-11-15" class="headerlink" title="17.11.15"></a>17.11.15</h2><h3 id="线代"><a href="#线代" class="headerlink" title="线代"></a>线代</h3><p><a href="http://mp.weixin.qq.com/s/4dg3-5i0y1LBZev_KvTJ0A" target="_blank" rel="external">如何理解相似矩阵？</a></p>
-<h3 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h3><p><a href="https://www.2cto.com/kf/201707/658181.html" target="_blank" rel="external">scikit-learn 朴素贝叶斯类库使用小结</a></p>
-<h2 id="17-11-15-1"><a href="#17-11-15-1" class="headerlink" title="17.11.15"></a>17.11.15</h2><p><a href="http://blog.csdn.net/pipisorry/article/details/52250760" target="_blank" rel="external">Scikit-learn：模型评估Model evaluation</a></p>
-<p><a href="http://blog.csdn.net/ybdesire/article/details/51999995" target="_blank" rel="external">详解ROC/AUC计算过程</a></p>
-<p><a href="http://blog.csdn.net/u013393647/article/details/47999513" target="_blank" rel="external">如何评估模型好坏</a></p>
-<p><a href="http://blog.csdn.net/kevinelstri/article/details/52636661" target="_blank" rel="external">数据加载，数据归一，特征选择，逻辑回归，贝叶斯，k近邻，决策树，SVM</a></p>
-<p><a href="https://www.cnblogs.com/pinard/p/6074222.html" target="_blank" rel="external">scikit-learn 朴素贝叶斯类库使用小结</a></p>
-<p><a href="http://blog.csdn.net/u010705209/article/details/53037481" target="_blank" rel="external">机器学习模型评价指标 – 混淆矩阵</a></p>
-<h2 id="17-11-20"><a href="#17-11-20" class="headerlink" title="17.11.20"></a>17.11.20</h2><p><a href="http://www.jianshu.com/p/a47c46153326" target="_blank" rel="external">回归系列之L1和L2正则化</a></p>
-<p><a href="https://www.cnblogs.com/subconscious/p/5058741.html" target="_blank" rel="external">神经网络浅讲：从神经元到深度学习</a></p>
-<p><a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&amp;mid=2650728746&amp;idx=1&amp;sn=61e9cb824501ec7c505eb464e8317915&amp;scene=0#wechat_redirect" target="_blank" rel="external">机器视角：长文揭秘图像处理和卷积神经网络架构</a></p>
-<p><a href="https://www.cnblogs.com/nsnow/p/4562308.html" target="_blank" rel="external">技术向：一文读懂卷积神经网络CNN</a></p>
-<p><a href="https://www.cnblogs.com/alexcai/p/5506806.html" target="_blank" rel="external">深度学习简介(一)——卷积神经网络</a></p>
-<h2 id="17-11-22"><a href="#17-11-22" class="headerlink" title="17.11.22"></a>17.11.22</h2><p><a href="http://blog.csdn.net/xlinsist/article/details/51289825" target="_blank" rel="external"> 逻辑回归（Logistic regression）详解-并用scikit-learn训练逻辑回归拟合Iris数据集</a></p>
-<h2 id="17-11-23"><a href="#17-11-23" class="headerlink" title="17.11.23"></a>17.11.23</h2><p><a href="https://mp.weixin.qq.com/s?__biz=MzAxNzg3MTE3Ng==&amp;mid=2247488549&amp;idx=2&amp;sn=a8bc802cc0a534482d2d9185fc85872e&amp;chksm=9bdfac02aca825148a6dcebe07a4fb5959e5912265d94409e78e91d14d07d9a208dc1715c204&amp;scene=21#wechat_redirect" target="_blank" rel="external">【泰勒多项式】图解普林斯顿微积分 18</a></p>
-<h2 id="17-11-24"><a href="#17-11-24" class="headerlink" title="17.11.24"></a>17.11.24</h2><p><a href="https://www.cnblogs.com/leoo2sk/archive/2010/09/19/decision-tree.html" target="_blank" rel="external">算法杂货铺——分类算法之决策树(Decision tree)</a></p>
-<h2 id="17-11-27"><a href="#17-11-27" class="headerlink" title="17.11.27"></a>17.11.27</h2><p><a href="http://blog.csdn.net/vividonly/article/details/50723852" target="_blank" rel="external">L0,L1,L2正则化浅析</a></p>
-<p><a href="http://blog.csdn.net/u012162613/article/details/44261657" target="_blank" rel="external">正则化方法：L1和L2 regularization、数据集扩增、dropout</a></p>
-<p><a href="http://blog.csdn.net/a_step_further/article/details/50333961" target="_blank" rel="external">基于hanLP的中文分词详解-MapReduce实现&amp;自定义词典文件</a></p>
-<p><a href="http://blog.csdn.net/zbc1090549839/article/details/38929215" target="_blank" rel="external">机器学习中的维数灾难</a></p>
-<h2 id="17-11-28"><a href="#17-11-28" class="headerlink" title="17.11.28"></a>17.11.28</h2><p><a href="http://www.jianshu.com/p/fc91fed8c77b" target="_blank" rel="external">聚类、K-Means、例子、细节</a></p>
-<p><a href="http://blog.csdn.net/zouxy09/article/details/42297625" target="_blank" rel="external">基于稀疏矩阵的k近邻（KNN）实现</a></p>
-<p><a href="https://www.cnblogs.com/pinard/p/6056319.html" target="_blank" rel="external">scikit-learn决策树算法类库使用小结</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;17-10-27&quot;&gt;&lt;a href=&quot;#17-10-27&quot; class=&quot;headerlink&quot; title=&quot;17.10.27&quot;&gt;&lt;/a&gt;17.10.27&lt;/h2&gt;&lt;h3 id=&quot;理解SparkX-Pregal&quot;&gt;&lt;a href=&quot;#理解SparkX-Prega
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Neo4j-Dump和Load</title>
-    <link href="http://yafei002.github.io/2017/12/12/Neo4j-Dump%E5%92%8CLoad/"/>
-    <id>http://yafei002.github.io/2017/12/12/Neo4j-Dump和Load/</id>
-    <published>2017-12-12T01:27:18.000Z</published>
-    <updated>2017-12-12T01:29:28.520Z</updated>
-    
-    <content type="html"><![CDATA[<p>当数据库需要备份或保存历史数据或做数据迁移时，由于数据库目录的格式和内容会随着时间而改变，显然单纯的复制<br>粘贴是不能完全保证数据库正常工作的，有时甚至是有害的。</p>
-<p>这是使用<code>neo4j-admin dump</code>和<code>neo4j-admin load</code>会更安全一些。</p>
-<p>具体的语法如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">neo4j-admin dump --database=&lt;database&gt; --to=&lt;destination-path&gt;</div><div class="line"></div><div class="line">neo4j-admin load --from=&lt;archive-path&gt; --database=&lt;database&gt; [--force]</div></pre></td></tr></table></figure>
-<h2 id="Dump"><a href="#Dump" class="headerlink" title="Dump"></a>Dump</h2><p>样例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$neo4j-home&gt; bin/neo4j-admin dump --database=graph.db --to=backups/graph.db/2016-10-02.dump</div><div class="line"></div><div class="line">$neo4j-home&gt; ls backups/graph.db</div><div class="line"></div><div class="line">$neo4j-home&gt; 2016-10-02.dump</div></pre></td></tr></table></figure>
-<p>保证当前目录下存在<code>backups/graph.db</code>目录。</p>
-<h2 id="Load"><a href="#Load" class="headerlink" title="Load"></a>Load</h2><p>样例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$neo4j-home&gt; bin/neo4j stop</div><div class="line"></div><div class="line">Stopping Neo4j.. stopped</div><div class="line"></div><div class="line">$neo4j-home&gt; bin/neo4j-admin load --from=backups/graph.db/2016-10-02.dump --database=graph.db --force</div></pre></td></tr></table></figure>
-<p>首先关闭neo4j进程，然后再加载。<code>force</code>是指覆盖原有的graph.db。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;当数据库需要备份或保存历史数据或做数据迁移时，由于数据库目录的格式和内容会随着时间而改变，显然单纯的复制&lt;br&gt;粘贴是不能完全保证数据库正常工作的，有时甚至是有害的。&lt;/p&gt;
-&lt;p&gt;这是使用&lt;code&gt;neo4j-admin dump&lt;/code&gt;和&lt;code&gt;neo4j-
-    
-    </summary>
-    
-    
-      <category term="Neo4j" scheme="http://yafei002.github.io/tags/Neo4j/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习读书笔记-Part1</title>
-    <link href="http://yafei002.github.io/2017/03/18/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-Part1/"/>
-    <id>http://yafei002.github.io/2017/03/18/深度学习读书笔记-Part1/</id>
-    <published>2017-03-18T02:07:25.000Z</published>
-    <updated>2017-03-20T12:41:32.655Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="深度学习是什么东西"><a href="#深度学习是什么东西" class="headerlink" title="深度学习是什么东西"></a>深度学习是什么东西</h2><ul>
-<li>深度神经网络包含多层前馈神经网络、递归神经网络、卷积神经网络</li>
-<li>深度神经网络是一种结构，不是算法</li>
-</ul>
-<h3 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h3><ul>
-<li>监督学习：给定数据，预测标签</li>
-<li>非监督学习：给定数据，学习数据</li>
-<li>强化学习：给定数据，选择动作来最大化长期回报期望</li>
-</ul>
-<p><img src="/image/dl/rl_in_out.png" alt="reiforcement learning"></p>
-<p><a href="https://www.zhihu.com/question/41775291" target="_blank" rel="external">图片来自</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;深度学习是什么东西&quot;&gt;&lt;a href=&quot;#深度学习是什么东西&quot; class=&quot;headerlink&quot; title=&quot;深度学习是什么东西&quot;&gt;&lt;/a&gt;深度学习是什么东西&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;深度神经网络包含多层前馈神经网络、递归神经网络、卷积神经网络&lt;/li&gt;
-
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>可视化中的交互</title>
-    <link href="http://yafei002.github.io/2017/01/14/%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B8%AD%E7%9A%84%E4%BA%A4%E4%BA%92/"/>
-    <id>http://yafei002.github.io/2017/01/14/可视化中的交互/</id>
-    <published>2017-01-14T13:42:46.000Z</published>
-    <updated>2017-01-16T04:03:04.504Z</updated>
-    
-    <content type="html"><![CDATA[<p>用户交互是数据可视化系统中除了视觉呈现外另一个核心要素。</p>
-<ul>
-<li>缓解有限的可视化空间和数据过载之间的矛盾<ul>
-<li>有限的屏幕尺寸不足以显示过量的数据</li>
-<li>常用的二维显示平面也对复杂数据的可视化提出了挑战</li>
-</ul>
-</li>
-<li>交互能让用户更好地参与对数据的理解和分析</li>
-</ul>
-<h2 id="交互准则"><a href="#交互准则" class="headerlink" title="交互准则"></a>交互准则</h2><p>交互是指从用户操作的发生到系统返回结果所经过的时间，是决定交互有效性最重要的因素之一。</p>
-<h3 id="交互延时"><a href="#交互延时" class="headerlink" title="交互延时"></a>交互延时</h3><p>延时的长短决定了一个可视化系统的可用性及用户体验。</p>
-<ul>
-<li>感知处理，指用户感知交互效果的过程       <ul>
-<li>如用户选装三维物体时更新的操作在0.1秒内完成</li>
-</ul>
-</li>
-<li>立即反应，指用户和可视化系统之间类似对话的交互<ul>
-<li>如鼠标点击选中可视化对象或不同视图间切换，用户容忍延时的忍耐度是1秒</li>
-</ul>
-</li>
-<li>基本任务，用户在交互中指令系统完成一个相对复杂的任务<ul>
-<li>如数据搜索相关信息，用户对此时延时的忍耐度大大增加，一般的期望是10秒，在某些情况下甚至是30秒。但在设计可视化系统是，尽可能将大的任务分解成若干个10秒内可以完成的基本任务，这样增加系统地互动性，优化用户体验</li>
-</ul>
-</li>
-</ul>
-<p>交互延时还来自用户的输入，如通过视频进行人体跟踪或者眼球跟踪的时候，系统处理输入信号并转换成交互操作的指令时间不可忽略。</p>
-<h4 id="系统反馈"><a href="#系统反馈" class="headerlink" title="系统反馈"></a>系统反馈</h4><p>可视化系统通过视觉信号来反馈信息。</p>
-<p>当一个交互操作完成所需要的时间比用户预期的更长时</p>
-<pre><code>* 显示操作的进度
-* 更好的，转变成对应的用户延时期望较大的另一类交互，如感知处理转变成立即反应
-</code></pre><h3 id="交互成本"><a href="#交互成本" class="headerlink" title="交互成本"></a>交互成本</h3><p>可视化系统应当采用数据挖掘算法自动发现用户可能会关心的数据或模式，并通过可视化呈现，提高交互效率。</p>
-<p>系统自动分析即通过自动算法得出用户的需要的结论，与用户交互分析是相互互补的，权衡两者的作用和成本，达到合理的平衡。</p>
-<p>7种主要的交互成本</p>
-<ul>
-<li>达成目的的选择花费的决策成本</li>
-<li>生成系统操作花费的系统资源成本</li>
-<li>多重输入模式引发的交互流程阻滞</li>
-<li>人体物理动作占据的流程执行时间</li>
-<li>视觉混淆引起的感知障碍</li>
-<li>视图变换花费的解读时间</li>
-<li>评估解释中的状态转换成本</li>
-</ul>
-<h3 id="交互场景变化"><a href="#交互场景变化" class="headerlink" title="交互场景变化"></a>交互场景变化</h3><p>交互操作引发可视化场景的变化，此时需要依赖用户的视觉和感知记忆避免交互出错。有时会增加用户的认知负担。</p>
-<p>通过一些辅助手段</p>
-<ul>
-<li>将这些需要用户记忆的信息在系统中保存并显示。</li>
-<li>动画（动画的转换比突然的切换更能帮助用户对场景中发生变化的部分进行跟踪)</li>
-<li>让用户自主地在场景之间来回切换（尤其对于需要通过对比交互前后场景的区别得出结论的应用）</li>
-</ul>
-<p><strong>变化盲视</strong>：由于大脑和感知系统的局限，我们通常只能关注有限的<code>焦点区域</code>内的变化，无法注意到焦点之外的变化，即使是非常大的变化。</p>
-<ul>
-<li>解决：系统提前引导，如高亮</li>
-</ul>
-<p>（待续）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;用户交互是数据可视化系统中除了视觉呈现外另一个核心要素。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;缓解有限的可视化空间和数据过载之间的矛盾&lt;ul&gt;
-&lt;li&gt;有限的屏幕尺寸不足以显示过量的数据&lt;/li&gt;
-&lt;li&gt;常用的二维显示平面也对复杂数据的可视化提出了挑战&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/l
-    
-    </summary>
-    
-    
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>了解人工神经网络（视频）</title>
-    <link href="http://yafei002.github.io/2017/01/12/%E4%BA%86%E8%A7%A3%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
-    <id>http://yafei002.github.io/2017/01/12/了解人工神经网络（视频）/</id>
-    <published>2017-01-12T15:32:31.000Z</published>
-    <updated>2017-01-16T04:25:23.389Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=o0365o3c7a5&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
-
-<p>（说明：简单的介绍,主要是为了自己学习的总结和理解。）</p>
-<h2 id="PPT"><a href="#PPT" class="headerlink" title="PPT"></a>PPT</h2><script async class="speakerdeck-embed" data-id="c56bb6a19d1e47a4943afc4fb44a3df7" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
-
-<p>（ppt若没有显示，请翻墙）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;视频&quot;&gt;&lt;a href=&quot;#视频&quot; class=&quot;headerlink&quot; title=&quot;视频&quot;&gt;&lt;/a&gt;视频&lt;/h2&gt;&lt;embed src=&quot;https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?ma
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yafei002.github.io/tags/algorithm/"/>
-    
-      <category term="数据挖掘" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>了解朴素贝叶斯（视频）</title>
-    <link href="http://yafei002.github.io/2017/01/10/%E4%BA%86%E8%A7%A3%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
-    <id>http://yafei002.github.io/2017/01/10/了解朴素贝叶斯（视频）/</id>
-    <published>2017-01-09T16:18:59.000Z</published>
-    <updated>2017-01-10T04:40:09.223Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=h0364s0yn92&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
-
-<p>（说明：简单的介绍,主要是为了自己学习的总结和理解。）</p>
-<h2 id="PPT"><a href="#PPT" class="headerlink" title="PPT"></a>PPT</h2><p><script async class="speakerdeck-embed" data-id="8c3f327a91a64e409525aacd9193f413" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（ppt若没有显示，请翻墙）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;视频&quot;&gt;&lt;a href=&quot;#视频&quot; class=&quot;headerlink&quot; title=&quot;视频&quot;&gt;&lt;/a&gt;视频&lt;/h2&gt;&lt;embed src=&quot;https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?ma
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yafei002.github.io/tags/algorithm/"/>
-    
-      <category term="数据挖掘" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据可视化简介和历史（PPT)</title>
-    <link href="http://yafei002.github.io/2017/01/09/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AE%80%E4%BB%8B%E5%92%8C%E5%8E%86%E5%8F%B2%EF%BC%88PPT/"/>
-    <id>http://yafei002.github.io/2017/01/09/数据可视化简介和历史（PPT/</id>
-    <published>2017-01-08T23:17:18.000Z</published>
-    <updated>2017-01-10T04:42:03.688Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="PPT"><a href="#PPT" class="headerlink" title="PPT"></a>PPT</h2><script async class="speakerdeck-embed" data-id="31691151436c4ab3bce9238c9809e905" data-ratio="1.50146627565982" src="//speakerdeck.com/assets/embed.js"></script>
-
-<p>（说明：ppt如果没有显示，请翻墙）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;PPT&quot;&gt;&lt;a href=&quot;#PPT&quot; class=&quot;headerlink&quot; title=&quot;PPT&quot;&gt;&lt;/a&gt;PPT&lt;/h2&gt;&lt;script async class=&quot;speakerdeck-embed&quot; data-id=&quot;31691151436c4ab3bce9
-    
-    </summary>
-    
-    
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>了解决策树和C4.5算法（视频）</title>
-    <link href="http://yafei002.github.io/2017/01/09/%E4%BA%86%E8%A7%A3%E5%86%B3%E7%AD%96%E6%A0%91%E5%92%8CC4-5%E7%AE%97%E6%B3%95%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
-    <id>http://yafei002.github.io/2017/01/09/了解决策树和C4-5算法（视频）/</id>
-    <published>2017-01-08T23:07:56.000Z</published>
-    <updated>2017-01-16T04:22:38.570Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=t0364qvai6k&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
-
-<p>（说明：简单的介绍,主要是为了自己学习的总结和理解。）</p>
-<h2 id="PPT"><a href="#PPT" class="headerlink" title="PPT"></a>PPT</h2><p><script async class="speakerdeck-embed" data-id="1cc654b996894bf3a563befde20f848b" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（ppt若没有显示，请翻墙）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;视频&quot;&gt;&lt;a href=&quot;#视频&quot; class=&quot;headerlink&quot; title=&quot;视频&quot;&gt;&lt;/a&gt;视频&lt;/h2&gt;&lt;embed src=&quot;https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?ma
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yafei002.github.io/tags/algorithm/"/>
-    
-      <category term="数据挖掘" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>了解K-Means算法（视频）</title>
-    <link href="http://yafei002.github.io/2017/01/09/%E4%BA%86%E8%A7%A3K-Means%E7%AE%97%E6%B3%95%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
-    <id>http://yafei002.github.io/2017/01/09/了解K-Means算法（视频）/</id>
-    <published>2017-01-08T18:22:07.000Z</published>
-    <updated>2017-01-10T04:40:12.207Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=e03636silu3&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
-
-<p>（说明：简单的介绍,主要是为了自己学习的总结和理解。）</p>
-<h2 id="PPT"><a href="#PPT" class="headerlink" title="PPT"></a>PPT</h2><p><script async class="speakerdeck-embed" data-id="4a0cc9eb9b9e4d8d958f27ba0a16a026" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（ppt若没有显示，请翻墙）</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;视频&quot;&gt;&lt;a href=&quot;#视频&quot; class=&quot;headerlink&quot; title=&quot;视频&quot;&gt;&lt;/a&gt;视频&lt;/h2&gt;&lt;embed src=&quot;https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?ma
-    
-    </summary>
-    
-    
-      <category term="算法" scheme="http://yafei002.github.io/tags/algorithm/"/>
-    
-      <category term="数据挖掘" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据可视化之视觉感知与认知（视频）</title>
-    <link href="http://yafei002.github.io/2017/01/07/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8B%E8%A7%86%E8%A7%89%E6%84%9F%E7%9F%A5%E4%B8%8E%E8%AE%A4%E7%9F%A5%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
-    <id>http://yafei002.github.io/2017/01/07/数据可视化之视觉感知与认知（视频）/</id>
-    <published>2017-01-06T16:04:53.000Z</published>
-    <updated>2017-01-16T04:30:09.619Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=s0363rwc2ny&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
-
-<p>（说明：视频录制的目的主要是自己能将学习到的内容能总结出来，能说出来，增强学习的效果）</p>
-<h2 id="PPT"><a href="#PPT" class="headerlink" title="PPT"></a>PPT</h2><p><script async class="speakerdeck-embed" data-id="68bc622c160941289205e3adff921df2" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（ppt若没有显示，请翻墙）</p>
-<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.”第二章</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;视频&quot;&gt;&lt;a href=&quot;#视频&quot; class=&quot;headerlink&quot; title=&quot;视频&quot;&gt;&lt;/a&gt;视频&lt;/h2&gt;&lt;embed src=&quot;https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?ma
-    
-    </summary>
-    
-    
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据可视化之地理信息可视化（视频）</title>
-    <link href="http://yafei002.github.io/2017/01/07/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8B%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
-    <id>http://yafei002.github.io/2017/01/07/数据可视化之地理信息可视化（视频）/</id>
-    <published>2017-01-06T16:04:20.000Z</published>
-    <updated>2017-01-16T04:33:50.296Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=e0363jpoj28&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
-
-<p>（说明：视频录制的目的主要是自己能将学习到的内容能总结出来，能说出来，增强学习的效果）</p>
-<h2 id="PPT"><a href="#PPT" class="headerlink" title="PPT"></a>PPT</h2><p><script async class="speakerdeck-embed" data-id="198a64d42ac640f3b354eef6da02c3e4" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（ppt若没有显示，请翻墙）</p>
-<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.”第六章</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;视频&quot;&gt;&lt;a href=&quot;#视频&quot; class=&quot;headerlink&quot; title=&quot;视频&quot;&gt;&lt;/a&gt;视频&lt;/h2&gt;&lt;embed src=&quot;https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?ma
-    
-    </summary>
-    
-    
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据可视化之复杂高维多元数据的可视化（上）（视频）</title>
-    <link href="http://yafei002.github.io/2017/01/07/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8B%E5%A4%8D%E6%9D%82%E9%AB%98%E7%BB%B4%E5%A4%9A%E5%85%83%E6%95%B0%E6%8D%AE%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
-    <id>http://yafei002.github.io/2017/01/07/数据可视化之复杂高维多元数据的可视化（上）（视频）/</id>
-    <published>2017-01-06T16:03:44.000Z</published>
-    <updated>2017-01-12T15:35:50.779Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=s0363oun5qx&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
-
-<p>（说明：视频录制的目的主要是自己能将学习到的内容能总结出来，能说出来，增强学习的效果）</p>
-<h2 id="PPT"><a href="#PPT" class="headerlink" title="PPT"></a>PPT</h2><p><script async class="speakerdeck-embed" data-id="40d2a92bc9d640e985e34a8d9b234635" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（ppt若没有显示，请翻墙）</p>
-<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.”第十二章上</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;视频&quot;&gt;&lt;a href=&quot;#视频&quot; class=&quot;headerlink&quot; title=&quot;视频&quot;&gt;&lt;/a&gt;视频&lt;/h2&gt;&lt;embed src=&quot;https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?ma
-    
-    </summary>
-    
-    
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据可视化之层次数据可视化（视频）</title>
-    <link href="http://yafei002.github.io/2017/01/06/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B9%8B%E5%B1%82%E6%AC%A1%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96%EF%BC%88%E8%A7%86%E9%A2%91%EF%BC%89/"/>
-    <id>http://yafei002.github.io/2017/01/06/数据可视化之层次数据可视化（视频）/</id>
-    <published>2017-01-06T15:31:18.000Z</published>
-    <updated>2017-01-10T04:40:20.744Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><embed src="https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?max_age=86400&v=20161117&vid=e0363zhvfly&auto=0" allowfullscreen="true" quality="high" width="480" height="400" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash">
-
-<p>（说明：视频录制的目的主要是自己能将学习到的内容能总结出来，能说出来，增强学习的效果）</p>
-<h2 id="PPT"><a href="#PPT" class="headerlink" title="PPT"></a>PPT</h2><p><script async class="speakerdeck-embed" data-id="c8401ce050ca41d691cf19cb1d08affb" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><br>（ppt若没有显示，请翻墙）</p>
-<h2 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h2><p>”陈为 沈则潜 陶煜波. (2013). 数据可视化. 电子工业出版社.”第九章上</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;视频&quot;&gt;&lt;a href=&quot;#视频&quot; class=&quot;headerlink&quot; title=&quot;视频&quot;&gt;&lt;/a&gt;视频&lt;/h2&gt;&lt;embed src=&quot;https://imgcache.qq.com/tencentvideo_v1/playerv3/TPout.swf?ma
-    
-    </summary>
-    
-    
-      <category term="数据可视化" scheme="http://yafei002.github.io/tags/data-visualization/"/>
     
   </entry>
   
