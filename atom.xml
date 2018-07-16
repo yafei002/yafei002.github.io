@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2018-07-16T01:35:38.446Z</updated>
+  <updated>2018-07-16T01:49:42.386Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -14,6 +14,129 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>句法依存</title>
+    <link href="http://yafei002.github.io/2018/05/10/%E5%8F%A5%E6%B3%95%E4%BE%9D%E5%AD%98/"/>
+    <id>http://yafei002.github.io/2018/05/10/句法依存/</id>
+    <published>2018-05-10T01:48:13.000Z</published>
+    <updated>2018-07-16T01:49:42.386Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="句法依存"><a href="#句法依存" class="headerlink" title="句法依存"></a>句法依存</h1><h2 id="配价语法分析"><a href="#配价语法分析" class="headerlink" title="配价语法分析"></a>配价语法分析</h2><p><a href="https://wenku.baidu.com/view/229ca1daa8114431b80dd855.html?rec_flag=default&amp;sxts=1529747374339" target="_blank" rel="external">配价语法分析</a></p>
+<p><a href="https://wenku.baidu.com/view/d55070a1a417866fb94a8e54.html" target="_blank" rel="external">第五讲 配价分析法</a></p>
+<p>语法研究中的“配价”思想及配价 语法分析 化学中提出“价”的概念为的是说明在分子结构中各元素原子间的比例关系。 o，水是由一个氧原子和两个氢原子化合成的，因此，氧是二价。 法国语言学家特思尼耶尔最早把化学中的“价”明确引入语法研究中。 语法学中引进“价”这个概念，为的是说明一个动词能支配多少个属于不同语义角 色的名词词组。</p>
+<p><a href="http://cache.baiducontent.com/c?m=9f65cb4a8c8507ed4fece7631049c0666e02dd32678bc7150885ce178e220606163cf4bc537e4741ce873c3045f41e19fdf7422e604637b7ec9ed55ddccfc97e388951377a1c824619d112a4ce52609c60c655fede1ef0cdf62592dec5a3ae4325ba44040a97808e4d7610dd1e870345e7b19838022f15ad9e3a72ff286059ef3433c2508fe3251d02&amp;p=8970c54ad49b1afc57efc03a5b&amp;newp=8772dd16d9c102e608e296121753d8254207dc357b9687787fc0c513fe200c01063dbee728261700d9cf776303ab4e5de1f13275300922bc8f8ee50b8af99d7f73de647d&amp;user=baidu&amp;fm=sc&amp;query=%C5%E4%BC%DB%B7%D6%CE%F6%B7%A8+%BB%AF%D1%A7&amp;qid=94219c57000221c7&amp;p1=4" target="_blank" rel="external">第五节配价分析法 </a></p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p><a href="http://www.hankcs.com/nlp/to-achieve-a-simple-generative-dependency-parsing.html" target="_blank" rel="external">生成式依存句法分析器的简单实现</a></p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p><a href="http://www.hankcs.com/nlp/corpus/chinese-treebank.html#h3-6" target="_blank" rel="external">汉语树库</a></p>
+<p><a href="https://blog.csdn.net/luoshixian099/article/details/51908175" target="_blank" rel="external">算法导论–最小生成树（Kruskal和Prim算法）</a></p>
+<p><a href="https://www.cnblogs.com/CheeseZH/p/5768389.html" target="_blank" rel="external">依存句法分析与语义依存分析的区别</a></p>
+<h2 id="HanLP"><a href="#HanLP" class="headerlink" title="HanLP"></a>HanLP</h2><p><a href="http://www.hankcs.com/nlp/parsing/neural-network-based-dependency-parser.html#h3-5" target="_blank" rel="external">基于神经网络的高性能依存句法分析器</a></p>
+<p><a href="http://www.hankcs.com/nlp/corpus/chinese-treebank.html#h2-8" target="_blank" rel="external">汉语树库</a></p>
+<h2 id="Syntaxnet"><a href="#Syntaxnet" class="headerlink" title="Syntaxnet"></a>Syntaxnet</h2><p><a href="https://www.cnblogs.com/kmsfan/p/5538730.html" target="_blank" rel="external">AI人工智能系列随笔：syntaxnet 初探（1）</a></p>
+<p><a href="https://www.jianshu.com/p/479a111ed5f4" target="_blank" rel="external">Google自然语言理解工具syntaxnet开放中文支持</a></p>
+<p><a href="https://blog.csdn.net/jiangjingxuan/article/details/54906393" target="_blank" rel="external">如何使用SyntaxNet进行中文模型的使用</a></p>
+<p><a href="https://github.com/dsindex/syntaxnet" target="_blank" rel="external">syntaxnet</a></p>
+<p><a href="https://github.com/yutaolife/syntaxNet4Chinese/tree/master/work" target="_blank" rel="external">syntaxNet4Chinese</a></p>
+<p><a href="https://github.com/Aniruddha-Tapas/How-to-use-SyntaxNet" target="_blank" rel="external">How to use SyntaxNet</a></p>
+<p><a href="https://www.zhihu.com/question/46272554" target="_blank" rel="external">如何评价SyntaxNet？ZHIHU</a></p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><a href="http://nlp.nju.edu.cn/tanggc/tools/DependencyViewer.html" target="_blank" rel="external">Dependency Viewer</a></p>
+<h2 id="syntaxnet-手动安装问题"><a href="#syntaxnet-手动安装问题" class="headerlink" title="syntaxnet 手动安装问题"></a>syntaxnet 手动安装问题</h2><ol>
+<li>注意python版本支持</li>
+<li>以下</li>
+</ol>
+<p><a href="https://github.com/tensorflow/models/tree/master/research/syntaxnet" target="_blank" rel="external">sytax github</a></p>
+<p>在<code>pip install pygraphviz --install-option=&quot;--include-path=/usr/include/graphviz&quot; --install-option=&quot;--library-path=/usr/lib/graphviz/&quot;</code>命令报错</p>
+<p><code>fatal error: Python.h: No such file or directory</code></p>
+<p>执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">For apt (Ubuntu, Debian...):</div><div class="line"></div><div class="line">sudo apt-get install python-dev   # for python2.x installs</div><div class="line">sudo apt-get install python3-dev  # for python3.x installs</div></pre></td></tr></table></figure>
+<p>参考：<a href="https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory" target="_blank" rel="external">https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory</a></p>
+<h2 id="syntaxnet-中文模型"><a href="#syntaxnet-中文模型" class="headerlink" title="syntaxnet 中文模型"></a>syntaxnet 中文模型</h2><p><a href="https://github.com/tensorflow/models/tree/master/research/syntaxnet" target="_blank" rel="external">SyntaxNet: Neural Models of Syntax. github</a></p>
+<p><a href="https://my.oschina.net/dingdayu/blog/1083438" target="_blank" rel="external">SyntaxNet 中文模型的使用 </a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;句法依存&quot;&gt;&lt;a href=&quot;#句法依存&quot; class=&quot;headerlink&quot; title=&quot;句法依存&quot;&gt;&lt;/a&gt;句法依存&lt;/h1&gt;&lt;h2 id=&quot;配价语法分析&quot;&gt;&lt;a href=&quot;#配价语法分析&quot; class=&quot;headerlink&quot; title=&quot;配价语法分
+    
+    </summary>
+    
+    
+      <category term="NLP" scheme="http://yafei002.github.io/tags/NLP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RNN相关</title>
+    <link href="http://yafei002.github.io/2018/05/01/RNN%E7%9B%B8%E5%85%B3/"/>
+    <id>http://yafei002.github.io/2018/05/01/RNN相关/</id>
+    <published>2018-05-01T01:42:45.000Z</published>
+    <updated>2018-07-16T01:44:13.682Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="RNN介绍"><a href="#RNN介绍" class="headerlink" title="RNN介绍"></a>RNN介绍</h2><p><a href="http://www.sohu.com/a/161900748_465975" target="_blank" rel="external">学界 | 结合堆叠与深度转换的新型神经翻译架构：爱丁堡大学提出BiDeep RNN</a></p>
+<p>[RNN 微软教程(<a href="http://www.jikexueyuan.com/course/3651_4.html" target="_blank" rel="external">http://www.jikexueyuan.com/course/3651_4.html</a>)</p>
+<h2 id="RNN理解"><a href="#RNN理解" class="headerlink" title="RNN理解"></a>RNN理解</h2><p><a href="https://www.cnblogs.com/Determined22/p/6562555.html" target="_blank" rel="external">循环神经网络的BPTT算法步骤整理；梯度消失与梯度爆炸</a></p>
+<h2 id="PTB-数据集"><a href="#PTB-数据集" class="headerlink" title="PTB 数据集"></a>PTB 数据集</h2><p><a href="https://blog.csdn.net/u010099495/article/details/46776617" target="_blank" rel="external">Penn Treebank词性标记集</a></p>
+<h2 id="RNN-vs-CNN"><a href="#RNN-vs-CNN" class="headerlink" title="RNN vs CNN"></a>RNN vs CNN</h2><p>传统的神经网络（包括CNN），输入和输出是相互独立的。</p>
+<p>RNN输出以来输入和“记忆”。</p>
+<p><a href="https://www.zhihu.com/question/29411132" target="_blank" rel="external">有哪些LSTM(Long Short Term Memory)和RNN(Recurrent)网络的教程？</a></p>
+<p><a href="https://blog.csdn.net/prom1201/article/details/52221822" target="_blank" rel="external">RNN介绍，较易懂</a></p>
+<p><a href="https://blog.csdn.net/chonghlyln/article/details/75659455" target="_blank" rel="external">LSTM+CRF介绍</a></p>
+<p><a href="https://www.jianshu.com/p/9dc9f41f0b29" target="_blank" rel="external">[译] 理解 LSTM 网络</a><br>+<br><a href="https://blog.csdn.net/roslei/article/details/61912618" target="_blank" rel="external">推荐给初学LSTM或者懂个大概却不完全懂的人</a></p>
+<h2 id="LSTM-变种"><a href="#LSTM-变种" class="headerlink" title="LSTM 变种"></a>LSTM 变种</h2><p><a href="https://guillaumegenthial.github.io/sequence-tagging-with-tensorflow.html" target="_blank" rel="external">Sequence Tagging with Tensorflow</a></p>
+<p><a href="https://guillaumegenthial.github.io/serving.html" target="_blank" rel="external">flask 服务</a></p>
+<p><a href="https://github.com/guillaumegenthial/sequence_tagging" target="_blank" rel="external">sequence_tagging(code)</a></p>
+<h2 id="GRU"><a href="#GRU" class="headerlink" title="GRU"></a>GRU</h2><p><a href="https://blog.csdn.net/wangyangzhizhou/article/details/77332582" target="_blank" rel="external">GRU神经网络</a></p>
+<p><a href="http://zh.gluon.ai/chapter_recurrent-neural-networks/gru-scratch.html" target="_blank" rel="external">门控循环单元（GRU）— 从0开始</a></p>
+<h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><p><a href="https://blog.csdn.net/u012392084/article/details/78010047" target="_blank" rel="external">基于深度学习的命名实体识别详解（附Github代码）</a></p>
+<p><a href="https://github.com/shiyybua/NER" target="_blank" rel="external">基于tensorflow深度学习的中文的命名实体识别</a></p>
+<h2 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h2><p>实体抽取 n-n<br>关系抽取 n-1<br>文本生成 n-m<br>文本分类 n-1<br>情感分类 n-1</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;RNN介绍&quot;&gt;&lt;a href=&quot;#RNN介绍&quot; class=&quot;headerlink&quot; title=&quot;RNN介绍&quot;&gt;&lt;/a&gt;RNN介绍&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.sohu.com/a/161900748_465975&quot; target=&quot;_
+    
+    </summary>
+    
+    
+      <category term="深度学习" scheme="http://yafei002.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CRF相关</title>
+    <link href="http://yafei002.github.io/2018/04/20/CRF%E7%9B%B8%E5%85%B3/"/>
+    <id>http://yafei002.github.io/2018/04/20/CRF相关/</id>
+    <published>2018-04-20T01:46:07.000Z</published>
+    <updated>2018-07-16T01:47:29.216Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h2><p><a href="https://www.jianshu.com/p/55755fc649b1" target="_blank" rel="external">如何轻松愉快地理解条件随机场（CRF）？</a></p>
+<p><a href="https://blog.csdn.net/xueyingxue001/article/details/51498902" target="_blank" rel="external">条件随机场(CRF) - 1 - 简介</a></p>
+<p><a href="https://www.zhihu.com/question/35866596/answer/139485548" target="_blank" rel="external">如何用简单易懂的例子解释条件随机场（CRF）模型？它和HMM有什么区别？</a></p>
+<p><a href="https://www.zhihu.com/question/20279019" target="_blank" rel="external">crf++里的特征模板得怎么理解？</a></p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p><a href="http://www.hankcs.com/ml/conditional-random-field.html" target="_blank" rel="external">条件随机场</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/26696451?group_id=843138862132895744" target="_blank" rel="external">条件随机场教程(Conditional Random Field Tutorial)</a></p>
+<h2 id="为什么要套一个exp呢？"><a href="#为什么要套一个exp呢？" class="headerlink" title="为什么要套一个exp呢？"></a>为什么要套一个exp呢？</h2><p>一方面，要保证每一个factor是正的，factor可以大于一也可以不归一化，但一定要是正的。另一方面，我们最后要通过最大似然函数优化的，似然值是这些<br>factor的累乘，对每一个最大子团累乘。这么多项相乘没有人直接去优化的，都是取log变成对数似然，然后这些累乘变成累加了嘛，然后优化这个累加。无论是算梯度用梯度下降，还是另导数为零求解析解都很方便了（这个表达形态下的目标函数是凸的）。你套上exp之后，再取对数，那么每个因子就变成一堆特征乘权重的累积，然后整个对数似然就是三级累积，对每个样本、每个团、每个特征累积。这个形式就很有利了，你是求导还是求梯度还是怎样，你面对的就是一堆项的和，每个和是一个1或者一个0乘以一个<br>权重。当然后面还要减一个log(Z)，不过对于map inference来说，给定Z之后log(Z)是常量，优化可以不带这一项。</p>
+<p><a href="https://www.zhihu.com/question/35866596/answer/74187736" target="_blank" rel="external">https://www.zhihu.com/question/35866596/answer/74187736</a></p>
+<h2 id="MEMM-VS-HMM-VS-crf"><a href="#MEMM-VS-HMM-VS-crf" class="headerlink" title="MEMM VS HMM VS crf"></a>MEMM VS HMM VS crf</h2><p><a href="https://www.cnblogs.com/549294286/archive/2013/06/06/3121761.html" target="_blank" rel="external">统计模型之间的比较，HMM，最大熵模型，CRF条件随机场</a></p>
+<p><a href="https://blog.csdn.net/aitodd1/article/details/39522025" target="_blank" rel="external">隐马尔可夫模型 最大熵马尔可夫模型 条件随机场 区别和联系</a></p>
+<p><a href="https://tieba.baidu.com/p/2827086847?red_tag=1184595284" target="_blank" rel="external">隐马尔可夫模型 最大熵马尔可夫模型 条件随机场 区别和联系</a></p>
+<h2 id="NER"><a href="#NER" class="headerlink" title="NER"></a>NER</h2><p><a href="https://www.zhihu.com/question/62399257" target="_blank" rel="external">如何理解LSTM后接CRF？</a></p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><a href="https://github.com/zhongkaifu/RNNSharp" target="_blank" rel="external">Deep-BiLSTM-CRF</a></p>
+<p><a href="http://dy.163.com/v2/article/detail/D7867H490511AQHO.html" target="_blank" rel="external">Bi-LSTM+CRF在文本序列标注中的应用</a></p>
+<p><a href="https://www.cnblogs.com/Determined22/p/7238342.html" target="_blank" rel="external">序列标注：BiLSTM-CRF模型做基于字的中文命名实体识别</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;理解&quot;&gt;&lt;a href=&quot;#理解&quot; class=&quot;headerlink&quot; title=&quot;理解&quot;&gt;&lt;/a&gt;理解&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/55755fc649b1&quot; target=&quot;_blank&quot; rel=&quot;
+    
+    </summary>
+    
+    
+      <category term="NLP" scheme="http://yafei002.github.io/tags/NLP/"/>
+    
+  </entry>
   
   <entry>
     <title>Knowledge Emdedding</title>
@@ -291,9 +414,9 @@
     </summary>
     
     
-      <category term="知识图谱" scheme="http://yafei002.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
-    
       <category term="NLP" scheme="http://yafei002.github.io/tags/NLP/"/>
+    
+      <category term="知识图谱" scheme="http://yafei002.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
     
   </entry>
   
@@ -749,155 +872,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;Graph&quot;&gt;&lt;a href=&quot;#Graph&quot; class=&quot;headerlink&quot; title=&quot;Graph&quot;&gt;&lt;/a&gt;Graph&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/57269332/answer/15
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>周记-18.01.08</title>
-    <link href="http://yafei002.github.io/2018/01/15/%E5%91%A8%E8%AE%B0-18-01-08/"/>
-    <id>http://yafei002.github.io/2018/01/15/周记-18-01-08/</id>
-    <published>2018-01-15T04:25:31.000Z</published>
-    <updated>2018-06-16T04:26:26.025Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
-<li><a href="https://baike.baidu.com/item/%E6%AD%A3%E4%BA%A4%E7%9F%A9%E9%98%B5/407284?fr=aladdin" target="_blank" rel="external">正交矩阵</a></li>
-<li><a href="https://www.cnblogs.com/AndyJee/p/3491487.html" target="_blank" rel="external">行列式的几何意义</a></li>
-<li><a href="https://baike.baidu.com/item/%E5%AF%B9%E8%A7%92%E7%9F%A9%E9%98%B5/638916?fr=aladdin" target="_blank" rel="external">对角矩阵</a></li>
-<li><a href="https://baike.baidu.com/item/%E5%AF%B9%E7%A7%B0%E7%9F%A9%E9%98%B5/7291260?fr=aladdin" target="_blank" rel="external">对称矩阵</a></li>
-</ul>
-<h2 id="DL"><a href="#DL" class="headerlink" title="DL"></a>DL</h2><ul>
-<li><a href="https://www.zhihu.com/question/22298352" target="_blank" rel="external">如何通俗易懂地解释卷积？</a></li>
-<li><a href="https://www.leiphone.com/news/201606/aewwFhhu9SCeIqUG.html" target="_blank" rel="external">ICML论文 | 利用CNN来学习任意图结构</a></li>
-<li><a href="http://blog.csdn.net/bvl10101111/article/details/53484620" target="_blank" rel="external"> 论文笔记之Learning Convolutional Neural Networks for Graphs</a></li>
-<li><a href="https://www.leiphone.com/news/201706/ppA1Hr0M0fLqm7OP.html" target="_blank" rel="external">卷积神经网络不能处理“图”结构数据？这篇文章告诉你答案</a></li>
-<li><a href="http://blog.csdn.net/u014313009/article/details/51043064" target="_blank" rel="external">交叉熵代价函数（作用及公式推导）</a>(推荐)</li>
-<li><a href="http://blog.csdn.net/u012162613/article/details/44239919" target="_blank" rel="external">交叉熵代价函数</a></li>
-<li><a href="https://www.zhihu.com/question/57269332/answer/157375170" target="_blank" rel="external">有哪些指标可以描述两个图（graph）的相似度？</a>(推荐)</li>
-</ul>
-<h2 id="Graph"><a href="#Graph" class="headerlink" title="Graph"></a>Graph</h2><ul>
-<li><a href="http://konect.uni-koblenz.de/statistics/" target="_blank" rel="external">network statistic </a>(强烈推荐)</li>
-</ul>
-<h2 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h2><ul>
-<li><a href="http://www.cnblogs.com/xingmeng/p/4446613.html" target="_blank" rel="external">mysql insert if not exists防止插入重复记录的方法</a></li>
-<li><a href="http://www.jb51.net/article/39421.htm" target="_blank" rel="external">mysql出现“Incorrect key file for table”处理方法</a></li>
-<li><a href="http://blog.csdn.net/wendi_0506/article/details/52173865" target="_blank" rel="external">MySQL使用SELECT INTO OUTFILE导出文本文件</a></li>
-<li><a href="http://blog.csdn.net/man_to_home/article/details/54947518" target="_blank" rel="external">MYSQL导出数据出现The MySQL server is running with the –secure-file-priv option so it cannot execute this</a></li>
-</ul>
-<h2 id="Tool"><a href="#Tool" class="headerlink" title="Tool"></a>Tool</h2><ul>
-<li><a href="https://www.jianshu.com/p/6e2ec0b8fff1" target="_blank" rel="external">pandoc markdown to doc &amp; ppt</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Math&quot;&gt;&lt;a href=&quot;#Math&quot; class=&quot;headerlink&quot; title=&quot;Math&quot;&gt;&lt;/a&gt;Math&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://baike.baidu.com/item/%E6%AD%A3%E4%BA%A4
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>周记-18.01.03</title>
-    <link href="http://yafei002.github.io/2018/01/10/%E5%91%A8%E8%AE%B0-18-01-03/"/>
-    <id>http://yafei002.github.io/2018/01/10/周记-18-01-03/</id>
-    <published>2018-01-10T04:12:36.000Z</published>
-    <updated>2018-06-16T04:15:19.979Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h2><ul>
-<li><a href="https://wenku.baidu.com/view/208864738e9951e79a892705.html" target="_blank" rel="external">重尾分布</a>(推荐)</li>
-</ul>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
-<li><a href="https://www.cnblogs.com/wuyuankun/p/3982216.html" target="_blank" rel="external">哈夫曼树与哈夫曼编码</a></li>
-</ul>
-<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><ul>
-<li><a href="https://www.jianshu.com/p/c497b41f8caa" target="_blank" rel="external">GD(梯度下降)和SGD(随机梯度下降)</a></li>
-<li><a href="https://www.cnblogs.com/bqtang/p/3693827.html" target="_blank" rel="external">拉普拉斯平滑处理 Laplace Smoothing</a>(推荐)</li>
-<li><a href="http://blog.csdn.net/seekerhit/article/details/53319905" target="_blank" rel="external">半监督分类算法简述，self-trainning，co-trainning</a></li>
-<li><a href="https://linqs.soe.ucsc.edu/home" target="_blank" rel="external">LINQS STATISTICAL RELATIONAL LEARNING GROUP</a></li>
-<li><a href="https://github.com/tkipf/gcn" target="_blank" rel="external">Graph Convolutional Networks</a></li>
-<li><a href="https://networkx.github.io/" target="_blank" rel="external">NetworkX</a></li>
-<li><a href="http://tkipf.github.io/graph-convolutional-networks/" target="_blank" rel="external">GRAPH CONVOLUTIONAL NETWORKS</a></li>
-<li><a href="http://blog.csdn.net/wsj998689aa/article/details/39547771" target="_blank" rel="external">谈谈自己对正则化的一些理解~</a></li>
-</ul>
-<h2 id="Deep-Learing"><a href="#Deep-Learing" class="headerlink" title="Deep Learing"></a>Deep Learing</h2><ul>
-<li><a href="http://blog.csdn.net/u013146742/article/details/51986575" target="_blank" rel="external">RELU 激活函数及其他相关的函数</a></li>
-</ul>
-<p><strong>ReLU</strong></p>
-<p>f(x)=max(0,x)</p>
-<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><ul>
-<li><a href="https://github.com/extrabacon/python-shell" target="_blank" rel="external">python-shell</a></li>
-</ul>
-<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
-<li><a href="https://baike.baidu.com/item/%E4%B8%80%E9%98%B6%E5%B7%AE%E5%88%86/3937421?fr=aladdin" target="_blank" rel="external">一阶差分与高阶差分</a></li>
-<li><a href="https://baike.baidu.com/item/%E5%85%8B%E7%BD%97%E5%86%85%E5%85%8B%E7%A7%AF/6282573?fr=aladdin" target="_blank" rel="external">克罗内克积和克罗内克和</a></li>
-<li><a href="http://www.doc88.com/p-6734183381055.html" target="_blank" rel="external">拉普拉斯变换讲解</a>(推荐)</li>
-</ul>
-<h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2><ul>
-<li><a href="http://lbsyun.baidu.com/index.php?title=lbscloud/yunni/explain" target="_blank" rel="external">LBS.云服务</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;统计&quot;&gt;&lt;a href=&quot;#统计&quot; class=&quot;headerlink&quot; title=&quot;统计&quot;&gt;&lt;/a&gt;统计&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://wenku.baidu.com/view/208864738e9951e79a892705.h
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>周记-17.12.25</title>
-    <link href="http://yafei002.github.io/2018/01/03/%E5%91%A8%E8%AE%B0-17-12-25/"/>
-    <id>http://yafei002.github.io/2018/01/03/周记-17-12-25/</id>
-    <published>2018-01-03T01:19:02.000Z</published>
-    <updated>2018-01-03T01:19:53.374Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Janusgraph"><a href="#Janusgraph" class="headerlink" title="Janusgraph"></a>Janusgraph</h2><ul>
-<li><a href="https://www.cnblogs.com/jiyuqi/p/320267ff0b5052fad4613945e58ea1f1.html" target="_blank" rel="external">JanusGraph Server配置</a></li>
-</ul>
-<h2 id="nlp"><a href="#nlp" class="headerlink" title="nlp"></a>nlp</h2><ul>
-<li>simhash<ul>
-<li><a href="https://www.zhihu.com/question/20820286" target="_blank" rel="external">什么是哈希算法？</a></li>
-<li><a href="https://yanyiwu.com/work/2014/01/30/simhash-shi-xian-xiang-jie.html" target="_blank" rel="external">simhash算法原理及实现</a></li>
-<li><a href="http://grunt1223.iteye.com/blog/964564" target="_blank" rel="external">我的数学之美系列二 —— simhash与重复信息识别</a></li>
-<li><a href="http://blog.csdn.net/zhaoxinfan/article/details/15815275" target="_blank" rel="external">simhash应用-文章去重</a></li>
-</ul>
-</li>
-<li><a href="https://www.cnblogs.com/hxsyl/p/5263114.html" target="_blank" rel="external">初识随机游走</a></li>
-<li><a href="https://www.jianshu.com/p/b7ede4e842f1" target="_blank" rel="external">带监督的文本分类算法FastText</a></li>
-<li><a href="http://blog.csdn.net/songzitea/article/details/18087401" target="_blank" rel="external">浅谈随机游走</a></li>
-<li><a href="http://blog.csdn.net/chichoxian/article/details/53944188" target="_blank" rel="external"> 编辑距离算法（Edit Distance）</a></li>
-</ul>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
-<li><a href="http://blog.csdn.net/jiutianhe/article/details/8076835" target="_blank" rel="external">Trie树（字典树）</a></li>
-</ul>
-<h2 id="图算法"><a href="#图算法" class="headerlink" title="图算法"></a>图算法</h2><ul>
-<li><a href="http://blog.csdn.net/osuperman12345/article/details/65444832" target="_blank" rel="external">DeepWalk 论文笔记</a></li>
-</ul>
-<h2 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h2><ul>
-<li><a href="https://mp.weixin.qq.com/s/rdb4I-IeT4-2pv1xOjyxPw" target="_blank" rel="external">你应该知道的模型评估的五个方法</a></li>
-<li><a href="http://blog.csdn.net/sinat_26917383/article/details/51725102" target="_blank" rel="external">笔记︱风控分类模型种类（决策、排序）比较与模型评估体系（ROC/gini/KS/lift）</a></li>
-<li><a href="http://blog.csdn.net/u010922186/article/details/41244317" target="_blank" rel="external">heavy-tailed distribution（重尾分布）</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Janusgraph&quot;&gt;&lt;a href=&quot;#Janusgraph&quot; class=&quot;headerlink&quot; title=&quot;Janusgraph&quot;&gt;&lt;/a&gt;Janusgraph&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com
     
     </summary>
     

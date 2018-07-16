@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        知识图谱基础-RDF和RDFS｜Yafei002&#39;s blog
+        句法依存｜Yafei002&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://yafei002.github.io/2017/12/14/知识图谱基础-RDF和RDFS/">
+    <link rel="canonical" href="http://yafei002.github.io/2018/05/10/句法依存/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -149,18 +149,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>知识图谱基础-RDF和RDFS</h1>
+                    <h1>句法依存</h1>
                     
                     <span class="meta">
                          作者 yafei002
                         <span>
-                          日期 2017-12-14
+                          日期 2018-05-10
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#知识图谱"
-                           title="知识图谱">知识图谱</a>
+                        <a class="tag" href="/tags/#NLP"
+                           title="NLP">NLP</a>
                         
                     </div>
                 </div>
@@ -169,7 +169,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            知识图谱基础-RDF和RDFS
+            句法依存
         </span>
     </div>
 </header>
@@ -180,87 +180,46 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>知识图谱是一个节点与关系的集合，节点通过关系相互连接，关系和节点拥有类型和属性。</p>
-<p>节点和关系的类型定义在模式（schema）中。</p>
-<p>这些被定义的关系叫做词汇（vocabulary）。</p>
-<h2 id="RDF-and-RDFS"><a href="#RDF-and-RDFS" class="headerlink" title="RDF and RDFS"></a>RDF and RDFS</h2><p>RDF（资源描述框架）是语义网络的现代标准。RDFS是RDF模式。</p>
-<h3 id="RDF"><a href="#RDF" class="headerlink" title="RDF"></a>RDF</h3><p>RDF通常指代W3C的资源。资源可以是任何事物——人、动物、游戏的角色等等。</p>
-<h4 id="RDF三元组和图"><a href="#RDF三元组和图" class="headerlink" title="RDF三元组和图"></a>RDF三元组和图</h4><p>资源，也叫做表述（statements）描述在RDF三元组中。RDF三元组图示如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-abddeb48489fdfcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="RDF triple.png"></p>
-<p>RDF图包含这些三元组的集合。集合中有三类节点：<a href="https://baike.baidu.com/item/iri/4442698?fr=aladdin" target="_blank" rel="external">IRI</a>（Iternationalised Resource Identifier, 国际化资源标识符），字面量（literals）和空节点。</p>
-<p>更具体地，对于一个三元组：</p>
-<ul>
-<li>主体（Subject）可以是一个IRI或空节点</li>
-<li>谓词（Predict）应该是一个IRI</li>
-<li>宾体（Object）可以是一个IRI,字面量或空节点</li>
-</ul>
-<p>字面量表示如字符串、数字和时间之类的值。</p>
-<p>空节点可以指代非IRI和字面量表示的<strong>其他任意</strong>事物。有空节点表示的资源被称为匿名资源，意味着某种事物的存在。而IRI表示的是任意的<strong>特定</strong>的事物。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-626479aa0c0b3f7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>IRI一般以一个前缀作为开始，这种前缀叫做命名空间前缀（namespace prefix）。拥有命名空间前缀的IRI叫做命名空间IRI。如下图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-9a7dddd67f92fa0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>从而上面的三元组可表示为：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-236e9fa9117ffe8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>三元组的其他示例：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-7265c74799afe056.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p><strong>序列化RDF</strong></p>
-<p>RDF为知识图谱提供标准的数据模型。几种存储和交换RDF的序列化语法是Turtle、RDF/XML、RDFa、N-Tripples、NQUADS和JSON-LD。</p>
-<p>Turtle文档可以使得RDF表示成紧凑的文本格式。其中“#”表示注释，IRI包含在&lt;&gt;中。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-53387eee95b7c8cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>字面量格式：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-f5bb441131e1f674.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>指定了数据类型的字面量：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-a86772524584c20e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>其他规则：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-eb6dcb687c7edd1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>一个完整的RDF序列化的例子如下图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-49fff5e9ea483861.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h4 id="RDFS"><a href="#RDFS" class="headerlink" title="RDFS"></a>RDFS</h4><p>RDFS为RDF提供简单的语言模式来声明类（classes）或属性（properties）。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-5e4676b679923e88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>RDFS可定义属性和类的依赖：rdfs:subClassOf, rdfs:subPropertyOf, rdfs:domain and rdfs:range.</p>
-<ul>
-<li><p>subClassOf 表示类的子类，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:Start -up rdfs:subClassOf org:Organization .</div></pre></td></tr></table></figure>
-</li>
-<li><p>subPropertyOf 表示属性的子属性，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasEnglishHomePage rdfs:subPropertyOf org:hasHomePage .</div></pre></td></tr></table></figure>
-</li>
-<li><p>domain表示属性在类的领域内，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasHomePage rdfs:domain org:Organization .</div></pre></td></tr></table></figure>
-</li>
-<li><p>range表示所有该属性的值是一个类或数据类型（如rdfs:Literal）的实例。如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasHomePage rdfs:range rdfs:Literal .</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="RDF相关资料"><a href="#RDF相关资料" class="headerlink" title="RDF相关资料"></a>RDF相关资料</h4><ul>
-<li><a href="http://zh.transwiki.org/cn/rdfprimer.htm" target="_blank" rel="external">W3C RDF 入门</a>（W3C标准RDF中文译文）</li>
-<li><a href="https://www.w3.org/TR/turtle/" target="_blank" rel="external">W3C RDF 1.1 Turtle</a></li>
-<li>博客<ul>
-<li><a href="http://blog.sina.com.cn/s/blog_6c42aaa60100nh30.html" target="_blank" rel="external">资源描述框架RDF </a></li>
-<li>[《RDF 1.1入门》摘要] (<a href="http://catwizard.net/posts/20140909212445.html" target="_blank" rel="external">http://catwizard.net/posts/20140909212445.html</a>)</li>
-</ul>
-</li>
-</ul>
-<p>然后去理解：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-f56d02683b66e88e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>其中Turtle序列化：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">@prefix org: &lt;http :// www.w3.org/ns/org#&gt;</div><div class="line">@prefix rdf: &lt;http :// www.w3.org /1999/02/22 -rdf -syntax -ns#&gt;</div><div class="line">@prefix rdfs: &lt;http :// www.w3.org /2000/01/ rdf -schema#&gt;</div><div class="line">@prefix data: &lt;http :// data.lab.expertsystem.com/&gt;</div><div class="line">org:Organization a rdfs:Class .</div><div class="line">org:Non -GovOrganization a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Organization .</div><div class="line">org:InternationalOrg a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:SME a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:Startup a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:hasName a rdf:Property ;</div><div class="line">rdfs:domain org:Organization;</div><div class="line">rdfs:range rdfs:Literal.</div><div class="line">org:hasPartner a rdf:Property ;</div><div class="line">rdfs:domain org:Organization ;</div><div class="line">rdfs:range org:Organization .</div><div class="line">org:hasHomePage a rdf:Property ;</div><div class="line">rdfs:domain org:InternationalOrg .</div><div class="line">data:ESI a org:SME ;</div><div class="line">org:hasPartner data:IBM ;</div><div class="line">org:hasName &quot;Expert System Iberia&quot; .</div><div class="line">data:IBM a org:InternationalOrg ;</div><div class="line">org:hasPartner data:Fundera ;</div><div class="line">org:hasHomePage &quot;http :// www.ibm.com&quot; .</div><div class="line">data:Fundera a org:Start -up .</div></pre></td></tr></table></figure>
-<h4 id="RDF局限性"><a href="#RDF局限性" class="headerlink" title="RDF局限性"></a>RDF局限性</h4><p>to do…</p>
+                <h1 id="句法依存"><a href="#句法依存" class="headerlink" title="句法依存"></a>句法依存</h1><h2 id="配价语法分析"><a href="#配价语法分析" class="headerlink" title="配价语法分析"></a>配价语法分析</h2><p><a href="https://wenku.baidu.com/view/229ca1daa8114431b80dd855.html?rec_flag=default&amp;sxts=1529747374339" target="_blank" rel="external">配价语法分析</a></p>
+<p><a href="https://wenku.baidu.com/view/d55070a1a417866fb94a8e54.html" target="_blank" rel="external">第五讲 配价分析法</a></p>
+<p>语法研究中的“配价”思想及配价 语法分析 化学中提出“价”的概念为的是说明在分子结构中各元素原子间的比例关系。 o，水是由一个氧原子和两个氢原子化合成的，因此，氧是二价。 法国语言学家特思尼耶尔最早把化学中的“价”明确引入语法研究中。 语法学中引进“价”这个概念，为的是说明一个动词能支配多少个属于不同语义角 色的名词词组。</p>
+<p><a href="http://cache.baiducontent.com/c?m=9f65cb4a8c8507ed4fece7631049c0666e02dd32678bc7150885ce178e220606163cf4bc537e4741ce873c3045f41e19fdf7422e604637b7ec9ed55ddccfc97e388951377a1c824619d112a4ce52609c60c655fede1ef0cdf62592dec5a3ae4325ba44040a97808e4d7610dd1e870345e7b19838022f15ad9e3a72ff286059ef3433c2508fe3251d02&amp;p=8970c54ad49b1afc57efc03a5b&amp;newp=8772dd16d9c102e608e296121753d8254207dc357b9687787fc0c513fe200c01063dbee728261700d9cf776303ab4e5de1f13275300922bc8f8ee50b8af99d7f73de647d&amp;user=baidu&amp;fm=sc&amp;query=%C5%E4%BC%DB%B7%D6%CE%F6%B7%A8+%BB%AF%D1%A7&amp;qid=94219c57000221c7&amp;p1=4" target="_blank" rel="external">第五节配价分析法 </a></p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p><a href="http://www.hankcs.com/nlp/to-achieve-a-simple-generative-dependency-parsing.html" target="_blank" rel="external">生成式依存句法分析器的简单实现</a></p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p><a href="http://www.hankcs.com/nlp/corpus/chinese-treebank.html#h3-6" target="_blank" rel="external">汉语树库</a></p>
+<p><a href="https://blog.csdn.net/luoshixian099/article/details/51908175" target="_blank" rel="external">算法导论–最小生成树（Kruskal和Prim算法）</a></p>
+<p><a href="https://www.cnblogs.com/CheeseZH/p/5768389.html" target="_blank" rel="external">依存句法分析与语义依存分析的区别</a></p>
+<h2 id="HanLP"><a href="#HanLP" class="headerlink" title="HanLP"></a>HanLP</h2><p><a href="http://www.hankcs.com/nlp/parsing/neural-network-based-dependency-parser.html#h3-5" target="_blank" rel="external">基于神经网络的高性能依存句法分析器</a></p>
+<p><a href="http://www.hankcs.com/nlp/corpus/chinese-treebank.html#h2-8" target="_blank" rel="external">汉语树库</a></p>
+<h2 id="Syntaxnet"><a href="#Syntaxnet" class="headerlink" title="Syntaxnet"></a>Syntaxnet</h2><p><a href="https://www.cnblogs.com/kmsfan/p/5538730.html" target="_blank" rel="external">AI人工智能系列随笔：syntaxnet 初探（1）</a></p>
+<p><a href="https://www.jianshu.com/p/479a111ed5f4" target="_blank" rel="external">Google自然语言理解工具syntaxnet开放中文支持</a></p>
+<p><a href="https://blog.csdn.net/jiangjingxuan/article/details/54906393" target="_blank" rel="external">如何使用SyntaxNet进行中文模型的使用</a></p>
+<p><a href="https://github.com/dsindex/syntaxnet" target="_blank" rel="external">syntaxnet</a></p>
+<p><a href="https://github.com/yutaolife/syntaxNet4Chinese/tree/master/work" target="_blank" rel="external">syntaxNet4Chinese</a></p>
+<p><a href="https://github.com/Aniruddha-Tapas/How-to-use-SyntaxNet" target="_blank" rel="external">How to use SyntaxNet</a></p>
+<p><a href="https://www.zhihu.com/question/46272554" target="_blank" rel="external">如何评价SyntaxNet？ZHIHU</a></p>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p><a href="http://nlp.nju.edu.cn/tanggc/tools/DependencyViewer.html" target="_blank" rel="external">Dependency Viewer</a></p>
+<h2 id="syntaxnet-手动安装问题"><a href="#syntaxnet-手动安装问题" class="headerlink" title="syntaxnet 手动安装问题"></a>syntaxnet 手动安装问题</h2><ol>
+<li>注意python版本支持</li>
+<li>以下</li>
+</ol>
+<p><a href="https://github.com/tensorflow/models/tree/master/research/syntaxnet" target="_blank" rel="external">sytax github</a></p>
+<p>在<code>pip install pygraphviz --install-option=&quot;--include-path=/usr/include/graphviz&quot; --install-option=&quot;--library-path=/usr/lib/graphviz/&quot;</code>命令报错</p>
+<p><code>fatal error: Python.h: No such file or directory</code></p>
+<p>执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">For apt (Ubuntu, Debian...):</div><div class="line"></div><div class="line">sudo apt-get install python-dev   # for python2.x installs</div><div class="line">sudo apt-get install python3-dev  # for python3.x installs</div></pre></td></tr></table></figure>
+<p>参考：<a href="https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory" target="_blank" rel="external">https://stackoverflow.com/questions/21530577/fatal-error-python-h-no-such-file-or-directory</a></p>
+<h2 id="syntaxnet-中文模型"><a href="#syntaxnet-中文模型" class="headerlink" title="syntaxnet 中文模型"></a>syntaxnet 中文模型</h2><p><a href="https://github.com/tensorflow/models/tree/master/research/syntaxnet" target="_blank" rel="external">SyntaxNet: Neural Models of Syntax. github</a></p>
+<p><a href="https://my.oschina.net/dingdayu/blog/1083438" target="_blank" rel="external">SyntaxNet 中文模型的使用 </a></p>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2017/12/18/周记-17-12-11/" data-toggle="tooltip" data-placement="top"
-                           title="周记-17.12.11">&larr; Previous Post</a>
-                    </li>
-                    
                     
                     <li class="next">
-                        <a href="/2017/12/12/Neo4j-Warm Up/" data-toggle="tooltip" data-placement="top"
-                           title="Neo4j-Warm Up">Next Post &rarr;</a>
+                        <a href="/2018/05/01/RNN相关/" data-toggle="tooltip" data-placement="top"
+                           title="RNN相关">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -295,7 +254,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#RDF-and-RDFS"><span class="toc-text">RDF and RDFS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#RDF"><span class="toc-text">RDF</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RDF三元组和图"><span class="toc-text">RDF三元组和图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RDFS"><span class="toc-text">RDFS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RDF相关资料"><span class="toc-text">RDF相关资料</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RDF局限性"><span class="toc-text">RDF局限性</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#句法依存"><span class="toc-text">句法依存</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配价语法分析"><span class="toc-text">配价语法分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础"><span class="toc-text">基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HanLP"><span class="toc-text">HanLP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Syntaxnet"><span class="toc-text">Syntaxnet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#工具"><span class="toc-text">工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#syntaxnet-手动安装问题"><span class="toc-text">syntaxnet 手动安装问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#syntaxnet-中文模型"><span class="toc-text">syntaxnet 中文模型</span></a></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -317,8 +276,8 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#知识图谱"
-                           title="知识图谱">知识图谱</a>
+                        <a class="tag" href="/tags/#NLP"
+                           title="NLP">NLP</a>
                         
                     </div>
                 </section>
