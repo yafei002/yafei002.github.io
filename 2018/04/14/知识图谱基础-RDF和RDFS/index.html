@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        Neo4j-Warm Up｜Yafei002&#39;s blog
+        知识图谱基础-RDF和RDFS｜Yafei002&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://yafei002.github.io/2017/12/12/Neo4j-Warm Up/">
+    <link rel="canonical" href="http://yafei002.github.io/2018/04/14/知识图谱基础-RDF和RDFS/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -149,18 +149,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>Neo4j-Warm Up</h1>
+                    <h1>知识图谱基础-RDF和RDFS</h1>
                     
                     <span class="meta">
                          作者 yafei002
                         <span>
-                          日期 2017-12-12
+                          日期 2018-04-14
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#Neo4j"
-                           title="Neo4j">Neo4j</a>
+                        <a class="tag" href="/tags/#知识图谱"
+                           title="知识图谱">知识图谱</a>
                         
                     </div>
                 </div>
@@ -169,7 +169,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            Neo4j-Warm Up
+            知识图谱基础-RDF和RDFS
         </span>
     </div>
 </header>
@@ -180,15 +180,72 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>有个现象是同一个查询第一次会比之后的慢很多。这是因为Neo4j的冷引导机制。首次查询需要从磁盘<br>中获取记录。如果能直接从内存中提取，性能将会大大提高。</p>
-<p>可以采用”warm the cache”的方法。运行一个查询，这个查询能涉及到所有的节点和关系。但是<br>需要考虑到在配置文件中设置的pagecache的大小，如果所有数据加起来小于等于设置的内存的大小，<br>就可以加载整个图谱；如果小于，只会尽可能的加载，无法覆盖整个图谱。</p>
-<p>Cypher语句如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MATCH (n)</div><div class="line">OPTIONAL MATCH (n)-[r]-&gt;()</div><div class="line">RETURN count(n.prop) + count(r.prop);</div></pre></td></tr></table></figure>
-<p><code>count(n.prop) + count(r.prop)</code>这条语句可以触及到所有节点和边中叫“prop”的属性。如果是<br>用<code>count(*)</code>的话并不能充分的加载所有节点和边的属性。</p>
-<p>java的方式：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@GET</span> <span class="meta">@Path</span>(<span class="string">"/warmup"</span>)</div><div class="line"><span class="function"><span class="keyword">public</span> String <span class="title">warmUp</span><span class="params">(@Context GraphDatabaseService db)</span> </span>&#123;</div><div class="line">    <span class="keyword">try</span> ( Transaction tx = db.beginTx()) &#123;</div><div class="line">        <span class="keyword">for</span> ( Node n : GlobalGraphOperations.at(db).getAllNodes()) &#123;</div><div class="line">            n.getPropertyKeys();</div><div class="line">            <span class="keyword">for</span> ( Relationship relationship : n.getRelationships()) &#123;</div><div class="line">                relationship.getPropertyKeys();</div><div class="line">                relationship.getStartNode();</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="string">"Warmed up and ready to go!"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>对于3.0以上版本的Neo4j, 且加入了<a href="https://github.com/neo4j-contrib/neo4j-apoc-procedures" target="_blank" rel="external">apoc</a><br>插件，可以使用如下方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CALL apoc.warmup.run()</div></pre></td></tr></table></figure>
+                <p>知识图谱是一个节点与关系的集合，节点通过关系相互连接，关系和节点拥有类型和属性。</p>
+<p>节点和关系的类型定义在模式（schema）中。</p>
+<p>这些被定义的关系叫做词汇（vocabulary）。</p>
+<h2 id="RDF-and-RDFS"><a href="#RDF-and-RDFS" class="headerlink" title="RDF and RDFS"></a>RDF and RDFS</h2><p>RDF（资源描述框架）是语义网络的现代标准。RDFS是RDF模式。</p>
+<h3 id="RDF"><a href="#RDF" class="headerlink" title="RDF"></a>RDF</h3><p>RDF通常指代W3C的资源。资源可以是任何事物——人、动物、游戏的角色等等。</p>
+<h4 id="RDF三元组和图"><a href="#RDF三元组和图" class="headerlink" title="RDF三元组和图"></a>RDF三元组和图</h4><p>资源，也叫做表述（statements）描述在RDF三元组中。RDF三元组图示如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-abddeb48489fdfcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="RDF triple.png"></p>
+<p>RDF图包含这些三元组的集合。集合中有三类节点：<a href="https://baike.baidu.com/item/iri/4442698?fr=aladdin" target="_blank" rel="external">IRI</a>（Iternationalised Resource Identifier, 国际化资源标识符），字面量（literals）和空节点。</p>
+<p>更具体地，对于一个三元组：</p>
+<ul>
+<li>主体（Subject）可以是一个IRI或空节点</li>
+<li>谓词（Predict）应该是一个IRI</li>
+<li>宾体（Object）可以是一个IRI,字面量或空节点</li>
+</ul>
+<p>字面量表示如字符串、数字和时间之类的值。</p>
+<p>空节点可以指代非IRI和字面量表示的<strong>其他任意</strong>事物。有空节点表示的资源被称为匿名资源，意味着某种事物的存在。而IRI表示的是任意的<strong>特定</strong>的事物。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-626479aa0c0b3f7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>IRI一般以一个前缀作为开始，这种前缀叫做命名空间前缀（namespace prefix）。拥有命名空间前缀的IRI叫做命名空间IRI。如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-9a7dddd67f92fa0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>从而上面的三元组可表示为：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-236e9fa9117ffe8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>三元组的其他示例：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-7265c74799afe056.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><strong>序列化RDF</strong></p>
+<p>RDF为知识图谱提供标准的数据模型。几种存储和交换RDF的序列化语法是Turtle、RDF/XML、RDFa、N-Tripples、NQUADS和JSON-LD。</p>
+<p>Turtle文档可以使得RDF表示成紧凑的文本格式。其中“#”表示注释，IRI包含在&lt;&gt;中。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-53387eee95b7c8cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>字面量格式：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-f5bb441131e1f674.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>指定了数据类型的字面量：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-a86772524584c20e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>其他规则：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-eb6dcb687c7edd1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>一个完整的RDF序列化的例子如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-49fff5e9ea483861.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h4 id="RDFS"><a href="#RDFS" class="headerlink" title="RDFS"></a>RDFS</h4><p>RDFS为RDF提供简单的语言模式来声明类（classes）或属性（properties）。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-5e4676b679923e88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>RDFS可定义属性和类的依赖：rdfs:subClassOf, rdfs:subPropertyOf, rdfs:domain and rdfs:range.</p>
+<ul>
+<li><p>subClassOf 表示类的子类，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:Start -up rdfs:subClassOf org:Organization .</div></pre></td></tr></table></figure>
+</li>
+<li><p>subPropertyOf 表示属性的子属性，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasEnglishHomePage rdfs:subPropertyOf org:hasHomePage .</div></pre></td></tr></table></figure>
+</li>
+<li><p>domain表示属性在类的领域内，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasHomePage rdfs:domain org:Organization .</div></pre></td></tr></table></figure>
+</li>
+<li><p>range表示所有该属性的值是一个类或数据类型（如rdfs:Literal）的实例。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasHomePage rdfs:range rdfs:Literal .</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="RDF相关资料"><a href="#RDF相关资料" class="headerlink" title="RDF相关资料"></a>RDF相关资料</h4><ul>
+<li><a href="http://zh.transwiki.org/cn/rdfprimer.htm" target="_blank" rel="external">W3C RDF 入门</a>（W3C标准RDF中文译文）</li>
+<li><a href="https://www.w3.org/TR/turtle/" target="_blank" rel="external">W3C RDF 1.1 Turtle</a></li>
+<li>博客<ul>
+<li><a href="http://blog.sina.com.cn/s/blog_6c42aaa60100nh30.html" target="_blank" rel="external">资源描述框架RDF </a></li>
+<li>[《RDF 1.1入门》摘要] (<a href="http://catwizard.net/posts/20140909212445.html" target="_blank" rel="external">http://catwizard.net/posts/20140909212445.html</a>)</li>
+</ul>
+</li>
+</ul>
+<p>然后去理解：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/6610077-f56d02683b66e88e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>其中Turtle序列化：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">@prefix org: &lt;http :// www.w3.org/ns/org#&gt;</div><div class="line">@prefix rdf: &lt;http :// www.w3.org /1999/02/22 -rdf -syntax -ns#&gt;</div><div class="line">@prefix rdfs: &lt;http :// www.w3.org /2000/01/ rdf -schema#&gt;</div><div class="line">@prefix data: &lt;http :// data.lab.expertsystem.com/&gt;</div><div class="line">org:Organization a rdfs:Class .</div><div class="line">org:Non -GovOrganization a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Organization .</div><div class="line">org:InternationalOrg a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:SME a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:Startup a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:hasName a rdf:Property ;</div><div class="line">rdfs:domain org:Organization;</div><div class="line">rdfs:range rdfs:Literal.</div><div class="line">org:hasPartner a rdf:Property ;</div><div class="line">rdfs:domain org:Organization ;</div><div class="line">rdfs:range org:Organization .</div><div class="line">org:hasHomePage a rdf:Property ;</div><div class="line">rdfs:domain org:InternationalOrg .</div><div class="line">data:ESI a org:SME ;</div><div class="line">org:hasPartner data:IBM ;</div><div class="line">org:hasName &quot;Expert System Iberia&quot; .</div><div class="line">data:IBM a org:InternationalOrg ;</div><div class="line">org:hasPartner data:Fundera ;</div><div class="line">org:hasHomePage &quot;http :// www.ibm.com&quot; .</div><div class="line">data:Fundera a org:Start -up .</div></pre></td></tr></table></figure>
+<h4 id="RDF局限性"><a href="#RDF局限性" class="headerlink" title="RDF局限性"></a>RDF局限性</h4><p>to do…</p>
 
                 <hr>
                 
@@ -196,14 +253,14 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/12/18/周记-17-12-11/" data-toggle="tooltip" data-placement="top"
-                           title="周记-17.12.11">&larr; Previous Post</a>
+                        <a href="/2018/04/16/Knowledge-Emdedding/" data-toggle="tooltip" data-placement="top"
+                           title="Knowledge Emdedding">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2017/12/12/周记-17.11.29/" data-toggle="tooltip" data-placement="top"
-                           title="周记-17.11.29">Next Post &rarr;</a>
+                        <a href="/2018/04/11/Network-Embedding/" data-toggle="tooltip" data-placement="top"
+                           title="Network Embedding">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -238,7 +295,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#RDF-and-RDFS"><span class="toc-text">RDF and RDFS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#RDF"><span class="toc-text">RDF</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#RDF三元组和图"><span class="toc-text">RDF三元组和图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RDFS"><span class="toc-text">RDFS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RDF相关资料"><span class="toc-text">RDF相关资料</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RDF局限性"><span class="toc-text">RDF局限性</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
         </div>
@@ -260,8 +317,8 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#Neo4j"
-                           title="Neo4j">Neo4j</a>
+                        <a class="tag" href="/tags/#知识图谱"
+                           title="知识图谱">知识图谱</a>
                         
                     </div>
                 </section>

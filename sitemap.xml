@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yafei002.github.io/2018/04/14/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E5%9F%BA%E7%A1%80-RDF%E5%92%8CRDFS/</loc>
+    
+    <lastmod>2018-07-16T02:50:26.645Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yafei002.github.io/2018/05/10/%E5%8F%A5%E6%B3%95%E4%BE%9D%E5%AD%98/</loc>
     
     <lastmod>2018-07-16T01:49:42.386Z</lastmod>
@@ -194,13 +201,6 @@
     <loc>http://yafei002.github.io/Neo4j-Warm%20Up.html</loc>
     
     <lastmod>2017-12-18T00:49:55.730Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yafei002.github.io/2017/12/14/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E5%9F%BA%E7%A1%80-RDF%E5%92%8CRDFS/</loc>
-    
-    <lastmod>2017-12-14T00:41:41.437Z</lastmod>
     
   </url>
   
