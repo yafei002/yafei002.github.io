@@ -186,7 +186,7 @@
     <link href="http://yafei002.github.io/2018/04/14/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E5%9F%BA%E7%A1%80-RDF%E5%92%8CRDFS/"/>
     <id>http://yafei002.github.io/2018/04/14/知识图谱基础-RDF和RDFS/</id>
     <published>2018-04-14T00:40:26.000Z</published>
-    <updated>2018-07-16T02:50:26.645Z</updated>
+    <updated>2018-07-16T02:52:22.520Z</updated>
     
     <content type="html"><![CDATA[<p>知识图谱是一个节点与关系的集合，节点通过关系相互连接，关系和节点拥有类型和属性。</p>
 <p>节点和关系的类型定义在模式（schema）中。</p>
