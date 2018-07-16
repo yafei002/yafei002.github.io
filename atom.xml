@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yafei002.github.io/"/>
-  <updated>2018-06-17T11:17:56.199Z</updated>
+  <updated>2018-07-16T01:35:38.446Z</updated>
   <id>http://yafei002.github.io/</id>
   
   <author>
@@ -14,6 +14,79 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Knowledge Emdedding</title>
+    <link href="http://yafei002.github.io/2018/04/16/Knowledge-Emdedding/"/>
+    <id>http://yafei002.github.io/2018/04/16/Knowledge-Emdedding/</id>
+    <published>2018-04-16T01:34:01.000Z</published>
+    <updated>2018-07-16T01:35:38.446Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="汇总"><a href="#汇总" class="headerlink" title="汇总"></a>汇总</h2><p><a href="https://github.com/thunlp/OpenKE" target="_blank" rel="external">清华OpenKE GitHub</a></p>
+<p><a href="http://openke.thunlp.org/home" target="_blank" rel="external">清华openKE官网</a></p>
+<p><a href="https://github.com/mnick/scikit-kge" target="_blank" rel="external">scikit kge GitHub</a></p>
+<p><a href="http://wwwbuild.net/almosthuman2014/458989.html" target="_blank" rel="external">一周论文 | 基于翻译模型(Trans系列)的知识表示学习</a></p>
+<p><a href="https://github.com/mana-ysh/knowledge-graph-embeddings" target="_blank" rel="external">mana-ysh/knowledge-graph-embeddings</a></p>
+<p><a href="https://blog.csdn.net/fffnull/article/details/52343606" target="_blank" rel="external">ke 脑图</a></p>
+<h2 id="GitHub代码"><a href="#GitHub代码" class="headerlink" title="GitHub代码"></a>GitHub代码</h2><p><a href="http://openke.thunlp.org/static/index.html" target="_blank" rel="external">OpenKE documentation</a></p>
+<p><a href="https://github.com/ZichaoHuang/TransE" target="_blank" rel="external">ZichaoHuang/TransE</a></p>
+<h2 id="知识图谱表示学习与关系推理（2016-2017）"><a href="#知识图谱表示学习与关系推理（2016-2017）" class="headerlink" title="知识图谱表示学习与关系推理（2016-2017）"></a>知识图谱表示学习与关系推理（2016-2017）</h2><p><a href="http://www.cnblogs.com/jtianwen2014/p/6985214.html" target="_blank" rel="external">ACL2016信息抽取与知识图谱相关论文掠影</a></p>
+<p><a href="https://www.cnblogs.com/jtianwen2014/p/7000190.html" target="_blank" rel="external">知识图谱表示学习与关系推理（2016-2017）（一）</a></p>
+<p><a href="http://www.cnblogs.com/jtianwen2014/p/7008228.html" target="_blank" rel="external">知识图谱表示学习与关系推理（2016-2017）（二）</a></p>
+<p><a href="http://www.cnblogs.com/jtianwen2014/p/7018872.html" target="_blank" rel="external">知识图谱表示学习与关系推理（2016-2017）（三）</a></p>
+<h2 id="TransE"><a href="#TransE" class="headerlink" title="TransE"></a>TransE</h2><p><a href="https://www.cnblogs.com/chenbjin/p/5644457.html" target="_blank" rel="external">word2vec + transE 知识表示模型</a></p>
+<p><a href="https://blog.csdn.net/elaine_bao/article/details/52012537" target="_blank" rel="external">【论文笔记】 知识图谱 之 TransE算法（Translating Embedding）</a></p>
+<p><a href="https://blog.csdn.net/dongfangxiaozi_/article/details/74498111" target="_blank" rel="external">TransE 知识图谱资料整理</a></p>
+<h3 id="论文翻译"><a href="#论文翻译" class="headerlink" title="论文翻译"></a>论文翻译</h3><p><a href="https://blog.csdn.net/fffnull/article/details/51130028" target="_blank" rel="external">TransE论文：多元关系数据嵌入</a></p>
+<p><a href="https://blog.csdn.net/fffnull/article/details/51139927" target="_blank" rel="external">TransE论文第2节：翻译模型</a></p>
+<p><a href="https://blog.csdn.net/fffnull/article/details/51150389" target="_blank" rel="external">TransE论文第3节：相关工作</a></p>
+<p><a href="https://blog.csdn.net/fffnull/article/details/51158519" target="_blank" rel="external">TransE论文第4节：实验</a></p>
+<p><a href="https://blog.csdn.net/fffnull/article/details/51163035" target="_blank" rel="external">TransE论文剩余部分</a></p>
+<p><a href="https://blog.csdn.net/fffnull/article/details/51167045" target="_blank" rel="external">Train_TransE代码注释</a></p>
+<h2 id="TransH"><a href="#TransH" class="headerlink" title="TransH"></a>TransH</h2><p><a href="https://www.cnblogs.com/crackpotisback/p/6123298.html" target="_blank" rel="external">Hinge Loss Function</a></p>
+<h1 id="DKRL论文：实体描述的知识图谱的表示学习"><a href="#DKRL论文：实体描述的知识图谱的表示学习" class="headerlink" title="DKRL论文：实体描述的知识图谱的表示学习"></a>DKRL论文：实体描述的知识图谱的表示学习</h1><p><a href="https://blog.csdn.net/FFFNULL/article/details/51523160" target="_blank" rel="external">DKRL论文：实体描述的知识图谱的表示学习</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;汇总&quot;&gt;&lt;a href=&quot;#汇总&quot; class=&quot;headerlink&quot; title=&quot;汇总&quot;&gt;&lt;/a&gt;汇总&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/thunlp/OpenKE&quot; target=&quot;_blank&quot; rel=&quot;extern
+    
+    </summary>
+    
+    
+      <category term="知识图谱" scheme="http://yafei002.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Network Embedding</title>
+    <link href="http://yafei002.github.io/2018/04/11/Network-Embedding/"/>
+    <id>http://yafei002.github.io/2018/04/11/Network-Embedding/</id>
+    <published>2018-04-11T01:33:29.000Z</published>
+    <updated>2018-07-16T01:34:58.834Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="汇总"><a href="#汇总" class="headerlink" title="汇总"></a>汇总</h2><p><a href="https://github.com/chihming/awesome-network-embedding" target="_blank" rel="external">awesome-network-embedding</a></p>
+<p><a href="https://github.com/thunlp/OpenNE" target="_blank" rel="external">清华openKE</a></p>
+<p><a href="https://blog.csdn.net/u013527419/article/details/76017528" target="_blank" rel="external">网络表示学习（DeepWalk，LINE，node2vec，SDNE）</a></p>
+<h2 id="Node2Vec"><a href="#Node2Vec" class="headerlink" title="Node2Vec"></a>Node2Vec</h2><p><a href="https://blog.csdn.net/myofficials/article/details/78903118" target="_blank" rel="external">node2vec论文阅读</a></p>
+<p><a href="https://www.aliyun.com/jiaocheng/442671.html?spm=5176.100033.2.5.eMF2jT" target="_blank" rel="external">笔记︱基于网络节点的node2vec、论文、算法python实现</a></p>
+<p><a href="http://snap.stanford.edu/node2vec/" target="_blank" rel="external">官方笔记</a></p>
+<h2 id="node2vec-vs-wor2vec"><a href="#node2vec-vs-wor2vec" class="headerlink" title="node2vec vs wor2vec"></a>node2vec vs wor2vec</h2><p>graph corresponds to document; node corresponds to word; edge corresponds to co-occurrence of words.</p>
+<h2 id="struct2vec"><a href="#struct2vec" class="headerlink" title="struct2vec"></a>struct2vec</h2><p><a href="https://github.com/leoribeiro/struc2vec" target="_blank" rel="external">struc2vec github</a></p>
+<h2 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h2><p><a href="https://blog.csdn.net/ckqsars/article/details/78184834" target="_blank" rel="external">graph embedding(常见的图embedding的方法)</a></p>
+<p><a href="https://www.sohu.com/a/154650431_642762" target="_blank" rel="external">推荐｜NE(Network Embedding)论文小览，附21篇经典论文和代码</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;汇总&quot;&gt;&lt;a href=&quot;#汇总&quot; class=&quot;headerlink&quot; title=&quot;汇总&quot;&gt;&lt;/a&gt;汇总&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/chihming/awesome-network-embedding&quot; target
+    
+    </summary>
+    
+    
+      <category term="知识图谱" scheme="http://yafei002.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>周记-18.04.02</title>
@@ -189,6 +262,38 @@
     
     
       <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>知识抽取</title>
+    <link href="http://yafei002.github.io/2018/03/12/%E7%9F%A5%E8%AF%86%E6%8A%BD%E5%8F%96/"/>
+    <id>http://yafei002.github.io/2018/03/12/知识抽取/</id>
+    <published>2018-03-12T01:31:08.000Z</published>
+    <updated>2018-07-16T01:32:44.796Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="汇总"><a href="#汇总" class="headerlink" title="汇总"></a>汇总</h2><p><a href="http://ai.51cto.com/art/201801/562743.htm" target="_blank" rel="external">浅析深度学习在实体识别和关系抽取中应用</a></p>
+<p><a href="https://www.zhihu.com/question/59624229" target="_blank" rel="external">如何从非结构化文本中提取知识？</a></p>
+<p><a href="https://www.cnblogs.com/theodoric008/p/7874373.html" target="_blank" rel="external">实体关系抽取 entity relation extraction 文献阅读总结</a></p>
+<h2 id="关系抽取"><a href="#关系抽取" class="headerlink" title="关系抽取"></a>关系抽取</h2><p><a href="https://www.zhihu.com/question/59624229/answer/167115969" target="_blank" rel="external">如何从非结构化文本中提取知识？</a></p>
+<p><a href="http://shomy.top/2018/02/28/relation-extraction/" target="_blank" rel="external">关系抽取(分类)总结</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/27510376" target="_blank" rel="external">我们眼中的“关系抽取” | 每周话题精选 #02</a></p>
+<p><a href="https://github.com/thunlp/TensorFlow-NRE" target="_blank" rel="external">Neural Relation Extraction(NRE)</a></p>
+<p><a href="https://www.cnblogs.com/theodoric008/p/7874373.html" target="_blank" rel="external">关系抽取(管理)</a></p>
+<h3 id="远程监督"><a href="#远程监督" class="headerlink" title="远程监督"></a>远程监督</h3><p><a href="http://www.sohu.com/a/165856071_465975" target="_blank" rel="external">一周论文 | 关于远程监督，我们来推荐几篇值得读的论文</a></p>
+<p><a href="http://www.doc88.com/p-9778237154660.html" target="_blank" rel="external">基于远程监督的关系抽取技术的研究与实现</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;汇总&quot;&gt;&lt;a href=&quot;#汇总&quot; class=&quot;headerlink&quot; title=&quot;汇总&quot;&gt;&lt;/a&gt;汇总&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://ai.51cto.com/art/201801/562743.htm&quot; target=&quot;_blank&quot; re
+    
+    </summary>
+    
+    
+      <category term="知识图谱" scheme="http://yafei002.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+      <category term="NLP" scheme="http://yafei002.github.io/tags/NLP/"/>
     
   </entry>
   
@@ -798,216 +903,6 @@
     
     
       <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>周记-17.12.18</title>
-    <link href="http://yafei002.github.io/2018/01/03/%E5%91%A8%E8%AE%B0-17-12-18/"/>
-    <id>http://yafei002.github.io/2018/01/03/周记-17-12-18/</id>
-    <published>2018-01-03T01:17:15.000Z</published>
-    <updated>2018-01-03T01:17:49.106Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><ul>
-<li><a href="https://github.com/eligrey/FileSaver.js/" target="_blank" rel="external">FileSaver.js</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL" target="_blank" rel="external">FileReader.readAsDataURL()</a></li>
-<li><a href="https://github.com/sheetjs/js-xlsx" target="_blank" rel="external">js-xlsx</a></li>
-<li><a href="https://www.zhihu.com/question/19631256/answer/119911045" target="_blank" rel="external">如何在 form 表单提交后实现页面不跳转？</a></li>
-<li><a href="https://www.zhihu.com/question/20948649" target="_blank" rel="external">Cross origin requests are only supported for HTTP?</a></li>
-<li><a href="http://blog.csdn.net/shidaping/article/details/52765155" target="_blank" rel="external">express设置ejs渲染.html文件</a></li>
-<li><a href="https://www.cnblogs.com/-nothing-/p/4943354.html" target="_blank" rel="external">Express使用html模板</a></li>
-<li><a href="https://stackoverflow.com/questions/8359902/how-to-rename-files-parsed-by-formidable" target="_blank" rel="external">How to rename files parsed by Formidable?</a></li>
-</ul>
-<h2 id="python"><a href="#python" class="headerlink" title="python"></a>python</h2><ul>
-<li><a href="http://www.jianshu.com/p/9d6da9b76d70" target="_blank" rel="external">Flask-Uploads文件上传的简单使用</a></li>
-<li><a href="http://www.jianshu.com/p/716d470d6434" target="_blank" rel="external">使用 Flask-Uploads + jQuery + Bootstrap 创建带进度条的文件上传</a></li>
-<li><a href="https://www.cnblogs.com/mosson/p/6163233.html" target="_blank" rel="external">flask文件的上传和下载</a></li>
-<li><a href="http://docs.jinkan.org/docs/flask/patterns/fileuploads.html" target="_blank" rel="external">上传文件</a></li>
-<li><a href="https://stackoverflow.com/questions/23450534/how-to-call-python-function-from-nodejs" target="_blank" rel="external">How to call Python function from NodeJS</a></li>
-</ul>
-<h2 id="janus"><a href="#janus" class="headerlink" title="janus"></a>janus</h2><ul>
-<li><a href="https://www.cnblogs.com/jiyuqi/p/7132986.html" target="_blank" rel="external">通过使用JanusGraph索引提高性能</a></li>
-</ul>
-<h2 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h2><ul>
-<li><a href="https://www.cnblogs.com/hustcat/archive/2009/10/28/1591648.html" target="_blank" rel="external">理解MySQL——索引与优化</a></li>
-</ul>
-<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><ul>
-<li><a href="https://www.zhihu.com/question/27126057" target="_blank" rel="external">对数损失函数是如何度量损失的？</a></li>
-<li><a href="http://blog.csdn.net/bitcarmanlee/article/details/51154481" target="_blank" rel="external">logistic回归详解一：为什么要使用logistic函数</a></li>
-<li><a href="http://blog.csdn.net/bitcarmanlee/article/details/51165444" target="_blank" rel="external">logistic回归详解(二）：损失函数（cost function）详解</a></li>
-<li><a href="http://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92" target="_blank" rel="external">Softmax回归</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/eligrey/FileSaver.js/&quot; target=&quot;_blan
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>周记-17.12.11</title>
-    <link href="http://yafei002.github.io/2017/12/18/%E5%91%A8%E8%AE%B0-17-12-11/"/>
-    <id>http://yafei002.github.io/2017/12/18/周记-17-12-11/</id>
-    <published>2017-12-18T00:54:46.000Z</published>
-    <updated>2017-12-18T00:55:25.692Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Neo4j"><a href="#Neo4j" class="headerlink" title="Neo4j"></a>Neo4j</h2><ul>
-<li><a href="https://neo4j.com/docs/operations-manual/current/tools/dump-load/" target="_blank" rel="external">Dump and load databases</a></li>
-<li><a href="https://neo4j.com/developer/kb/" target="_blank" rel="external">Neo4j Knowledge Base</a><ul>
-<li>Neo4j官方文章</li>
-</ul>
-</li>
-<li><a href="https://neo4j.com/developer/kb/warm-the-cache-to-improve-performance-from-cold-start/" target="_blank" rel="external">Warm the cache to improve performance from cold start</a></li>
-</ul>
-<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><ul>
-<li><a href="http://blog.csdn.net/kevin7658/article/details/50780391" target="_blank" rel="external">IV和WOE详解</a></li>
-<li><a href="http://www.sohu.com/a/129333346_465975" target="_blank" rel="external">从重采样到数据合成：如何处理机器学习中的不平衡分类问题？</a></li>
-<li><a href="https://www.zhihu.com/question/38002635" target="_blank" rel="external">怎么形象理解embedding这个概念？</a></li>
-</ul>
-<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><ul>
-<li><a href="https://www.cnblogs.com/mingforyou/archive/2013/09/03/3299569.html" target="_blank" rel="external">Java String.split()用法小结</a></li>
-<li><a href="https://www.cnblogs.com/tianzhiliang/archive/2010/09/19/1830763.html" target="_blank" rel="external">深入理解堆栈、堆在内存中的实现</a></li>
-<li><a href="http://blog.csdn.net/wulong710/article/details/52964461" target="_blank" rel="external">使用visualVM监控JAVA程序</a></li>
-<li><a href="https://www.cnblogs.com/chuxiuhong/p/5953498.html" target="_blank" rel="external">IDEA上安装和使用checkstyle,findbugs,visualVM,PMD插件</a></li>
-<li><a href="https://www.cnblogs.com/yingsong/p/5896207.html" target="_blank" rel="external">IntelliJ IDEA 学习（六）内存设置</a></li>
-</ul>
-<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><ul>
-<li><a href="http://www.ams.org/samplings/feature-column/fcarc-svd" target="_blank" rel="external">We Recommend a Singular Value Decomposition</a></li>
-</ul>
-<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><ul>
-<li><a href="https://www.cnblogs.com/joshua317/p/6170839.html" target="_blank" rel="external">Linux下常用压缩 解压命令和压缩比率对比</a></li>
-</ul>
-<h2 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h2><ul>
-<li>亲属称谓<ul>
-<li><a href="http://xh.5156edu.com/page/z7534m5890j18716.html" target="_blank" rel="external">中国血统关系称谓大全</a></li>
-<li><a href="https://wenku.baidu.com/view/cb6e170e4431b90d6c85c791.html?from=search" target="_blank" rel="external">史上最全面的中国人亲戚关系图表</a></li>
-<li><a href="https://wenku.baidu.com/view/8becacb365ce05087632139c.html" target="_blank" rel="external">亲戚称谓大全图表精华版</a></li>
-<li><a href="https://wenku.baidu.com/view/ec1eb2fc4028915f804dc267.html" target="_blank" rel="external">社会关系称谓整理</a></li>
-<li><a href="https://wenku.baidu.com/view/9c97857002020740bf1e9b22.html" target="_blank" rel="external">社会关系称呼</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="scala"><a href="#scala" class="headerlink" title="scala"></a>scala</h2><ul>
-<li><a href="https://stackoverflow.com/questions/38006735/unable-to-create-scala-class-on-intellij/39978789#39978789" target="_blank" rel="external">Unable to create Scala class on IntelliJ</a></li>
-</ul>
-<h2 id="hadoop-family"><a href="#hadoop-family" class="headerlink" title="hadoop family"></a>hadoop family</h2><ul>
-<li><a href="http://www.jianshu.com/p/017acc8044b2" target="_blank" rel="external">HCatalog 介绍</a></li>
-<li><a href="http://blog.csdn.net/jun_life/article/details/51671347" target="_blank" rel="external">使用Sqoop将Hive表数据导入到mysql</a></li>
-</ul>
-<h2 id="KG"><a href="#KG" class="headerlink" title="KG"></a>KG</h2><ul>
-<li><a href="http://www.ruanyifeng.com/blog/2016/07/yaml.html" target="_blank" rel="external">YAML 语言教程</a></li>
-<li><a href="https://github.com/memect/kg-beijing/wiki/%E7%AC%AC%E4%B8%80%E6%9C%9Fw1%EF%BC%9A%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96" target="_blank" rel="external">第一期w1：知识提取</a></li>
-<li><a href="https://github.com/memect/kg-beijing/wiki/%E7%AC%AC%E4%B8%80%E6%9C%9Fw2%EF%BC%9A%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA" target="_blank" rel="external">第一期w2：知识表示</a></li>
-<li><a href="https://github.com/memect/kg-beijing/wiki/%E7%AC%AC%E4%B8%80%E6%9C%9Fw3%EF%BC%9A%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8" target="_blank" rel="external">第一期w3：知识存储</a></li>
-<li><a href="https://github.com/memect/kg-beijing/wiki/%E7%AC%AC%E4%B8%80%E6%9C%9Fw4-:--%E7%9F%A5%E8%AF%86%E6%A3%80%E7%B4%A2" target="_blank" rel="external">第一期w4 : 知识检索</a></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;Neo4j&quot;&gt;&lt;a href=&quot;#Neo4j&quot; class=&quot;headerlink&quot; title=&quot;Neo4j&quot;&gt;&lt;/a&gt;Neo4j&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://neo4j.com/docs/operations-manual/cu
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>知识图谱基础-RDF和RDFS</title>
-    <link href="http://yafei002.github.io/2017/12/14/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E5%9F%BA%E7%A1%80-RDF%E5%92%8CRDFS/"/>
-    <id>http://yafei002.github.io/2017/12/14/知识图谱基础-RDF和RDFS/</id>
-    <published>2017-12-14T00:40:26.000Z</published>
-    <updated>2017-12-14T00:41:41.437Z</updated>
-    
-    <content type="html"><![CDATA[<p>知识图谱是一个节点与关系的集合，节点通过关系相互连接，关系和节点拥有类型和属性。</p>
-<p>节点和关系的类型定义在模式（schema）中。</p>
-<p>这些被定义的关系叫做词汇（vocabulary）。</p>
-<h2 id="RDF-and-RDFS"><a href="#RDF-and-RDFS" class="headerlink" title="RDF and RDFS"></a>RDF and RDFS</h2><p>RDF（资源描述框架）是语义网络的现代标准。RDFS是RDF模式。</p>
-<h3 id="RDF"><a href="#RDF" class="headerlink" title="RDF"></a>RDF</h3><p>RDF通常指代W3C的资源。资源可以是任何事物——人、动物、游戏的角色等等。</p>
-<h4 id="RDF三元组和图"><a href="#RDF三元组和图" class="headerlink" title="RDF三元组和图"></a>RDF三元组和图</h4><p>资源，也叫做表述（statements）描述在RDF三元组中。RDF三元组图示如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-abddeb48489fdfcc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="RDF triple.png"></p>
-<p>RDF图包含这些三元组的集合。集合中有三类节点：<a href="https://baike.baidu.com/item/iri/4442698?fr=aladdin" target="_blank" rel="external">IRI</a>（Iternationalised Resource Identifier, 国际化资源标识符），字面量（literals）和空节点。</p>
-<p>更具体地，对于一个三元组：</p>
-<ul>
-<li>主体（Subject）可以是一个IRI或空节点</li>
-<li>谓词（Predict）应该是一个IRI</li>
-<li>宾体（Object）可以是一个IRI,字面量或空节点</li>
-</ul>
-<p>字面量表示如字符串、数字和时间之类的值。</p>
-<p>空节点可以指代非IRI和字面量表示的<strong>其他任意</strong>事物。有空节点表示的资源被称为匿名资源，意味着某种事物的存在。而IRI表示的是任意的<strong>特定</strong>的事物。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-626479aa0c0b3f7a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>IRI一般以一个前缀作为开始，这种前缀叫做命名空间前缀（namespace prefix）。拥有命名空间前缀的IRI叫做命名空间IRI。如下图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-9a7dddd67f92fa0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>从而上面的三元组可表示为：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-236e9fa9117ffe8b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>三元组的其他示例：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-7265c74799afe056.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p><strong>序列化RDF</strong></p>
-<p>RDF为知识图谱提供标准的数据模型。几种存储和交换RDF的序列化语法是Turtle、RDF/XML、RDFa、N-Tripples、NQUADS和JSON-LD。</p>
-<p>Turtle文档可以使得RDF表示成紧凑的文本格式。其中“#”表示注释，IRI包含在&lt;&gt;中。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-53387eee95b7c8cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>字面量格式：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-f5bb441131e1f674.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>指定了数据类型的字面量：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-a86772524584c20e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>其他规则：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-eb6dcb687c7edd1f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>一个完整的RDF序列化的例子如下图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-49fff5e9ea483861.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h4 id="RDFS"><a href="#RDFS" class="headerlink" title="RDFS"></a>RDFS</h4><p>RDFS为RDF提供简单的语言模式来声明类（classes）或属性（properties）。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-5e4676b679923e88.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>RDFS可定义属性和类的依赖：rdfs:subClassOf, rdfs:subPropertyOf, rdfs:domain and rdfs:range.</p>
-<ul>
-<li><p>subClassOf 表示类的子类，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:Start -up rdfs:subClassOf org:Organization .</div></pre></td></tr></table></figure>
-</li>
-<li><p>subPropertyOf 表示属性的子属性，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasEnglishHomePage rdfs:subPropertyOf org:hasHomePage .</div></pre></td></tr></table></figure>
-</li>
-<li><p>domain表示属性在类的领域内，如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasHomePage rdfs:domain org:Organization .</div></pre></td></tr></table></figure>
-</li>
-<li><p>range表示所有该属性的值是一个类或数据类型（如rdfs:Literal）的实例。如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">org:hasHomePage rdfs:range rdfs:Literal .</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="RDF相关资料"><a href="#RDF相关资料" class="headerlink" title="RDF相关资料"></a>RDF相关资料</h4><ul>
-<li><a href="http://zh.transwiki.org/cn/rdfprimer.htm" target="_blank" rel="external">W3C RDF 入门</a>（W3C标准RDF中文译文）</li>
-<li><a href="https://www.w3.org/TR/turtle/" target="_blank" rel="external">W3C RDF 1.1 Turtle</a></li>
-<li>博客<ul>
-<li><a href="http://blog.sina.com.cn/s/blog_6c42aaa60100nh30.html" target="_blank" rel="external">资源描述框架RDF </a></li>
-<li>[《RDF 1.1入门》摘要] (<a href="http://catwizard.net/posts/20140909212445.html" target="_blank" rel="external">http://catwizard.net/posts/20140909212445.html</a>)</li>
-</ul>
-</li>
-</ul>
-<p>然后去理解：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/6610077-f56d02683b66e88e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>其中Turtle序列化：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">@prefix org: &lt;http :// www.w3.org/ns/org#&gt;</div><div class="line">@prefix rdf: &lt;http :// www.w3.org /1999/02/22 -rdf -syntax -ns#&gt;</div><div class="line">@prefix rdfs: &lt;http :// www.w3.org /2000/01/ rdf -schema#&gt;</div><div class="line">@prefix data: &lt;http :// data.lab.expertsystem.com/&gt;</div><div class="line">org:Organization a rdfs:Class .</div><div class="line">org:Non -GovOrganization a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Organization .</div><div class="line">org:InternationalOrg a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:SME a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:Startup a rdfs:Class ;</div><div class="line">rdfs:subClassOf org:Non -GovOrganization .</div><div class="line">org:hasName a rdf:Property ;</div><div class="line">rdfs:domain org:Organization;</div><div class="line">rdfs:range rdfs:Literal.</div><div class="line">org:hasPartner a rdf:Property ;</div><div class="line">rdfs:domain org:Organization ;</div><div class="line">rdfs:range org:Organization .</div><div class="line">org:hasHomePage a rdf:Property ;</div><div class="line">rdfs:domain org:InternationalOrg .</div><div class="line">data:ESI a org:SME ;</div><div class="line">org:hasPartner data:IBM ;</div><div class="line">org:hasName &quot;Expert System Iberia&quot; .</div><div class="line">data:IBM a org:InternationalOrg ;</div><div class="line">org:hasPartner data:Fundera ;</div><div class="line">org:hasHomePage &quot;http :// www.ibm.com&quot; .</div><div class="line">data:Fundera a org:Start -up .</div></pre></td></tr></table></figure>
-<h4 id="RDF局限性"><a href="#RDF局限性" class="headerlink" title="RDF局限性"></a>RDF局限性</h4><p>to do…</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;知识图谱是一个节点与关系的集合，节点通过关系相互连接，关系和节点拥有类型和属性。&lt;/p&gt;
-&lt;p&gt;节点和关系的类型定义在模式（schema）中。&lt;/p&gt;
-&lt;p&gt;这些被定义的关系叫做词汇（vocabulary）。&lt;/p&gt;
-&lt;h2 id=&quot;RDF-and-RDFS&quot;&gt;&lt;a hre
-    
-    </summary>
-    
-    
-      <category term="知识图谱" scheme="http://yafei002.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
     
   </entry>
   
