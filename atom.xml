@@ -373,6 +373,45 @@
   </entry>
   
   <entry>
+    <title>数据不平衡问题</title>
+    <link href="http://yafei002.github.io/2018/02/16/%E6%95%B0%E6%8D%AE%E4%B8%8D%E5%B9%B3%E8%A1%A1%E9%97%AE%E9%A2%98/"/>
+    <id>http://yafei002.github.io/2018/02/16/数据不平衡问题/</id>
+    <published>2018-02-16T01:22:03.000Z</published>
+    <updated>2018-07-16T01:26:57.079Z</updated>
+    
+    <content type="html"><![CDATA[<p>如对于二分类问题，正例过少，负例过多，优化目标就等价于错误率最小化，也就是精确度最大化。一般采用过采样,欠采样和修改损失权重这种采样的方式解决。</p>
+<h2 id="过采样和欠采样"><a href="#过采样和欠采样" class="headerlink" title="过采样和欠采样"></a>过采样和欠采样</h2><h3 id="过采样"><a href="#过采样" class="headerlink" title="过采样"></a>过采样</h3><p>随机复制少数样本，容易造成过拟合的问题。</p>
+<h3 id="改进1：smote算法"><a href="#改进1：smote算法" class="headerlink" title="改进1：smote算法"></a>改进1：smote算法</h3><p>再少数样本集中，对每个样本a再少数样本集中使用欧式距离选出k个最近邻样本。</p>
+<p>从k个样本中随机选择一个样本b。</p>
+<p>在a与b之间随机选择一个样本作为新样本加入少少数样本集中。</p>
+<p><strong>缺陷</strong></p>
+<p>“一是在近邻选择时,存在一定的盲目性。K值的上限没有办法确定,只能根据具体的数据集去反复测试。因此如何确定K值,才能使算法达到最优这是未知的。</p>
+<p>另外,该算法无法克服非平衡数据集的数据分布问题,容易产生分布边缘化问题。”</p>
+<p>摘自：<a href="https://www.cnblogs.com/Determined22/p/5772538.html" target="_blank" rel="external">不平衡问题与SMOTE过采样算法</a></p>
+<h2 id="修改损失函数权重"><a href="#修改损失函数权重" class="headerlink" title="修改损失函数权重"></a>修改损失函数权重</h2><p>设置损失函数的权重，使得少数类判别错误的损失大于多数类判别错误的损失。在python的scikit-learn中我们可以使用class_weight参数来设置权重。</p>
+<h2 id="python-imbalanced-learn-package"><a href="#python-imbalanced-learn-package" class="headerlink" title="python imbalanced-learn package"></a>python imbalanced-learn package</h2><p><a href="https://github.com/scikit-learn-contrib/imbalanced-learn" target="_blank" rel="external">imbalanced-learn github</a></p>
+<p><a href="http://blog.csdn.net/liweibin1994/article/details/78380841" target="_blank" rel="external">imbalanced-learn 应用示例</a></p>
+<p><a href="http://contrib.scikit-learn.org/imbalanced-learn/stable/" target="_blank" rel="external">imbalanced-learn package文档</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://blog.csdn.net/a358463121/article/details/52304670" target="_blank" rel="external">不平衡数据分类算法介绍与比较</a>(推荐)</p>
+<p><a href="http://blog.csdn.net/march_on/article/details/48650237" target="_blank" rel="external">smote算法</a></p>
+<p><a href="https://www.cnblogs.com/Determined22/p/5772538.html" target="_blank" rel="external">不平衡问题与SMOTE过采样算法</a></p>
+<p><a href="http://blog.csdn.net/Yaphat/article/details/52463304?locationNum=7" target="_blank" rel="external">SMOTE算法及其python实现</a></p>
+<p><a href="https://www.jianshu.com/p/ecbc924860af" target="_blank" rel="external">Python：SMOTE算法</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如对于二分类问题，正例过少，负例过多，优化目标就等价于错误率最小化，也就是精确度最大化。一般采用过采样,欠采样和修改损失权重这种采样的方式解决。&lt;/p&gt;
+&lt;h2 id=&quot;过采样和欠采样&quot;&gt;&lt;a href=&quot;#过采样和欠采样&quot; class=&quot;headerlink&quot; title
+    
+    </summary>
+    
+    
+      <category term="数据挖掘" scheme="http://yafei002.github.io/tags/%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>周记-18.02.05</title>
     <link href="http://yafei002.github.io/2018/02/12/%E5%91%A8%E8%AE%B0-18-02-05/"/>
     <id>http://yafei002.github.io/2018/02/12/周记-18-02-05/</id>
@@ -969,101 +1008,6 @@
     
     
       <category term="知识图谱" scheme="http://yafei002.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>周记-17.11.29</title>
-    <link href="http://yafei002.github.io/2017/12/12/%E5%91%A8%E8%AE%B0-17.11.29/"/>
-    <id>http://yafei002.github.io/2017/12/12/周记-17.11.29/</id>
-    <published>2017-12-12T03:27:18.000Z</published>
-    <updated>2017-12-13T09:00:29.899Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h2><ul>
-<li><a href="http://blog.csdn.net/mytestmy/article/details/26961315" target="_blank" rel="external">词向量</a></li>
-</ul>
-<h2 id="kg"><a href="#kg" class="headerlink" title="kg"></a>kg</h2><ul>
-<li><a href="https://code.ziqiangxuetang.com/rdf/rdf-tutorial.html" target="_blank" rel="external">RDF 教程</a></li>
-<li><a href="http://blog.sina.com.cn/s/blog_6a7447840100utms.html" target="_blank" rel="external">owl本体语言学习笔记 </a></li>
-</ul>
-<h3 id="RDF"><a href="#RDF" class="headerlink" title="RDF"></a>RDF</h3><ul>
-<li><a href="http://zh.transwiki.org/cn/rdfprimer.htm" target="_blank" rel="external">W3C RDF 入门</a>（W3C标准RDF中文译文）</li>
-<li><a href="https://www.w3.org/TR/turtle/" target="_blank" rel="external">W3C RDF 1.1 Turtle</a></li>
-<li>博客<ul>
-<li><a href="http://blog.sina.com.cn/s/blog_6c42aaa60100nh30.html" target="_blank" rel="external">资源描述框架RDF </a></li>
-<li>[《RDF 1.1入门》摘要] (<a href="http://catwizard.net/posts/20140909212445.html" target="_blank" rel="external">http://catwizard.net/posts/20140909212445.html</a>)</li>
-</ul>
-</li>
-</ul>
-<h2 id="ML"><a href="#ML" class="headerlink" title="ML"></a>ML</h2><ul>
-<li><a href="http://blog.csdn.net/u012162613/article/details/42192293" target="_blank" rel="external">scikit-learn中PCA的使用方法</a></li>
-<li><a href="https://www.cnblogs.com/pinard/p/6243025.html" target="_blank" rel="external">用scikit-learn学习主成分分析(PCA)</a></li>
-</ul>
-<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><ul>
-<li><a href="http://man.linuxde.net/curl" target="_blank" rel="external">curl命令</a></li>
-<li><a href="http://blog.sina.com.cn/s/blog_465311c101013gkh.html" target="_blank" rel="external">df -h和du -h的区别</a></li>
-<li><a href="https://www.cnblogs.com/benio/archive/2010/09/15/1826728.html" target="_blank" rel="external">Linux查看程序端口占用情况</a></li>
-<li><a href="https://www.cnblogs.com/ggjucheng/archive/2012/01/08/2316661.html" target="_blank" rel="external">Linux netstat命令详解</a></li>
-</ul>
-<h2 id="金融"><a href="#金融" class="headerlink" title="金融"></a>金融</h2><ul>
-<li><a href="https://www.zhihu.com/question/51583052" target="_blank" rel="external">互联网金融中需要关注的风控逾期指标有哪些？</a></li>
-<li><a href="http://blog.sina.com.cn/s/blog_537ed51201019m3s.html" target="_blank" rel="external">Vintage分析和迁移率模型在信用卡业务中的应用</a></li>
-</ul>
-<h2 id="big-data"><a href="#big-data" class="headerlink" title="big data"></a>big data</h2><ul>
-<li>hive<ul>
-<li><a href="http://blog.csdn.net/kwu_ganymede/article/details/52947809" target="_blank" rel="external">get_json_object</a></li>
-<li><a href="http://blog.sina.com.cn/s/blog_465311c101013gkh.html" target="_blank" rel="external">df -h和du -h的区别</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h2><ul>
-<li>A/B Test<ul>
-<li><a href="http://www.appadhoc.com/blog/realization-principle-of-abtesting/?utm_campaign=suiji&amp;utm_source=segmentfault&amp;utm_medium=article&amp;utm_term=principle&amp;utm_content=shuyi" target="_blank" rel="external">随机化试验</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><ul>
-<li><a href="https://www.cnblogs.com/HangZhe/p/6015936.html" target="_blank" rel="external">关于Java获取文件路径的几种方法</a></li>
-<li><a href="https://www.cnblogs.com/guanghuiqq/p/6490649.html" target="_blank" rel="external">双冒号</a></li>
-<li><a href="https://www.cnblogs.com/longqingyang/p/5577937.html" target="_blank" rel="external">XML解析——Java中XML的四种解析方式</a></li>
-<li><a href="https://www.cnblogs.com/dreammyle/p/5458280.html" target="_blank" rel="external">Java生成CSV文件实例详解</a></li>
-<li><a href="https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/" target="_blank" rel="external">Java 8 中的 Streams API 详解</a></li>
-<li><a href="http://www.importnew.com/26066.html" target="_blank" rel="external">Java8 如何正确使用 Optional</a></li>
-<li><a href="http://www.importnew.com/6675.html" target="_blank" rel="external">Java 8 Optional类深度解析</a></li>
-</ul>
-<h2 id="NLP-1"><a href="#NLP-1" class="headerlink" title="NLP"></a>NLP</h2><ul>
-<li><a href="https://www.cnblogs.com/maohai/p/6453389.html" target="_blank" rel="external">中文句法结构（CIPS2016、依存句法、文法）</a></li>
-<li><a href="">依存句法分析与语义依存分析的区别</a></li>
-</ul>
-<h2 id="Neo4j"><a href="#Neo4j" class="headerlink" title="Neo4j"></a>Neo4j</h2><ul>
-<li><a href="https://neo4j.com/developer/guide-import-csv/" target="_blank" rel="external">Importing CSV Data into Neo4j</a></li>
-<li><a href="https://neo4j.com/docs/operations-manual/current/tools/import/" target="_blank" rel="external">Import</a></li>
-<li><a href="https://neo4j.com/docs/operations-manual/current/tutorial/import-tool/" target="_blank" rel="external">Use the Import tool</a></li>
-<li><a href="https://neo4j.com/docs/operations-manual/current/tools/import/file-header-format/" target="_blank" rel="external">CSV file header format</a></li>
-<li><a href="https://neo4j.com/docs/operations-manual/current/tools/import/syntax/" target="_blank" rel="external">Syntax</a></li>
-<li>batch insert<ul>
-<li><a href="https://www.programcreek.com/java-api-examples/index.php?api=org.neo4j.unsafe.batchinsert.BatchInserters" target="_blank" rel="external">Java Code Examples for org.neo4j.unsafe.batchinsert.BatchInserters</a></li>
-<li><a href="https://github.com/dswarm/dswarm-graph-neo4j" target="_blank" rel="external">dswarm-graph-neo4j</a>(上面的源代码)</li>
-<li><a href="https://neo4j.com/docs/stable/batchinsert-examples.html" target="_blank" rel="external">Batch Inserter Examples</a>(关注)</li>
-</ul>
-</li>
-<li>Import tool<ul>
-<li><a href="https://neo4j.com/docs/operations-manual/current/tutorial/import-tool/" target="_blank" rel="external">Use the Import tool</a></li>
-<li><a href="https://neo4j.com/docs/operations-manual/current/tools/import/file-header-format/" target="_blank" rel="external">CSV file header format</a></li>
-</ul>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;NLP&quot;&gt;&lt;a href=&quot;#NLP&quot; class=&quot;headerlink&quot; title=&quot;NLP&quot;&gt;&lt;/a&gt;NLP&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/mytestmy/article/details/26961
-    
-    </summary>
-    
-    
-      <category term="周记" scheme="http://yafei002.github.io/tags/%E5%91%A8%E8%AE%B0/"/>
     
   </entry>
   
